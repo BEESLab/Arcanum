@@ -1,4 +1,4 @@
-### 1. Build An Unmodified Chromium from Source Code
+### 1. Build Chromium
 
 Arcanum is built upon on Chromium version 108.0.5359.71, before apply the patches, make sure to build an unmodified Chromium locally first. You can also follow the [official instruction](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md)
 
