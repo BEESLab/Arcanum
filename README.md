@@ -22,4 +22,7 @@ Next, switch to the version 108 branch (commit `bc8aa10cc7044a60ece07cd8ec173087
 * Checkout the branch `src` tree: `git checkout tags/108.0.5359.71`
 * Then checkout all the submodules at their branch DEPS revisions: `gclient sync --with_branch_heads --with_tags`
 
+### 2. Build Chromium
+
+
 
