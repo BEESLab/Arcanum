@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
-import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-import time
 import os
-import platform
 from pyvirtualdisplay import Display
+from colorama import Fore, Back, Style
 
 test_path = "/root/"
 arcanum_executable_path = test_path + 'arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
@@ -60,11 +58,15 @@ def launch_driver():
     return driver
 
 def Run_Basic_Test():
-    init()
-    driver = launch_driver()
-    driver.get('https://google.com')
-    driver.quit()
-    deinit()
+    try:
+        init()
+        driver = launch_driver()
+        driver.get('https://google.com')
+        driver.quit()
+        deinit()
+        print('Basic Test: '+ Back.GREEN + "Success"+ Back.RESET + ".")
+    except Exception as e:
+        print('Basic Test: '+ Fore.RED + "Fail" + Fore.RESET + ":" + str(e))
 
 if __name__ == '__main__':
     Run_Basic_Test()
