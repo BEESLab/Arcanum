@@ -1,0 +1,5 @@
+enable_linux_installer = true
+is_component_build = false
+enable_nacl = true
+symbol_level = 0
+# Set build arguments here. See `gn help buildargs`.
