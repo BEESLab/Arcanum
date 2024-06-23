@@ -1,0 +1,118 @@
+>>> TAINT SINK `XHR` REACHED (xml-send-body-USVString) <<<
+STACK TRACE START: 
+0x21164eb8a911 <String[160]: c"applyClaimSpottingAPI (chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/backend.js:145:9)chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/backend.js:388:5">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** XHR leak, request URL = https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: This is a rainy day!
+
+** Propagation paths: 
+
+0x005e477cfb61 <String[20]: e"This is a rainy day!">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x389ac27f3ca1 <JSFunction applyClaimSpottingAPI (sfi = 0x389ac27f2479)> `applyClaimSpottingAPI`: 1264
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
