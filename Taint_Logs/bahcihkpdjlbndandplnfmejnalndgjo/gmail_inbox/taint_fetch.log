@@ -1,0 +1,63 @@
+>>> TAINT SINK `XHR` REACHED (fetch-body-USVString) <<<
+STACK TRACE START: 
+0x12a7c8bae8f9 <String[246]: c"chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js:242:9new Promise (<anonymous>)getDataApi (chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js:223:12)chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js:49:30">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://api3.likewiseapp.net/api/extension/screenplay/match
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: {"lines":[" "," ","Skip to content","Using Gmail with screen readers","Search","Compose","Labels","Inbox","Starred","Snoozed","Sent","Drafts","More","Labels","Labels","Get additional protection against phishing","Turn on Enhanced Safe Browsing to get additional protection against dangerous emails","Conversations","Primary","Promotions","Social","Google","Security alert","A new sign-in on Linux amylee.230119@gmail.com We noticed a new sign-in to your Google Account on a Linux device. If this was you, you don't need to do anything. If not, we'll help you secure"," - ","Amazon.com","Payment declined: Update your information so we can ship your order","Amazon.com Payment Declined Hello Amy, We are having trouble authorizing your payment for the items below. Please verify or update your payment method. If your payment information is correct, please"," - ","Amazon.com","Your Amazon.com order #114-4821889-3861866","Amazon Order Confirmation Hello Amy, Thank you for shopping with us. We'll send a confirmation when your item ships. Details Order #114-4821889-3861866 Arriving: Tuesday, September 12 View or"," - ","noreply-newsroom","Bank of America Newsroom","Bank of America Newsroom A new press release has been added to Bank of America's Newsroom Bank of America Enhances Benefits for its Customized Cash Rewards Credit Card Cardholders Can Now Earn 3%"," - ","Jack Ma","1-on-1","......................................................................................................................................... Join online meeting ..........................................."," - ","Jack Ma","One off event","......................................................................................................................................... Join online meeting ..........................................."," - ","noreply-newsroom","Bank of America Newsroom","Bank of America Newsroom A new press release has been added to Bank of America's Newsroom Bank of America Announces Redemption of €2.0 Billion of Floating Rate Senior Notes, due April 25, 2024"," - "," ","no-reply",", ","me","Your bank bank statement is ready for your review","---------- Forwarded message --------- From: <no-reply@fidelity.com> Date: Sun, Feb 26, 2023 at 5:27 PM Subject: Your bank bank statement is ready for your review To: amylee.230119@gmail.com"," - ","Attachment:","Fidelity Investments Review-from-Jan2022_5128827372.pdf","order-update@amazon.","Your Amazon.com order of \"Ray-Ban RB3025 Classic...\" has been canceled.","Amazon.com Your Orders | Your Account | Amazon.com Order Cancellation Order # 113-2660035-1513811 Hello Amy, We're writing to let you know that your order has been successfully canceled. In most"," - ","order-update@amazon.","Your Amazon.com order of \"Rosnek Neon Light Rocket...\" has been canceled.","Amazon.com Your Orders | Your Account | Amazon.com Order Cancellation Order # 113-0795055-7669027 Hello Amy, We're writing to let you know that your order has been successfully canceled. In most"," - ","Amazon.com","Your Amazon.com order #113-0795055-7669027","Amazon Order Confirmation Hello Amy, Thank you for shopping with us. We'll send a confirmation when your item ships. Details Order #113-0795055-7669027 Arriving: Monday, April 10 View or manage"," - ","Amazon","Verify your email address","Verify your email address To verify your email address, please use the following One Time Password (OTP): 686771 Do not share this OTP with anyone. Amazon takes your account security very seriously."," - ","leasing","Lease Approved For 1016 West Avenue","Online Lease Executed Online Lease has been Executed by Both Parties The lease document(s) has been signed by both parties. The executed agreement is attached to this email. If you have any questions,"," - ","Attachment:","signed_lease_document_8901_2023260281023.pdf","noreply-newsroom","Bank of America Newsroom","Bank of America Newsroom A new press release has been added to Bank of America's Newsroom BofA Data Finds that 2023 is off to a Strong Start for Consumer Spending, With Credit and Debit Card"," - ","noreply-newsroom","Bank of America Newsroom","Bank of America Newsroom A new press release has been added to Bank of America's Newsroom Bank of America Chair and CEO Brian Moynihan to Open the BofA Securities Financial Services Conference on"," - ","Jack Lee","I got into Georgia Tech!","Hi Amy, I hope you are doing well. I am happy to announce that I got into Georgia Tech for Fall '23 to pursue postgraduate studies. I hope I can meet you there. We are going to have lots of fun."," - ","noreply-newsroom","Bank of America Newsroom","Bank of America Newsroom Welcome to Bank of America's press release subscription We appreciate your interest in the Bank of America Newsroom. You are now subscribed. If you received this email by"," - "],"url":"https://mail.google.com/mail/u/0/#inbox"}
+
+** Propagation paths: 
+
+0x12a7c8b9e1a1 <String[4894]: uc"...<truncated>>">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"lines":{"details":"","tainted":false,"recursive":{"0":{"details":"","tainted":false,"recursive":{}},"2":{"details":"","tainted":false,"recursive":{}},"3":{"details":"","tainted":false,"recursive":{}},"4":{"details":"","tainted":false,"recursive":{}},"5":{"details":"","tainted":false,"recursive":{}},"6":{"details":"","tainted":false,"recursive":{}},"7":{"details":"","tainted":false,"recursive":{}},"8":{"details":"","tainted":false,"recursive":{}},"9":{"details":"","tainted":false,"recursive":{}},"10":{"details":"","tainted":false,"recursive":{}},"11":{"details":"","tainted":false,"recursive":{}},"12":{"details":"","tainted":false,"recursive":{}},"15":{"details":"","tainted":false,"recursive":{}},"16":{"details":"","tainted":false,"recursive":{}},"17":{"details":"","tainted":false,"recursive":{}},"18":{"details":"/ram/analysis/v8logs/00000050.log","tainted":true,"recursive":{}},"19":{"details":"/ram/analysis/v8logs/00000051.log","tainted":true,"recursive":{}},"20":{"details":"/ram/analysis/v8logs/00000052.log","tainted":true,"recursive":{}},"21":{"details":"/ram/analysis/v8logs/00000053.log","tainted":true,"recursive":{}},"22":{"details":"/ram/analysis/v8logs/00000054.log","tainted":true,"recursive":{}},"23":{"details":"/ram/analysis/v8logs/00000055.log","tainted":true,"recursive":{}},"24":{"details":"/ram/analysis/v8logs/00000056.log","tainted":true,"recursive":{}},"25":{"details":"/ram/analysis/v8logs/00000057.log","tainted":true,"recursive":{}},"26":{"details":"/ram/analysis/v8logs/00000058.log","tainted":true,"recursive":{}},"27":{"details":"/ram/analysis/v8logs/00000059.log","tainted":true,"recursive":{}},"30":{"details":"/ram/analysis/v8logs/0000005a.log","tainted":true,"recursive":{}},"31":{"details":"/ram/analysis/v8logs/0000005b.log","tainted":true,"recursive":{}},"33":{"details":"/ram/analysis/v8logs/0000005c.log","tainted":true,"recursive":{}},"34":{"details":"/ram/analysis/v8logs/0000005d.log","tainted":true,"recursive":{}},"35":{"details":"/ram/analysis/v8logs/0000005e.log","tainted":true,"recursive":{}},"37":{"details":"/ram/analysis/v8logs/0000005f.log","tainted":true,"recursive":{}},"38":{"details":"/ram/analysis/v8logs/00000060.log","tainted":true,"recursive":{}},"39":{"details":"/ram/analysis/v8logs/00000061.log","tainted":true,"recursive":{}},"42":{"details":"/ram/analysis/v8logs/00000062.log","tainted":true,"recursive":{}},"43":{"details":"","tainted":false,"recursive":{}},"45":{"details":"","tainted":false,"recursive":{}},"46":{"details":"","tainted":false,"recursive":{}},"47":{"details":"/ram/analysis/v8logs/00000063.log","tainted":true,"recursive":{}},"50":{"details":"/ram/analysis/v8logs/00000064.log","tainted":true,"recursive":{}},"51":{"details":"/ram/analysis/v8logs/00000065.log","tainted":true,"recursive":{}},"52":{"details":"/ram/analysis/v8logs/00000066.log","tainted":true,"recursive":{}},"53":{"details":"/ram/analysis/v8logs/00000067.log","tainted":true,"recursive":{}},"54":{"details":"/ram/analysis/v8logs/00000068.log","tainted":true,"recursive":{}},"56":{"details":"/ram/analysis/v8logs/00000069.log","tainted":true,"recursive":{}},"57":{"details":"/ram/analysis/v8logs/0000006a.log","tainted":true,"recursive":{}},"58":{"details":"/ram/analysis/v8logs/0000006b.log","tainted":true,"recursive":{}},"59":{"details":"/ram/analysis/v8logs/0000006c.log","tainted":true,"recursive":{}},"60":{"details":"/ram/analysis/v8logs/0000006d.log","tainted":true,"recursive":{}},"62":{"details":"","tainted":false,"recursive":{}},"63":{"details":"/ram/analysis/v8logs/0000006e.log","tainted":true,"recursive":{}},"64":{"details":"/ram/analysis/v8logs/0000006f.log","tainted":true,"recursive":{}},"67":{"details":"/ram/analysis/v8logs/00000070.log","tainted":true,"recursive":{}},"68":{"details":"/ram/analysis/v8logs/00000071.log","tainted":true,"recursive":{}},"70":{"details":"/ram/analysis/v8logs/00000072.log","tainted":true,"recursive":{}},"71":{"details":"/ram/analysis/v8logs/00000073.log","tainted":true,"recursive":{}},"72":{"details":"/ram/analysis/v8logs/00000074.log","tainted":true,"recursive":{}},"74":{"details":"/ram/analysis/v8logs/00000075.log","tainted":true,"recursive":{}},"75":{"details":"/ram/analysis/v8logs/00000076.log","tainted":true,"recursive":{}},"76":{"details":"/ram/analysis/v8logs/00000077.log","tainted":true,"recursive":{}},"78":{"details":"","tainted":false,"recursive":{}},"79":{"details":"/ram/analysis/v8logs/00000078.log","tainted":true,"recursive":{}},"80":{"details":"","tainted":false,"recursive":{}},"81":{"details":"","tainted":false,"recursive":{}},"82":{"details":"/ram/analysis/v8logs/00000079.log","tainted":true,"recursive":{}},"84":{"details":"","tainted":false,"recursive":{}},"85":{"details":"","tainted":false,"recursive":{}},"86":{"details":"/ram/analysis/v8logs/0000007a.log","tainted":true,"recursive":{}},"88":{"details":"/ram/analysis/v8logs/0000007b.log","tainted":true,"recursive":{}},"89":{"details":"/ram/analysis/v8logs/0000007c.log","tainted":true,"recursive":{}},"90":{"details":"/ram/analysis/v8logs/0000007d.log","tainted":true,"recursive":{}},"92":{"details":"","tainted":false,"recursive":{}},"93":{"details":"","tainted":false,"recursive":{}},"94":{"details":"/ram/analysis/v8logs/0000007e.log","tainted":true,"recursive":{}},"length":{"details":"","tainted":false,"recursive":{}}}},"url":{"details":"","tainted":false,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x12a7c8b995f9 <JSFunction (sfi = 0x33aefc025c41)> ``: 8678
+(resolve, reject) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+        myHeaders.append("Content-Type", "application/json");
+        if (token) {
+            myHeaders.append("Authorization", `Bearer ${token}`);
+        }
+
+        let raw = JSON.stringify({
+            lines: data,
+            url: url
+        });
+
+        let requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow",
+        };
+        fetch(`${live_url}/api/extension/screenplay/match`, requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result);
+                if ("data" in data) {
+                    resolve({ data: data.data, autoPop: data.autoPop });
+                } else {
+                    resolve([]);
+                }
+            })
+            .catch((error) => console.log("error", error));
+    }
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<

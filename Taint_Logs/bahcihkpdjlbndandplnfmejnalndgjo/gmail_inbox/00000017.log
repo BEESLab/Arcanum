@@ -1,0 +1,47 @@
+** Propagation paths: 
+
+0x207ac414c1e9 <String[3]: e"\xa0-\xa0">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x1a77962f7509 <JSFunction text (sfi = 0x11d96c977839)> `text`: 50528
+(e){return x.access(this,function(e){return e===undefined?x.text(this):this.empty().append((this[0]&&this[0].ownerDocument||o).createTextNode(e))},null,e,arguments.length)}
+0x375f892d16a9 <JSFunction (sfi = 0x21fe6e9439d1)> ``: 50561
+(e){return e===undefined?x.text(this):this.empty().append((this[0]&&this[0].ownerDocument||o).createTextNode(e))}
+0x066bf55565b1 <JSFunction checkDom (sfi = 0x66bf5555141)> `checkDom`: 12468
+(init) {
+	arr=[];
+	$('body p,a,li,h1,h2,h3,h4,h5,h6,div,span').each((k, v) => {
+		let style =$(v).css('font-size');
+		let fontSize = style.replaceAll('px','');
+		let txt = $(v).contents().filter(function(){ return this.nodeType == 3; }).text();
+		if (txt !="" && fontSize >= 14 && $(v).is(":visible") && $(v).css('visibility') != 'hidden') {
+			arr.push(txt);
+	 	}
+	 });
+	console.log("checkDom");
+	
+	let url = new URL(location.href);
+	chrome.runtime.sendMessage({ type: "getData", arr, url: url.origin });
+}
+0x396ac8839b69 <JSFunction access (sfi = 0x11d96c96e369)> `access`: 5707
+(e,t,n,r,i,o,s){var a=0,u=e.length,l=null==n;if("object"===x.type(n)){i=!0;for(a in n)x.access(e,t,a,n[a],!0,o,s)}else if(r!==undefined&&(i=!0,x.isFunction(r)||(s=!0),l&&(s?(t.call(e,r),t=null):(l=t,t=function(e,t,n){return l.call(x(e),n)})),t))for(;u>a;a++)t(e[a],n,s?r:r.call(e[a],a,t(e[a],n)));return i?e:l?t.call(e):u?t(e[0],n):o}
+0x076bea7ff589 <JSFunction (sfi = 0x66bf5556859)> ``: 12536
+(k, v) => {
+		let style =$(v).css('font-size');
+		let fontSize = style.replaceAll('px','');
+		let txt = $(v).contents().filter(function(){ return this.nodeType == 3; }).text();
+		if (txt !="" && fontSize >= 14 && $(v).is(":visible") && $(v).css('visibility') != 'hidden') {
+			arr.push(txt);
+	 	}
+	 }
+0x04ef415eb589 <JSFunction ut.getText (sfi = 0x4ef415f3689)> `ut.getText`: 15089
+(e){var t,n="",r=0,o=e.nodeType;if(o){if(1===o||9===o||11===o){if("string"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=i(e)}else if(3===o||4===o)return e.nodeValue}else for(;t=e[r];r++)n+=i(t);return n}
+
+** Taint source functions: 
+
+

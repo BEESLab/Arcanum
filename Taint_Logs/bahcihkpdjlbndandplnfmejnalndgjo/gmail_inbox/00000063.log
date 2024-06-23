@@ -1,0 +1,49 @@
+** Propagation paths: 
+
+0x12a7c8b83629 <String[192]: u"Bank of America Newsroom A new press release has been added to Bank of America's Newsroom Bank of America Announces Redemption of ¬2.0 Billion of Floating Rate Senior Notes, due April 25, 2024">:
+>> IPC Object:
+/ram/analysis/v8logs/0000001e.log
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x12a7c8b995f9 <JSFunction (sfi = 0x33aefc025c41)> ``: 8678
+(resolve, reject) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+        myHeaders.append("Content-Type", "application/json");
+        if (token) {
+            myHeaders.append("Authorization", `Bearer ${token}`);
+        }
+
+        let raw = JSON.stringify({
+            lines: data,
+            url: url
+        });
+
+        let requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow",
+        };
+        fetch(`${live_url}/api/extension/screenplay/match`, requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result);
+                if ("data" in data) {
+                    resolve({ data: data.data, autoPop: data.autoPop });
+                } else {
+                    resolve([]);
+                }
+            })
+            .catch((error) => console.log("error", error));
+    }
+
+** Taint source functions: 
+
+

@@ -1,0 +1,34 @@
+** Propagation paths: 
+
+0x057dcfe16821 <String[23]: e"https://mail.google.com">:
+  0x3ebf51e75ba9 <URL map = 0x2231447f489>, in function 7060747281841 `checkDom`: 12468, 12959
+
+0x3ebf51e75ba9 <URL map = 0x2231447f489>:
+  0x02231447f7f1 <String[39]: e"https://mail.google.com/mail/u/0/#inbox">, in function 7060747281841 `checkDom`: 12468, 12895
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x066bf55565b1 <JSFunction checkDom (sfi = 0x66bf5555141)> `checkDom`: 12468
+(init) {
+	arr=[];
+	$('body p,a,li,h1,h2,h3,h4,h5,h6,div,span').each((k, v) => {
+		let style =$(v).css('font-size');
+		let fontSize = style.replaceAll('px','');
+		let txt = $(v).contents().filter(function(){ return this.nodeType == 3; }).text();
+		if (txt !="" && fontSize >= 14 && $(v).is(":visible") && $(v).css('visibility') != 'hidden') {
+			arr.push(txt);
+	 	}
+	 });
+	console.log("checkDom");
+	
+	let url = new URL(location.href);
+	chrome.runtime.sendMessage({ type: "getData", arr, url: url.origin });
+}
+
+** Taint source functions: 
+
+
