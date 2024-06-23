@@ -1,0 +1,34 @@
+** Propagation paths: 
+
+0x187667a2be01 <String[24]: e"https://www.facebook.com">:
+  0x3c891714caa9 <URL map = 0x187667a383b1>, in function 15687890509561 `checkDom`: 12468, 12959
+
+0x3c891714caa9 <URL map = 0x187667a383b1>:
+  0x187667a38689 <String[55]: e"https://www.facebook.com/profile.php?id=100084859195049">, in function 15687890509561 `checkDom`: 12468, 12895
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x0e449f241ef9 <JSFunction checkDom (sfi = 0x34cef7b56179)> `checkDom`: 12468
+(init) {
+	arr=[];
+	$('body p,a,li,h1,h2,h3,h4,h5,h6,div,span').each((k, v) => {
+		let style =$(v).css('font-size');
+		let fontSize = style.replaceAll('px','');
+		let txt = $(v).contents().filter(function(){ return this.nodeType == 3; }).text();
+		if (txt !="" && fontSize >= 14 && $(v).is(":visible") && $(v).css('visibility') != 'hidden') {
+			arr.push(txt);
+	 	}
+	 });
+	console.log("checkDom");
+	
+	let url = new URL(location.href);
+	chrome.runtime.sendMessage({ type: "getData", arr, url: url.origin });
+}
+
+** Taint source functions: 
+
+

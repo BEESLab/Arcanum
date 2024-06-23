@@ -1,0 +1,150 @@
+[234147:234202:0922/105455.015966:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[234147:234202:0922/105455.016141:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[234147:234201:0922/105455.020619:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[234147:234201:0922/105455.020683:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[234147:234147:0922/105455.026648:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[234209:234209:0922/105455.042610:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[234147:234147:0922/105455.049549:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[234147:234201:0922/105455.057732:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[234147:234201:0922/105455.057772:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[234209:234209:0922/105455.079041:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[234147:234201:0922/105455.107091:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[234147:234201:0922/105455.107185:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[234209:234209:0922/105455.187178:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[234251:234251:0922/105455.196480:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234252:234252:0922/105455.197638:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234147:234147:0922/105455.229096:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[234147:234270:0922/105455.269635:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[234147:234270:0922/105455.269739:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[234147:234270:0922/105455.269840:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[234147:234270:0922/105455.269864:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[234147:234270:0922/105455.269920:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[234147:234270:0922/105455.269975:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[234273:234273:0922/105455.386888:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234273:234282:0922/105455.422889:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js]
+[234283:234283:0922/105455.454228:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234210:234233:0922/105455.972498:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[234210:234233:0922/105455.973506:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[234302:234302:0922/105456.663509:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234304:234304:0922/105456.668685:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234147:234164:0922/105456.695641:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for www.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[234147:234147:0922/105456.843615:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[234147:234147:0922/105456.843986:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[234147:234164:0922/105456.968578:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for scontent.xx.fbcdn.net failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[234147:234164:0922/105456.981314:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for static.xx.fbcdn.net failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[234147:234147:0922/105457.074377:INFO:CONSOLE(1)] "trackingHelper: cached TV Loaded data [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[234147:234147:0922/105504.891987:INFO:CONSOLE(1)] "trackingHelper: begin [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[234147:234147:0922/105504.892431:INFO:CONSOLE(1)] "trackingHelper: fired TV Session Started [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[234147:234147:0922/105504.906178:INFO:CONSOLE(1)] "trackingHelper: Sending TV Loaded [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[234147:234147:0922/105504.919539:INFO:CONSOLE(1)] "trackingHelper: TV Loaded result [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[234147:234147:0922/105504.919872:INFO:CONSOLE(1)] "trackingHelper: end [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[234339:234339:0922/105505.287404:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234147:234147:0922/105505.491306:INFO:CONSOLE(22)] "all post ok", source: https://www.facebook.com/profile.php?id=100084859195049 (22)
+[234147:234147:0922/105505.492697:INFO:CONSOLE(25)] "1", source: https://www.facebook.com/profile.php?id=100084859195049 (25)
+[234147:234147:0922/105505.493201:INFO:CONSOLE(27)] "0", source: https://www.facebook.com/profile.php?id=100084859195049 (27)
+[234147:234147:0922/105505.494880:INFO:CONSOLE(52)] "head yes", source: https://www.facebook.com/profile.php?id=100084859195049 (52)
+[234147:234147:0922/105505.496140:INFO:CONSOLE(56)] "head done", source: https://www.facebook.com/profile.php?id=100084859195049 (56)
+[234147:234147:0922/105505.501128:INFO:CONSOLE(63)] "bio yes", source: https://www.facebook.com/profile.php?id=100084859195049 (63)
+[234147:234147:0922/105505.502094:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[234147:234147:0922/105505.502997:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[234147:234147:0922/105505.503842:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[234147:234147:0922/105505.504666:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[234147:234147:0922/105505.505499:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[234147:234147:0922/105505.506343:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[234147:234147:0922/105505.507167:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[234147:234147:0922/105505.507987:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[234147:234147:0922/105505.508725:INFO:CONSOLE(70)] "bio done", source: https://www.facebook.com/profile.php?id=100084859195049 (70)
+[234147:234147:0922/105505.809756:INFO:CONSOLE(558)] "GTM PTag v1.4; tagId: 2613487379772", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (558)
+[234147:234147:0922/105505.883012:INFO:CONSOLE(558)] "data =  [object Object]", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (558)
+[234147:234147:0922/105505.909138:INFO:CONSOLE(558)] "initData =  [object Object]", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (558)
+[234210:234233:0922/105507.033732:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[234210:234233:0922/105507.034669:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[234147:234147:0922/105508.436645:INFO:CONSOLE(558)] "Firing Pinterest event: pagevisit", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (558)
+[234147:234147:0922/105508.436923:INFO:CONSOLE(558)] "Event Data:", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (558)
+[234147:234147:0922/105508.437750:INFO:CONSOLE(558)] "[object Object]", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (558)
+[234147:234147:0922/105508.936799:INFO:CONSOLE(5)] "[TikTok Pixel] - Invalid pixel ID
+Issue: The pixel ID is invalid. This could prevent your pixel from receiving data.
+Suggestion: Please go to Events Manager and find the correct pixel ID.", source: https://analytics.tiktok.com/i18n/pixel/static/main.MWQ0NWRkZTlhMQ.js (5)
+[234147:234147:0922/105508.937083:INFO:CONSOLE(5)] "[TikTok Pixel] - Invalid pixel ID
+Issue: The pixel ID is invalid. This could prevent your pixel from receiving data.
+Suggestion: Please go to Events Manager and find the correct pixel ID.", source: https://analytics.tiktok.com/i18n/pixel/static/main.MWQ0NWRkZTlhMQ.js (5)
+[234365:234365:0922/105511.512445:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234373:234373:0922/105511.548025:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234385:234385:0922/105511.941500:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234396:234396:0922/105512.698445:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234302:234302:0922/105513.043049:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.facebook.com/profile.php?id=100084859195049"]
+[234147:234147:0922/105516.159025:INFO:CONSOLE(261)] "checkDom", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/content.js (261)
+[234147:234147:0922/105516.217571:INFO:CONSOLE(39)] "1429608297", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js (39)
+[234147:234147:0922/105516.424679:INFO:CONSOLE(50)] "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length')", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js (50)
+[234147:234147:0922/105516.488885:INFO:CONSOLE(301)] "Response from server [object Object]", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js (301)
+[234422:234422:0922/105518.370446:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[234210:234233:0922/105522.802909:WARNING:spdy_session.cc(3219)] Received RST for invalid stream15
+[234210:234233:0922/105522.802991:WARNING:spdy_session.cc(3219)] Received RST for invalid stream15
+[234147:234164:0922/105522.852162:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for edge-chat.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[234210:234233:0922/105524.983974:WARNING:spdy_session.cc(3219)] Received RST for invalid stream17
+[234210:234233:0922/105524.984101:WARNING:spdy_session.cc(3219)] Received RST for invalid stream17
+[234147:234147:0922/105532.147358:INFO:CONSOLE(59)] "ErrorUtils caught an error:
+
+missing footer data, url: https://l.facebook.com/l.php?u=AT3bHdXclCghHlqe_6_HOBQlEwq025KPvHhZJRD3972BM_ac7gk_UJJ0Xzt2_0AmWe9gjRqdClVQuS4BKUTscAJVtaFJeOfPJoo&h=AT1WQ6iEf9QBY8NlygmhZ-eyA8z6pSWc22tF6N26p64Tl9nJ4r4ciI8Qlvzuo44QgfHkR6IOf8grVOor_gf0ag_-TTwZXIa1Vo2hygddexy-brm2UvkxH3KTRTWJLgc&enc=1, headline: Other Life Event, footerBody: , meta: jetNnxQ7T.com
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs.", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (59)
+[234210:234233:0922/105536.348927:WARNING:spdy_session.cc(3219)] Received RST for invalid stream21
+[234210:234233:0922/105536.349085:WARNING:spdy_session.cc(3219)] Received RST for invalid stream21
+[234147:234147:0922/105536.350681:INFO:CONSOLE(231)] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[234147:234147:0922/105536.351791:INFO:CONSOLE(231)] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[234147:234147:0922/105536.352371:INFO:CONSOLE(231)] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[234147:234147:0922/105536.352880:INFO:CONSOLE(231)] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[234147:234147:0922/105541.138516:INFO:CONSOLE(37)] "all post again!!!!!!!!!!!", source: https://www.facebook.com/profile.php?id=100084859195049 (37)
+[234147:234147:0922/105541.139083:INFO:CONSOLE(41)] "3", source: https://www.facebook.com/profile.php?id=100084859195049 (41)
+[234147:234147:0922/105541.139556:INFO:CONSOLE(43)] "0", source: https://www.facebook.com/profile.php?id=100084859195049 (43)
+[234147:234147:0922/105541.140011:INFO:CONSOLE(43)] "1", source: https://www.facebook.com/profile.php?id=100084859195049 (43)
+[234147:234147:0922/105541.140824:INFO:CONSOLE(43)] "2", source: https://www.facebook.com/profile.php?id=100084859195049 (43)
+[234147:234147:0922/105547.018116:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=2359886203584511&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[234147:234147:0922/105554.886576:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=3260606129897471&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[234147:234147:0922/105556.567466:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[234147:234147:0922/105557.175473:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 413
+[234147:234147:0922/105557.175570:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 413
+[234147:234147:0922/105557.175820:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[234147:234147:0922/105557.175891:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters
+[234210:234233:0922/105559.648572:WARNING:spdy_session.cc(3219)] Received RST for invalid stream5
+[234210:234233:0922/105559.648649:WARNING:spdy_session.cc(3219)] Received RST for invalid stream5
+[234147:234147:0922/105559.658485:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=3260606129897471&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[234210:234233:0922/105600.281759:WARNING:spdy_session.cc(3219)] Received RST for invalid stream31
+[234210:234233:0922/105600.281896:WARNING:spdy_session.cc(3219)] Received RST for invalid stream31
+[234210:234233:0922/105600.281932:WARNING:spdy_session.cc(3219)] Received RST for invalid stream31
+[234210:234233:0922/105600.355391:WARNING:spdy_session.cc(3219)] Received RST for invalid stream7
+[234210:234233:0922/105600.355504:WARNING:spdy_session.cc(3219)] Received RST for invalid stream7
+[234147:234147:0922/105600.372689:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=4161326054113279&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[234147:234147:0922/105612.101129:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=4161326054113279&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[234147:234164:0922/105613.787875:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for edge-chat.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[234147:234147:0922/105616.508038:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=5062045980426239&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[234147:234147:0922/105625.607621:INFO:CONSOLE(0)] "Uncaught (in promise) Error: The browser is shutting down.", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js (0)
+[234147:234147:0922/105625.613070:ERROR:background_mode_manager_aura.cc(12)] Not implemented reached in virtual void BackgroundModeManager::EnableLaunchOnStartup(bool)
+[234147:234147:0922/105625.655028:WARNING:internal_linux.cc(67)] Failed to read /proc/234210/stat
+[234147:234147:0922/105625.655072:ERROR:kill_posix.cc(34)] waitpid(234210): No child processes (10)
+[234147:234165:0922/105625.656879:WARNING:discardable_shared_memory_manager.cc(436)] Some MojoDiscardableSharedMemoryManagerImpls are still alive. They will be leaked.
+[234147:234147:0922/105625.661869:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

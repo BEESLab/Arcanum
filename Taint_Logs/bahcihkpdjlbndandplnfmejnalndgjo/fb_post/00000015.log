@@ -1,0 +1,47 @@
+** Propagation paths: 
+
+0x187667a31d09 <String[14]: e"All reactions:">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x0e8d5101ec39 <JSFunction (sfi = 0x170ed3cb3259)> ``: 50561
+(e){return e===undefined?x.text(this):this.empty().append((this[0]&&this[0].ownerDocument||o).createTextNode(e))}
+0x0e449f241ef9 <JSFunction checkDom (sfi = 0x34cef7b56179)> `checkDom`: 12468
+(init) {
+	arr=[];
+	$('body p,a,li,h1,h2,h3,h4,h5,h6,div,span').each((k, v) => {
+		let style =$(v).css('font-size');
+		let fontSize = style.replaceAll('px','');
+		let txt = $(v).contents().filter(function(){ return this.nodeType == 3; }).text();
+		if (txt !="" && fontSize >= 14 && $(v).is(":visible") && $(v).css('visibility') != 'hidden') {
+			arr.push(txt);
+	 	}
+	 });
+	console.log("checkDom");
+	
+	let url = new URL(location.href);
+	chrome.runtime.sendMessage({ type: "getData", arr, url: url.origin });
+}
+0x3d5122182009 <JSFunction ut.getText (sfi = 0x3d0e07686079)> `ut.getText`: 15089
+(e){var t,n="",r=0,o=e.nodeType;if(o){if(1===o||9===o||11===o){if("string"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=i(e)}else if(3===o||4===o)return e.nodeValue}else for(;t=e[r];r++)n+=i(t);return n}
+0x1ae1019824f9 <JSFunction (sfi = 0xe449f2421a1)> ``: 12536
+(k, v) => {
+		let style =$(v).css('font-size');
+		let fontSize = style.replaceAll('px','');
+		let txt = $(v).contents().filter(function(){ return this.nodeType == 3; }).text();
+		if (txt !="" && fontSize >= 14 && $(v).is(":visible") && $(v).css('visibility') != 'hidden') {
+			arr.push(txt);
+	 	}
+	 }
+0x3d512218edb1 <JSFunction access (sfi = 0xcbe97d59c49)> `access`: 5707
+(e,t,n,r,i,o,s){var a=0,u=e.length,l=null==n;if("object"===x.type(n)){i=!0;for(a in n)x.access(e,t,a,n[a],!0,o,s)}else if(r!==undefined&&(i=!0,x.isFunction(r)||(s=!0),l&&(s?(t.call(e,r),t=null):(l=t,t=function(e,t,n){return l.call(x(e),n)})),t))for(;u>a;a++)t(e[a],n,s?r:r.call(e[a],a,t(e[a],n)));return i?e:l?t.call(e):u?t(e[0],n):o}
+0x1be4abcfb699 <JSFunction text (sfi = 0xcbe97d63119)> `text`: 50528
+(e){return x.access(this,function(e){return e===undefined?x.text(this):this.empty().append((this[0]&&this[0].ownerDocument||o).createTextNode(e))},null,e,arguments.length)}
+
+** Taint source functions: 
+
+

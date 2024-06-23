@@ -1,0 +1,63 @@
+>>> TAINT SINK `XHR` REACHED (fetch-body-USVString) <<<
+STACK TRACE START: 
+0x1dbc7f160dd1 <String[246]: c"chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js:242:9new Promise (<anonymous>)getDataApi (chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js:223:12)chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js:49:30">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://api3.likewiseapp.net/api/extension/screenplay/match
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: {"lines":["Amy Lee","2 friends","Friends","Message","More","Posts","About","Friends","Photos","Videos","Check-ins","Intro","my bio","Works at ","MyComputerCareer","Studied at ","Scream Queens","Went to ","High School Reunion","Lives in ","Atlanta, Georgia","From ","Koski Tl","In a relationship","anu","google.com","🎧","Listening to Music","Photos","See all photos","Write something to Amy...","Photo/video","Tag people","Feeling/activity","Posts","Filters"," is feeling happy in .","Amy Lee","Atlanta, GA","This is a rainy day!"," ","All reactions:","1","Amy Lee","2 comments","1 share","Like","Comment","Share","wowo","Thank you! ","Write a comment…"],"url":"https://www.facebook.com/profile.php?id=100084859195049"}
+
+** Propagation paths: 
+
+0x1dbc7f158361 <String[719]: uc"{"lines":["Amy Lee","2 friends","Friends","Message","More","Posts","About","Friends","Photos","Videos","Check-ins","Intro","my bio","Works at ","MyComputerCareer","Studied at ","Scream Queens","Went to ","High School Reunion","Lives in ","Atlanta, Georgia","From ","Koski Tl","In a relationship","anu","google.com","<\xdfa7","Listening to Music","Photos","See all photos","Write something to Amy...","Photo/video","Tag people","Feeling/activity","Posts","Filters"," is feeling happy in .","Amy Lee","Atlanta, GA","This is a rainy day!"," ","All reactions:","1","Amy Lee","2 comments","1 share","Like","Comment","Share","wowo","Thank you! ","Write a comment&"],"url":"https://www.facebook.com/profile.php?id=100084859195049"}">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"lines":{"details":"","tainted":false,"recursive":{"0":{"details":"/ram/analysis/v8logs/00000021.log","tainted":true,"recursive":{}},"1":{"details":"/ram/analysis/v8logs/00000022.log","tainted":true,"recursive":{}},"2":{"details":"","tainted":false,"recursive":{}},"3":{"details":"","tainted":false,"recursive":{}},"4":{"details":"","tainted":false,"recursive":{}},"5":{"details":"","tainted":false,"recursive":{}},"6":{"details":"","tainted":false,"recursive":{}},"8":{"details":"","tainted":false,"recursive":{}},"9":{"details":"","tainted":false,"recursive":{}},"10":{"details":"","tainted":false,"recursive":{}},"11":{"details":"","tainted":false,"recursive":{}},"12":{"details":"","tainted":false,"recursive":{}},"13":{"details":"/ram/analysis/v8logs/00000023.log","tainted":true,"recursive":{}},"14":{"details":"/ram/analysis/v8logs/00000024.log","tainted":true,"recursive":{}},"15":{"details":"/ram/analysis/v8logs/00000025.log","tainted":true,"recursive":{}},"16":{"details":"/ram/analysis/v8logs/00000026.log","tainted":true,"recursive":{}},"17":{"details":"/ram/analysis/v8logs/00000027.log","tainted":true,"recursive":{}},"18":{"details":"/ram/analysis/v8logs/00000028.log","tainted":true,"recursive":{}},"19":{"details":"/ram/analysis/v8logs/00000029.log","tainted":true,"recursive":{}},"20":{"details":"/ram/analysis/v8logs/0000002a.log","tainted":true,"recursive":{}},"21":{"details":"/ram/analysis/v8logs/0000002b.log","tainted":true,"recursive":{}},"22":{"details":"/ram/analysis/v8logs/0000002c.log","tainted":true,"recursive":{}},"23":{"details":"/ram/analysis/v8logs/0000002d.log","tainted":true,"recursive":{}},"24":{"details":"/ram/analysis/v8logs/0000002e.log","tainted":true,"recursive":{}},"25":{"details":"/ram/analysis/v8logs/0000002f.log","tainted":true,"recursive":{}},"26":{"details":"","tainted":false,"recursive":{}},"27":{"details":"","tainted":false,"recursive":{}},"29":{"details":"","tainted":false,"recursive":{}},"30":{"details":"","tainted":false,"recursive":{}},"31":{"details":"","tainted":false,"recursive":{}},"32":{"details":"","tainted":false,"recursive":{}},"33":{"details":"","tainted":false,"recursive":{}},"35":{"details":"","tainted":false,"recursive":{}},"36":{"details":"/ram/analysis/v8logs/00000030.log","tainted":true,"recursive":{}},"38":{"details":"/ram/analysis/v8logs/00000031.log","tainted":true,"recursive":{}},"39":{"details":"/ram/analysis/v8logs/00000032.log","tainted":true,"recursive":{}},"40":{"details":"/ram/analysis/v8logs/00000033.log","tainted":true,"recursive":{}},"41":{"details":"/ram/analysis/v8logs/00000034.log","tainted":true,"recursive":{}},"42":{"details":"/ram/analysis/v8logs/00000035.log","tainted":true,"recursive":{}},"44":{"details":"/ram/analysis/v8logs/00000036.log","tainted":true,"recursive":{}},"45":{"details":"/ram/analysis/v8logs/00000037.log","tainted":true,"recursive":{}},"46":{"details":"/ram/analysis/v8logs/00000038.log","tainted":true,"recursive":{}},"47":{"details":"/ram/analysis/v8logs/00000039.log","tainted":true,"recursive":{}},"48":{"details":"/ram/analysis/v8logs/0000003a.log","tainted":true,"recursive":{}},"49":{"details":"/ram/analysis/v8logs/0000003b.log","tainted":true,"recursive":{}},"50":{"details":"/ram/analysis/v8logs/0000003c.log","tainted":true,"recursive":{}},"51":{"details":"/ram/analysis/v8logs/0000003d.log","tainted":true,"recursive":{}},"length":{"details":"","tainted":false,"recursive":{}}}},"url":{"details":"","tainted":false,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x1dbc7f157009 <JSFunction (sfi = 0xcff7af24f79)> ``: 8678
+(resolve, reject) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+        myHeaders.append("Content-Type", "application/json");
+        if (token) {
+            myHeaders.append("Authorization", `Bearer ${token}`);
+        }
+
+        let raw = JSON.stringify({
+            lines: data,
+            url: url
+        });
+
+        let requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow",
+        };
+        fetch(`${live_url}/api/extension/screenplay/match`, requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result);
+                if ("data" in data) {
+                    resolve({ data: data.data, autoPop: data.autoPop });
+                } else {
+                    resolve([]);
+                }
+            })
+            .catch((error) => console.log("error", error));
+    }
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
