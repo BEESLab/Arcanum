@@ -1,0 +1,943 @@
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6c86d9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/518cRYanpbL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce870931 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/518cRYanpbL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce870861 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/518cRYanpbL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870861 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/518cRYanpbL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870861 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/518cRYanpbL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6cac11 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png
+
+** Propagation paths: 
+
+0x1340ce870a01 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+  0x1340ce870999 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870999 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870999 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6cd149 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png
+
+** Propagation paths: 
+
+0x1340ce870ad1 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+  0x1340ce870a69 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870a69 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870a69 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6cf681 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/41Xfz3eizpL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce870ba1 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41Xfz3eizpL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce870b39 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41Xfz3eizpL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870b39 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41Xfz3eizpL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870b39 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41Xfz3eizpL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6d1bb9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png
+
+** Propagation paths: 
+
+0x1340ce870c71 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+  0x1340ce870c09 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870c09 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870c09 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6d40f1 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png
+
+** Propagation paths: 
+
+0x1340ce870d41 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+  0x1340ce870cd9 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870cd9 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870cd9 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6d6629 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/41GYmjbeVSL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce870e11 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41GYmjbeVSL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce870da9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41GYmjbeVSL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870da9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41GYmjbeVSL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870da9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41GYmjbeVSL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6d8b61 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png
+
+** Propagation paths: 
+
+0x1340ce870ee1 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+  0x1340ce870e79 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870e79 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870e79 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6db099 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png
+
+** Propagation paths: 
+
+0x1340ce870fb1 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+  0x1340ce870f49 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce870f49 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce870f49 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6dd5d1 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/41xQKlqYxNL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce871081 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41xQKlqYxNL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce871019 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41xQKlqYxNL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871019 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41xQKlqYxNL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871019 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41xQKlqYxNL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6dfb09 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png
+
+** Propagation paths: 
+
+0x1340ce871151 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+  0x1340ce8710e9 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce8710e9 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce8710e9 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6e2041 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png
+
+** Propagation paths: 
+
+0x1340ce871221 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+  0x1340ce8711b9 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce8711b9 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce8711b9 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6e4579 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/51+HSOOoOQL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce8712f1 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/51+HSOOoOQL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce871289 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/51+HSOOoOQL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871289 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/51+HSOOoOQL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871289 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/51+HSOOoOQL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6e6ab1 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png
+
+** Propagation paths: 
+
+0x1340ce8713c1 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+  0x1340ce871359 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871359 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871359 <String[58]: e"https://m.media-amazon.com/images/I/216-OX9rBaL._SS72_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6e8fe9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png
+
+** Propagation paths: 
+
+0x1340ce871491 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+  0x1340ce871429 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871429 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871429 <String[59]: e"https://m.media-amazon.com/images/I/31FqTrWUyTL._SS180_.png">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6eb521 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/71IAZrrxIOL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce8716b1 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71IAZrrxIOL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce871629 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71IAZrrxIOL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871629 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71IAZrrxIOL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871629 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71IAZrrxIOL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6eda59 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/71IeAu2kDNL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce871781 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71IeAu2kDNL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce871719 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71IeAu2kDNL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871719 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71IeAu2kDNL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871719 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71IeAu2kDNL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6eff91 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/811W12m6w8L._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce871851 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/811W12m6w8L._AC_UL160_SR160,160_.jpg">:
+  0x1340ce8717e9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/811W12m6w8L._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce8717e9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/811W12m6w8L._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce8717e9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/811W12m6w8L._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6f24c9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/61mzlX3ucxL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce871921 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/61mzlX3ucxL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce8718b9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/61mzlX3ucxL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce8718b9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/61mzlX3ucxL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce8718b9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/61mzlX3ucxL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6f4a01 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/71wuOV6vrQL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce8719f1 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71wuOV6vrQL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce871989 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71wuOV6vrQL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871989 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71wuOV6vrQL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871989 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/71wuOV6vrQL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6f6f39 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/81ow+3OuHDL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce871ac1 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/81ow+3OuHDL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce871a59 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/81ow+3OuHDL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871a59 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/81ow+3OuHDL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871a59 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/81ow+3OuHDL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6f9471 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/41+TrTPcdtL._AC_UL160_SR160,160_.jpg
+
+** Propagation paths: 
+
+0x1340ce871b91 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41+TrTPcdtL._AC_UL160_SR160,160_.jpg">:
+  0x1340ce871b29 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41+TrTPcdtL._AC_UL160_SR160,160_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871b29 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41+TrTPcdtL._AC_UL160_SR160,160_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871b29 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41+TrTPcdtL._AC_UL160_SR160,160_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x20d17a6fb9a9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://images-na.ssl-images-amazon.com/images/I/41lLBXd-5YL._AC_UL100_SR100,100_.jpg
+
+** Propagation paths: 
+
+0x1340ce871c61 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41lLBXd-5YL._AC_UL100_SR100,100_.jpg">:
+  0x1340ce871bf9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41lLBXd-5YL._AC_UL100_SR100,100_.jpg">, in function 10815610159993 `r`: 5929, 5987
+  0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">, in function 10815610159993 `r`: 5929, 5989
+  0x1340ce871bf9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41lLBXd-5YL._AC_UL100_SR100,100_.jpg">, in function 36084074176729 ``: 6572, 6687
+
+0x1340ce871bf9 <String[85]: e"https://images-na.ssl-images-amazon.com/images/I/41lLBXd-5YL._AC_UL100_SR100,100_.jpg">:
+
+0x1340ce86c581 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x09d6349a0379 <JSFunction r (sfi = 0x1340ce86bfc9)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x2fd7ddc4bf19 <JSFunction _fixRelativeUris (sfi = 0x29768f117b79)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x20d17a6c60d9 <JSFunction (sfi = 0x1340ce86c069)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<

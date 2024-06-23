@@ -1,0 +1,16 @@
+** Propagation paths: 
+
+0x35b81cc2ac59 <String[3137]: uc"...<truncated>>">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x315bfbb552a9 <JSFunction ie (sfi = 0x29768f116769)> `ie`: 33037
+(){var A=document.cloneNode(!0),E=new he.Readability(A).parse(),e=null;E&&E.textContent&&(e=E.textContent,e=e.replace(/\n+/g," "),e=e.replace(/\t+/g," "),e=e.replace(/ +/g," ")),$=!0,chrome.runtime.sendMessage({type:"fetch",text:e});}
+
+** Taint source functions: 
+
+

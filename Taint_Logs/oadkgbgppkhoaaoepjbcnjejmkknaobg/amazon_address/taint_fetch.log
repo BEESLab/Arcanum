@@ -1,0 +1,33 @@
+>>> TAINT SINK `XHR` REACHED (fetch-body-USVString) <<<
+STACK TRACE START: 
+0x3f305c08c1d1 <String[148]: c"I (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/background.js:4:4300)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/background.js:4:5385">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://faas-tor1-70ca848e.doserverless.co/api/v1/web/fn-95174a8b-baf3-4efa-9cc6-420906f0d494/default/HuggingFaceFunction
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: {"inputs":" Skip to main content Your Account › Your Addresses Amy Lee1762 CLIFTON RD NEATLANTA, GA 30322-4001United StatesPhone number: ‪4701929199‬ Edit   |   Amy Lee1762 CLIFTON RD NEATLANTA, GA 30322-4001United StatesPhone number: ‪4701929199‬ Remove Amy Lee1762 CLIFTON RD NEATLANTA, GA 30322-4001United StatesPhone number: ‪4701929199‬ Erin Lee27 A ST SWJACKSONVILLE, AL 36265-2402United StatesPhone number: ‪+1 470 253 1212‬ Edit   |   Remove Erin Lee27 A ST SWJACKSONVILLE, AL 36265-2402United StatesPhone number: ‪+1 470 253 1212‬ Please note: Removing this address will not affect any pending orders being shipped to this address. To ensure uninterrupted fulfillment of future orders, please update any wishlists, subscribe and save settings and periodical subscriptions using this address. Jack Lee388 BLOSSOM STHOLBROOK, NY 11741-2906United StatesPhone number: ‪+1 470 253 1468‬ Edit   |   Remove Jack Lee388 BLOSSOM STHOLBROOK, NY 11741-2906United StatesPhone number: ‪+1 470 253 1468‬ Please note: Removing this address will not affect any pending orders being shipped to this address. To ensure uninterrupted fulfillment of future orders, please update any wishlists, subscribe and save settings and periodical subscriptions using this address. Related 1-Click Settings Change address on an open order Amazon devices for youPage 1 of 1 Start overPage 1 of 1 Get it as soon as Thursday, Sep 21FREE"}
+
+** Propagation paths: 
+
+0x3f305c08a809 <String[1413]: uc"...<truncated>>">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"inputs":{"details":"/ram/analysis/v8logs/00000002.log","tainted":true,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3842a746fc51 <JSFunction I (sfi = 0x47cf4535059)> `I`: 4278
+(e,t){switch(e){case"detectGPT":const s=await(await fetch("https://faas-tor1-70ca848e.doserverless.co/api/v1/web/fn-95174a8b-baf3-4efa-9cc6-420906f0d494/default/HuggingFaceFunction",{headers:{"Content-Type":"application/json"},method:"POST",body:JSON.stringify({inputs:t})})).json();return await k(),s;case"originality":var n=await chrome.storage.local.get("detectGPT_settings").then(async function(o){var i=!1,c=o.detectGPT_settings;if(c){var l=c.apikey,o=await fetch(v.SCANNING,{method:"POST",body:JSON.stringify({content:t}),headers:{"Content-Type":"application/json","X-OAI-API-KEY":l}}).then(r=>(r.status==422&&(i=!0),r.json())).then(r=>!i&&r.success&&r.score?{success:!0,point:r.score}:{success:!1,error:r.error}).catch(r=>({success:!1,error:"Error happended"}));return o}});return n}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
