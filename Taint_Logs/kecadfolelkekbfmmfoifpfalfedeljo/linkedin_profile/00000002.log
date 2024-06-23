@@ -1,0 +1,16 @@
+** Propagation paths: 
+
+0x259a01704919 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x259a017067b9 <JSFunction (sfi = 0x3deafb5e1431)> ``: 12725
+(){chrome.tabs.sendMessage(t,{message:"profilechanged",url:e.url})}
+
+** Taint source functions: 
+
+

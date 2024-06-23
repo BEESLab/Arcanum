@@ -1,0 +1,16 @@
+** Propagation paths: 
+
+0x006db243f011 <String[33]: "https://kendoemailapp.com/welcome">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x259a01702821 <JSFunction (sfi = 0x3deafb5e1431)> ``: 12725
+(){chrome.tabs.sendMessage(t,{message:"profilechanged",url:e.url})}
+
+** Taint source functions: 
+
+

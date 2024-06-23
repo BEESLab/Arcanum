@@ -1,0 +1,19 @@
+** Propagation paths: 
+
+0x09cd8c71d561 <String[12]: "Chromium/108">:
+  0x0e49767d6109 <String[8]: e"Chromium">, in function 10778429215537 ``: 732936, 732949
+  0x0e49767d6129 <String[3]: e"108">, in function 10778429215537 ``: 732936, 732961
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3f1f51cb8041 <JSFunction join (sfi = 0x144b85f6d351)> `join`: 0
+0x09cd8c71d331 <JSFunction (sfi = 0x276dccb33d19)> ``: 732936
+(e){return e.brand+"/"+e.version}
+
+** Taint source functions: 
+
+

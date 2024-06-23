@@ -1,0 +1,24 @@
+** Propagation paths: 
+
+0x2c879b2af061 <String[10]: >"sophiatian">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x2c879b2a9d79 <JSFunction (sfi = 0x330bb9e39069)> ``: 1099592
+(c){switch(c.label){case 0:return!t||!t.href||t.href.indexOf("/overlay/")>-1||t.href.indexOf("profile-video/")>-1?[2]:[4,ei(t.href,!1)];case 1:return[4,ri(n=c.sent())];case 2:if(r=c.sent(),n=n.split("?")[0],r&&(a=t.querySelector(e))){if(o=getComputedStyle(a).width,i=getComputedStyle(a).width,s=parseInt(i.toLocaleLowerCase().replace("px","")),l=parseInt(o.toLocaleLowerCase().replace("px","")),d=l>70,i=a.classList.contains("EntityPhoto-circle-5")||a.classList.contains("EntityPhoto-circle-5-ghost-person")?"50px":a.classList.contains("EntityPhoto-circle-7")||a.classList.contains("EntityPhoto-circle-7-ghost-person")?"80px":a.classList.contains("EntityPhoto-circle-6")||a.classList.contains("EntityPhoto-circle-6-ghost-person")?"60px":a.classList.contains("EntityPhoto-circle-3")||a.classList.contains("EntityPhoto-circle-3-ghost-person")?"33px":a.classList.contains("EntityPhoto-circle-4")||a.classList.contains("EntityPhoto-circle-4-ghost-person")?"40px":a.classList.contains("ember-view")&&104==s?"0":"".concat(s-20,"px"),(a=a.parentElement).querySelector(".kendo_item")||l<47)return[2];(u=document.createElement("button")).classList.add("kendo_item"),u.innerHTML=d?"last seen:".concat(Bo()(r).format("MMM Do")):'last seen<br><span style="font-size:11px!important;font-weight:600;">'.concat(Bo()(r).format("MMM Do"),"</span>"),u.style.cssText="width:".concat(o,";background-color:rgb(25 25 27);border-radius:5px;border:1px solid #4e6096;cursor:pointer;color:white;font-family:Arial;\n                        opacity:0.9;font-size:10px!important;padding:0px;text-decoration:none;line-height:9px!important; position:absolute; top:").concat(i,";left:0;z-index:40;font-stretch:condensed"),a.style.position="relative",a.appendChild(u)}return[2]}}
+0x2c879b2ae331 <JSFunction (sfi = 0x3aa502d69e11)> ``: 1106058
+(m){switch(m.label){case 0:if((e=e.split("?")[0]).match(/linkedin\.com\/talent\/profile\//i)&&(n=document.querySelector("a.personal-info__link"))){if(a=n.href.match(/linkedin\.com\/pub\/([a-z0-9\-]+)/i))return[2,r(a[1])];if(a=n.href.match(/linkedin\.com\/in\/([a-z0-9!"#$%&'()*+,.:;<=>?@\[\] ^_`{|}~-]+)/i))return[2,r(a[1])]}if(!e.match(/linkedin\.com\/talent\/search\/profile\//i))return[3,1];if(n=document.querySelector("a.personal-info__link")){if(a=n.href.match(/linkedin\.com\/pub\/([a-z0-9\-]+)/i))return[2,r(a[1])];if(a=n.href.match(/linkedin\.com\/in\/([a-z0-9!"#$%&'()*+,.:;<=>?@\[\] ^_`{|}~-]+)/i))return[2,r(a[1])]}return[3,6];case 1:return e.match(/linkedin\.com\/sales\/lead/i)?document.querySelector('a[href*="recent_activity"]')&&(o=document.querySelector('a[href*="recent_activity"]'),d=o.href.match(/linkedin\.com\/in\/([a-z0-9!"#$%&'()*+,.:;<=>?@\[\] ^_`{|}~-]+)/i))?[2,r(d[1].toString().toLowerCase())]:e&&t?(d=null===(c=null===(u=new URL(e).pathname)||void 0===u?void 0:u.split("/").pop())||void 0===c?void 0:c.split(",").shift())?[3,2]:(r(""),[3,4]):[3,4]:[3,5];case 2:return[4,(f=d,new Promise((function(e){var t="https://www.linkedin.com/voyager/api/identity/profiles/".concat(encodeURIComponent(f),"/profileView");fetch(t,{headers:{Accept:"application/vnd.linkedin.normalized+json","x-li-lang":"en_US","csrf-token":ni("JSESSIONID")}}).then((function(e){return e.json()})).then((function(t){var n=t.included.find((function(e){return e.publicIdentifier&&e.entityUrn=="urn:li:fs_miniProfile:"+t.data.profile.replace("urn:li:fs_profile:","")}));e(null==n?void 0:n.publicIdentifier)})).catch((function(t){e("")}))})))];case 3:i=m.sent(),r(i),m.label=4;case 4:return[3,6];case 5:if(e.match(/linkedin\.com\/pub/i))return(s=new URL(e).pathname.split("/")).length>5?(l=s[2]+"-"+s[5]+s[4]+s[3],[2,r(l)]):[2,void 0];if(d=e.match(/linkedin\.com\/in\/([a-z0-9!"#$%&'()*+,.:;<=>?@\[\] ^_`{|}~-]+)/i))return[2,r(d[1].toString().toLowerCase())];m.label=6;case 6:return[2,r("")]}var f}
+0x2e3686c5c9a1 <JSFunction (sfi = 0x330bb9e3e9d1)> ``: 1108495
+(t,n){chrome.runtime.sendMessage({contentScriptQuery:fe.inhistory,data:e},(function(e){t(e)}))}
+0x2c879b2a9f01 <JSFunction sent (sfi = 0x3aa502d63a91)> `sent`: 1080732
+(){if(1&a[0])throw a[1];return a[1]}
+0x2c879b2a9c21 <JSFunction i (sfi = 0x3aa502d63559)> `i`: 1080446
+(e){try{l(r.next(e))}catch(e){o(e)}}
+
+** Taint source functions: 
+
+

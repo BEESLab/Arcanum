@@ -1,0 +1,22 @@
+** Propagation paths: 
+
+0x2442773c5b81 <String[4]: "1035">:
+  0x3379a7a592a1 <String[38]: e"https://www.linkedin.com/company/1035/">, in function 39867886882545 ``: 1094664, 1094694
+  0x3379a7a592a1 <String[38]: e"https://www.linkedin.com/company/1035/">, in function 39867886882545 ``: 1094664, 1094710
+  0x3379a7a592a1 <String[38]: e"https://www.linkedin.com/company/1035/">, in function 39867886882545 ``: 1094664, 1094690
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3f1f51cb8041 <JSFunction join (sfi = 0x144b85f6d351)> `join`: 0
+0x2442773c4ef1 <JSFunction (sfi = 0x3aa502d73ba9)> ``: 1094664
+(e){var t;return((null===(t=e.href)||void 0===t?void 0:t.match(/\/company\/(\d+)/))||[])[1]||""}
+0x2442773c5d21 <JSFunction (sfi = 0x3aa502d73be1)> ``: 1094779
+(e){return e}
+
+** Taint source functions: 
+
+

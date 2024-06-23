@@ -1,0 +1,19 @@
+** Propagation paths: 
+
+0x13ea01bc8951 <String[13]: c"Not?A_Brand/8">:
+  0x25ce3237b561 <String[11]: e"Not?A_Brand">, in function 21895772407833 ``: 732936, 732949
+  0x25ce3237b581 <String[1]: e"8">, in function 21895772407833 ``: 732936, 732961
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x13ea01bc8819 <JSFunction (sfi = 0x276dccb33d19)> ``: 732936
+(e){return e.brand+"/"+e.version}
+0x3f1f51cb8041 <JSFunction join (sfi = 0x144b85f6d351)> `join`: 0
+
+** Taint source functions: 
+
+

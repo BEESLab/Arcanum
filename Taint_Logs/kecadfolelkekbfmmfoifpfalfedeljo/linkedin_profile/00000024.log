@@ -1,0 +1,19 @@
+** Propagation paths: 
+
+0x3deafb5fe1b1 <String[7]: u#Amy Lee>:
+>> IPC Object:
+/ram/analysis/v8logs/00000012.log
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x030c3c084739 <JSFunction (sfi = 0x3deafb5ec391)> ``: 11642
+(t){!i&&t&&t.widgettop&&t.widgettop>20&&(i=t.widgettop),n(t)}
+
+** Taint source functions: 
+
+
