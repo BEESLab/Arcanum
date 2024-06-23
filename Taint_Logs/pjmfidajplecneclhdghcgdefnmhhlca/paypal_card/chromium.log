@@ -1,0 +1,62 @@
+[124092:124146:0929/064259.543760:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[124092:124146:0929/064259.543932:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[124092:124145:0929/064259.548281:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[124092:124145:0929/064259.548328:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[124092:124092:0929/064259.557263:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[124154:124154:0929/064259.566660:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[124092:124092:0929/064259.577892:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[124092:124145:0929/064259.585623:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[124092:124145:0929/064259.585671:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[124154:124154:0929/064259.603797:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[124092:124145:0929/064259.631993:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[124092:124145:0929/064259.632072:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[124154:124154:0929/064259.710662:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[124201:124201:0929/064259.715984:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[124202:124202:0929/064259.723490:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[124092:124092:0929/064259.747966:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[124092:124220:0929/064259.787674:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[124092:124220:0929/064259.787822:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[124092:124220:0929/064259.788521:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[124092:124220:0929/064259.788546:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[124092:124220:0929/064259.788576:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[124092:124220:0929/064259.788608:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[124224:124224:0929/064259.906048:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[124224:124233:0929/064259.953029:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/background.js]
+[124235:124235:0929/064259.992335:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[124092:124092:0929/064300.055624:INFO:CONSOLE(92)] "", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (92)
+[124256:124256:0929/064300.893930:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[124278:124278:0929/064301.395603:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[124092:124092:0929/064301.507807:INFO:CONSOLE(101)] "https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (101)
+[124092:124092:0929/064302.878627:INFO:CONSOLE(101)] "https://changingroom.eco/welcome-change-maker", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (101)
+[124155:124177:0929/064303.131923:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124155:124177:0929/064303.134606:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124155:124177:0929/064303.135401:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124155:124177:0929/064303.136237:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124155:124177:0929/064303.137014:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124155:124177:0929/064303.137685:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124092:124092:0929/064303.311417:INFO:CONSOLE(1)] "Failed to decode downloaded font: https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Regular.woff2", source: https://www.paypalobjects.com/ui-web/consumer-home/header-footer/1.79.0/cw-utils-header-footer.js (1)
+[124092:124092:0929/064303.311898:INFO:CONSOLE(1)] "OTS parsing error: Failed to convert WOFF 2.0 font to SFNT", source: https://www.paypalobjects.com/ui-web/consumer-home/header-footer/1.79.0/cw-utils-header-footer.js (1)
+[124092:124092:0929/064303.346794:INFO:CONSOLE(0)] "Access to font at 'https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2' from origin 'https://changingroom.eco' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://changingroom.eco/welcome-change-maker (0)
+[124092:124092:0929/064303.347771:INFO:CONSOLE(0)] "Access to font at 'https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh50XSwiPGQ.woff2' from origin 'https://changingroom.eco' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://changingroom.eco/welcome-change-maker (0)
+[124092:124092:0929/064303.350493:INFO:CONSOLE(0)] "Access to font at 'https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wXg.woff2' from origin 'https://changingroom.eco' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://changingroom.eco/welcome-change-maker (0)
+[124092:124092:0929/064303.350868:INFO:CONSOLE(0)] "Access to font at 'https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPGQ.woff2' from origin 'https://changingroom.eco' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://changingroom.eco/welcome-change-maker (0)
+[124092:124092:0929/064303.379437:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected number in JSON at position 16490", source: https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q (1)
+[124155:124177:0929/064303.474792:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124155:124177:0929/064303.479262:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124155:124177:0929/064303.774250:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[124092:124092:0929/064303.780386:INFO:CONSOLE(0)] "Access to font at 'https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Regular.woff' from origin 'https://www.paypal.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q (0)
+[124296:124296:0929/064304.200960:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[124256:124256:0929/064304.251351:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q"]
+[124201:124201:0929/064304.313361:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://changingroom.eco/welcome-change-maker"]
+[124092:124092:0929/064304.335309:INFO:CONSOLE(13)] "[batch] MIXPANEL REQUEST: [object Object]", source: https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js (13)
+[124092:124092:0929/064304.345778:INFO:CONSOLE(92)] "https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (92)
+[124092:124092:0929/064307.959871:INFO:CONSOLE(0)] "Access to fetch at 'https://www.changingroom.eco/api/html_parser' from origin 'https://changingroom.eco' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://changingroom.eco/welcome-change-maker (0)
+[124092:124092:0929/064307.960065:INFO:CONSOLE(65)] "Uncaught (in promise) TypeError: Failed to fetch", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/content_script.js (65)
+[124092:124092:0929/064308.322618:INFO:CONSOLE(0)] "Access to fetch at 'https://www.changingroom.eco/api/html_parser' from origin 'https://www.paypal.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q (0)
+[124092:124092:0929/064308.324991:INFO:CONSOLE(65)] "Uncaught (in promise) TypeError: Failed to fetch", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/content_script.js (65)
+[124092:124092:0929/064308.679224:INFO:CONSOLE(13)] "[batch] MIXPANEL REQUEST: [object Object]", source: https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js (13)
+[124092:124092:0929/064311.207847:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[124092:124092:0929/064401.471372:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 414
+[124092:124092:0929/064401.471471:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 414
+[124092:124092:0929/064401.471747:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[124092:124092:0929/064401.471814:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters
