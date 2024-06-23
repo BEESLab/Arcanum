@@ -1,0 +1,47 @@
+** Propagation paths: 
+
+0x3728df7648a1 <JSArray[0]>:
+  0x3728df753621 <JSArray[0]>, in function 26258422585649 `Ya`: 643159, 644766
+  0x3728df753621 <JSArray[0]>, in function 26258422585649 `Ya`: 643159, 644957
+
+0x3728df753621 <JSArray[0]>:
+  0x3728df752351 <Object map = 0x8dd41e28b81>, in function 26258422585649 `Ya`: 643159, 644918
+
+0x3728df752351 <Object map = 0x8dd41e28b81>:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x05ad4d0c6d11 <JSFunction Kr (sfi = 0xd8eb0079d49)> `Kr`: 613129
+(e,t){return qr.call(e)===`[object ${t}]`}
+0x17e1c3f34c49 <JSFunction ii (sfi = 0xd8eb0079f29)> `ii`: 613409
+(e){return"undefined"!=typeof Event&&si(e,Event)}
+0x17e1c3f34c09 <JSFunction ri (sfi = 0xd8eb0079ed9)> `ri`: 613372
+(e){return Kr(e,"Object")}
+0x01876a823291 <JSFunction _sendEventToWorker (sfi = 0x80088891aa1)> `_sendEventToWorker`: 766909
+(e){return this._worker.postMessage("addEvent",JSON.stringify(e))}
+0x3728df763869 <JSFunction (sfi = 0x13b50ca749f1)> ``: 644175
+(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}
+0x3728df760911 <JSFunction (sfi = 0x13b50ca749f1)> ``: 644175
+(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}
+0x3728df7564f1 <JSFunction (sfi = 0x13b50ca74599)> ``: 643376
+(n){if(e)t.delete(n);else for(let e=0;e<t.length;e++)if(t[e]===n){t.splice(e,1);break}}
+0x17e1c3f34f09 <JSFunction Ii (sfi = 0xd8eb007a389)> `Ii`: 615342
+(e){if(Jr(e))return{message:e.message,name:e.name,stack:e.stack,...Mi(e)};if(ii(e)){const t={type:e.type,target:wi(e.target),currentTarget:wi(e.currentTarget),...Mi(e)};return"undefined"!=typeof CustomEvent&&si(e,CustomEvent)&&(t.detail=e.detail),t}return e}
+0x17e1c3f34ac9 <JSFunction Jr (sfi = 0xd8eb0079cf9)> `Jr`: 612984
+(e){switch(qr.call(e)){case"[object Error]":case"[object Exception]":case"[object DOMException]":return!0;default:return si(e,Error)}}
+0x17e1c3f35931 <JSFunction Ya (sfi = 0xd8eb007c299)> `Ya`: 643159
+(e,t,r=1/0,i=1/0,a=function(){const e="function"==typeof WeakSet,t=e?new WeakSet:[];return[function(n){if(e)return!!t.has(n)||(t.add(n),!1);for(let e=0;e<t.length;e++)if(t[e]===n)return!0;return t.push(n),!1},function(n){if(e)t.delete(n);else for(let e=0;e<t.length;e++)if(t[e]===n){t.splice(e,1);break}}]}()){const[o,s]=a;if(null==t||["number","boolean","string"].includes(typeof t)&&!oi(t))return t;const l=function(e,t){try{if("domain"===e&&t&&"object"==typeof t&&t._events)return"[Domain]";if("domainEmitter"===e)return"[DomainEmitter]";if(void 0!==n.g&&t===n.g)return"[Global]";if("undefined"!=typeof window&&t===window)return"[Window]";if("undefined"!=typeof document&&t===document)return"[Document]";if(ri(r=t)&&"nativeEvent"in r&&"preventDefault"in r&&"stopPropagation"in r)return"[SyntheticEvent]";if("number"==typeof t&&t!=t)return"[NaN]";if("function"==typeof t)return`[Function: ${ma(t)}]`;if("symbol"==typeof t)return`[${String(t)}]`;if("bigint"==typeof t)return`[BigInt: ${String(t)}]`;const i=function(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}(t);return/^HTML(\w*)Element$/.test(i)?`[HTMLElement: ${i}]`:`[object ${i}]`}catch(e){return`**non-serializable** (${e})`}var r}(e,t);if(!l.startsWith("[object "))return l;if(t.__sentry_skip_normalization__)return t;const c="number"==typeof t.__sentry_override_normalization_depth__?t.__sentry_override_normalization_depth__:r;if(0===c)return l.replace("object ","");if(o(t))return"[Circular ~]";const u=t;if(u&&"function"==typeof u.toJSON)try{return Ya("",u.toJSON(),c-1,i,a)}catch(e){}const d=Array.isArray(t)?[]:{};let f=0;const p=Ii(t);for(const e in p){if(!Object.prototype.hasOwnProperty.call(p,e))continue;if(f>=i){d[e]="[MaxProperties ~]";break}const t=p[e];d[e]=Ya(e,t,c-1,i,a),f++}return s(t),d}
+0x3728df75ff39 <JSFunction (sfi = 0x13b50ca73141)> ``: 643576
+(e,t){try{if("domain"===e&&t&&"object"==typeof t&&t._events)return"[Domain]";if("domainEmitter"===e)return"[DomainEmitter]";if(void 0!==n.g&&t===n.g)return"[Global]";if("undefined"!=typeof window&&t===window)return"[Window]";if("undefined"!=typeof document&&t===document)return"[Document]";if(ri(r=t)&&"nativeEvent"in r&&"preventDefault"in r&&"stopPropagation"in r)return"[SyntheticEvent]";if("number"==typeof t&&t!=t)return"[NaN]";if("function"==typeof t)return`[Function: ${ma(t)}]`;if("symbol"==typeof t)return`[${String(t)}]`;if("bigint"==typeof t)return`[BigInt: ${String(t)}]`;const i=function(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}(t);return/^HTML(\w*)Element$/.test(i)?`[HTMLElement: ${i}]`:`[object ${i}]`}catch(e){return`**non-serializable** (${e})`}var r}
+0x3728df762ec1 <JSFunction (sfi = 0x13b50ca73141)> ``: 643576
+(e,t){try{if("domain"===e&&t&&"object"==typeof t&&t._events)return"[Domain]";if("domainEmitter"===e)return"[DomainEmitter]";if(void 0!==n.g&&t===n.g)return"[Global]";if("undefined"!=typeof window&&t===window)return"[Window]";if("undefined"!=typeof document&&t===document)return"[Document]";if(ri(r=t)&&"nativeEvent"in r&&"preventDefault"in r&&"stopPropagation"in r)return"[SyntheticEvent]";if("number"==typeof t&&t!=t)return"[NaN]";if("function"==typeof t)return`[Function: ${ma(t)}]`;if("symbol"==typeof t)return`[${String(t)}]`;if("bigint"==typeof t)return`[BigInt: ${String(t)}]`;const i=function(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}(t);return/^HTML(\w*)Element$/.test(i)?`[HTMLElement: ${i}]`:`[object ${i}]`}catch(e){return`**non-serializable** (${e})`}var r}
+0x3728df7564b1 <JSFunction (sfi = 0x13b50ca74549)> ``: 643258
+(n){if(e)return!!t.has(n)||(t.add(n),!1);for(let e=0;e<t.length;e++)if(t[e]===n)return!0;return t.push(n),!1}
+
+** Taint source functions: 
+
+

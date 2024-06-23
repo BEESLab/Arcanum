@@ -1,0 +1,18 @@
+** Propagation paths: 
+
+0x077c35c54e11 <String[5]: "*****">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x01876a823291 <JSFunction _sendEventToWorker (sfi = 0x80088891aa1)> `_sendEventToWorker`: 766909
+(e){return this._worker.postMessage("addEvent",JSON.stringify(e))}
+0x17e1c3f37039 <JSFunction Al (sfi = 0xd8eb007f9d9)> `Al`: 710527
+({input:e,maskInputSelector:t,unmaskInputSelector:n,maskInputOptions:r,tagName:i,type:a,value:o,maskInputFn:s}){let l=o||"";return n&&e.matches(n)||(e.hasAttribute("data-rr-is-password")&&(a="password"),(Ml({maskInputOptions:r,tagName:i,type:a})||t&&e.matches(t))&&(l=s?s(l):"*".repeat(l.length))),l}
+
+** Taint source functions: 
+
+

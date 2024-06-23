@@ -1,0 +1,24 @@
+** Propagation paths: 
+
+0x2d7e5d1678e1 <String[9]: "instagram">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"0":{"details":"/ram/analysis/v8logs/0000045c.log","tainted":true,"recursive":{}},"length":{"details":"","tainted":false,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x2d7e5d149291 <JSFunction cleanTheUrlName (sfi = 0x14aeae02e8d1)> `cleanTheUrlName`: 854382
+(e){return(e=(e=e.replace("official","")).replace("-et-","&")).replace("-","")}
+0x2d7e5d149259 <JSFunction getPossibleListOfBrandNamesGivenURL (sfi = 0x14aeae02e881)> `getPossibleListOfBrandNamesGivenURL`: 853782
+(e){let t=[];const n=e.indexOf("://")+3;let r=e.slice(n);An.info(`SHADE | website brand detection | url without the start: "${r}"`)(),0==r.indexOf("www.")&&(r=r.slice(4)),An.info(`SHADE | website brand detection | removed "www": "${r}"`)();let i=r.substr(0,r.indexOf("."));i=this.cleanTheUrlName(i),An.info(`SHADE | website brand detection | before the dot: "${i}"`)(),t.push(i);const a=r.slice(i.length+1);let o=a.substr(0,a.indexOf("."));return o=this.cleanTheUrlName(o),t.push(o),t=t.filter(Boolean),An.info("SHADE | website brand detection | list of possible names:",t)(),t}
+0x104a6f141b19 <JSFunction join (sfi = 0xd2af64ad351)> `join`: 0
+0x17e1c3f34e09 <JSFunction pi (sfi = 0xd8eb007a159)> `pi`: 614666
+(e,t){if(!Array.isArray(e))return"";const n=[];for(let t=0;t<e.length;t++){const r=e[t];try{n.push(String(r))}catch(e){n.push("[value cannot be serialized]")}}return n.join(t)}
+
+** Taint source functions: 
+
+

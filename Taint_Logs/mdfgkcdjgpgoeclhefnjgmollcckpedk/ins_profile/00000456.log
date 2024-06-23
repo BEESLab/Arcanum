@@ -1,0 +1,20 @@
+** Propagation paths: 
+
+0x2d7e5d1591a1 <String[73]: c"SHADE | website brand detection | removed "www": "instagram.com/xqgtiti/"">:
+  0x2d7e5d158ce9 <String[22]: "instagram.com/xqgtiti/">, in function 50020750758489 `getPossibleListOfBrandNamesGivenURL`: 853782, 854014
+
+0x2d7e5d158ce9 <String[22]: "instagram.com/xqgtiti/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x2d7e5d149259 <JSFunction getPossibleListOfBrandNamesGivenURL (sfi = 0x14aeae02e881)> `getPossibleListOfBrandNamesGivenURL`: 853782
+(e){let t=[];const n=e.indexOf("://")+3;let r=e.slice(n);An.info(`SHADE | website brand detection | url without the start: "${r}"`)(),0==r.indexOf("www.")&&(r=r.slice(4)),An.info(`SHADE | website brand detection | removed "www": "${r}"`)();let i=r.substr(0,r.indexOf("."));i=this.cleanTheUrlName(i),An.info(`SHADE | website brand detection | before the dot: "${i}"`)(),t.push(i);const a=r.slice(i.length+1);let o=a.substr(0,a.indexOf("."));return o=this.cleanTheUrlName(o),t.push(o),t=t.filter(Boolean),An.info("SHADE | website brand detection | list of possible names:",t)(),t}
+0x104a6f141b19 <JSFunction join (sfi = 0xd2af64ad351)> `join`: 0
+
+** Taint source functions: 
+
+

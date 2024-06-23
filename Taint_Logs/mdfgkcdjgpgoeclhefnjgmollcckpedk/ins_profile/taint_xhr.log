@@ -1,0 +1,66 @@
+>>> TAINT SINK `XHR` REACHED (xml-send-body-FormData-value) <<<
+STACK TRACE START: 
+0x36ffc74aaaa9 <String[249]: c"Object.send (https://static.cdninstagram.com/rsrc.php/v3i9Ja4/yn/l/makehaste_jhash/uzCk5VOWDLH.js?_nc_x=Ij3Wp8lg5Kz:1822:2280)https://static.cdninstagram.com/rsrc.php/v3i9Ja4/yn/l/makehaste_jhash/uzCk5VOWDLH.js?_nc_x=Ij3Wp8lg5Kz:1831:6311<anonymous>">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** XHR leak, request URL = https://www.instagram.com/ajax/bz?__a=1&__ccg=UNKNOWN&__comet_req=7&__d=www&__hs=19615.HYP%3Ainstagram_web_pkg.2.1..0.1&__hsi=7279116329630935303&__req=d&__rev=1008662111&__s=gmr2la%3Arfjve3%3Arfjve3&__spin_b=trunk&__spin_r=1008662111&__spin_t=1694801340&__user=0&dpr=1&fb_dtsg=NAcOQBuMWP5HnNRTwrT44oCNe6v4UEP9v2nWV6nTeXc2DoN3ng9VkGA%3A17864329786054772%3A1694801279&jazoest=26090&lsd=QiOwekhEr4x7GNfDdB4WsQ&ph=C3
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: [{"app_id":"936619743392459","posts":"0","user":"17841453226275010","webSessionId":"gmr2la:rfjve3:rfjve3","trigger":"gk2_exposure","send_method":"ajax","compression":"deflate","snappy_ms":401}]
+
+** Propagation paths: 
+
+0x36ffc7491d11 <String[193]: c"[{"app_id":"936619743392459","posts":"0","user":"17841453226275010","webSessionId":"gmr2la:rfjve3:rfjve3","trigger":"gk2_exposure","send_method":"ajax","compression":"deflate","snappy_ms":401}]">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"0":{"details":"","tainted":false,"recursive":{"app_id":{"details":"","tainted":false,"recursive":{}},"posts":{"details":"/ram/analysis/v8logs/0000040a.log","tainted":true,"recursive":{}},"user":{"details":"","tainted":false,"recursive":{}},"webSessionId":{"details":"","tainted":false,"recursive":{}},"trigger":{"details":"","tainted":false,"recursive":{}},"send_method":{"details":"","tainted":false,"recursive":{}},"compression":{"details":"","tainted":false,"recursive":{}},"snappy_ms":{"details":"","tainted":false,"recursive":{}}}},"length":{"details":"","tainted":false,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x1fef29575b71 <JSFunction send (sfi = 0x163c4eee889)> `send`: 2658272
+(a,b,d,e){var f,g=m.getEndPointUrl(!1);g=c("ZeroRewrites").rewriteURI(new(c("URI"))(g));c("ExecutionEnvironment").isInWorker&&(g=g.getQualifiedURI());var i=c("ZeroRewrites").getTransportBuilderForURI(g)();i.open(l,g.toString(),!0);e===!0?i.onreadystatechange=function(){if(i.readyState>=4){var a=h.indexOf(i);a>=0&&h.splice(a,1);try{a=i.status}catch(b){a=0}a===200?(b&&b(),c("NetworkStatus").reportSuccess()):(d&&d(a),c("NetworkStatus").reportError())}}:i.onreadystatechange=function(){c("JSScheduler").scheduleNormalPriCallback(function(){if(i.readyState>=4){var a=h.indexOf(i);a>=0&&h.splice(a,1);try{a=i.status}catch(b){a=0}a===200?(b&&b(),c("NetworkStatus").reportSuccess(),m.inform(c("BanzaiConsts").OK)):(d&&d(a),c("NetworkStatus").reportError(),m.inform(c("BanzaiConsts").ERROR))}})};h.push(i);c("NetworkStatus").isOnline()?i.send(a):f=c("NetworkStatus").onChange(function(b){b=b.online;b&&(i.send(a),f.remove())})}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `XHR` REACHED (xml-send-body-FormData-value) <<<
+STACK TRACE START: 
+0x1a13f44e17a1 <String[249]: c"Object.send (https://static.cdninstagram.com/rsrc.php/v3i9Ja4/yn/l/makehaste_jhash/uzCk5VOWDLH.js?_nc_x=Ij3Wp8lg5Kz:1822:2280)https://static.cdninstagram.com/rsrc.php/v3i9Ja4/yn/l/makehaste_jhash/uzCk5VOWDLH.js?_nc_x=Ij3Wp8lg5Kz:1831:6311<anonymous>">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** XHR leak, request URL = https://www.instagram.com/ajax/bz?__a=1&__ccg=UNKNOWN&__comet_req=7&__d=www&__hs=19615.HYP%3Ainstagram_web_pkg.2.1..0.1&__hsi=7279116329630935303&__req=f&__rev=1008662111&__s=gmr2la%3Arfjve3%3Arfjve3&__spin_b=trunk&__spin_r=1008662111&__spin_t=1694801340&__user=0&dpr=1&fb_dtsg=NAcOQBuMWP5HnNRTwrT44oCNe6v4UEP9v2nWV6nTeXc2DoN3ng9VkGA%3A17864329786054772%3A1694801279&jazoest=26090&lsd=QiOwekhEr4x7GNfDdB4WsQ&ph=C3
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: [{"app_id":"936619743392459","posts":"0","user":"17841453226275010","webSessionId":"gmr2la:rfjve3:rfjve3","trigger":"gk2_exposure","send_method":"ajax","compression":"deflate","snappy_ms":31}]
+
+** Propagation paths: 
+
+0x1a13f44c99c1 <String[192]: c"[{"app_id":"936619743392459","posts":"0","user":"17841453226275010","webSessionId":"gmr2la:rfjve3:rfjve3","trigger":"gk2_exposure","send_method":"ajax","compression":"deflate","snappy_ms":31}]">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"0":{"details":"","tainted":false,"recursive":{"app_id":{"details":"","tainted":false,"recursive":{}},"posts":{"details":"/ram/analysis/v8logs/0000041d.log","tainted":true,"recursive":{}},"user":{"details":"","tainted":false,"recursive":{}},"webSessionId":{"details":"","tainted":false,"recursive":{}},"trigger":{"details":"","tainted":false,"recursive":{}},"send_method":{"details":"","tainted":false,"recursive":{}},"compression":{"details":"","tainted":false,"recursive":{}},"snappy_ms":{"details":"","tainted":false,"recursive":{}}}},"length":{"details":"","tainted":false,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x1fef29575b71 <JSFunction send (sfi = 0x163c4eee889)> `send`: 2658272
+(a,b,d,e){var f,g=m.getEndPointUrl(!1);g=c("ZeroRewrites").rewriteURI(new(c("URI"))(g));c("ExecutionEnvironment").isInWorker&&(g=g.getQualifiedURI());var i=c("ZeroRewrites").getTransportBuilderForURI(g)();i.open(l,g.toString(),!0);e===!0?i.onreadystatechange=function(){if(i.readyState>=4){var a=h.indexOf(i);a>=0&&h.splice(a,1);try{a=i.status}catch(b){a=0}a===200?(b&&b(),c("NetworkStatus").reportSuccess()):(d&&d(a),c("NetworkStatus").reportError())}}:i.onreadystatechange=function(){c("JSScheduler").scheduleNormalPriCallback(function(){if(i.readyState>=4){var a=h.indexOf(i);a>=0&&h.splice(a,1);try{a=i.status}catch(b){a=0}a===200?(b&&b(),c("NetworkStatus").reportSuccess(),m.inform(c("BanzaiConsts").OK)):(d&&d(a),c("NetworkStatus").reportError(),m.inform(c("BanzaiConsts").ERROR))}})};h.push(i);c("NetworkStatus").isOnline()?i.send(a):f=c("NetworkStatus").onChange(function(b){b=b.online;b&&(i.send(a),f.remove())})}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<

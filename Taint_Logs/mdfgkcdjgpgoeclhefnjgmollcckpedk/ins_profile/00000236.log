@@ -1,0 +1,163 @@
+** Propagation paths: 
+
+0x3fff7a8f4f79 <Object map = 0x22360b19f719>:
+  0x3d13bf232be1 <HeapNumber 3.0>, in function 26258422585521 `Ba`: 642902, 642937
+  0x380c89ebf921 <Object map = 0x22360b19f719>, in function 26258422585521 `Ba`: 642902, 642935
+  0x380c89ebf921 <Object map = 0x22360b19f719>, in function 26258422585649 `Ya`: 643159, 644766
+  0x380c89ebf921 <Object map = 0x22360b19f719>, in function 26258422585649 `Ya`: 643159, 644957
+
+0x3d13bf232be1 <HeapNumber 3.0>:
+  0x29a55b91dc79 <Object map = 0x2533027785c9>, in function 26258422585649 `Ya`: 643159, 644498
+
+0x29a55b91dc79 <Object map = 0x2533027785c9>:
+  0x35bc1c5119d1 <Is map = 0x25f9c71f6e69>, in function 23065693546617 ``: 649262, 649285
+
+0x35bc1c5119d1 <Is map = 0x25f9c71f6e69>:
+  0x1e39d8564861 <Is map = 0x25f9c71f6e69>, in function 67155020355697 ``: 683256, 683309
+  0x1e39d8564861 <Is map = 0x25f9c71f6e69>, in function 67155020355697 ``: 683256, 683279
+  0x14fa66791161 <Object map = 0x2533027785c9>, in function 23065693546617 ``: 649262, 649282
+
+0x1e39d8564861 <Is map = 0x25f9c71f6e69>:
+  0x3d13bf232be1 <HeapNumber 3.0>, in function 23065693546617 ``: 649262, 649292
+  0x14fa66793c69 <Object map = 0x2533027785c9>, in function 23065693546617 ``: 649262, 649282
+  0x223f307c7361 <Is map = 0x13b50ca5a559>, in function 26258422590761 `Ks`: 695852, 695890
+
+0x14fa66793c69 <Object map = 0x2533027785c9>:
+  0x3d13bf232be1 <HeapNumber 3.0>, in function 26258422585521 `Ba`: 642902, 642937
+  0x1e39d8564cb9 <Object map = 0x2533027785c9>, in function 26258422585649 `Ya`: 643159, 644766
+  0x1e39d8564cb9 <Object map = 0x2533027785c9>, in function 26258422585521 `Ba`: 642902, 642935
+  0x1e39d8564cb9 <Object map = 0x2533027785c9>, in function 26258422585649 `Ya`: 643159, 644957
+
+0x1e39d8564cb9 <Object map = 0x2533027785c9>:
+  0x1e39d8564861 <Is map = 0x25f9c71f6e69>, in function 23065693546617 ``: 649262, 649285
+
+0x223f307c7361 <Is map = 0x13b50ca5a559>:
+  0x2057a6ff8cb1 <String[9]: e"/xqgtiti/">, in function 37654791746113 `ks`: 690534, 691569
+
+0x2057a6ff8cb1 <String[9]: e"/xqgtiti/">:
+
+0x14fa66791161 <Object map = 0x2533027785c9>:
+  0x29a55b91dc79 <Object map = 0x2533027785c9>, in function 26258422585649 `Ya`: 643159, 644766
+  0x29a55b91dc79 <Object map = 0x2533027785c9>, in function 26258422585649 `Ya`: 643159, 644957
+  0x29a55b91dc79 <Object map = 0x2533027785c9>, in function 26258422585521 `Ba`: 642902, 642935
+
+0x380c89ebf921 <Object map = 0x22360b19f719>:
+  0x3f9fa96022b1 <Is map = 0x25f9c71f6e69>, in function 23065693546617 ``: 649262, 649285
+
+0x3f9fa96022b1 <Is map = 0x25f9c71f6e69>:
+  0x3d13bf232be1 <HeapNumber 3.0>, in function 23065693546617 ``: 649262, 649292
+  0x3fff7a8f4f79 <Object map = 0x22360b19f719>, in function 23065693546617 ``: 649262, 649282
+  0x223f307c7361 <Is map = 0x13b50ca5a559>, in function 26258422590761 `Ks`: 695852, 695890
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x1e39d85701b1 <JSFunction (sfi = 0x22360b19bd79)> ``: 698496
+(e,t,n){Ks(e,{op:"browser",description:"request",startTimestamp:n+$s(t.requestStart),endTimestamp:n+$s(t.responseEnd)}),Ks(e,{op:"browser",description:"response",startTimestamp:n+$s(t.responseStart),endTimestamp:n+$s(t.responseEnd)})}
+0x223f307c7519 <JSFunction (sfi = 0x2057a6ff6f49)> ``: 706448
+e=>{const n=this._createRouteTransaction(e);return this.options._experiments.onStartRouteTransaction&&this.options._experiments.onStartRouteTransaction(n,e,t),n}
+0x3d13bf236641 <JSFunction (sfi = 0x13b50ca68439)> ``: 633340
+(e,t){if("transaction"!==e.type||!t||!t.length)return!1;const n=e.transaction;return!!n&&mi(n,t)}
+0x1e39d8576801 <JSFunction (sfi = 0x22360b19a4f9)> ``: 699431
+(e,t,n,r,i,a){if("xmlhttprequest"===t.initiatorType||"fetch"===t.initiatorType)return;const o={};"transferSize"in t&&(o["http.response_transfer_size"]=t.transferSize);"encodedBodySize"in t&&(o["http.response_content_length"]=t.encodedBodySize);"decodedBodySize"in t&&(o["http.decoded_response_content_length"]=t.decodedBodySize);"renderBlockingStatus"in t&&(o["resource.render_blocking_status"]=t.renderBlockingStatus);const s=a+r;Ks(e,{description:n,endTimestamp:s+i,op:t.initiatorType?`resource.${t.initiatorType}`:"resource.other",startTimestamp:s,data:o})}
+0x14fa6678f5c9 <JSFunction (sfi = 0x13b50ca74599)> ``: 643376
+(n){if(e)t.delete(n);else for(let e=0;e<t.length;e++)if(t[e]===n){t.splice(e,1);break}}
+0x223f307c7241 <JSFunction ks (sfi = 0xd8eb007ec61)> `ks`: 690534
+(e,t,n){if(!Ss(t))return e.sampled=!1,e;if(void 0!==e.sampled)return e.setMetadata({sampleRate:Number(e.sampled)}),e;let r;return"function"==typeof t.tracesSampler?(r=t.tracesSampler(n),e.setMetadata({sampleRate:Number(r)})):void 0!==n.parentSampled?r=n.parentSampled:void 0!==t.tracesSampleRate?(r=t.tracesSampleRate,e.setMetadata({sampleRate:Number(r)})):(r=1,e.setMetadata({sampleRate:r})),function(e){if(oi(e)||"number"!=typeof e&&"boolean"!=typeof e)return("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.warn(`[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(e)} of type ${JSON.stringify(typeof e)}.`),!1;if(e<0||e>1)return("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.warn(`[Tracing] Given sample rate is invalid. Sample rate must be between 0 and 1. Got ${e}.`),!1;return!0}(r)?r?(e.sampled=Math.random()<r,e.sampled?(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log(`[Tracing] starting ${e.op} transaction - ${e.name}`),e):(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log(`[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = ${Number(r)})`),e)):(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Tracing] Discarding transaction because "+("function"==typeof t.tracesSampler?"tracesSampler returned 0 or false":"a negative sampling decision was inherited or tracesSampleRate is set to 0")),e.sampled=!1,e):(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.warn("[Tracing] Discarding transaction because of invalid sample rate."),e.sampled=!1,e)}
+0x3d13bf221871 <JSFunction (sfi = 0x13b50ca58c69)> ``: 683256
+(e,t)=>e.endTimestamp&&t.endTimestamp?e.endTimestamp>t.endTimestamp?e:t:e
+0x17e1c3f34c09 <JSFunction ri (sfi = 0xd8eb0079ed9)> `ri`: 613372
+(e){return Kr(e,"Object")}
+0x17e1c3f2fc51 <JSFunction (sfi = 0x2057a6ff9191)> ``: 708789
+e=>{this._collectWebVitals(),ol(e)}
+0x17e1c3f34ac9 <JSFunction Jr (sfi = 0xd8eb0079cf9)> `Jr`: 612984
+(e){switch(qr.call(e)){case"[object Error]":case"[object Exception]":case"[object DOMException]":return!0;default:return si(e,Error)}}
+0x14fa66790271 <JSFunction (sfi = 0x13b50ca749f1)> ``: 644175
+(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}
+0x3fff7a8f38e9 <JSFunction (sfi = 0x13b50ca73141)> ``: 643576
+(e,t){try{if("domain"===e&&t&&"object"==typeof t&&t._events)return"[Domain]";if("domainEmitter"===e)return"[DomainEmitter]";if(void 0!==n.g&&t===n.g)return"[Global]";if("undefined"!=typeof window&&t===window)return"[Window]";if("undefined"!=typeof document&&t===document)return"[Document]";if(ri(r=t)&&"nativeEvent"in r&&"preventDefault"in r&&"stopPropagation"in r)return"[SyntheticEvent]";if("number"==typeof t&&t!=t)return"[NaN]";if("function"==typeof t)return`[Function: ${ma(t)}]`;if("symbol"==typeof t)return`[${String(t)}]`;if("bigint"==typeof t)return`[BigInt: ${String(t)}]`;const i=function(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}(t);return/^HTML(\w*)Element$/.test(i)?`[HTMLElement: ${i}]`:`[object ${i}]`}catch(e){return`**non-serializable** (${e})`}var r}
+0x14fa66792091 <JSFunction (sfi = 0x13b50ca74549)> ``: 643258
+(n){if(e)return!!t.has(n)||(t.add(n),!1);for(let e=0;e<t.length;e++)if(t[e]===n)return!0;return t.push(n),!1}
+0x05ad4d0c6d11 <JSFunction Kr (sfi = 0xd8eb0079d49)> `Kr`: 613129
+(e,t){return qr.call(e)===`[object ${t}]`}
+0x223f307c75c1 <JSFunction Ns (sfi = 0xd8eb007eb71)> `Ns`: 690176
+(e){return(e||Ki()).getScope().getTransaction()}
+0x1e39d8562bd9 <JSFunction (sfi = 0x22360b19a489)> ``: 698250
+(e,t,n){["unloadEvent","redirect","domContentLoadedEvent","loadEvent","connect"].forEach((r=>{sl(e,t,r,n)})),sl(e,t,"secureConnection",n,"TLS/SSL","connectEnd"),sl(e,t,"fetch",n,"cache","domainLookupStart"),sl(e,t,"domainLookup",n,"DNS"),function(e,t,n){Ks(e,{op:"browser",description:"request",startTimestamp:n+$s(t.requestStart),endTimestamp:n+$s(t.responseEnd)}),Ks(e,{op:"browser",description:"response",startTimestamp:n+$s(t.responseStart),endTimestamp:n+$s(t.responseEnd)})}(e,t,n)}
+0x380c89e89a41 <JSFunction (sfi = 0x22360b19a4c1)> ``: 698846
+(e,t,n,r,i){const a=i+n,o=a+r;Ks(e,{description:t.name,endTimestamp:o,op:t.entryType,startTimestamp:a})}
+0x3fff7a8f33e1 <JSFunction (sfi = 0x13b50ca74599)> ``: 643376
+(n){if(e)t.delete(n);else for(let e=0;e<t.length;e++)if(t[e]===n){t.splice(e,1);break}}
+0x17e1c3f36e31 <JSFunction ol (sfi = 0xd8eb007f151)> `ol`: 697853
+(e){const t=el();if(!t||!Us.performance.getEntries||!Ri.Z1)return;("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Tracing] Adding & adjusting spans using Performance API");const n=$s(Ri.Z1),r=t.getEntries();let i,a;if(r.slice(rl).forEach((t=>{const r=$s(t.startTime),o=$s(t.duration);if(!("navigation"===e.op&&n+r<e.startTimestamp))switch(t.entryType){case"navigation":!function(e,t,n){["unloadEvent","redirect","domContentLoadedEvent","loadEvent","connect"].forEach((r=>{sl(e,t,r,n)})),sl(e,t,"secureConnection",n,"TLS/SSL","connectEnd"),sl(e,t,"fetch",n,"cache","domainLookupStart"),sl(e,t,"domainLookup",n,"DNS"),function(e,t,n){Ks(e,{op:"browser",description:"request",startTimestamp:n+$s(t.requestStart),endTimestamp:n+$s(t.responseEnd)}),Ks(e,{op:"browser",description:"response",startTimestamp:n+$s(t.responseStart),endTimestamp:n+$s(t.responseEnd)})}(e,t,n)}(e,t,n),i=n+$s(t.responseStart),a=n+$s(t.requestStart);break;case"mark":case"paint":case"measure":{!function(e,t,n,r,i){const a=i+n,o=a+r;Ks(e,{description:t.name,endTimestamp:o,op:t.entryType,startTimestamp:a})}(e,t,r,o,n);const i=Xs(),a=t.startTime<i.firstHiddenTime;"first-paint"===t.name&&a&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding FP"),il.fp={value:t.startTime,unit:"millisecond"}),"first-contentful-paint"===t.name&&a&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding FCP"),il.fcp={value:t.startTime,unit:"millisecond"});break}case"resource":{const i=t.name.replace(Us.location.origin,"");!function(e,t,n,r,i,a){if("xmlhttprequest"===t.initiatorType||"fetch"===t.initiatorType)return;const o={};"transferSize"in t&&(o["http.response_transfer_size"]=t.transferSize);"encodedBodySize"in t&&(o["http.response_content_length"]=t.encodedBodySize);"decodedBodySize"in t&&(o["http.decoded_response_content_length"]=t.decodedBodySize);"renderBlockingStatus"in t&&(o["resource.render_blocking_status"]=t.renderBlockingStatus);const s=a+r;Ks(e,{description:n,endTimestamp:s+i,op:t.initiatorType?`resource.${t.initiatorType}`:"resource.other",startTimestamp:s,data:o})}(e,t,i,r,o,n);break}}})),rl=Math.max(r.length-1,0),function(e){const t=Us.navigator;if(!t)return;const n=t.connection;n&&(n.effectiveType&&e.setTag("effectiveConnectionType",n.effectiveType),n.type&&e.setTag("connectionType",n.type),Js(n.rtt)&&(il["connection.rtt"]={value:n.rtt,unit:"millisecond"}));Js(t.deviceMemory)&&e.setTag("deviceMemory",`${t.deviceMemory} GB`);Js(t.hardwareConcurrency)&&e.setTag("hardwareConcurrency",String(t.hardwareConcurrency))}(e),"pageload"===e.op){"number"==typeof i&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding TTFB"),il.ttfb={value:1e3*(i-e.startTimestamp),unit:"millisecond"},"number"==typeof a&&a<=i&&(il["ttfb.requestTime"]={value:1e3*(i-a),unit:"millisecond"})),["fcp","fp","lcp"].forEach((t=>{if(!il[t]||n>=e.startTimestamp)return;const r=il[t].value,i=n+$s(r),a=Math.abs(1e3*(i-e.startTimestamp)),o=a-r;("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log(`[Measurements] Normalized ${t} from ${r} to ${a} (${o})`),il[t].value=a}));const t=il["mark.fid"];t&&il.fid&&(Ks(e,{description:"first input delay",endTimestamp:t.value+$s(il.fid.value),op:"ui.action",startTimestamp:t.value}),delete il["mark.fid"]),"fcp"in il||delete il.cls,Object.keys(il).forEach((t=>{e.setMeasurement(t,il[t].value,il[t].unit)})),function(e){tl&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding LCP Data"),tl.element&&e.setTag("lcp.element",ui(tl.element)),tl.id&&e.setTag("lcp.id",tl.id),tl.url&&e.setTag("lcp.url",tl.url.trim().slice(0,200)),e.setTag("lcp.size",tl.size));nl&&nl.sources&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding CLS Data"),nl.sources.forEach(((t,n)=>e.setTag(`cls.source.${n+1}`,ui(t.node)))))}(e)}tl=void 0,nl=void 0,il={}}
+0x14fa667920d1 <JSFunction (sfi = 0x13b50ca74599)> ``: 643376
+(n){if(e)t.delete(n);else for(let e=0;e<t.length;e++)if(t[e]===n){t.splice(e,1);break}}
+0x17e1c3f34c49 <JSFunction ii (sfi = 0xd8eb0079f29)> `ii`: 613409
+(e){return"undefined"!=typeof Event&&si(e,Event)}
+0x01876a8285a1 <JSFunction finish (sfi = 0x8008888e901)> `finish`: 682557
+(e){if(void 0!==this.endTimestamp)return;this.name||(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.warn("Transaction has no name, falling back to `<unlabeled transaction>`."),this.name="<unlabeled transaction>"),super.finish(e);const t=this._hub.getClient();if(t&&t.emit&&t.emit("finishTransaction",this),!0!==this.sampled)return("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Tracing] Discarding transaction because its trace was not chosen to be sampled."),void(t&&t.recordDroppedEvent("sample_rate","transaction"));const n=this.spanRecorder?this.spanRecorder.spans.filter((e=>e!==this&&e.endTimestamp)):[];this._trimEnd&&n.length>0&&(this.endTimestamp=n.reduce(((e,t)=>e.endTimestamp&&t.endTimestamp?e.endTimestamp>t.endTimestamp?e:t:e)).endTimestamp);const r=this.metadata,i={contexts:{...this._contexts,trace:this.getTraceContext()},spans:n,start_timestamp:this.startTimestamp,tags:this.tags,timestamp:this.endTimestamp,transaction:this.name,type:"transaction",sdkProcessingMetadata:{...r,dynamicSamplingContext:this.getDynamicSamplingContext()},...r.source&&{transaction_info:{source:r.source}}};return Object.keys(this._measurements).length>0&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding measurements to transaction",JSON.stringify(this._measurements,void 0,2)),i.measurements=this._measurements),("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log(`[Tracing] Finishing ${this.op} transaction: ${this.name}.`),this._hub.captureEvent(i)}
+0x14fa6678fad1 <JSFunction (sfi = 0x13b50ca73141)> ``: 643576
+(e,t){try{if("domain"===e&&t&&"object"==typeof t&&t._events)return"[Domain]";if("domainEmitter"===e)return"[DomainEmitter]";if(void 0!==n.g&&t===n.g)return"[Global]";if("undefined"!=typeof window&&t===window)return"[Window]";if("undefined"!=typeof document&&t===document)return"[Document]";if(ri(r=t)&&"nativeEvent"in r&&"preventDefault"in r&&"stopPropagation"in r)return"[SyntheticEvent]";if("number"==typeof t&&t!=t)return"[NaN]";if("function"==typeof t)return`[Function: ${ma(t)}]`;if("symbol"==typeof t)return`[${String(t)}]`;if("bigint"==typeof t)return`[BigInt: ${String(t)}]`;const i=function(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}(t);return/^HTML(\w*)Element$/.test(i)?`[HTMLElement: ${i}]`:`[object ${i}]`}catch(e){return`**non-serializable** (${e})`}var r}
+0x223f307c7601 <JSFunction (sfi = 0x37817d764fb1)> ``: 705666
+e=>{for(const t of e){const e=Ns();if(!e)return;const n=$s(Ri.Z1+t.startTime),r=$s(t.duration);e.startChild({description:"Main UI thread blocked",op:"ui.long-task",startTimestamp:n,endTimestamp:n+r})}}
+0x223f307c7471 <JSFunction add (sfi = 0x8008888eae1)> `add`: 685138
+(e){e.spanId!==this.transactionSpanId&&(e.finish=t=>{e.endTimestamp="number"==typeof t?t:(0,Ri.ph)(),this._popActivity(e.spanId)},void 0===e.endTimestamp&&this._pushActivity(e.spanId)),super.add(e)}
+0x17e1c3f35931 <JSFunction Ya (sfi = 0xd8eb007c299)> `Ya`: 643159
+(e,t,r=1/0,i=1/0,a=function(){const e="function"==typeof WeakSet,t=e?new WeakSet:[];return[function(n){if(e)return!!t.has(n)||(t.add(n),!1);for(let e=0;e<t.length;e++)if(t[e]===n)return!0;return t.push(n),!1},function(n){if(e)t.delete(n);else for(let e=0;e<t.length;e++)if(t[e]===n){t.splice(e,1);break}}]}()){const[o,s]=a;if(null==t||["number","boolean","string"].includes(typeof t)&&!oi(t))return t;const l=function(e,t){try{if("domain"===e&&t&&"object"==typeof t&&t._events)return"[Domain]";if("domainEmitter"===e)return"[DomainEmitter]";if(void 0!==n.g&&t===n.g)return"[Global]";if("undefined"!=typeof window&&t===window)return"[Window]";if("undefined"!=typeof document&&t===document)return"[Document]";if(ri(r=t)&&"nativeEvent"in r&&"preventDefault"in r&&"stopPropagation"in r)return"[SyntheticEvent]";if("number"==typeof t&&t!=t)return"[NaN]";if("function"==typeof t)return`[Function: ${ma(t)}]`;if("symbol"==typeof t)return`[${String(t)}]`;if("bigint"==typeof t)return`[BigInt: ${String(t)}]`;const i=function(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}(t);return/^HTML(\w*)Element$/.test(i)?`[HTMLElement: ${i}]`:`[object ${i}]`}catch(e){return`**non-serializable** (${e})`}var r}(e,t);if(!l.startsWith("[object "))return l;if(t.__sentry_skip_normalization__)return t;const c="number"==typeof t.__sentry_override_normalization_depth__?t.__sentry_override_normalization_depth__:r;if(0===c)return l.replace("object ","");if(o(t))return"[Circular ~]";const u=t;if(u&&"function"==typeof u.toJSON)try{return Ya("",u.toJSON(),c-1,i,a)}catch(e){}const d=Array.isArray(t)?[]:{};let f=0;const p=Ii(t);for(const e in p){if(!Object.prototype.hasOwnProperty.call(p,e))continue;if(f>=i){d[e]="[MaxProperties ~]";break}const t=p[e];d[e]=Ya(e,t,c-1,i,a),f++}return s(t),d}
+0x223f307c74e1 <JSFunction _createRouteTransaction (sfi = 0x8008888f431)> `_createRouteTransaction`: 707301
+(e){if(!this._getCurrentHub)return void(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.warn(`[Tracing] Did not create ${e.op} transaction because _getCurrentHub is invalid.`));const{beforeNavigate:t,idleTimeout:n,finalTimeout:r,heartbeatInterval:i}=this.options,a="pageload"===e.op,o=a?pl("sentry-trace"):null,s=a?pl("baggage"):null,l=o?function(e){const t=e.match(Ls);if(!e||!t)return;let n;return"1"===t[3]?n=!0:"0"===t[3]&&(n=!1),{traceId:t[1],parentSampled:n,parentSpanId:t[2]}}(o):void 0,c=s?function(e){if(!ti(e)&&!Array.isArray(e))return;let t={};if(Array.isArray(e))t=e.reduce(((e,t)=>({...e,...Ys(t)})),{});else{if(!e)return;t=Ys(e)}const n=Object.entries(t).reduce(((e,[t,n])=>(t.match(Bs)&&(e[t.slice(Rs.length)]=n),e)),{});return Object.keys(n).length>0?n:void 0}(s):void 0,u={...e,...l,metadata:{...e.metadata,dynamicSamplingContext:l&&!c?{}:c},trimEnd:!0},d="function"==typeof t?t(u):u,f=void 0===d?{...u,sampled:!1}:d;f.metadata=f.name!==u.name?{...f.metadata,source:"custom"}:f.metadata,this._latestRouteName=f.name,this._latestRouteSource=f.metadata&&f.metadata.source,!1===f.sampled&&("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log(`[Tracing] Will not send ${f.op} transaction because of beforeNavigate.`),("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log(`[Tracing] Starting ${f.op} transaction on scope`);const p=this._getCurrentHub(),{location:h}=Us,m=js(p,f,n,r,!0,{location:h},i);return m.registerBeforeFinishCallback((e=>{this._collectWebVitals(),ol(e)})),m}
+0x223f307c7321 <JSFunction js (sfi = 0xd8eb007edc1)> `js`: 692833
+(e,t,n,r,i,a,o){const s=e.getClient(),l=s&&s.getOptions()||{};let c=new Ds(t,e,n,r,o,i);return c=ks(c,l,{parentSampled:t.parentSampled,transactionContext:t,...a}),c.sampled&&c.initSpanRecorder(l._experiments&&l._experiments.maxSpans),s&&s.emit&&s.emit("startTransaction",c),c}
+0x223f307c7df1 <JSFunction get name (sfi = 0x8008888e6b9)> `get name`: 682156
+(){return this._name}
+0x14fa66792d79 <JSFunction (sfi = 0x13b50ca749f1)> ``: 644175
+(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}
+0x14fa66786879 <JSFunction (sfi = 0x13b50ca72051)> ``: 649262
+e=>(e.data&&(e.data=Ba(e.data,t,n)),e)
+0x17e1c3f34e49 <JSFunction hi (sfi = 0xd8eb007a1a9)> `hi`: 614853
+(e,t,n=!1){return!!ti(e)&&(Kr(t,"RegExp")?t.test(e):!!ti(t)&&(n?e===t:e.includes(t)))}
+0x17e1c3f358b1 <JSFunction Ba (sfi = 0xd8eb007c131)> `Ba`: 642902
+(e,t=100,n=1/0){try{return Ya("",e,t,n)}catch(e){return{ERROR:`**non-serializable** (${e})`}}}
+0x3fff7a8f4089 <JSFunction (sfi = 0x13b50ca749f1)> ``: 644175
+(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}
+0x1e39d8562a01 <JSFunction (sfi = 0x3de0dc4eda51)> ``: 698111
+t=>{const r=$s(t.startTime),o=$s(t.duration);if(!("navigation"===e.op&&n+r<e.startTimestamp))switch(t.entryType){case"navigation":!function(e,t,n){["unloadEvent","redirect","domContentLoadedEvent","loadEvent","connect"].forEach((r=>{sl(e,t,r,n)})),sl(e,t,"secureConnection",n,"TLS/SSL","connectEnd"),sl(e,t,"fetch",n,"cache","domainLookupStart"),sl(e,t,"domainLookup",n,"DNS"),function(e,t,n){Ks(e,{op:"browser",description:"request",startTimestamp:n+$s(t.requestStart),endTimestamp:n+$s(t.responseEnd)}),Ks(e,{op:"browser",description:"response",startTimestamp:n+$s(t.responseStart),endTimestamp:n+$s(t.responseEnd)})}(e,t,n)}(e,t,n),i=n+$s(t.responseStart),a=n+$s(t.requestStart);break;case"mark":case"paint":case"measure":{!function(e,t,n,r,i){const a=i+n,o=a+r;Ks(e,{description:t.name,endTimestamp:o,op:t.entryType,startTimestamp:a})}(e,t,r,o,n);const i=Xs(),a=t.startTime<i.firstHiddenTime;"first-paint"===t.name&&a&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding FP"),il.fp={value:t.startTime,unit:"millisecond"}),"first-contentful-paint"===t.name&&a&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding FCP"),il.fcp={value:t.startTime,unit:"millisecond"});break}case"resource":{const i=t.name.replace(Us.location.origin,"");!function(e,t,n,r,i,a){if("xmlhttprequest"===t.initiatorType||"fetch"===t.initiatorType)return;const o={};"transferSize"in t&&(o["http.response_transfer_size"]=t.transferSize);"encodedBodySize"in t&&(o["http.response_content_length"]=t.encodedBodySize);"decodedBodySize"in t&&(o["http.decoded_response_content_length"]=t.decodedBodySize);"renderBlockingStatus"in t&&(o["resource.render_blocking_status"]=t.renderBlockingStatus);const s=a+r;Ks(e,{description:n,endTimestamp:s+i,op:t.initiatorType?`resource.${t.initiatorType}`:"resource.other",startTimestamp:s,data:o})}(e,t,i,r,o,n);break}}}
+0x17e1c3f34f09 <JSFunction Ii (sfi = 0xd8eb007a389)> `Ii`: 615342
+(e){if(Jr(e))return{message:e.message,name:e.name,stack:e.stack,...Mi(e)};if(ii(e)){const t={type:e.type,target:wi(e.target),currentTarget:wi(e.currentTarget),...Mi(e)};return"undefined"!=typeof CustomEvent&&si(e,CustomEvent)&&(t.detail=e.detail),t}return e}
+0x3fff7a8f33a1 <JSFunction (sfi = 0x13b50ca74549)> ``: 643258
+(n){if(e)return!!t.has(n)||(t.add(n),!1);for(let e=0;e<t.length;e++)if(t[e]===n)return!0;return t.push(n),!1}
+0x17e1c3f35a71 <JSFunction Wa (sfi = 0xd8eb007c721)> `Wa`: 645192
+(e,t){const[n,r]=e;let i=JSON.stringify(n);function a(e){"string"==typeof i?i="string"==typeof e?i+e:[Qa(i,t),e]:i.push("string"==typeof e?Qa(e,t):e)}for(const e of r){const[t,n]=e;if(a(`\n${JSON.stringify(t)}\n`),"string"==typeof n||n instanceof Uint8Array)a(n);else{let e;try{e=JSON.stringify(n)}catch(t){e=JSON.stringify(Ba(n))}a(e)}}return"string"==typeof i?i:function(e){const t=e.reduce(((e,t)=>e+t.length),0),n=new Uint8Array(t);let r=0;for(const t of e)n.set(t,r),r+=t.length;return n}(i)}
+0x17e1c3f35049 <JSFunction Di (sfi = 0xd8eb007a519)> `Di`: 616192
+(e,t){if(ri(e)){const n=t.get(e);if(void 0!==n)return n;const r={};t.set(e,r);for(const n of Object.keys(e))void 0!==e[n]&&(r[n]=Di(e[n],t));return r}if(Array.isArray(e)){const n=t.get(e);if(void 0!==n)return n;const r=[];return t.set(e,r),e.forEach((e=>{r.push(Di(e,t))})),r}return e}
+0x17e1c3f36e71 <JSFunction sl (sfi = 0xd8eb007f501)> `sl`: 701808
+(e,t,n,r,i,a){const o=a?t[a]:t[`${n}End`],s=t[`${n}Start`];s&&o&&Ks(e,{op:"browser",description:i||n,startTimestamp:r+$s(s),endTimestamp:r+$s(o)})}
+0x14fa667925d9 <JSFunction (sfi = 0x13b50ca73141)> ``: 643576
+(e,t){try{if("domain"===e&&t&&"object"==typeof t&&t._events)return"[Domain]";if("domainEmitter"===e)return"[DomainEmitter]";if(void 0!==n.g&&t===n.g)return"[Global]";if("undefined"!=typeof window&&t===window)return"[Window]";if("undefined"!=typeof document&&t===document)return"[Document]";if(ri(r=t)&&"nativeEvent"in r&&"preventDefault"in r&&"stopPropagation"in r)return"[SyntheticEvent]";if("number"==typeof t&&t!=t)return"[NaN]";if("function"==typeof t)return`[Function: ${ma(t)}]`;if("symbol"==typeof t)return`[${String(t)}]`;if("bigint"==typeof t)return`[BigInt: ${String(t)}]`;const i=function(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}(t);return/^HTML(\w*)Element$/.test(i)?`[HTMLElement: ${i}]`:`[object ${i}]`}catch(e){return`**non-serializable** (${e})`}var r}
+0x17e1c3f34b89 <JSFunction ti (sfi = 0xd8eb0079e39)> `ti`: 613262
+(e){return Kr(e,"String")}
+0x223f307c74a9 <JSFunction add (sfi = 0x8008888de19)> `add`: 677733
+(e){this.spans.length>this._maxlen?e.spanRecorder=void 0:this.spans.push(e)}
+0x15e67d24b0d9 <JSFunction toJSON (sfi = 0x8008888e4d1)> `toJSON`: 681333
+(){return Ei({data:Object.keys(this.data).length>0?this.data:void 0,description:this.description,op:this.op,parent_span_id:this.parentSpanId,span_id:this.spanId,start_timestamp:this.startTimestamp,status:this.status,tags:Object.keys(this.tags).length>0?this.tags:void 0,timestamp:this.endTimestamp,trace_id:this.traceId})}
+0x1e39d8562e71 <JSFunction (sfi = 0x22360b19bd29)> ``: 698340
+r=>{sl(e,t,r,n)}
+0x14fa6678f589 <JSFunction (sfi = 0x13b50ca74549)> ``: 643258
+(n){if(e)return!!t.has(n)||(t.add(n),!1);for(let e=0;e<t.length;e++)if(t[e]===n)return!0;return t.push(n),!1}
+0x3d13bf236ae9 <JSFunction (sfi = 0x13b50ca6b701)> ``: 614979
+t=>hi(e,t,n)
+0x223f307c7589 <JSFunction getTransaction (sfi = 0x8008888a419)> `getTransaction`: 622834
+(){const e=this.getSpan();return e&&e.transaction}
+0x17e1c3f36d29 <JSFunction Ks (sfi = 0xd8eb007f011)> `Ks`: 695852
+(e,{startTimestamp:t,...n}){return t&&e.startTimestamp>t&&(e.startTimestamp=t),e.startChild({startTimestamp:t,...n})}
+0x223f307c7001 <JSFunction routingInstrumentation (sfi = 0x8008888f2b1)> `routingInstrumentation`: 704500
+(e,t=!0,n=!0){if(!Us||!Us.location)return void(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.warn("Could not initialize routing instrumentation due to invalid location"));let r,i=Us.location.href;t&&(r=e({name:Us.location.pathname,startTimestamp:Ri.Z1?Ri.Z1/1e3:void 0,op:"pageload",metadata:{source:"url"}})),n&&Ea("history",(({to:t,from:n})=>{void 0===n&&i&&-1!==i.indexOf(t)?i=void 0:n!==t&&(i=void 0,r&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log(`[Tracing] Finishing current transaction with op: ${r.op}`),r.finish()),r=e({name:Us.location.pathname,op:"navigation",metadata:{source:"url"}}))}))}
+0x223f307c7551 <JSFunction getSpan (sfi = 0x8008888a3c9)> `getSpan`: 622799
+(){return this._span}
+
+** Taint source functions: 
+
+

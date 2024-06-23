@@ -1,0 +1,23 @@
+** Propagation paths: 
+
+0x20146cdded99 <String[61]: c"SHADE | website brand detection | before the dot: "instagram"">:
+  0x20146cdde9e1 <String[9]: "instagram">, in function 35272097832401 `getPossibleListOfBrandNamesGivenURL`: 853782, 854143
+
+0x20146cdde9e1 <String[9]: "instagram">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x20146cdc9dd1 <JSFunction getPossibleListOfBrandNamesGivenURL (sfi = 0x2689e093e5a1)> `getPossibleListOfBrandNamesGivenURL`: 853782
+(e){let t=[];const n=e.indexOf("://")+3;let r=e.slice(n);An.info(`SHADE | website brand detection | url without the start: "${r}"`)(),0==r.indexOf("www.")&&(r=r.slice(4)),An.info(`SHADE | website brand detection | removed "www": "${r}"`)();let i=r.substr(0,r.indexOf("."));i=this.cleanTheUrlName(i),An.info(`SHADE | website brand detection | before the dot: "${i}"`)(),t.push(i);const a=r.slice(i.length+1);let o=a.substr(0,a.indexOf("."));return o=this.cleanTheUrlName(o),t.push(o),t=t.filter(Boolean),An.info("SHADE | website brand detection | list of possible names:",t)(),t}
+0x20146cdc9e09 <JSFunction cleanTheUrlName (sfi = 0x2689e093e5f1)> `cleanTheUrlName`: 854382
+(e){return(e=(e=e.replace("official","")).replace("-et-","&")).replace("-","")}
+0x3c51e3c57a29 <JSFunction _sendEventToWorker (sfi = 0xde4bea11149)> `_sendEventToWorker`: 766909
+(e){return this._worker.postMessage("addEvent",JSON.stringify(e))}
+
+** Taint source functions: 
+
+

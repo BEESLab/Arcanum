@@ -1,0 +1,28 @@
+** Propagation paths: 
+
+0x39433c59f591 <String[102]: e"https://static.cdninstagram.com/rsrc.php/v3iZsx4/yc/l/makehaste_jhash/sUEqHh8mR-s.js?_nc_x=Ij3Wp8lg5Kz">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x15e67d24b0d9 <JSFunction toJSON (sfi = 0x8008888e4d1)> `toJSON`: 681333
+(){return Ei({data:Object.keys(this.data).length>0?this.data:void 0,description:this.description,op:this.op,parent_span_id:this.parentSpanId,span_id:this.spanId,start_timestamp:this.startTimestamp,status:this.status,tags:Object.keys(this.tags).length>0?this.tags:void 0,timestamp:this.endTimestamp,trace_id:this.traceId})}
+0x05ad4d0c6d11 <JSFunction Kr (sfi = 0xd8eb0079d49)> `Kr`: 613129
+(e,t){return qr.call(e)===`[object ${t}]`}
+0x380c89ea8f89 <JSFunction (sfi = 0x22360b19a4f9)> ``: 699431
+(e,t,n,r,i,a){if("xmlhttprequest"===t.initiatorType||"fetch"===t.initiatorType)return;const o={};"transferSize"in t&&(o["http.response_transfer_size"]=t.transferSize);"encodedBodySize"in t&&(o["http.response_content_length"]=t.encodedBodySize);"decodedBodySize"in t&&(o["http.decoded_response_content_length"]=t.decodedBodySize);"renderBlockingStatus"in t&&(o["resource.render_blocking_status"]=t.renderBlockingStatus);const s=a+r;Ks(e,{description:n,endTimestamp:s+i,op:t.initiatorType?`resource.${t.initiatorType}`:"resource.other",startTimestamp:s,data:o})}
+0x17e1c3f35a71 <JSFunction Wa (sfi = 0xd8eb007c721)> `Wa`: 645192
+(e,t){const[n,r]=e;let i=JSON.stringify(n);function a(e){"string"==typeof i?i="string"==typeof e?i+e:[Qa(i,t),e]:i.push("string"==typeof e?Qa(e,t):e)}for(const e of r){const[t,n]=e;if(a(`\n${JSON.stringify(t)}\n`),"string"==typeof n||n instanceof Uint8Array)a(n);else{let e;try{e=JSON.stringify(n)}catch(t){e=JSON.stringify(Ba(n))}a(e)}}return"string"==typeof i?i:function(e){const t=e.reduce(((e,t)=>e+t.length),0),n=new Uint8Array(t);let r=0;for(const t of e)n.set(t,r),r+=t.length;return n}(i)}
+0x17e1c3f35049 <JSFunction Di (sfi = 0xd8eb007a519)> `Di`: 616192
+(e,t){if(ri(e)){const n=t.get(e);if(void 0!==n)return n;const r={};t.set(e,r);for(const n of Object.keys(e))void 0!==e[n]&&(r[n]=Di(e[n],t));return r}if(Array.isArray(e)){const n=t.get(e);if(void 0!==n)return n;const r=[];return t.set(e,r),e.forEach((e=>{r.push(Di(e,t))})),r}return e}
+0x1e39d8562a01 <JSFunction (sfi = 0x3de0dc4eda51)> ``: 698111
+t=>{const r=$s(t.startTime),o=$s(t.duration);if(!("navigation"===e.op&&n+r<e.startTimestamp))switch(t.entryType){case"navigation":!function(e,t,n){["unloadEvent","redirect","domContentLoadedEvent","loadEvent","connect"].forEach((r=>{sl(e,t,r,n)})),sl(e,t,"secureConnection",n,"TLS/SSL","connectEnd"),sl(e,t,"fetch",n,"cache","domainLookupStart"),sl(e,t,"domainLookup",n,"DNS"),function(e,t,n){Ks(e,{op:"browser",description:"request",startTimestamp:n+$s(t.requestStart),endTimestamp:n+$s(t.responseEnd)}),Ks(e,{op:"browser",description:"response",startTimestamp:n+$s(t.responseStart),endTimestamp:n+$s(t.responseEnd)})}(e,t,n)}(e,t,n),i=n+$s(t.responseStart),a=n+$s(t.requestStart);break;case"mark":case"paint":case"measure":{!function(e,t,n,r,i){const a=i+n,o=a+r;Ks(e,{description:t.name,endTimestamp:o,op:t.entryType,startTimestamp:a})}(e,t,r,o,n);const i=Xs(),a=t.startTime<i.firstHiddenTime;"first-paint"===t.name&&a&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding FP"),il.fp={value:t.startTime,unit:"millisecond"}),"first-contentful-paint"===t.name&&a&&(("undefined"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&Pi.log("[Measurements] Adding FCP"),il.fcp={value:t.startTime,unit:"millisecond"});break}case"resource":{const i=t.name.replace(Us.location.origin,"");!function(e,t,n,r,i,a){if("xmlhttprequest"===t.initiatorType||"fetch"===t.initiatorType)return;const o={};"transferSize"in t&&(o["http.response_transfer_size"]=t.transferSize);"encodedBodySize"in t&&(o["http.response_content_length"]=t.encodedBodySize);"decodedBodySize"in t&&(o["http.decoded_response_content_length"]=t.decodedBodySize);"renderBlockingStatus"in t&&(o["resource.render_blocking_status"]=t.renderBlockingStatus);const s=a+r;Ks(e,{description:n,endTimestamp:s+i,op:t.initiatorType?`resource.${t.initiatorType}`:"resource.other",startTimestamp:s,data:o})}(e,t,i,r,o,n);break}}}
+0x17e1c3f34c09 <JSFunction ri (sfi = 0xd8eb0079ed9)> `ri`: 613372
+(e){return Kr(e,"Object")}
+
+** Taint source functions: 
+
+

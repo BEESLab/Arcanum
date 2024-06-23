@@ -1,0 +1,25 @@
+** Propagation paths: 
+
+0x20146cdcb779 <String[195]: "%c INFO %c  %c04:26:04 background-color: rgb(70,180,220); color: #FFF;  background-color: rgb(230, 230, 230); SHADE | website brand detection | url without the start: "www.instagram.com/xqgtiti/"">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"0":{"details":"","tainted":false,"recursive":{}},"1":{"details":"","tainted":false,"recursive":{}},"2":{"details":"","tainted":false,"recursive":{}},"3":{"details":"","tainted":false,"recursive":{}},"4":{"details":"/ram/analysis/v8logs/00000174.log","tainted":true,"recursive":{}},"length":{"details":"","tainted":false,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3aecc076d601 <JSFunction To (sfi = 0x1b8b6513d5c1)> `To`: 660755
+(e){for(let t=0;t<e.args.length;t++)if("ref=Ref<"===e.args[t]){e.args[t+1]="viewRef";break}const t={category:"console",data:{arguments:e.args,logger:"console"},level:Eo(e.level),message:pi(e.args," ")};if("assert"===e.level){if(!1!==e.args[0])return;t.message=`Assertion failed: ${pi(e.args.slice(1)," ")||"console.assert"}`,t.data.arguments=e.args.slice(1)}Ki().addBreadcrumb(t,{input:e.args,level:e.level})}
+0x3aecc076c2d1 <JSFunction pi (sfi = 0x1b8b6513a159)> `pi`: 614666
+(e,t){if(!Array.isArray(e))return"";const n=[];for(let t=0;t<e.length;t++){const r=e[t];try{n.push(String(r))}catch(e){n.push("[value cannot be serialized]")}}return n.join(t)}
+0x3c51e3c57a29 <JSFunction _sendEventToWorker (sfi = 0xde4bea11149)> `_sendEventToWorker`: 766909
+(e){return this._worker.postMessage("addEvent",JSON.stringify(e))}
+0x3aecc076cdf9 <JSFunction Ya (sfi = 0x1b8b6513c299)> `Ya`: 643159
+(e,t,r=1/0,i=1/0,a=function(){const e="function"==typeof WeakSet,t=e?new WeakSet:[];return[function(n){if(e)return!!t.has(n)||(t.add(n),!1);for(let e=0;e<t.length;e++)if(t[e]===n)return!0;return t.push(n),!1},function(n){if(e)t.delete(n);else for(let e=0;e<t.length;e++)if(t[e]===n){t.splice(e,1);break}}]}()){const[o,s]=a;if(null==t||["number","boolean","string"].includes(typeof t)&&!oi(t))return t;const l=function(e,t){try{if("domain"===e&&t&&"object"==typeof t&&t._events)return"[Domain]";if("domainEmitter"===e)return"[DomainEmitter]";if(void 0!==n.g&&t===n.g)return"[Global]";if("undefined"!=typeof window&&t===window)return"[Window]";if("undefined"!=typeof document&&t===document)return"[Document]";if(ri(r=t)&&"nativeEvent"in r&&"preventDefault"in r&&"stopPropagation"in r)return"[SyntheticEvent]";if("number"==typeof t&&t!=t)return"[NaN]";if("function"==typeof t)return`[Function: ${ma(t)}]`;if("symbol"==typeof t)return`[${String(t)}]`;if("bigint"==typeof t)return`[BigInt: ${String(t)}]`;const i=function(e){const t=Object.getPrototypeOf(e);return t?t.constructor.name:"null prototype"}(t);return/^HTML(\w*)Element$/.test(i)?`[HTMLElement: ${i}]`:`[object ${i}]`}catch(e){return`**non-serializable** (${e})`}var r}(e,t);if(!l.startsWith("[object "))return l;if(t.__sentry_skip_normalization__)return t;const c="number"==typeof t.__sentry_override_normalization_depth__?t.__sentry_override_normalization_depth__:r;if(0===c)return l.replace("object ","");if(o(t))return"[Circular ~]";const u=t;if(u&&"function"==typeof u.toJSON)try{return Ya("",u.toJSON(),c-1,i,a)}catch(e){}const d=Array.isArray(t)?[]:{};let f=0;const p=Ii(t);for(const e in p){if(!Object.prototype.hasOwnProperty.call(p,e))continue;if(f>=i){d[e]="[MaxProperties ~]";break}const t=p[e];d[e]=Ya(e,t,c-1,i,a),f++}return s(t),d}
+
+** Taint source functions: 
+
+
