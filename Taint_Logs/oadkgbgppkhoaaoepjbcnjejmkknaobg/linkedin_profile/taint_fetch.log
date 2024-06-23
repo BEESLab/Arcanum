@@ -1,0 +1,33 @@
+>>> TAINT SINK `XHR` REACHED (fetch-body-USVString) <<<
+STACK TRACE START: 
+0x31d575cc5ef9 <String[148]: c"I (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/background.js:4:4300)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/background.js:4:5385">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://faas-tor1-70ca848e.doserverless.co/api/v1/web/fn-95174a8b-baf3-4efa-9cc6-420906f0d494/default/HuggingFaceFunction
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: {"inputs":" Marketing Intern at Microsoft Douglasville, Georgia, United States Contact info Amy Lee is skilled in leadership, team work, collaboration and communication. She possess provable experience in strategy, sales and digital marketing. In terms of technology, she is interested in cloud systems and operating systems. Skills: Product Strategy · Paid Search Strategy · Sales & Marketing · Networking Skills: Engineering · Paid Search Strategy · Networking Microsoft Certified Technology Specialist (MCTS) Microsoft User Behavior Analytics - Digital Product Consumer Feb 2019 - Present Associated with Georgia Institute of Technology CRY - Child Rights and You May 2013 - Present · 10 yrs 5 mos Children Marketing Intern at Microsoft Georgia Institute of Technology Marketing Intern at Microsoft Georgia Institute of Technology User Behavior Analytics on digital services megamind · Jan 21, 2019 Associated with Georgia Institute of Technology Associated with Georgia Institute of Technology "}
+
+** Propagation paths: 
+
+0x31d575cc4c59 <String[1000]: c"{"inputs":" Marketing Intern at Microsoft Douglasville, Georgia, United States Contact info Amy Lee is skilled in leadership, team work, collaboration and communication. She possess provable experience in strategy, sales and digital marketing. In terms of technology, she is interested in cloud systems and operating systems. Skills: Product Strategy \xb7 Paid Search Strategy \xb7 Sales & Marketing \xb7 Networking Skills: Engineering \xb7 Paid Search Strategy \xb7 Networking Microsoft Certified Technology Specialist (MCTS) Microsoft User Behavior Analytics - Digital Product Consumer Feb 2019 - Present Associated with Georgia Institute of Technology CRY - Child Rights and You May 2013 - Present \xb7 10 yrs 5 mos Children Marketing Intern at Microsoft Georgia Institute of Technology Marketing Intern at Microsoft Georgia Institute of Technology User Behavior Analytics on digital services megamind \xb7 Jan 21, 2019 Associated with Georgia Institute of Technology Associated with Georgia Institute of Technology "}">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"inputs":{"details":"/ram/analysis/v8logs/00000002.log","tainted":true,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x13dc34fafc51 <JSFunction I (sfi = 0x1096285f5059)> `I`: 4278
+(e,t){switch(e){case"detectGPT":const s=await(await fetch("https://faas-tor1-70ca848e.doserverless.co/api/v1/web/fn-95174a8b-baf3-4efa-9cc6-420906f0d494/default/HuggingFaceFunction",{headers:{"Content-Type":"application/json"},method:"POST",body:JSON.stringify({inputs:t})})).json();return await k(),s;case"originality":var n=await chrome.storage.local.get("detectGPT_settings").then(async function(o){var i=!1,c=o.detectGPT_settings;if(c){var l=c.apikey,o=await fetch(v.SCANNING,{method:"POST",body:JSON.stringify({content:t}),headers:{"Content-Type":"application/json","X-OAI-API-KEY":l}}).then(r=>(r.status==422&&(i=!0),r.json())).then(r=>!i&&r.success&&r.score?{success:!0,point:r.score}:{success:!1,error:r.error}).catch(r=>({success:!1,error:"Error happended"}));return o}});return n}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
