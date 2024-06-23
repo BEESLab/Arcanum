@@ -1,0 +1,128 @@
+[111188:111243:1002/223510.393745:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[111188:111243:1002/223510.393895:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[111188:111242:1002/223510.398573:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[111188:111242:1002/223510.398615:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[111188:111188:1002/223510.404137:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[111250:111250:1002/223510.419833:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[111188:111188:1002/223510.427830:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[111188:111242:1002/223510.435500:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[111188:111242:1002/223510.435540:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[111250:111250:1002/223510.474471:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[111188:111242:1002/223510.490752:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[111188:111242:1002/223510.490829:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[111250:111250:1002/223510.576034:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[111295:111295:1002/223510.581487:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[111296:111296:1002/223510.589047:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[111188:111188:1002/223510.615460:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[111188:111312:1002/223510.651573:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[111188:111312:1002/223510.651634:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[111188:111312:1002/223510.651685:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[111188:111312:1002/223510.651698:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[111188:111312:1002/223510.651725:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[111188:111312:1002/223510.651752:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[111317:111317:1002/223510.790726:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[111317:111326:1002/223510.828396:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/background.js]
+[111328:111328:1002/223510.873947:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[111188:111188:1002/223510.920846:INFO:CONSOLE(92)] "", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (92)
+[111350:111350:1002/223511.458932:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[111371:111371:1002/223511.918184:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[111188:111188:1002/223512.063285:INFO:CONSOLE(101)] "https://www.linkedin.com/in/amy-lee-gt/", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (101)
+[111188:111188:1002/223514.309031:INFO:CONSOLE(101)] "https://changingroom.eco/welcome-change-maker", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (101)
+[111251:111273:1002/223517.027450:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[111251:111273:1002/223517.030184:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[111251:111273:1002/223517.031291:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[111251:111273:1002/223517.032102:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[111251:111273:1002/223517.032777:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[111251:111273:1002/223517.033428:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[111295:111295:1002/223519.706086:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://changingroom.eco/welcome-change-maker"]
+[111188:111188:1002/223520.819060:INFO:CONSOLE(0)] "Access to fetch at 'https://www.changingroom.eco/api/html_parser' from origin 'https://changingroom.eco' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://changingroom.eco/welcome-change-maker (0)
+[111188:111188:1002/223520.820304:INFO:CONSOLE(65)] "Uncaught (in promise) TypeError: Failed to fetch", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/content_script.js (65)
+[111188:111188:1002/223521.290917:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[111188:111188:1002/223522.410603:INFO:CONSOLE(13)] "[batch] MIXPANEL REQUEST: [object Object]", source: https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js (13)
+[111188:111188:1002/223530.524090:INFO:CONSOLE(0)] "Uncaught (in promise) #<Object>", source: https://www.linkedin.com/in/amy-lee-gt/ (0)
+[111188:111188:1002/223610.789601:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 414
+[111188:111188:1002/223610.789717:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 414
+[111188:111188:1002/223610.789861:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[111188:111188:1002/223610.789928:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters
+[111251:111273:1002/223649.820510:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[111188:111188:1002/223701.837619:INFO:CONSOLE(4006)] "Error: No activity within 45000 milliseconds. No response received. Reconnecting.", source: https://static.licdn.com/sc/h/elkx4yqpmhdbzsoniz2lt3lsp (4006)
+[111188:111188:1002/223703.397351:INFO:CONSOLE(0)] "Uncaught (in promise) #<Object>", source: https://www.linkedin.com/in/amy-lee-gt/ (0)
+[111188:111188:1002/223708.337944:INFO:CONSOLE(23)] "right two", source: https://www.linkedin.com/in/amy-lee-gt/ (23)
+[111188:111188:1002/223708.401527:INFO:CONSOLE(27)] "Amy Lee (She/Her)
+Marketing Intern at Microsoft
+Microsoft
+Georgia Institute of Technology
+Douglasville, Georgia, United States  Contact info
+Open to
+Add profile section
+More
+Open to work
+
+Marketing Specialist roles
+
+Show details
+
+Edit
+
+Share that you’re hiring and attract qualified candidates.
+
+Get started
+
+Showcase services you offer so you and your business can be found in search.
+
+Get started", source: https://www.linkedin.com/in/amy-lee-gt/ (27)
+[111188:111188:1002/223708.402410:INFO:CONSOLE(46)] "headers ok", source: https://www.linkedin.com/in/amy-lee-gt/ (46)
+[111188:111188:1002/223708.402974:INFO:CONSOLE(54)] "headers count=19", source: https://www.linkedin.com/in/amy-lee-gt/ (54)
+[111188:111188:1002/223708.403564:INFO:CONSOLE(61)] "list item ok", source: https://www.linkedin.com/in/amy-lee-gt/ (61)
+[111188:111188:1002/223708.404267:INFO:CONSOLE(69)] "listitem count=25", source: https://www.linkedin.com/in/amy-lee-gt/ (69)
+[111188:111188:1002/223708.405468:INFO:CONSOLE(76)] "see more ok", source: https://www.linkedin.com/in/amy-lee-gt/ (76)
+[111188:111188:1002/223708.406033:INFO:CONSOLE(84)] "see more count=8", source: https://www.linkedin.com/in/amy-lee-gt/ (84)
+[111188:111188:1002/223708.406531:INFO:CONSOLE(91)] "language_card ok", source: https://www.linkedin.com/in/amy-lee-gt/ (91)
+[111188:111188:1002/223708.407011:INFO:CONSOLE(95)] "Profile language
+
+English
+
+Public profile & URL
+
+www.linkedin.com/in/amy-lee-gt", source: https://www.linkedin.com/in/amy-lee-gt/ (95)
+[111188:111188:1002/223708.407492:INFO:CONSOLE(103)] "reply ok", source: https://www.linkedin.com/in/amy-lee-gt/ (103)
+[111188:111188:1002/223708.407985:INFO:CONSOLE(106)] "0", source: https://www.linkedin.com/in/amy-lee-gt/ (106)
+[111188:111188:1002/223708.408543:INFO:CONSOLE(108)] "Amy Lee reposted this • 6mo
+6mo
+3,481
+30 comments", source: https://www.linkedin.com/in/amy-lee-gt/ (108)
+[111188:111188:1002/223708.409058:INFO:CONSOLE(106)] "1", source: https://www.linkedin.com/in/amy-lee-gt/ (106)
+[111188:111188:1002/223708.409550:INFO:CONSOLE(108)] "Amy Lee posted this • 6mo • 
+6mo
+Hello World!", source: https://www.linkedin.com/in/amy-lee-gt/ (108)
+[111188:111188:1002/223708.410241:INFO:CONSOLE(116)] "bar ok", source: https://www.linkedin.com/in/amy-lee-gt/ (116)
+[111495:111495:1002/223708.506827:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[111495:111503:1002/223708.584344:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/background.js]
+[111188:111188:1002/223708.616217:INFO:CONSOLE(92)] "https://www.linkedin.com/in/amy-lee-gt/", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (92)
+[111350:111350:1002/223709.761351:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.linkedin.com/in/amy-lee-gt/"]
+[111188:111188:1002/223720.000201:INFO:CONSOLE(0)] "Access to fetch at 'https://www.changingroom.eco/api/html_parser' from origin 'https://www.linkedin.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.linkedin.com/in/amy-lee-gt/ (0)
+[111188:111188:1002/223721.359346:INFO:CONSOLE(65)] "Uncaught (in promise) TypeError: Failed to fetch", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/content_script.js (65)
+[111188:111188:1002/223723.097740:INFO:CONSOLE(126)] "days ok", source: https://www.linkedin.com/tscp-serving/dtag?sz=300x250&ti=1&p=1&c=1&z=profile&pk=d_flagship3_profile_view_base&pz=BR&vmid=ACoAAEE8wlYBhFSJLKFvgg6x7y4Z5fq9A-bmqCA&_x=company%3D1035 (126)
+[111188:111188:1002/223723.099780:INFO:CONSOLE(129)] "Ad
+Amy, unlock your full potential with LinkedIn Premium
+LinkedIn Premium
+See who's viewed your profile in the last 90 days
+Try now for $0", source: https://www.linkedin.com/tscp-serving/dtag?sz=300x250&ti=1&p=1&c=1&z=profile&pk=d_flagship3_profile_view_base&pz=BR&vmid=ACoAAEE8wlYBhFSJLKFvgg6x7y4Z5fq9A-bmqCA&_x=company%3D1035 (129)
+[111188:111188:1002/223723.100139:INFO:CONSOLE(135)] "promo ok", source: https://www.linkedin.com/tscp-serving/dtag?sz=300x250&ti=1&p=1&c=1&z=profile&pk=d_flagship3_profile_view_base&pz=BR&vmid=ACoAAEE8wlYBhFSJLKFvgg6x7y4Z5fq9A-bmqCA&_x=company%3D1035 (135)
+[111188:111188:1002/223723.101569:INFO:CONSOLE(138)] "Ad
+Amy, unlock your full potential with LinkedIn Premium
+LinkedIn Premium
+See who's viewed your profile in the last 90 days
+Try now for $0", source: https://www.linkedin.com/tscp-serving/dtag?sz=300x250&ti=1&p=1&c=1&z=profile&pk=d_flagship3_profile_view_base&pz=BR&vmid=ACoAAEE8wlYBhFSJLKFvgg6x7y4Z5fq9A-bmqCA&_x=company%3D1035 (138)
+[111188:111188:1002/223727.042536:INFO:CONSOLE(35)] "message ok", source: https://www.linkedin.com/in/amy-lee-gt/ (35)
+[111350:111505:1002/223753.759036:WARNING:media_session.cc(949)] RED codec red is missing an associated payload type.
+[111251:111273:1002/223754.842551:ERROR:socket_manager.cc(138)] Failed to resolve address for stun.l.google.com., errorcode: -105
+[111509:111509:1002/223754.854355:WARNING:audio_manager_linux.cc(60)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
+[111350:111506:1002/223755.910262:WARNING:stun_port.cc(485)] Port[a46bd00:0:1:0:local:Net[any:0:0:0:x:x:x:x:x/0:Wildcard:id=0]]: StunPort: stun host lookup received error -1
+[111350:111506:1002/223755.914778:ERROR:stun_request.cc(115)] CheckResponse called on a passwordless request. Fix test!
+[111250:111250:1002/223800.850706:ERROR:gl_utils.cc(319)] [.WebGL-0x3e1400612800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[111188:111188:1002/223801.111147:INFO:CONSOLE(0)] "[.WebGL-0x3e1400612800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://www.linkedin.com/in/amy-lee-gt/ (0)
+[111350:111506:1002/223805.929845:ERROR:stun_request.cc(115)] CheckResponse called on a passwordless request. Fix test!
+[111350:111506:1002/223815.945455:ERROR:stun_request.cc(115)] CheckResponse called on a passwordless request. Fix test!
+[111350:111506:1002/223825.961098:ERROR:stun_request.cc(115)] CheckResponse called on a passwordless request. Fix test!
+[111350:111506:1002/223835.976855:ERROR:stun_request.cc(115)] CheckResponse called on a passwordless request. Fix test!

@@ -1,0 +1,36 @@
+** Propagation paths: 
+
+0x25d1e8577079 <String[39]: e"https://www.linkedin.com/in/amy-lee-gt/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x13b55fcc1331 <JSFunction sendHTMLpage (sfi = 0xe700b4bd61)> `sendHTMLpage`: 2526
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+
+** Taint source functions: 
+
+

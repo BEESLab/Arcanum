@@ -1,0 +1,425 @@
+>>> Taint source: (invoked from api_request_handler:tabs.create:pendingUrl)
+0x06f24daf8949 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x3e1400a34248 ``, source code:
+(tab) { }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:pendingUrl)
+0x06f24dafab31 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x3e1400a34248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x06f24dafb749 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e1400a34428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x06f24dafde69 <String[8]: "LinkedIn">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x06f24dafe241 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x06f24daffe89 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x3e1400a34428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e83121 <String[23]: "Welcome - Changing Room">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e834e9 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e854a9 <String[8]: "LinkedIn">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e854d9 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e87869 <String[23]: "Welcome - Changing Room">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e878a9 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e8a5c9 <String[23]: "Welcome - Changing Room">
+** In function 0x3e1400a34428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e8a7d1 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x3e1400a34428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x01cf09c51b99 <String[11155]: ue"...<truncated>>">
+** In function 0x3e14002ba108 `DOMtoString`, source code:
+(document_root) {
+        var html = '', node = document_root.firstChild;
+        while (node) {
+            switch (node.nodeType) {
+                case Node.ELEMENT_NODE:
+                    html += node.outerHTML;
+                    break;
+                case Node.TEXT_NODE:
+                    html += node.nodeValue;
+                    break;
+                case Node.CDATA_SECTION_NODE:
+                    html += '<![CDATA[' + node.nodeValue + ']]>';
+                    break;
+                case Node.COMMENT_NODE:
+                    html += '<!--' + node.nodeValue + '-->';
+                    break;
+                case Node.DOCUMENT_TYPE_NODE:
+                    // (X)HTML documents are identified by public identifiers
+                    html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+                    break;
+            }
+            node = node.nextSibling;
+        }
+        return html;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x01cf09c53ee9 <String[45]: e"https://changingroom.eco/welcome-change-maker">
+** In function 0x3e14002ba1c8 `sendHTMLpage`, source code:
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e8cb51 <String[13]: "(25) LinkedIn">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e8cf09 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e8ed49 <String[23]: "(25) Amy Lee | LinkedIn">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x060f49e8f111 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e1400a34410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x06f24daf66c9 <String[23]: "(25) Amy Lee | LinkedIn">
+** In function 0x3e1400ab4410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x06f24daf6709 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e1400ab4410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x06f24daf9669 <String[23]: "(25) Amy Lee | LinkedIn">
+** In function 0x3e1400ab4428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x06f24daf9871 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e1400ab4428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:url)
+0x06f24dafe8c1 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e1400ab4248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:title)
+0x06f24dafe881 <String[23]: "(25) Amy Lee | LinkedIn">
+** In function 0x3e1400ab4248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x25d1e8579991 <String[984388]: ue"...<truncated>>">
+** In function 0x3e14002ba108 `DOMtoString`, source code:
+(document_root) {
+        var html = '', node = document_root.firstChild;
+        while (node) {
+            switch (node.nodeType) {
+                case Node.ELEMENT_NODE:
+                    html += node.outerHTML;
+                    break;
+                case Node.TEXT_NODE:
+                    html += node.nodeValue;
+                    break;
+                case Node.CDATA_SECTION_NODE:
+                    html += '<![CDATA[' + node.nodeValue + ']]>';
+                    break;
+                case Node.COMMENT_NODE:
+                    html += '<!--' + node.nodeValue + '-->';
+                    break;
+                case Node.DOCUMENT_TYPE_NODE:
+                    // (X)HTML documents are identified by public identifiers
+                    html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+                    break;
+            }
+            node = node.nextSibling;
+        }
+        return html;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x25d1e8577079 <String[39]: e"https://www.linkedin.com/in/amy-lee-gt/">
+** In function 0x3e14002ba1c8 `sendHTMLpage`, source code:
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+>>> END Taint source
+
