@@ -1,0 +1,86 @@
+** Propagation paths: 
+
+0x2cfb2639f759 <String[14]: e"This is me!!!!">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3749c9270511 <JSFunction (sfi = 0xe58b871d39)> ``: 6762
+(s)
+   {
+    if(s)
+     {
+      var e = document.querySelector(s);
+      var name = get_text(e);
+      if(name)
+       {
+        var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+        get_offer(json,retargeting);
+        return true;
+       }
+     }
+    
+    db_get('url',function(s)
+     {
+      if(s)
+       {
+        var e = document.querySelector(s);
+        var name = get_text(e);
+        if(name)
+         {
+          var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+          get_offer(json,retargeting);
+          return true;
+         }
+       }
+       
+       retargeting();
+     });
+   }
+0x34e6f396bc89 <JSFunction get (sfi = 0x34e6f3969329)> `get`: 1280
+(url,post,fn,not_json)
+ {
+  var ajax = new XMLHttpRequest();
+  var method = 'GET';
+  if(post)
+   {
+    method = 'POST';
+    post = 'json='+encodeURIComponent(JSON.stringify(post));
+   }
+  ajax.open(method,url);
+  ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  ajax.onreadystatechange = function()
+   {
+    if(ajax.readyState==4)
+     {
+      var r = ajax.responseText;
+      if(typeof not_json=='undefined')
+       {
+        r = JSON.parse(r);
+       }
+      if(fn){fn(r);}else{return r;}
+     }
+   }
+  ajax.send(post);
+ }
+0x34e6f396bd59 <JSFunction get_text (sfi = 0x34e6f3969699)> `get_text`: 3886
+(e)
+ {
+  var name = '';
+  if(e)
+   {
+    name = e.innerText;
+    if(!name)
+     {
+      name = e.getAttribute('content');
+     }
+   }
+  return name;
+ }
+
+** Taint source functions: 
+
+

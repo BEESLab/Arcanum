@@ -1,0 +1,161 @@
+** Propagation paths: 
+
+0x00e58b872ef1 <String[17]: e"www.instagram.com">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3749c9270511 <JSFunction (sfi = 0xe58b871d39)> ``: 6762
+(s)
+   {
+    if(s)
+     {
+      var e = document.querySelector(s);
+      var name = get_text(e);
+      if(name)
+       {
+        var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+        get_offer(json,retargeting);
+        return true;
+       }
+     }
+    
+    db_get('url',function(s)
+     {
+      if(s)
+       {
+        var e = document.querySelector(s);
+        var name = get_text(e);
+        if(name)
+         {
+          var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+          get_offer(json,retargeting);
+          return true;
+         }
+       }
+       
+       retargeting();
+     });
+   }
+0x34e6f396bc89 <JSFunction get (sfi = 0x34e6f3969329)> `get`: 1280
+(url,post,fn,not_json)
+ {
+  var ajax = new XMLHttpRequest();
+  var method = 'GET';
+  if(post)
+   {
+    method = 'POST';
+    post = 'json='+encodeURIComponent(JSON.stringify(post));
+   }
+  ajax.open(method,url);
+  ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  ajax.onreadystatechange = function()
+   {
+    if(ajax.readyState==4)
+     {
+      var r = ajax.responseText;
+      if(typeof not_json=='undefined')
+       {
+        r = JSON.parse(r);
+       }
+      if(fn){fn(r);}else{return r;}
+     }
+   }
+  ajax.send(post);
+ }
+0x34e6f396bde9 <JSFunction check_sites (sfi = 0x34e6f39696e9)> `check_sites`: 5090
+(sites)
+ {
+  var host = window.location.host;
+  var url = window.location.href;
+  var c = sites.length;
+  for(var i=0;i<c;i++)
+   {
+    if((sites[i].host==host)||(is_google&&(sites[i].host=='www.google.ru'))||(is_yandex&&(sites[i].host=='yandex.ru'))||(is_bing&&(sites[i].host=='www.bing.com')))
+     {
+      var site = sites[i];
+      var c2 = site.url.length;
+      for(var i2=0;i2<c2;i2++)
+       {
+        var x = url.match(new RegExp(site.url[i2]));
+        if(x)
+         {
+          var e = document.querySelector(site.name_parse);
+          var name = get_text(e);
+          if((is_google&&(e||(url.indexOf('tbm=shop')>-1)))||(is_yandex&&e)||is_bing)
+           {
+            var e = document.querySelector('input[name='+(is_yandex?'text':'q')+']');
+            var name2 = e?e.value:'';
+           }
+          else
+           {
+            var name2 = '';
+           }
+          
+          if(is_google||url.match(/^http(|s):\/\/(www\.|)yandex\.ru\//))
+           {
+            name = '';
+           }
+          
+          if(is_yandex&&(name2||name))
+           {
+            var v = name2?name2:name;
+            if(v.length>256){v='';}
+            if(v)
+             {
+              db_set('retar_key',v);
+              db_set('retar_showed',0);
+             }
+           }
+          
+          if(name||name2)
+           {
+            var json = {site:host,url:url,ref:document.referrer,name:name,name2:name2,shop_id:site.shop_id,browser:browser,version:version};
+            get_offer(json);
+           }
+          break;
+         }
+       }
+      return true;
+     }
+   }
+  
+  db_get('mikraz',function(s)
+   {
+    if(s)
+     {
+      var e = document.querySelector(s);
+      var name = get_text(e);
+      if(name)
+       {
+        var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+        get_offer(json,retargeting);
+        return true;
+       }
+     }
+    
+    db_get('url',function(s)
+     {
+      if(s)
+       {
+        var e = document.querySelector(s);
+        var name = get_text(e);
+        if(name)
+         {
+          var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+          get_offer(json,retargeting);
+          return true;
+         }
+       }
+       
+       retargeting();
+     });
+   });
+ }
+
+** Taint source functions: 
+
+

