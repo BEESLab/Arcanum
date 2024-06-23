@@ -1,0 +1,99 @@
+[173855:173910:0927/085551.960520:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[173855:173910:0927/085551.960687:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[173855:173909:0927/085551.965301:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[173855:173909:0927/085551.965382:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[173855:173855:0927/085551.970113:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[173917:173917:0927/085551.984192:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[173855:173855:0927/085551.991857:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[173855:173909:0927/085551.998924:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[173855:173909:0927/085551.998966:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[173917:173917:0927/085552.019986:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[173855:173909:0927/085552.040202:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[173855:173909:0927/085552.040282:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[173917:173917:0927/085552.119249:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[173959:173959:0927/085552.124440:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173960:173960:0927/085552.126614:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173855:173855:0927/085552.152074:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[173855:173977:0927/085552.187939:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[173855:173977:0927/085552.188167:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[173855:173977:0927/085552.188321:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[173855:173977:0927/085552.188341:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[173855:173977:0927/085552.188387:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[173855:173977:0927/085552.188526:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[173981:173981:0927/085552.298363:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173981:173990:0927/085552.339883:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js]
+[173991:173991:0927/085552.371487:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173918:173941:0927/085552.919094:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[173918:173941:0927/085552.919796:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[174019:174019:0927/085553.046481:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[174042:174042:0927/085553.582498:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173855:173855:0927/085553.628625:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[173855:173855:0927/085553.628863:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[173855:173855:0927/085553.670652:INFO:CONSOLE(1)] "trackingHelper: cached TV Loaded data [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[173855:173855:0927/085557.435966:INFO:CONSOLE(1)] "trackingHelper: begin [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[173855:173855:0927/085557.436328:INFO:CONSOLE(1)] "trackingHelper: fired TV Session Started [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[173855:173855:0927/085557.441782:INFO:CONSOLE(1)] "trackingHelper: Sending TV Loaded [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[173855:173855:0927/085557.448755:INFO:CONSOLE(1)] "trackingHelper: TV Loaded result [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[173855:173855:0927/085557.449067:INFO:CONSOLE(1)] "trackingHelper: end [object Object]", source: https://likewisetv.com/_next/static/chunks/pages/_app-f43d16f0fa5c42e7.js (1)
+[174062:174062:0927/085557.750176:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[174072:174072:0927/085558.356448:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[174080:174080:0927/085558.375213:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173855:173855:0927/085558.657236:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[173855:173855:0927/085558.856802:INFO:CONSOLE(559)] "GTM PTag v1.4; tagId: 2613487379772", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (559)
+[173855:173855:0927/085558.893126:INFO:CONSOLE(559)] "data =  [object Object]", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (559)
+[173855:173855:0927/085558.904328:INFO:CONSOLE(559)] "initData =  [object Object]", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (559)
+[173855:173855:0927/085600.290358:INFO:CONSOLE(5)] "[TikTok Pixel] - Invalid pixel ID
+Issue: The pixel ID is invalid. This could prevent your pixel from receiving data.
+Suggestion: Please go to Events Manager and find the correct pixel ID.", source: https://analytics.tiktok.com/i18n/pixel/static/main.MWQ0NWRkZTlhMA.js (5)
+[173855:173855:0927/085600.290679:INFO:CONSOLE(5)] "[TikTok Pixel] - Invalid pixel ID
+Issue: The pixel ID is invalid. This could prevent your pixel from receiving data.
+Suggestion: Please go to Events Manager and find the correct pixel ID.", source: https://analytics.tiktok.com/i18n/pixel/static/main.MWQ0NWRkZTlhMA.js (5)
+[173855:173855:0927/085601.047757:INFO:CONSOLE(59)] "ErrorUtils caught an error:
+
+No hash for rsrcIndex 93 (rev: 1008662111, cohort: HYP:instagram_web_pkg). ["{\"hash\":\"csr:_a_0_3i\",\"rev\":1008662111,\"type\":\"csr\",\"src\":\":93,40\",\"c\":1,\"tsrc\":null}"]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs.", source: https://static.cdninstagram.com/rsrc.php/v3/ys/r/m-391j4JoBJ.js?_nc_x=Ij3Wp8lg5Kz (59)
+[174105:174105:0927/085601.186117:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173855:173855:0927/085601.662653:INFO:CONSOLE(559)] "Firing Pinterest event: pagevisit", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (559)
+[173855:173855:0927/085601.662849:INFO:CONSOLE(559)] "Event Data:", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (559)
+[173855:173855:0927/085601.663018:INFO:CONSOLE(559)] "[object Object]", source: https://www.googletagmanager.com/gtm.js?id=GTM-M35GLRP&gtm_auth=TlaZjy-kddVA5pZhDggSqQ&gtm_preview=env-1&gtm_cookies_win=x (559)
+[174118:174118:0927/085602.582081:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173855:173855:0927/085603.314385:INFO:CONSOLE(20)] "profile head ok", source: https://www.instagram.com/xqgtiti/ (20)
+[173855:173855:0927/085603.316120:INFO:CONSOLE(24)] "xqgtiti
+Edit Profile
+View archive
+2 posts
+0 followers
+13 following
+Erin
+ 
+she
+This is me!!!!
+google.com", source: https://www.instagram.com/xqgtiti/ (24)
+[173855:173855:0927/085603.316487:INFO:CONSOLE(30)] "post list ok", source: https://www.instagram.com/xqgtiti/ (30)
+[173855:173855:0927/085603.323796:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[173855:173855:0927/085603.414793:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[173855:173855:0927/085603.415298:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[173855:173855:0927/085603.513334:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[173855:173855:0927/085603.537311:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[173855:173855:0927/085603.537550:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[173855:173855:0927/085603.555915:INFO:CONSOLE(106)] "[Report Only] Refused to load the image 'https://googleads.g.doubleclick.net/pagead/viewthroughconversion/858885276/?value=1.00&currency_code=USD&label=qGVACPj3of0DEJyZxpkD&guid=ON&script=0' because it violates the following Content Security Policy directive: "img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster: *.giphy.com *.teststagram.com *.igsonar.com *.google-analytics.com".
+", source: https://www.instagram.com/paid_ads/generete_pixels/? (106)
+[173855:173855:0927/085603.594355:INFO:CONSOLE(0)] "[Report Only] Refused to load the image 'https://www.google.com/pagead/1p-user-list/858885276/?value=1.00&currency_code=USD&label=qGVACPj3of0DEJyZxpkD&guid=ON&script=0&is_vtc=1&random=3232947768' because it violates the following Content Security Policy directive: "img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster: *.giphy.com *.teststagram.com *.igsonar.com *.google-analytics.com".
+", source: https://www.instagram.com/paid_ads/generete_pixels/? (0)
+[173855:173855:0927/085603.905307:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[174138:174138:0927/085606.755331:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173855:173855:0927/085606.780676:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[173855:173855:0927/085606.780880:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[174149:174149:0927/085607.454291:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[173855:173855:0927/085607.503964:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[174019:174019:0927/085608.898928:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.instagram.com/xqgtiti/"]
+[173855:173855:0927/085609.603558:INFO:CONSOLE(261)] "checkDom", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/content.js (261)
+[173855:173855:0927/085609.658763:INFO:CONSOLE(39)] "81147875", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js (39)
+[173855:173855:0927/085609.822937:INFO:CONSOLE(301)] "Response from server [object Object]", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js (301)
+[173855:173855:0927/085609.893810:INFO:CONSOLE(50)] "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length')", source: chrome-extension://bahcihkpdjlbndandplnfmejnalndgjo/asset/sw.js (50)
+[173855:173855:0927/085612.170138:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[173855:173855:0927/085652.678717:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 413
+[173855:173855:0927/085652.678821:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 413
+[173855:173855:0927/085652.679019:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[173855:173855:0927/085652.679081:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters
