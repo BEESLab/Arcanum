@@ -1,0 +1,11 @@
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:770:30
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: 100008340645340
+
+{"details":"/ram/analysis/v8logs/00000001.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<

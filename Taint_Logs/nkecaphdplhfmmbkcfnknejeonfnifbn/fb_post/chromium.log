@@ -1,0 +1,127 @@
+[175299:175354:0922/053558.046874:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[175299:175354:0922/053558.047039:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[175299:175353:0922/053558.052654:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[175299:175353:0922/053558.052695:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[175299:175299:0922/053558.063287:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[175362:175362:0922/053558.073635:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[175299:175299:0922/053558.084560:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[175299:175353:0922/053558.096209:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[175299:175353:0922/053558.096268:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[175362:175362:0922/053558.124155:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[175299:175353:0922/053558.205792:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[175299:175353:0922/053558.205875:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[175362:175362:0922/053558.298596:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[175403:175403:0922/053558.304394:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[175407:175407:0922/053558.311438:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[175299:175299:0922/053558.344976:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[175299:175423:0922/053558.693667:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[175299:175423:0922/053558.693757:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[175299:175423:0922/053558.693850:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[175299:175423:0922/053558.693879:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[175299:175423:0922/053558.693928:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[175299:175423:0922/053558.693981:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[175425:175425:0922/053558.790703:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[175425:175435:0922/053558.881834:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/background.js]
+[175437:175437:0922/053600.100800:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[175447:175447:0922/053600.144139:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[175299:175357:0922/053600.246170:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for www.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[175299:175299:0922/053600.400429:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[175299:175299:0922/053600.400802:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[175299:175314:0922/053600.625266:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for static.xx.fbcdn.net failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[175299:175314:0922/053600.672032:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for scontent.xx.fbcdn.net failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[175364:175385:0922/053607.838250:WARNING:spdy_session.cc(3219)] Received RST for invalid stream5
+[175364:175385:0922/053607.838333:WARNING:spdy_session.cc(3219)] Received RST for invalid stream5
+[175299:175299:0922/053610.659065:INFO:CONSOLE(22)] "all post ok", source: https://www.facebook.com/profile.php?id=100084859195049 (22)
+[175299:175299:0922/053610.659681:INFO:CONSOLE(25)] "1", source: https://www.facebook.com/profile.php?id=100084859195049 (25)
+[175299:175299:0922/053610.660128:INFO:CONSOLE(27)] "0", source: https://www.facebook.com/profile.php?id=100084859195049 (27)
+[175299:175299:0922/053610.660607:INFO:CONSOLE(52)] "head yes", source: https://www.facebook.com/profile.php?id=100084859195049 (52)
+[175299:175299:0922/053610.660984:INFO:CONSOLE(56)] "head done", source: https://www.facebook.com/profile.php?id=100084859195049 (56)
+[175299:175299:0922/053610.661394:INFO:CONSOLE(63)] "bio yes", source: https://www.facebook.com/profile.php?id=100084859195049 (63)
+[175299:175299:0922/053610.661772:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[175299:175299:0922/053610.662251:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[175299:175299:0922/053610.662871:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[175299:175299:0922/053610.663283:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[175299:175299:0922/053610.663699:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[175299:175299:0922/053610.664086:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[175299:175299:0922/053610.664491:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[175299:175299:0922/053610.664878:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[175299:175299:0922/053610.665259:INFO:CONSOLE(70)] "bio done", source: https://www.facebook.com/profile.php?id=100084859195049 (70)
+[175437:175437:0922/053610.992424:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.facebook.com/profile.php?id=100084859195049"]
+[175364:175385:0922/053620.300066:WARNING:spdy_session.cc(3219)] Received RST for invalid stream13
+[175364:175385:0922/053620.300140:WARNING:spdy_session.cc(3219)] Received RST for invalid stream13
+[175299:175356:0922/053620.354408:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for edge-chat.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[175299:175299:0922/053627.152734:INFO:CONSOLE(231)] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[175299:175299:0922/053627.153109:INFO:CONSOLE(231)] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[175299:175299:0922/053627.153486:INFO:CONSOLE(231)] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[175299:175299:0922/053627.153831:INFO:CONSOLE(231)] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[175364:175385:0922/053627.158451:WARNING:spdy_session.cc(3219)] Received RST for invalid stream27
+[175364:175385:0922/053627.158517:WARNING:spdy_session.cc(3219)] Received RST for invalid stream27
+[175364:175385:0922/053629.280958:WARNING:spdy_session.cc(3219)] Received RST for invalid stream31
+[175364:175385:0922/053629.281058:WARNING:spdy_session.cc(3219)] Received RST for invalid stream31
+[175364:175385:0922/053629.281085:WARNING:spdy_session.cc(3219)] Received RST for invalid stream31
+[175364:175385:0922/053629.451022:WARNING:spdy_session.cc(3219)] Received RST for invalid stream1
+[175364:175385:0922/053629.451090:WARNING:spdy_session.cc(3219)] Received RST for invalid stream1
+[175299:175299:0922/053629.461991:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=558446353055743&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[175364:175385:0922/053629.478640:WARNING:spdy_session.cc(3219)] Received RST for invalid stream3
+[175364:175385:0922/053629.478710:WARNING:spdy_session.cc(3219)] Received RST for invalid stream3
+[175299:175299:0922/053629.482436:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=1459166277271551&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[175299:175299:0922/053629.556001:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=1459166277271551&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[175364:175385:0922/053631.639951:WARNING:spdy_session.cc(3219)] Received RST for invalid stream7
+[175364:175385:0922/053631.640030:WARNING:spdy_session.cc(3219)] Received RST for invalid stream7
+[175299:175299:0922/053631.643775:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=3260606129897471&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[175364:175385:0922/053633.637736:WARNING:spdy_session.cc(3219)] Received RST for invalid stream9
+[175364:175385:0922/053633.637830:WARNING:spdy_session.cc(3219)] Received RST for invalid stream9
+[175299:175299:0922/053633.659772:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=5062045980426239&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[175299:175299:0922/053635.263205:INFO:CONSOLE(59)] "ErrorUtils caught an error:
+
+Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs.", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (59)
+[175299:175299:0922/053635.264099:INFO:CONSOLE(557)] "Uncaught Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.", source: https://static.xx.fbcdn.net/rsrc.php/v3i-254/yE/l/makehaste_jhash/59voBUqUkj8Qq2WSraySoabdQH5E5-yTvM1DIlJlfMQ1kSkGYmsF6rLJm65Xoag2nlutO3-3p3TD2CrlvGUJVgX4ddbtwZ742doYPe2LREXTDN9puHYM9-sL7axpIdddPXqorRzXLi7Qp5lELRDWoExR4_bzIDvJlBz_tvlOBn0g850HuJmCoseIfEo.js?_nc_x=XqDGrcryK4Y (557)
+[175299:175299:0922/053635.291797:INFO:CONSOLE(557)] "Uncaught Error: Minified React error #422; visit https://reactjs.org/docs/error-decoder.html?invariant=422 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.", source: https://static.xx.fbcdn.net/rsrc.php/v3i-254/yE/l/makehaste_jhash/59voBUqUkj8Qq2WSraySoabdQH5E5-yTvM1DIlJlfMQ1kSkGYmsF6rLJm65Xoag2nlutO3-3p3TD2CrlvGUJVgX4ddbtwZ742doYPe2LREXTDN9puHYM9-sL7axpIdddPXqorRzXLi7Qp5lELRDWoExR4_bzIDvJlBz_tvlOBn0g850HuJmCoseIfEo.js?_nc_x=XqDGrcryK4Y (557)
+[175364:175385:0922/053645.430891:WARNING:spdy_session.cc(3219)] Received RST for invalid stream11
+[175364:175385:0922/053645.430972:WARNING:spdy_session.cc(3219)] Received RST for invalid stream11
+[175299:175299:0922/053645.472606:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=6863485830955007&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[175299:175299:0922/053649.733352:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=7764205757267967&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[175299:175299:0922/053700.105751:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[175299:175299:0922/053700.147590:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 413
+[175299:175299:0922/053700.147652:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 413
+[175299:175299:0922/053700.147872:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[175299:175299:0922/053700.147915:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters
+[175299:175315:0922/053714.194556:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for edge-chat.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[175364:175385:0922/053714.228085:WARNING:spdy_session.cc(3219)] Received RST for invalid stream15
+[175364:175385:0922/053714.228202:WARNING:spdy_session.cc(3219)] Received RST for invalid stream15
+[175299:175299:0922/053714.955876:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=8664925681483775&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[175364:175385:0922/053725.077897:WARNING:spdy_session.cc(3219)] Received RST for invalid stream45
+[175364:175385:0922/053725.077984:WARNING:spdy_session.cc(3219)] Received RST for invalid stream45
+[175299:175299:0922/053725.143125:ERROR:background_mode_manager_aura.cc(12)] Not implemented reached in virtual void BackgroundModeManager::EnableLaunchOnStartup(bool)
+[175364:175385:0922/053725.143603:WARNING:spdy_session.cc(3219)] Received RST for invalid stream17
+[175364:175385:0922/053725.143667:WARNING:spdy_session.cc(3219)] Received RST for invalid stream17
+[175299:175299:0922/053725.183375:WARNING:internal_linux.cc(67)] Failed to read /proc/175364/stat
+[175299:175299:0922/053725.183413:ERROR:kill_posix.cc(34)] waitpid(175364): No child processes (10)
+[175299:175318:0922/053725.184809:WARNING:discardable_shared_memory_manager.cc(436)] Some MojoDiscardableSharedMemoryManagerImpls are still alive. They will be leaked.
+[175299:175299:0922/053725.187733:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

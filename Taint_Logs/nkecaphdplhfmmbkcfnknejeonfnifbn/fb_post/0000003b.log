@@ -1,0 +1,17 @@
+** Propagation paths: 
+
+0x309da94e5a11 <String[1]: e"\xa0">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x146c1db05b91 <JSFunction (sfi = 0xafea93be801)> ``: 37101
+el => el.innerText
+0x1a491358a3d1 <JSFunction join (sfi = 0x38aaa39ed351)> `join`: 0
+
+** Taint source functions: 
+
+

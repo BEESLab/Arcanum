@@ -1,0 +1,1830 @@
+>>> TAINT SINK `XHR` REACHED (fetch-body-USVString) <<<
+STACK TRACE START: 
+0x2e2fa5242891 <String[280]: c"PostAPI (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:997:28)userDetails (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:824:28)chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser.js:203:1">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://api.poweradspy.com/checkFbUser
+
+** Tainted bytes: (nullptr=0): 0000000000000000011111111111111100
+
+** Sink object: { "facebook_id": 100008340645340 }
+
+** Propagation paths: 
+
+0x2e2fa5241d41 <String[34]: uc"{ "facebook_id": 100008340645340 }">:
+  0x2e2fa5241381 <String[15]: u"100008340645340">, in function 40486678856345 `userDetails`: 26651, 27103
+
+0x2e2fa5241381 <String[15]: u"100008340645340">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24d28a1c8359 <JSFunction PostAPI (sfi = 0x24d28a1c4eb9)> `PostAPI`: 32137
+(post, url) {
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: post
+    });
+    return response.text();
+  } catch (error) { return ''; }
+}
+0x24d28a1c7281 <JSFunction getBetween (sfi = 0x24d28a1c3de9)> `getBetween`: 3212
+(pageSource, firstData, secondData) {
+  try {
+    const resSplit = pageSource.split(firstData);
+    const indexSec = resSplit[1].indexOf(secondData);
+    return resSplit[1].substring(0, indexSec);
+  } catch (e) {
+    return '';
+  }
+}
+0x24d28a1c8299 <JSFunction userDetails (sfi = 0x24d28a1c4e19)> `userDetails`: 26651
+() {
+  if (userDataProcessing) {
+    return;
+  }
+  userDataProcessing = true;
+  
+  let userID = user_ID;
+  let currentCity = '';
+  let profileName = '';
+  let otherPlace = '';
+  let birthday = '';
+  let gender = '';
+  let relationshipStatus = '';
+
+  if (userID === '') {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  }
+
+  const adUser = `{ "facebook_id": ${user_ID} }`;
+  var userResponse = await PostAPI(adUser, powerAdSpyApi + 'checkFbUser');
+  const obj = JSON.parse(userResponse);
+  if (obj.code == 400 || obj.code == 200) {
+    const aboutUrl =
+      'https://www.facebook.com/profile.php?id=' + userID + '&sk=about';
+    const LivingUrl =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=living&pnref=about';
+    const GenderPageURL =
+      'https://www.facebook.com/profile.php?id=' +
+      userID +
+      '&sk=about&section=contact-info';
+    const relationshipURL =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=relationship&pnref=about';
+
+    var aboutResponse = await GetAPI(aboutUrl);
+    profileName = getBetween(aboutResponse, 'id="pageTitle">', '<');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        'fb-timeline-cover-name">',
+        '<',
+      ).replace('&#039;', '\'');
+    }
+    profileName = profileName.replace(',', '');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        '"NAME":"',
+        '","SHORT_NAME"',
+      );
+    }
+    if (profileName == '') {
+      profileName = 'NA';
+    }
+
+    birthday = getBetween(
+      aboutResponse,
+      'Birthday</span></div><div>',
+      '</div>',
+    ).replace(',', '');
+    birthday = birthday.substr(birthday.length - 4, 4);
+    const d = new Date();
+    const n = d.getFullYear();
+    birthday = n - birthday;
+    if (isNaN(birthday) || birthday == n) {
+      var birthdayResponse = await GetAPI('https://www.facebook.com/' + userID + '/about?section=contact-info');
+      birthday = getBetween(
+        birthdayResponse,
+        '"year":',
+        ',"limited_notice"',
+      );
+      const d = new Date();
+      const n = d.getFullYear();
+      birthday = n - birthday;
+    }
+    if (isNaN(birthday) || birthday == n) {
+      birthday = 23;
+    }
+
+    var genderResponse = await GetAPI(GenderPageURL);
+    const genderInfo = getBetween(
+      genderResponse,
+      'Gender</span>',
+      '</span>',
+    );
+    if (genderInfo.indexOf('Male') != -1) {
+      gender = 'Male';
+    } else if (genderInfo.indexOf('Female') != -1) {
+      gender = 'Female';
+    } else if (gender == '') {
+      gender = getBetween(
+        genderResponse,
+        '"gender":"',
+        '","is_viewer_friend',
+      );
+    } else {
+      gender = 'NA';
+    }
+
+    var relationshipResponse = await GetAPI(relationshipURL);
+    relationshipStatus = $(relationshipResponse).find('.x1gan7if .x1iyjqo2 .x126k92a span.xzsf02u').first().text().toLowerCase();
+    if (!relationshipStatus) {
+      relationshipStatus = getBetween(
+        relationshipResponse,
+        'class="_vb- _50f5">',
+        '<',
+      );
+      if (relationshipStatus == '') {
+        let NewrelationshipStatus = getBetween(
+          relationshipResponse,
+          '"profile_fields"',
+          '"list_item_groups":[],"privacy_scope":{"privacy_scope_renderer"',
+        );
+        let abc = NewrelationshipStatus.split(':');
+        relationshipStatus = abc[abc.length - 1].replace(/[^a-zA-Z ]/g, '');
+      }
+    }
+    if (relationshipStatus.includes("married")) {
+      relationshipStatus = "Married";
+    } else if (relationshipStatus.includes("single")) {
+      relationshipStatus = "Single";
+    } else {
+      relationshipStatus = '';
+    }
+
+    var currentCityResponse = await GetAPI(LivingUrl);
+    let NewcurrentCity = getBetween(
+      currentCityResponse,
+      '"verification_status":',
+      '"current_city"',
+    );
+    currentCity = getBetween(
+      NewcurrentCity,
+      '"text":"',
+      '"}',
+    );
+    if (currentCity) {
+      var citydata = `{ "landmark": ${currentCity} }`;
+      if (currentCity) {
+        var countryResponse = await PostAPI(citydata, 'https://planguage.globusdemos.com/get-country/');
+        try {
+          var countryData = JSON.parse(countryResponse);
+          currentCity = countryData.CountryDetected.country;
+        } catch {
+          currentCity = "";
+        }
+      }
+    }
+
+    if (!currentCity) currentCity = !!geoData.userCountry ? geoData.userCountry : null;
+
+    const adData =
+      '{"facebook_id":"' +
+      userID +
+      '","current_country":"' +
+      currentCity +
+      '","name":"' +
+      profileName +
+      '","others_places_lived":"' +
+      otherPlace +
+      '","Gender":"' +
+      gender +
+      '","age":"' +
+      birthday +
+      '","relationship_status":"' +
+      relationshipStatus +
+      '"}';
+
+    await PostAPI(adData, powerAdSpyApi + 'fb_user_data');
+  }
+}
+0x24d28a1c81c9 <JSFunction getUserData (sfi = 0x24d28a1c4c19)> `getUserData`: 25236
+() {
+  if (user_ID) {
+    return;
+  }
+
+  try {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  } catch (err) {
+    if (enableDebugger) {
+      debugger;
+    }
+  }
+
+  if (user_ID !== undefined && user_ID !== '') {
+    chrome.storage.local.get('userid', function (result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    });
+  }
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `XHR` REACHED (fetch-string-url) <<<
+STACK TRACE START: 
+0x2fbbb94f7f91 <String[201]: c"GetAPI (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:982:28)userDetails (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:842:31)">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://www.facebook.com/profile.php?id=100008340645340&sk=about
+
+** Tainted bytes: (nullptr=0): 0000000000000000000000000000000000000000111111111111111000000000
+
+** Sink object: https://www.facebook.com/profile.php?id=100008340645340&sk=about
+
+** Propagation paths: 
+
+0x2fbbb94f72c9 <String[64]: uc"https://www.facebook.com/profile.php?id=100008340645340&sk=about">:
+  0x3fe29dbce6c9 <String[15]: u"100008340645340">, in function 40486678856345 `userDetails`: 26651, 27352
+
+0x3fe29dbce6c9 <String[15]: u"100008340645340">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24d28a1c82f9 <JSFunction GetAPI (sfi = 0x24d28a1c4e69)> `GetAPI`: 31814
+(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+        'cache-control': 'no-cache',
+        'Accept': 'text/html'
+      }
+    });
+
+    return response.text();
+  } catch (error) { return ''; }
+}
+0x3fe29dbce6f9 <JSFunction (sfi = 0x2f9b5b271e81)> ``: 25586
+(result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    }
+0x24d28a1c7281 <JSFunction getBetween (sfi = 0x24d28a1c3de9)> `getBetween`: 3212
+(pageSource, firstData, secondData) {
+  try {
+    const resSplit = pageSource.split(firstData);
+    const indexSec = resSplit[1].indexOf(secondData);
+    return resSplit[1].substring(0, indexSec);
+  } catch (e) {
+    return '';
+  }
+}
+0x24d28a1c8299 <JSFunction userDetails (sfi = 0x24d28a1c4e19)> `userDetails`: 26651
+() {
+  if (userDataProcessing) {
+    return;
+  }
+  userDataProcessing = true;
+  
+  let userID = user_ID;
+  let currentCity = '';
+  let profileName = '';
+  let otherPlace = '';
+  let birthday = '';
+  let gender = '';
+  let relationshipStatus = '';
+
+  if (userID === '') {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  }
+
+  const adUser = `{ "facebook_id": ${user_ID} }`;
+  var userResponse = await PostAPI(adUser, powerAdSpyApi + 'checkFbUser');
+  const obj = JSON.parse(userResponse);
+  if (obj.code == 400 || obj.code == 200) {
+    const aboutUrl =
+      'https://www.facebook.com/profile.php?id=' + userID + '&sk=about';
+    const LivingUrl =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=living&pnref=about';
+    const GenderPageURL =
+      'https://www.facebook.com/profile.php?id=' +
+      userID +
+      '&sk=about&section=contact-info';
+    const relationshipURL =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=relationship&pnref=about';
+
+    var aboutResponse = await GetAPI(aboutUrl);
+    profileName = getBetween(aboutResponse, 'id="pageTitle">', '<');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        'fb-timeline-cover-name">',
+        '<',
+      ).replace('&#039;', '\'');
+    }
+    profileName = profileName.replace(',', '');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        '"NAME":"',
+        '","SHORT_NAME"',
+      );
+    }
+    if (profileName == '') {
+      profileName = 'NA';
+    }
+
+    birthday = getBetween(
+      aboutResponse,
+      'Birthday</span></div><div>',
+      '</div>',
+    ).replace(',', '');
+    birthday = birthday.substr(birthday.length - 4, 4);
+    const d = new Date();
+    const n = d.getFullYear();
+    birthday = n - birthday;
+    if (isNaN(birthday) || birthday == n) {
+      var birthdayResponse = await GetAPI('https://www.facebook.com/' + userID + '/about?section=contact-info');
+      birthday = getBetween(
+        birthdayResponse,
+        '"year":',
+        ',"limited_notice"',
+      );
+      const d = new Date();
+      const n = d.getFullYear();
+      birthday = n - birthday;
+    }
+    if (isNaN(birthday) || birthday == n) {
+      birthday = 23;
+    }
+
+    var genderResponse = await GetAPI(GenderPageURL);
+    const genderInfo = getBetween(
+      genderResponse,
+      'Gender</span>',
+      '</span>',
+    );
+    if (genderInfo.indexOf('Male') != -1) {
+      gender = 'Male';
+    } else if (genderInfo.indexOf('Female') != -1) {
+      gender = 'Female';
+    } else if (gender == '') {
+      gender = getBetween(
+        genderResponse,
+        '"gender":"',
+        '","is_viewer_friend',
+      );
+    } else {
+      gender = 'NA';
+    }
+
+    var relationshipResponse = await GetAPI(relationshipURL);
+    relationshipStatus = $(relationshipResponse).find('.x1gan7if .x1iyjqo2 .x126k92a span.xzsf02u').first().text().toLowerCase();
+    if (!relationshipStatus) {
+      relationshipStatus = getBetween(
+        relationshipResponse,
+        'class="_vb- _50f5">',
+        '<',
+      );
+      if (relationshipStatus == '') {
+        let NewrelationshipStatus = getBetween(
+          relationshipResponse,
+          '"profile_fields"',
+          '"list_item_groups":[],"privacy_scope":{"privacy_scope_renderer"',
+        );
+        let abc = NewrelationshipStatus.split(':');
+        relationshipStatus = abc[abc.length - 1].replace(/[^a-zA-Z ]/g, '');
+      }
+    }
+    if (relationshipStatus.includes("married")) {
+      relationshipStatus = "Married";
+    } else if (relationshipStatus.includes("single")) {
+      relationshipStatus = "Single";
+    } else {
+      relationshipStatus = '';
+    }
+
+    var currentCityResponse = await GetAPI(LivingUrl);
+    let NewcurrentCity = getBetween(
+      currentCityResponse,
+      '"verification_status":',
+      '"current_city"',
+    );
+    currentCity = getBetween(
+      NewcurrentCity,
+      '"text":"',
+      '"}',
+    );
+    if (currentCity) {
+      var citydata = `{ "landmark": ${currentCity} }`;
+      if (currentCity) {
+        var countryResponse = await PostAPI(citydata, 'https://planguage.globusdemos.com/get-country/');
+        try {
+          var countryData = JSON.parse(countryResponse);
+          currentCity = countryData.CountryDetected.country;
+        } catch {
+          currentCity = "";
+        }
+      }
+    }
+
+    if (!currentCity) currentCity = !!geoData.userCountry ? geoData.userCountry : null;
+
+    const adData =
+      '{"facebook_id":"' +
+      userID +
+      '","current_country":"' +
+      currentCity +
+      '","name":"' +
+      profileName +
+      '","others_places_lived":"' +
+      otherPlace +
+      '","Gender":"' +
+      gender +
+      '","age":"' +
+      birthday +
+      '","relationship_status":"' +
+      relationshipStatus +
+      '"}';
+
+    await PostAPI(adData, powerAdSpyApi + 'fb_user_data');
+  }
+}
+0x24d28a1c81c9 <JSFunction getUserData (sfi = 0x24d28a1c4c19)> `getUserData`: 25236
+() {
+  if (user_ID) {
+    return;
+  }
+
+  try {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  } catch (err) {
+    if (enableDebugger) {
+      debugger;
+    }
+  }
+
+  if (user_ID !== undefined && user_ID !== '') {
+    chrome.storage.local.get('userid', function (result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    });
+  }
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `XHR` REACHED (fetch-string-url) <<<
+STACK TRACE START: 
+0x300601d8bb49 <String[201]: c"GetAPI (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:982:28)userDetails (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:873:36)">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://www.facebook.com/100008340645340/about?section=contact-info
+
+** Tainted bytes: (nullptr=0): 0000000000000000000000000111111111111111000000000000000000000000000
+
+** Sink object: https://www.facebook.com/100008340645340/about?section=contact-info
+
+** Propagation paths: 
+
+0x300601d8b0b1 <String[67]: uc"https://www.facebook.com/100008340645340/about?section=contact-info">:
+  0x3fe29dbce6c9 <String[15]: u"100008340645340">, in function 40486678856345 `userDetails`: 26651, 28722
+
+0x3fe29dbce6c9 <String[15]: u"100008340645340">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24d28a1c82f9 <JSFunction GetAPI (sfi = 0x24d28a1c4e69)> `GetAPI`: 31814
+(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+        'cache-control': 'no-cache',
+        'Accept': 'text/html'
+      }
+    });
+
+    return response.text();
+  } catch (error) { return ''; }
+}
+0x3fe29dbce6f9 <JSFunction (sfi = 0x2f9b5b271e81)> ``: 25586
+(result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    }
+0x24d28a1c7281 <JSFunction getBetween (sfi = 0x24d28a1c3de9)> `getBetween`: 3212
+(pageSource, firstData, secondData) {
+  try {
+    const resSplit = pageSource.split(firstData);
+    const indexSec = resSplit[1].indexOf(secondData);
+    return resSplit[1].substring(0, indexSec);
+  } catch (e) {
+    return '';
+  }
+}
+0x24d28a1c8299 <JSFunction userDetails (sfi = 0x24d28a1c4e19)> `userDetails`: 26651
+() {
+  if (userDataProcessing) {
+    return;
+  }
+  userDataProcessing = true;
+  
+  let userID = user_ID;
+  let currentCity = '';
+  let profileName = '';
+  let otherPlace = '';
+  let birthday = '';
+  let gender = '';
+  let relationshipStatus = '';
+
+  if (userID === '') {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  }
+
+  const adUser = `{ "facebook_id": ${user_ID} }`;
+  var userResponse = await PostAPI(adUser, powerAdSpyApi + 'checkFbUser');
+  const obj = JSON.parse(userResponse);
+  if (obj.code == 400 || obj.code == 200) {
+    const aboutUrl =
+      'https://www.facebook.com/profile.php?id=' + userID + '&sk=about';
+    const LivingUrl =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=living&pnref=about';
+    const GenderPageURL =
+      'https://www.facebook.com/profile.php?id=' +
+      userID +
+      '&sk=about&section=contact-info';
+    const relationshipURL =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=relationship&pnref=about';
+
+    var aboutResponse = await GetAPI(aboutUrl);
+    profileName = getBetween(aboutResponse, 'id="pageTitle">', '<');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        'fb-timeline-cover-name">',
+        '<',
+      ).replace('&#039;', '\'');
+    }
+    profileName = profileName.replace(',', '');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        '"NAME":"',
+        '","SHORT_NAME"',
+      );
+    }
+    if (profileName == '') {
+      profileName = 'NA';
+    }
+
+    birthday = getBetween(
+      aboutResponse,
+      'Birthday</span></div><div>',
+      '</div>',
+    ).replace(',', '');
+    birthday = birthday.substr(birthday.length - 4, 4);
+    const d = new Date();
+    const n = d.getFullYear();
+    birthday = n - birthday;
+    if (isNaN(birthday) || birthday == n) {
+      var birthdayResponse = await GetAPI('https://www.facebook.com/' + userID + '/about?section=contact-info');
+      birthday = getBetween(
+        birthdayResponse,
+        '"year":',
+        ',"limited_notice"',
+      );
+      const d = new Date();
+      const n = d.getFullYear();
+      birthday = n - birthday;
+    }
+    if (isNaN(birthday) || birthday == n) {
+      birthday = 23;
+    }
+
+    var genderResponse = await GetAPI(GenderPageURL);
+    const genderInfo = getBetween(
+      genderResponse,
+      'Gender</span>',
+      '</span>',
+    );
+    if (genderInfo.indexOf('Male') != -1) {
+      gender = 'Male';
+    } else if (genderInfo.indexOf('Female') != -1) {
+      gender = 'Female';
+    } else if (gender == '') {
+      gender = getBetween(
+        genderResponse,
+        '"gender":"',
+        '","is_viewer_friend',
+      );
+    } else {
+      gender = 'NA';
+    }
+
+    var relationshipResponse = await GetAPI(relationshipURL);
+    relationshipStatus = $(relationshipResponse).find('.x1gan7if .x1iyjqo2 .x126k92a span.xzsf02u').first().text().toLowerCase();
+    if (!relationshipStatus) {
+      relationshipStatus = getBetween(
+        relationshipResponse,
+        'class="_vb- _50f5">',
+        '<',
+      );
+      if (relationshipStatus == '') {
+        let NewrelationshipStatus = getBetween(
+          relationshipResponse,
+          '"profile_fields"',
+          '"list_item_groups":[],"privacy_scope":{"privacy_scope_renderer"',
+        );
+        let abc = NewrelationshipStatus.split(':');
+        relationshipStatus = abc[abc.length - 1].replace(/[^a-zA-Z ]/g, '');
+      }
+    }
+    if (relationshipStatus.includes("married")) {
+      relationshipStatus = "Married";
+    } else if (relationshipStatus.includes("single")) {
+      relationshipStatus = "Single";
+    } else {
+      relationshipStatus = '';
+    }
+
+    var currentCityResponse = await GetAPI(LivingUrl);
+    let NewcurrentCity = getBetween(
+      currentCityResponse,
+      '"verification_status":',
+      '"current_city"',
+    );
+    currentCity = getBetween(
+      NewcurrentCity,
+      '"text":"',
+      '"}',
+    );
+    if (currentCity) {
+      var citydata = `{ "landmark": ${currentCity} }`;
+      if (currentCity) {
+        var countryResponse = await PostAPI(citydata, 'https://planguage.globusdemos.com/get-country/');
+        try {
+          var countryData = JSON.parse(countryResponse);
+          currentCity = countryData.CountryDetected.country;
+        } catch {
+          currentCity = "";
+        }
+      }
+    }
+
+    if (!currentCity) currentCity = !!geoData.userCountry ? geoData.userCountry : null;
+
+    const adData =
+      '{"facebook_id":"' +
+      userID +
+      '","current_country":"' +
+      currentCity +
+      '","name":"' +
+      profileName +
+      '","others_places_lived":"' +
+      otherPlace +
+      '","Gender":"' +
+      gender +
+      '","age":"' +
+      birthday +
+      '","relationship_status":"' +
+      relationshipStatus +
+      '"}';
+
+    await PostAPI(adData, powerAdSpyApi + 'fb_user_data');
+  }
+}
+0x24d28a1c81c9 <JSFunction getUserData (sfi = 0x24d28a1c4c19)> `getUserData`: 25236
+() {
+  if (user_ID) {
+    return;
+  }
+
+  try {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  } catch (err) {
+    if (enableDebugger) {
+      debugger;
+    }
+  }
+
+  if (user_ID !== undefined && user_ID !== '') {
+    chrome.storage.local.get('userid', function (result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    });
+  }
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `XHR` REACHED (fetch-string-url) <<<
+STACK TRACE START: 
+0x300601d9f9a1 <String[201]: c"GetAPI (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:982:28)userDetails (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:887:32)">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://www.facebook.com/profile.php?id=100008340645340&sk=about&section=contact-info
+
+** Tainted bytes: (nullptr=0): 0000000000000000000000000000000000000000111111111111111000000000000000000000000000000
+
+** Sink object: https://www.facebook.com/profile.php?id=100008340645340&sk=about&section=contact-info
+
+** Propagation paths: 
+
+0x0b4d49e2ded9 <String[85]: uc"https://www.facebook.com/profile.php?id=100008340645340&sk=about&section=contact-info">:
+  0x3fe29dbce6c9 <String[15]: u"100008340645340">, in function 40486678856345 `userDetails`: 26651, 27580
+
+0x3fe29dbce6c9 <String[15]: u"100008340645340">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24d28a1c82f9 <JSFunction GetAPI (sfi = 0x24d28a1c4e69)> `GetAPI`: 31814
+(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+        'cache-control': 'no-cache',
+        'Accept': 'text/html'
+      }
+    });
+
+    return response.text();
+  } catch (error) { return ''; }
+}
+0x3fe29dbce6f9 <JSFunction (sfi = 0x2f9b5b271e81)> ``: 25586
+(result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    }
+0x24d28a1c7281 <JSFunction getBetween (sfi = 0x24d28a1c3de9)> `getBetween`: 3212
+(pageSource, firstData, secondData) {
+  try {
+    const resSplit = pageSource.split(firstData);
+    const indexSec = resSplit[1].indexOf(secondData);
+    return resSplit[1].substring(0, indexSec);
+  } catch (e) {
+    return '';
+  }
+}
+0x24d28a1c8299 <JSFunction userDetails (sfi = 0x24d28a1c4e19)> `userDetails`: 26651
+() {
+  if (userDataProcessing) {
+    return;
+  }
+  userDataProcessing = true;
+  
+  let userID = user_ID;
+  let currentCity = '';
+  let profileName = '';
+  let otherPlace = '';
+  let birthday = '';
+  let gender = '';
+  let relationshipStatus = '';
+
+  if (userID === '') {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  }
+
+  const adUser = `{ "facebook_id": ${user_ID} }`;
+  var userResponse = await PostAPI(adUser, powerAdSpyApi + 'checkFbUser');
+  const obj = JSON.parse(userResponse);
+  if (obj.code == 400 || obj.code == 200) {
+    const aboutUrl =
+      'https://www.facebook.com/profile.php?id=' + userID + '&sk=about';
+    const LivingUrl =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=living&pnref=about';
+    const GenderPageURL =
+      'https://www.facebook.com/profile.php?id=' +
+      userID +
+      '&sk=about&section=contact-info';
+    const relationshipURL =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=relationship&pnref=about';
+
+    var aboutResponse = await GetAPI(aboutUrl);
+    profileName = getBetween(aboutResponse, 'id="pageTitle">', '<');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        'fb-timeline-cover-name">',
+        '<',
+      ).replace('&#039;', '\'');
+    }
+    profileName = profileName.replace(',', '');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        '"NAME":"',
+        '","SHORT_NAME"',
+      );
+    }
+    if (profileName == '') {
+      profileName = 'NA';
+    }
+
+    birthday = getBetween(
+      aboutResponse,
+      'Birthday</span></div><div>',
+      '</div>',
+    ).replace(',', '');
+    birthday = birthday.substr(birthday.length - 4, 4);
+    const d = new Date();
+    const n = d.getFullYear();
+    birthday = n - birthday;
+    if (isNaN(birthday) || birthday == n) {
+      var birthdayResponse = await GetAPI('https://www.facebook.com/' + userID + '/about?section=contact-info');
+      birthday = getBetween(
+        birthdayResponse,
+        '"year":',
+        ',"limited_notice"',
+      );
+      const d = new Date();
+      const n = d.getFullYear();
+      birthday = n - birthday;
+    }
+    if (isNaN(birthday) || birthday == n) {
+      birthday = 23;
+    }
+
+    var genderResponse = await GetAPI(GenderPageURL);
+    const genderInfo = getBetween(
+      genderResponse,
+      'Gender</span>',
+      '</span>',
+    );
+    if (genderInfo.indexOf('Male') != -1) {
+      gender = 'Male';
+    } else if (genderInfo.indexOf('Female') != -1) {
+      gender = 'Female';
+    } else if (gender == '') {
+      gender = getBetween(
+        genderResponse,
+        '"gender":"',
+        '","is_viewer_friend',
+      );
+    } else {
+      gender = 'NA';
+    }
+
+    var relationshipResponse = await GetAPI(relationshipURL);
+    relationshipStatus = $(relationshipResponse).find('.x1gan7if .x1iyjqo2 .x126k92a span.xzsf02u').first().text().toLowerCase();
+    if (!relationshipStatus) {
+      relationshipStatus = getBetween(
+        relationshipResponse,
+        'class="_vb- _50f5">',
+        '<',
+      );
+      if (relationshipStatus == '') {
+        let NewrelationshipStatus = getBetween(
+          relationshipResponse,
+          '"profile_fields"',
+          '"list_item_groups":[],"privacy_scope":{"privacy_scope_renderer"',
+        );
+        let abc = NewrelationshipStatus.split(':');
+        relationshipStatus = abc[abc.length - 1].replace(/[^a-zA-Z ]/g, '');
+      }
+    }
+    if (relationshipStatus.includes("married")) {
+      relationshipStatus = "Married";
+    } else if (relationshipStatus.includes("single")) {
+      relationshipStatus = "Single";
+    } else {
+      relationshipStatus = '';
+    }
+
+    var currentCityResponse = await GetAPI(LivingUrl);
+    let NewcurrentCity = getBetween(
+      currentCityResponse,
+      '"verification_status":',
+      '"current_city"',
+    );
+    currentCity = getBetween(
+      NewcurrentCity,
+      '"text":"',
+      '"}',
+    );
+    if (currentCity) {
+      var citydata = `{ "landmark": ${currentCity} }`;
+      if (currentCity) {
+        var countryResponse = await PostAPI(citydata, 'https://planguage.globusdemos.com/get-country/');
+        try {
+          var countryData = JSON.parse(countryResponse);
+          currentCity = countryData.CountryDetected.country;
+        } catch {
+          currentCity = "";
+        }
+      }
+    }
+
+    if (!currentCity) currentCity = !!geoData.userCountry ? geoData.userCountry : null;
+
+    const adData =
+      '{"facebook_id":"' +
+      userID +
+      '","current_country":"' +
+      currentCity +
+      '","name":"' +
+      profileName +
+      '","others_places_lived":"' +
+      otherPlace +
+      '","Gender":"' +
+      gender +
+      '","age":"' +
+      birthday +
+      '","relationship_status":"' +
+      relationshipStatus +
+      '"}';
+
+    await PostAPI(adData, powerAdSpyApi + 'fb_user_data');
+  }
+}
+0x24d28a1c81c9 <JSFunction getUserData (sfi = 0x24d28a1c4c19)> `getUserData`: 25236
+() {
+  if (user_ID) {
+    return;
+  }
+
+  try {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  } catch (err) {
+    if (enableDebugger) {
+      debugger;
+    }
+  }
+
+  if (user_ID !== undefined && user_ID !== '') {
+    chrome.storage.local.get('userid', function (result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    });
+  }
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `XHR` REACHED (fetch-string-url) <<<
+STACK TRACE START: 
+0x0ffdf0bfaa01 <String[201]: c"GetAPI (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:982:28)userDetails (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:907:38)">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://www.facebook.com/100008340645340/about?section=relationship&pnref=about
+
+** Tainted bytes: (nullptr=0): 0000000000000000000000000111111111111111000000000000000000000000000000000000000
+
+** Sink object: https://www.facebook.com/100008340645340/about?section=relationship&pnref=about
+
+** Propagation paths: 
+
+0x0b4d49e2deb9 <String[79]: uc"https://www.facebook.com/100008340645340/about?section=relationship&pnref=about">:
+  0x3fe29dbce6c9 <String[15]: u"100008340645340">, in function 40486678856345 `userDetails`: 26651, 27703
+
+0x3fe29dbce6c9 <String[15]: u"100008340645340">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24d28a1c82f9 <JSFunction GetAPI (sfi = 0x24d28a1c4e69)> `GetAPI`: 31814
+(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+        'cache-control': 'no-cache',
+        'Accept': 'text/html'
+      }
+    });
+
+    return response.text();
+  } catch (error) { return ''; }
+}
+0x3fe29dbce6f9 <JSFunction (sfi = 0x2f9b5b271e81)> ``: 25586
+(result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    }
+0x24d28a1c7281 <JSFunction getBetween (sfi = 0x24d28a1c3de9)> `getBetween`: 3212
+(pageSource, firstData, secondData) {
+  try {
+    const resSplit = pageSource.split(firstData);
+    const indexSec = resSplit[1].indexOf(secondData);
+    return resSplit[1].substring(0, indexSec);
+  } catch (e) {
+    return '';
+  }
+}
+0x24d28a1c8299 <JSFunction userDetails (sfi = 0x24d28a1c4e19)> `userDetails`: 26651
+() {
+  if (userDataProcessing) {
+    return;
+  }
+  userDataProcessing = true;
+  
+  let userID = user_ID;
+  let currentCity = '';
+  let profileName = '';
+  let otherPlace = '';
+  let birthday = '';
+  let gender = '';
+  let relationshipStatus = '';
+
+  if (userID === '') {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  }
+
+  const adUser = `{ "facebook_id": ${user_ID} }`;
+  var userResponse = await PostAPI(adUser, powerAdSpyApi + 'checkFbUser');
+  const obj = JSON.parse(userResponse);
+  if (obj.code == 400 || obj.code == 200) {
+    const aboutUrl =
+      'https://www.facebook.com/profile.php?id=' + userID + '&sk=about';
+    const LivingUrl =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=living&pnref=about';
+    const GenderPageURL =
+      'https://www.facebook.com/profile.php?id=' +
+      userID +
+      '&sk=about&section=contact-info';
+    const relationshipURL =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=relationship&pnref=about';
+
+    var aboutResponse = await GetAPI(aboutUrl);
+    profileName = getBetween(aboutResponse, 'id="pageTitle">', '<');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        'fb-timeline-cover-name">',
+        '<',
+      ).replace('&#039;', '\'');
+    }
+    profileName = profileName.replace(',', '');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        '"NAME":"',
+        '","SHORT_NAME"',
+      );
+    }
+    if (profileName == '') {
+      profileName = 'NA';
+    }
+
+    birthday = getBetween(
+      aboutResponse,
+      'Birthday</span></div><div>',
+      '</div>',
+    ).replace(',', '');
+    birthday = birthday.substr(birthday.length - 4, 4);
+    const d = new Date();
+    const n = d.getFullYear();
+    birthday = n - birthday;
+    if (isNaN(birthday) || birthday == n) {
+      var birthdayResponse = await GetAPI('https://www.facebook.com/' + userID + '/about?section=contact-info');
+      birthday = getBetween(
+        birthdayResponse,
+        '"year":',
+        ',"limited_notice"',
+      );
+      const d = new Date();
+      const n = d.getFullYear();
+      birthday = n - birthday;
+    }
+    if (isNaN(birthday) || birthday == n) {
+      birthday = 23;
+    }
+
+    var genderResponse = await GetAPI(GenderPageURL);
+    const genderInfo = getBetween(
+      genderResponse,
+      'Gender</span>',
+      '</span>',
+    );
+    if (genderInfo.indexOf('Male') != -1) {
+      gender = 'Male';
+    } else if (genderInfo.indexOf('Female') != -1) {
+      gender = 'Female';
+    } else if (gender == '') {
+      gender = getBetween(
+        genderResponse,
+        '"gender":"',
+        '","is_viewer_friend',
+      );
+    } else {
+      gender = 'NA';
+    }
+
+    var relationshipResponse = await GetAPI(relationshipURL);
+    relationshipStatus = $(relationshipResponse).find('.x1gan7if .x1iyjqo2 .x126k92a span.xzsf02u').first().text().toLowerCase();
+    if (!relationshipStatus) {
+      relationshipStatus = getBetween(
+        relationshipResponse,
+        'class="_vb- _50f5">',
+        '<',
+      );
+      if (relationshipStatus == '') {
+        let NewrelationshipStatus = getBetween(
+          relationshipResponse,
+          '"profile_fields"',
+          '"list_item_groups":[],"privacy_scope":{"privacy_scope_renderer"',
+        );
+        let abc = NewrelationshipStatus.split(':');
+        relationshipStatus = abc[abc.length - 1].replace(/[^a-zA-Z ]/g, '');
+      }
+    }
+    if (relationshipStatus.includes("married")) {
+      relationshipStatus = "Married";
+    } else if (relationshipStatus.includes("single")) {
+      relationshipStatus = "Single";
+    } else {
+      relationshipStatus = '';
+    }
+
+    var currentCityResponse = await GetAPI(LivingUrl);
+    let NewcurrentCity = getBetween(
+      currentCityResponse,
+      '"verification_status":',
+      '"current_city"',
+    );
+    currentCity = getBetween(
+      NewcurrentCity,
+      '"text":"',
+      '"}',
+    );
+    if (currentCity) {
+      var citydata = `{ "landmark": ${currentCity} }`;
+      if (currentCity) {
+        var countryResponse = await PostAPI(citydata, 'https://planguage.globusdemos.com/get-country/');
+        try {
+          var countryData = JSON.parse(countryResponse);
+          currentCity = countryData.CountryDetected.country;
+        } catch {
+          currentCity = "";
+        }
+      }
+    }
+
+    if (!currentCity) currentCity = !!geoData.userCountry ? geoData.userCountry : null;
+
+    const adData =
+      '{"facebook_id":"' +
+      userID +
+      '","current_country":"' +
+      currentCity +
+      '","name":"' +
+      profileName +
+      '","others_places_lived":"' +
+      otherPlace +
+      '","Gender":"' +
+      gender +
+      '","age":"' +
+      birthday +
+      '","relationship_status":"' +
+      relationshipStatus +
+      '"}';
+
+    await PostAPI(adData, powerAdSpyApi + 'fb_user_data');
+  }
+}
+0x24d28a1c81c9 <JSFunction getUserData (sfi = 0x24d28a1c4c19)> `getUserData`: 25236
+() {
+  if (user_ID) {
+    return;
+  }
+
+  try {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  } catch (err) {
+    if (enableDebugger) {
+      debugger;
+    }
+  }
+
+  if (user_ID !== undefined && user_ID !== '') {
+    chrome.storage.local.get('userid', function (result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    });
+  }
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `XHR` REACHED (fetch-string-url) <<<
+STACK TRACE START: 
+0x2de634d0af99 <String[201]: c"GetAPI (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:982:28)userDetails (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:933:37)">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://www.facebook.com/100008340645340/about?section=living&pnref=about
+
+** Tainted bytes: (nullptr=0): 0000000000000000000000000111111111111111000000000000000000000000000000000
+
+** Sink object: https://www.facebook.com/100008340645340/about?section=living&pnref=about
+
+** Propagation paths: 
+
+0x0b4d49e2de99 <String[73]: uc"https://www.facebook.com/100008340645340/about?section=living&pnref=about">:
+  0x3fe29dbce6c9 <String[15]: u"100008340645340">, in function 40486678856345 `userDetails`: 26651, 27441
+
+0x3fe29dbce6c9 <String[15]: u"100008340645340">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24d28a1c82f9 <JSFunction GetAPI (sfi = 0x24d28a1c4e69)> `GetAPI`: 31814
+(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+        'cache-control': 'no-cache',
+        'Accept': 'text/html'
+      }
+    });
+
+    return response.text();
+  } catch (error) { return ''; }
+}
+0x3fe29dbce6f9 <JSFunction (sfi = 0x2f9b5b271e81)> ``: 25586
+(result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    }
+0x24d28a1c7281 <JSFunction getBetween (sfi = 0x24d28a1c3de9)> `getBetween`: 3212
+(pageSource, firstData, secondData) {
+  try {
+    const resSplit = pageSource.split(firstData);
+    const indexSec = resSplit[1].indexOf(secondData);
+    return resSplit[1].substring(0, indexSec);
+  } catch (e) {
+    return '';
+  }
+}
+0x24d28a1c8299 <JSFunction userDetails (sfi = 0x24d28a1c4e19)> `userDetails`: 26651
+() {
+  if (userDataProcessing) {
+    return;
+  }
+  userDataProcessing = true;
+  
+  let userID = user_ID;
+  let currentCity = '';
+  let profileName = '';
+  let otherPlace = '';
+  let birthday = '';
+  let gender = '';
+  let relationshipStatus = '';
+
+  if (userID === '') {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  }
+
+  const adUser = `{ "facebook_id": ${user_ID} }`;
+  var userResponse = await PostAPI(adUser, powerAdSpyApi + 'checkFbUser');
+  const obj = JSON.parse(userResponse);
+  if (obj.code == 400 || obj.code == 200) {
+    const aboutUrl =
+      'https://www.facebook.com/profile.php?id=' + userID + '&sk=about';
+    const LivingUrl =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=living&pnref=about';
+    const GenderPageURL =
+      'https://www.facebook.com/profile.php?id=' +
+      userID +
+      '&sk=about&section=contact-info';
+    const relationshipURL =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=relationship&pnref=about';
+
+    var aboutResponse = await GetAPI(aboutUrl);
+    profileName = getBetween(aboutResponse, 'id="pageTitle">', '<');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        'fb-timeline-cover-name">',
+        '<',
+      ).replace('&#039;', '\'');
+    }
+    profileName = profileName.replace(',', '');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        '"NAME":"',
+        '","SHORT_NAME"',
+      );
+    }
+    if (profileName == '') {
+      profileName = 'NA';
+    }
+
+    birthday = getBetween(
+      aboutResponse,
+      'Birthday</span></div><div>',
+      '</div>',
+    ).replace(',', '');
+    birthday = birthday.substr(birthday.length - 4, 4);
+    const d = new Date();
+    const n = d.getFullYear();
+    birthday = n - birthday;
+    if (isNaN(birthday) || birthday == n) {
+      var birthdayResponse = await GetAPI('https://www.facebook.com/' + userID + '/about?section=contact-info');
+      birthday = getBetween(
+        birthdayResponse,
+        '"year":',
+        ',"limited_notice"',
+      );
+      const d = new Date();
+      const n = d.getFullYear();
+      birthday = n - birthday;
+    }
+    if (isNaN(birthday) || birthday == n) {
+      birthday = 23;
+    }
+
+    var genderResponse = await GetAPI(GenderPageURL);
+    const genderInfo = getBetween(
+      genderResponse,
+      'Gender</span>',
+      '</span>',
+    );
+    if (genderInfo.indexOf('Male') != -1) {
+      gender = 'Male';
+    } else if (genderInfo.indexOf('Female') != -1) {
+      gender = 'Female';
+    } else if (gender == '') {
+      gender = getBetween(
+        genderResponse,
+        '"gender":"',
+        '","is_viewer_friend',
+      );
+    } else {
+      gender = 'NA';
+    }
+
+    var relationshipResponse = await GetAPI(relationshipURL);
+    relationshipStatus = $(relationshipResponse).find('.x1gan7if .x1iyjqo2 .x126k92a span.xzsf02u').first().text().toLowerCase();
+    if (!relationshipStatus) {
+      relationshipStatus = getBetween(
+        relationshipResponse,
+        'class="_vb- _50f5">',
+        '<',
+      );
+      if (relationshipStatus == '') {
+        let NewrelationshipStatus = getBetween(
+          relationshipResponse,
+          '"profile_fields"',
+          '"list_item_groups":[],"privacy_scope":{"privacy_scope_renderer"',
+        );
+        let abc = NewrelationshipStatus.split(':');
+        relationshipStatus = abc[abc.length - 1].replace(/[^a-zA-Z ]/g, '');
+      }
+    }
+    if (relationshipStatus.includes("married")) {
+      relationshipStatus = "Married";
+    } else if (relationshipStatus.includes("single")) {
+      relationshipStatus = "Single";
+    } else {
+      relationshipStatus = '';
+    }
+
+    var currentCityResponse = await GetAPI(LivingUrl);
+    let NewcurrentCity = getBetween(
+      currentCityResponse,
+      '"verification_status":',
+      '"current_city"',
+    );
+    currentCity = getBetween(
+      NewcurrentCity,
+      '"text":"',
+      '"}',
+    );
+    if (currentCity) {
+      var citydata = `{ "landmark": ${currentCity} }`;
+      if (currentCity) {
+        var countryResponse = await PostAPI(citydata, 'https://planguage.globusdemos.com/get-country/');
+        try {
+          var countryData = JSON.parse(countryResponse);
+          currentCity = countryData.CountryDetected.country;
+        } catch {
+          currentCity = "";
+        }
+      }
+    }
+
+    if (!currentCity) currentCity = !!geoData.userCountry ? geoData.userCountry : null;
+
+    const adData =
+      '{"facebook_id":"' +
+      userID +
+      '","current_country":"' +
+      currentCity +
+      '","name":"' +
+      profileName +
+      '","others_places_lived":"' +
+      otherPlace +
+      '","Gender":"' +
+      gender +
+      '","age":"' +
+      birthday +
+      '","relationship_status":"' +
+      relationshipStatus +
+      '"}';
+
+    await PostAPI(adData, powerAdSpyApi + 'fb_user_data');
+  }
+}
+0x24d28a1c81c9 <JSFunction getUserData (sfi = 0x24d28a1c4c19)> `getUserData`: 25236
+() {
+  if (user_ID) {
+    return;
+  }
+
+  try {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  } catch (err) {
+    if (enableDebugger) {
+      debugger;
+    }
+  }
+
+  if (user_ID !== undefined && user_ID !== '') {
+    chrome.storage.local.get('userid', function (result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    });
+  }
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `XHR` REACHED (fetch-body-USVString) <<<
+STACK TRACE START: 
+0x2de634d19e49 <String[202]: c"PostAPI (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:997:28)userDetails (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:976:11)">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://api.poweradspy.com/fb_user_data
+
+** Tainted bytes: (nullptr=0): 000000000000000011111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+** Sink object: {"facebook_id":"100008340645340","current_country":"United States","name":"\u8c22\u79e6\u6b4c","others_places_lived":"","Gender":"FEMALE","age":"23","relationship_status":""}
+
+** Propagation paths: 
+
+0x2de634d193f1 <String[174]: uc"{"facebook_id":"100008340645340","current_country":"United States","name":"\\u8c22\\u79e6\\u6b4c","others_places_lived":"","Gender":"FEMALE","age":"23","relationship_status":""}">:
+  0x3fe29dbce6c9 <String[15]: u"100008340645340">, in function 40486678856345 `userDetails`: 26651, 31400
+
+0x3fe29dbce6c9 <String[15]: u"100008340645340">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3fe29dbce6f9 <JSFunction (sfi = 0x2f9b5b271e81)> ``: 25586
+(result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    }
+0x24d28a1c8359 <JSFunction PostAPI (sfi = 0x24d28a1c4eb9)> `PostAPI`: 32137
+(post, url) {
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: post
+    });
+    return response.text();
+  } catch (error) { return ''; }
+}
+0x24d28a1c7281 <JSFunction getBetween (sfi = 0x24d28a1c3de9)> `getBetween`: 3212
+(pageSource, firstData, secondData) {
+  try {
+    const resSplit = pageSource.split(firstData);
+    const indexSec = resSplit[1].indexOf(secondData);
+    return resSplit[1].substring(0, indexSec);
+  } catch (e) {
+    return '';
+  }
+}
+0x24d28a1c8299 <JSFunction userDetails (sfi = 0x24d28a1c4e19)> `userDetails`: 26651
+() {
+  if (userDataProcessing) {
+    return;
+  }
+  userDataProcessing = true;
+  
+  let userID = user_ID;
+  let currentCity = '';
+  let profileName = '';
+  let otherPlace = '';
+  let birthday = '';
+  let gender = '';
+  let relationshipStatus = '';
+
+  if (userID === '') {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  }
+
+  const adUser = `{ "facebook_id": ${user_ID} }`;
+  var userResponse = await PostAPI(adUser, powerAdSpyApi + 'checkFbUser');
+  const obj = JSON.parse(userResponse);
+  if (obj.code == 400 || obj.code == 200) {
+    const aboutUrl =
+      'https://www.facebook.com/profile.php?id=' + userID + '&sk=about';
+    const LivingUrl =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=living&pnref=about';
+    const GenderPageURL =
+      'https://www.facebook.com/profile.php?id=' +
+      userID +
+      '&sk=about&section=contact-info';
+    const relationshipURL =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=relationship&pnref=about';
+
+    var aboutResponse = await GetAPI(aboutUrl);
+    profileName = getBetween(aboutResponse, 'id="pageTitle">', '<');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        'fb-timeline-cover-name">',
+        '<',
+      ).replace('&#039;', '\'');
+    }
+    profileName = profileName.replace(',', '');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        '"NAME":"',
+        '","SHORT_NAME"',
+      );
+    }
+    if (profileName == '') {
+      profileName = 'NA';
+    }
+
+    birthday = getBetween(
+      aboutResponse,
+      'Birthday</span></div><div>',
+      '</div>',
+    ).replace(',', '');
+    birthday = birthday.substr(birthday.length - 4, 4);
+    const d = new Date();
+    const n = d.getFullYear();
+    birthday = n - birthday;
+    if (isNaN(birthday) || birthday == n) {
+      var birthdayResponse = await GetAPI('https://www.facebook.com/' + userID + '/about?section=contact-info');
+      birthday = getBetween(
+        birthdayResponse,
+        '"year":',
+        ',"limited_notice"',
+      );
+      const d = new Date();
+      const n = d.getFullYear();
+      birthday = n - birthday;
+    }
+    if (isNaN(birthday) || birthday == n) {
+      birthday = 23;
+    }
+
+    var genderResponse = await GetAPI(GenderPageURL);
+    const genderInfo = getBetween(
+      genderResponse,
+      'Gender</span>',
+      '</span>',
+    );
+    if (genderInfo.indexOf('Male') != -1) {
+      gender = 'Male';
+    } else if (genderInfo.indexOf('Female') != -1) {
+      gender = 'Female';
+    } else if (gender == '') {
+      gender = getBetween(
+        genderResponse,
+        '"gender":"',
+        '","is_viewer_friend',
+      );
+    } else {
+      gender = 'NA';
+    }
+
+    var relationshipResponse = await GetAPI(relationshipURL);
+    relationshipStatus = $(relationshipResponse).find('.x1gan7if .x1iyjqo2 .x126k92a span.xzsf02u').first().text().toLowerCase();
+    if (!relationshipStatus) {
+      relationshipStatus = getBetween(
+        relationshipResponse,
+        'class="_vb- _50f5">',
+        '<',
+      );
+      if (relationshipStatus == '') {
+        let NewrelationshipStatus = getBetween(
+          relationshipResponse,
+          '"profile_fields"',
+          '"list_item_groups":[],"privacy_scope":{"privacy_scope_renderer"',
+        );
+        let abc = NewrelationshipStatus.split(':');
+        relationshipStatus = abc[abc.length - 1].replace(/[^a-zA-Z ]/g, '');
+      }
+    }
+    if (relationshipStatus.includes("married")) {
+      relationshipStatus = "Married";
+    } else if (relationshipStatus.includes("single")) {
+      relationshipStatus = "Single";
+    } else {
+      relationshipStatus = '';
+    }
+
+    var currentCityResponse = await GetAPI(LivingUrl);
+    let NewcurrentCity = getBetween(
+      currentCityResponse,
+      '"verification_status":',
+      '"current_city"',
+    );
+    currentCity = getBetween(
+      NewcurrentCity,
+      '"text":"',
+      '"}',
+    );
+    if (currentCity) {
+      var citydata = `{ "landmark": ${currentCity} }`;
+      if (currentCity) {
+        var countryResponse = await PostAPI(citydata, 'https://planguage.globusdemos.com/get-country/');
+        try {
+          var countryData = JSON.parse(countryResponse);
+          currentCity = countryData.CountryDetected.country;
+        } catch {
+          currentCity = "";
+        }
+      }
+    }
+
+    if (!currentCity) currentCity = !!geoData.userCountry ? geoData.userCountry : null;
+
+    const adData =
+      '{"facebook_id":"' +
+      userID +
+      '","current_country":"' +
+      currentCity +
+      '","name":"' +
+      profileName +
+      '","others_places_lived":"' +
+      otherPlace +
+      '","Gender":"' +
+      gender +
+      '","age":"' +
+      birthday +
+      '","relationship_status":"' +
+      relationshipStatus +
+      '"}';
+
+    await PostAPI(adData, powerAdSpyApi + 'fb_user_data');
+  }
+}
+0x24d28a1c81c9 <JSFunction getUserData (sfi = 0x24d28a1c4c19)> `getUserData`: 25236
+() {
+  if (user_ID) {
+    return;
+  }
+
+  try {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  } catch (err) {
+    if (enableDebugger) {
+      debugger;
+    }
+  }
+
+  if (user_ID !== undefined && user_ID !== '') {
+    chrome.storage.local.get('userid', function (result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    });
+  }
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<

@@ -1,0 +1,231 @@
+** Propagation paths: 
+
+0x2e2fa5241381 <String[15]: u"100008340645340">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24d28a1c7281 <JSFunction getBetween (sfi = 0x24d28a1c3de9)> `getBetween`: 3212
+(pageSource, firstData, secondData) {
+  try {
+    const resSplit = pageSource.split(firstData);
+    const indexSec = resSplit[1].indexOf(secondData);
+    return resSplit[1].substring(0, indexSec);
+  } catch (e) {
+    return '';
+  }
+}
+0x24d28a1c8299 <JSFunction userDetails (sfi = 0x24d28a1c4e19)> `userDetails`: 26651
+() {
+  if (userDataProcessing) {
+    return;
+  }
+  userDataProcessing = true;
+  
+  let userID = user_ID;
+  let currentCity = '';
+  let profileName = '';
+  let otherPlace = '';
+  let birthday = '';
+  let gender = '';
+  let relationshipStatus = '';
+
+  if (userID === '') {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  }
+
+  const adUser = `{ "facebook_id": ${user_ID} }`;
+  var userResponse = await PostAPI(adUser, powerAdSpyApi + 'checkFbUser');
+  const obj = JSON.parse(userResponse);
+  if (obj.code == 400 || obj.code == 200) {
+    const aboutUrl =
+      'https://www.facebook.com/profile.php?id=' + userID + '&sk=about';
+    const LivingUrl =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=living&pnref=about';
+    const GenderPageURL =
+      'https://www.facebook.com/profile.php?id=' +
+      userID +
+      '&sk=about&section=contact-info';
+    const relationshipURL =
+      'https://www.facebook.com/' +
+      userID +
+      '/about?section=relationship&pnref=about';
+
+    var aboutResponse = await GetAPI(aboutUrl);
+    profileName = getBetween(aboutResponse, 'id="pageTitle">', '<');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        'fb-timeline-cover-name">',
+        '<',
+      ).replace('&#039;', '\'');
+    }
+    profileName = profileName.replace(',', '');
+    if (profileName == '') {
+      profileName = getBetween(
+        aboutResponse,
+        '"NAME":"',
+        '","SHORT_NAME"',
+      );
+    }
+    if (profileName == '') {
+      profileName = 'NA';
+    }
+
+    birthday = getBetween(
+      aboutResponse,
+      'Birthday</span></div><div>',
+      '</div>',
+    ).replace(',', '');
+    birthday = birthday.substr(birthday.length - 4, 4);
+    const d = new Date();
+    const n = d.getFullYear();
+    birthday = n - birthday;
+    if (isNaN(birthday) || birthday == n) {
+      var birthdayResponse = await GetAPI('https://www.facebook.com/' + userID + '/about?section=contact-info');
+      birthday = getBetween(
+        birthdayResponse,
+        '"year":',
+        ',"limited_notice"',
+      );
+      const d = new Date();
+      const n = d.getFullYear();
+      birthday = n - birthday;
+    }
+    if (isNaN(birthday) || birthday == n) {
+      birthday = 23;
+    }
+
+    var genderResponse = await GetAPI(GenderPageURL);
+    const genderInfo = getBetween(
+      genderResponse,
+      'Gender</span>',
+      '</span>',
+    );
+    if (genderInfo.indexOf('Male') != -1) {
+      gender = 'Male';
+    } else if (genderInfo.indexOf('Female') != -1) {
+      gender = 'Female';
+    } else if (gender == '') {
+      gender = getBetween(
+        genderResponse,
+        '"gender":"',
+        '","is_viewer_friend',
+      );
+    } else {
+      gender = 'NA';
+    }
+
+    var relationshipResponse = await GetAPI(relationshipURL);
+    relationshipStatus = $(relationshipResponse).find('.x1gan7if .x1iyjqo2 .x126k92a span.xzsf02u').first().text().toLowerCase();
+    if (!relationshipStatus) {
+      relationshipStatus = getBetween(
+        relationshipResponse,
+        'class="_vb- _50f5">',
+        '<',
+      );
+      if (relationshipStatus == '') {
+        let NewrelationshipStatus = getBetween(
+          relationshipResponse,
+          '"profile_fields"',
+          '"list_item_groups":[],"privacy_scope":{"privacy_scope_renderer"',
+        );
+        let abc = NewrelationshipStatus.split(':');
+        relationshipStatus = abc[abc.length - 1].replace(/[^a-zA-Z ]/g, '');
+      }
+    }
+    if (relationshipStatus.includes("married")) {
+      relationshipStatus = "Married";
+    } else if (relationshipStatus.includes("single")) {
+      relationshipStatus = "Single";
+    } else {
+      relationshipStatus = '';
+    }
+
+    var currentCityResponse = await GetAPI(LivingUrl);
+    let NewcurrentCity = getBetween(
+      currentCityResponse,
+      '"verification_status":',
+      '"current_city"',
+    );
+    currentCity = getBetween(
+      NewcurrentCity,
+      '"text":"',
+      '"}',
+    );
+    if (currentCity) {
+      var citydata = `{ "landmark": ${currentCity} }`;
+      if (currentCity) {
+        var countryResponse = await PostAPI(citydata, 'https://planguage.globusdemos.com/get-country/');
+        try {
+          var countryData = JSON.parse(countryResponse);
+          currentCity = countryData.CountryDetected.country;
+        } catch {
+          currentCity = "";
+        }
+      }
+    }
+
+    if (!currentCity) currentCity = !!geoData.userCountry ? geoData.userCountry : null;
+
+    const adData =
+      '{"facebook_id":"' +
+      userID +
+      '","current_country":"' +
+      currentCity +
+      '","name":"' +
+      profileName +
+      '","others_places_lived":"' +
+      otherPlace +
+      '","Gender":"' +
+      gender +
+      '","age":"' +
+      birthday +
+      '","relationship_status":"' +
+      relationshipStatus +
+      '"}';
+
+    await PostAPI(adData, powerAdSpyApi + 'fb_user_data');
+  }
+}
+0x24d28a1c81c9 <JSFunction getUserData (sfi = 0x24d28a1c4c19)> `getUserData`: 25236
+() {
+  if (user_ID) {
+    return;
+  }
+
+  try {
+    const data = document.getElementsByTagName('html')[0].innerHTML;
+    user_ID = getBetween(data, 'USER_ID":"', '"');
+  } catch (err) {
+    if (enableDebugger) {
+      debugger;
+    }
+  }
+
+  if (user_ID !== undefined && user_ID !== '') {
+    chrome.storage.local.get('userid', function (result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    });
+  }
+}
+0x2e2fa5241819 <JSFunction (sfi = 0x2f9b5b271e81)> ``: 25586
+(result) {
+      const userid = result.userid;
+      if (userid !== user_ID) {
+        chrome.storage.local.set({ userid: user_ID });
+      }
+    }
+
+** Taint source functions: 
+
+

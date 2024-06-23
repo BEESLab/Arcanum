@@ -1,0 +1,14 @@
+>>> TAINT SINK `XHR` REACHED (xml-open-url) <<<
+STACK TRACE START: 
+0x2e2fa525f181 <String[386]: c"Object.send (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/library/jquery-3.6.0.min.js:2:81868)Function.ajax (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/library/jquery-3.6.0.min.js:2:78291)buildUpGeoData (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser_functions.js:785:9)chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/fb/fb_feed_parser.js:30:5">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** XHR leak, request URL = https://geolocation.poweradspy.com/
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://geolocation.poweradspy.com/
+
+>>> END TAINT SINK REPORT <<<

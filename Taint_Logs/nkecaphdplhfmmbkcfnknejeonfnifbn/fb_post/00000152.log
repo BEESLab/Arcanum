@@ -1,0 +1,17 @@
+** Propagation paths: 
+
+0x0b34091e4309 <String[334]: ue"Amy Lee is feeling happy in Atlanta, GA.\nt\nS\nn\no\nr\no\nd\ns\np\ne\n\xa0\nh\nr\n2\ne\n2\nf\ne\n0\n5\nb\nD\n3\n,\n6\nc\n2\n3\nc\n0\nf\nl\nu\n2\ng\nm\n8\nh\na\n2\n7\n6\n4\ng\ng\n2\n8\n0\n1\nu\ne\n4\n5\n7\nh\nm\nc\nm\n\xa0\n3\n\xa0\n \xb7 \nThis is a rainy day!\nAll reactions:\n1\nAmy Lee\n2 comments\n1 share\nLike\nComment\nShare\nAmy Lee\nwowo\nLike\nReply\n36w\nAmy Lee\nThank you! \nLike\nReply\n36w\n\n\n\n\nWrite a comment&">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x1a491358a3d1 <JSFunction join (sfi = 0x38aaa39ed351)> `join`: 0
+0x072074b560a9 <JSFunction (sfi = 0xafea93be801)> ``: 37101
+el => el.innerText
+
+** Taint source functions: 
+
+
