@@ -1,0 +1,962 @@
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb66921 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x178d6f74b491 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb684c9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad351 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb6a071 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad401 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb6bc19 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad4b1 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb6d7c1 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad561 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb6f369 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad611 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb70f11 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad6c1 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb72ab9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad771 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb74661 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad821 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb76209 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad8d1 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb77db1 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ad981 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb79959 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ada31 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb7b501 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203adae1 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb7d0a9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203adb91 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x22831cb7ec51 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203adc41 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e41a51 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ade41 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e435f9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203adef1 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e451a1 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203adfa1 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e46d49 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ae051 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e48bc9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ae249 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e4a771 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ae2f9 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e4c319 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ae3a9 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e4dec1 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ae459 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e4fa69 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ae509 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e51611 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ae5b9 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x030542e531b9 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://mail.google.com/mail/u/0/images/cleardot.gif
+
+** Propagation paths: 
+
+0x281f203ae669 <String[52]: e"https://mail.google.com/mail/u/0/images/cleardot.gif">:
+  0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">, in function 37946517757217 `r`: 5929, 5989
+
+0x178d6f749421 <String[33]: e"https://mail.google.com/mail/u/0/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x22831cb61d21 <JSFunction r (sfi = 0x178d6f748e69)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+0x0d6a78e50ff1 <JSFunction _fixRelativeUris (sfi = 0x2edb8fc4fbc9)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x22831cb63d31 <JSFunction (sfi = 0x178d6f748f09)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
