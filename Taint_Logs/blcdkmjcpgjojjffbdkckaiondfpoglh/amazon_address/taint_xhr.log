@@ -1,0 +1,530 @@
+>>> TAINT SINK `XHR` REACHED (xml-send-body-USVString) <<<
+STACK TRACE START: 
+0x1693a1515dc1 <String[160]: c"applyClaimSpottingAPI (chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/backend.js:145:9)chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/backend.js:388:5">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** XHR leak, request URL = https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1
+
+** Tainted bytes: (nullptr=0): 1111111111111111111111111111111111111111111000000001111111111111111111111111111100000000111111111111111111111111111110000000011111111111111111111111111111111111111111111111111111111111111000000001111111111111111111111111111111111111111111111111111111111111100000000111111111111111111111111111111100000000111111111111111111111111111111100000000111111111111111111111111111111100000000111111111111111111111111111111100000000111111111111111111111111111111100000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000001111111111111111110000000011111111111111111111111111111111111111111111111111000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000011111111111111111100000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000111111111111111111000000001111111111111111111111111111111111111111111111111100000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000111111111111111111000000001111111111111111111111111111111111111111111111111100000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000001111111111111111110000000011111111111111111111111111111111111111111111111111000000001111111111111111111111111111111111111111111111111111111111111111111111100000000111111111111111111000000001111111111111111111111111111111111111111111111000000001111111111111111110000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000011111111111111111100000000111111111111111111111111111111111111111111111111110000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000111111111111111111000000001111111111111111111111111111111111111111111111111111111111111111111111111111111100000000111111111111111111000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000001111111111111111110000000011111111111111111111111111111111111111111111111111000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000111111111111111111000000001111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111000000001111111111111111111111111111111110000000011111111111111111111111111100000000111111111111111111111111111111100000000111111111111111111111111111111111111110000000011111111111111111111111111111111111111111110000000011111111111111111111111111111111111111111111111
+
+** Sink object: Select the department you want to search in$&@!@&!*Health, Household & Baby Care$&@!@&!*Household, Health & Baby Care$&@!@&!*set a different residential address for your digital purchases$&@!@&!*set a different residential address for your digital purchases$&@!@&!*Phone number: ‪+1 470 253 1212‬$&@!@&!*Phone number: ‪+1 470 253 1212‬$&@!@&!*Phone number: ‪+1 470 253 1468‬$&@!@&!*Phone number: ‪+1 470 253 1468‬$&@!@&!*Change address on an open order$&@!@&!*Echo Dot (5th Gen, 2022 release) | With bigger vibrant sound, helpful routines and Alexa | Charcoal$&@!@&!*4.7 out of 5 stars$&@!@&!*FREE Shipping on orders over $25 shipped by Amazon$&@!@&!*Amazon Fire TV Stick 4K Max streaming device, Wi-Fi 6, Alexa Voice Remote (includes TV controls)$&@!@&!*4.7 out of 5 stars$&@!@&!*Fire TV Stick 4K, brilliant 4K streaming quality, TV and smart home controls, free and live TV$&@!@&!*4.7 out of 5 stars$&@!@&!*FREE Shipping on orders over $25 shipped by Amazon$&@!@&!*Echo Buds with Active Noise Cancellation (2021 release, 2nd gen) | Wired charging case | Black$&@!@&!*4.0 out of 5 stars$&@!@&!*FREE Shipping on orders over $25 shipped by Amazon$&@!@&!*Echo Dot (5th Gen, 2022 release) Kids | Designed for kids, with parental controls | Owl$&@!@&!*4.7 out of 5 stars$&@!@&!*FREE Shipping on orders over $25 shipped by Amazon$&@!@&!*Amazon Fire TV 50" 4-Series 4K UHD smart TV with 4-Year Protection Plan$&@!@&!*4.5 out of 5 stars$&@!@&!*5 oz Freeze Dried Candy Skittle Serenity Farmz$&@!@&!*4.2 out of 5 stars$&@!@&!*Black Forest Stretch Island Fruit Strips, School Snacks, Variety Pack (Cherry, Apple, Raspberry, Grape, Strawberry, Apricot), 0.5ounce Strips (Pack of 48)$&@!@&!*4.5 out of 5 stars$&@!@&!*FREE Shipping on orders over $25 shipped by Amazon$&@!@&!*KD Supplies Freeze Dried Skittles (10 oz) - Premium Freeze Dried Crunchy Candy For An Enhanced Flavor (Original Rainbow)$&@!@&!*4.4 out of 5 stars$&@!@&!*MREs (Meals Ready-to-Eat) Genuine U.S. Military Surplus Assorted Flavor (6-Pack)$&@!@&!*4.5 out of 5 stars$&@!@&!*Moon Rocks - Freeze Dried Candy | Original Flavors — Orange, Lemon, Grape, Strawberry, & Lime | For Backpacking, Camping, or as a Gift - Freeze-Dried in the USA (3.5oz Bag)$&@!@&!*4.1 out of 5 stars$&@!@&!*FREE Shipping on orders over $25 shipped by Amazon$&@!@&!*Eliza Mae's Freeze Dried Jolly Ranchers (3 ounce), Blue, Green Red, Pink and Purple$&@!@&!*4.2 out of 5 stars$&@!@&!*View or edit your browsing history$&@!@&!*Your recently viewed items and featured recommendations$&@!@&!*View or edit your browsing history$&@!@&!*After viewing product detail pages, look here to find an easy way to navigate back to pages you are interested in.$&@!@&!*Protect & Build Your Brand$&@!@&!*Start a Package Delivery Business$&@!@&!*See More Ways to Make Money$&@!@&!*Manage Your Content and Devices$&@!@&!*Your Recalls and Product Safety Alerts$&@!@&!*Top subscription boxes – right to your door$&@!@&!*© 1996-2023, Amazon.com, Inc. or its affiliates
+
+** Propagation paths: 
+
+0x1693a15113d1 <String[2974]: uc"...<truncated>>">:
+  0x1d76acfc1481 <JSArray[51]>, in function 11826836501161 `applyClaimSpottingAPI`: 1264, 1338
+
+0x1d76acfc1481 <JSArray[51]>:
+  0x0ac1a66253d9 <String[34]: e"https://www.amazon.com/a/addresses">, in function 11826836499817 ``: 0, 8754
+
+0x0ac1a66253d9 <String[34]: e"https://www.amazon.com/a/addresses">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x0ac1a6636d69 <JSFunction (sfi = 0xac1a66357a1)> ``: 0
+const ALLOW_ALL = true;
+const MAX_DEPTH = 0;
+
+var allowed_sites = [];
+var prohibit_tag = ["script", "style", "noscript"];
+var delim = '`!@!$`';
+
+var eList = [];
+var eListContent = [];
+
+var cwTexts = [];
+var cwScores = [];
+var cwSentences = [];
+
+var gResults = [];
+
+function allowed(str) {
+    if (ALLOW_ALL) {
+        return true;
+    }
+
+    for (var i = 0; i < allowed_sites.length; i++)
+        if (str.toLowerCase().includes(allowed_sites[i].toLowerCase()))
+            return true;
+
+    return false;
+}
+
+function prohibited(str) {
+    for (var i=0; i<prohibit_tag.length; i++) {
+        if (str.toLowerCase().includes(prohibit_tag[i].toLocaleString()))
+            return true;
+    }
+    return false;
+}
+
+function count_maximum_depth(el) {
+    var ret = 0;
+    if (prohibited(el.tagName)) ret = 100; // arbitrary large number
+
+    var c = el.children;
+    for (var i=0; i<c.length; i++) {
+        ret = Math.max(count_maximum_depth(c[i]) + 1, ret);
+    }
+
+    return ret;
+}
+
+function createCORSRequest(method, url, api_key=null) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    if (method == "POST") {
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    }
+    return xhr;
+}
+
+function applyClaimSpottingAPI(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+
+function applyGoogleAPI() {
+    var url = "https://idir.uta.edu/misinfo-api/query_google";
+
+    var tot = "";
+    for (var i=0; i<cwSentences.length; i++) {
+        tot += cwSentences[i];
+        if (i < cwSentences.length - 1) tot += "$&@!@&!*";
+    }
+    
+    var xhr = createCORSRequest('POST', url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+  
+    xhr.onload = function() {
+        gResults = JSON.parse(xhr.responseText);
+
+        var retIdx = 0;
+        for (var i = 0; i < cwScores.length; i++) {
+            var curHTML = eListContent[i];
+            for (var j = 0; j < cwScores[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                var curRes = gResults[retIdx++];
+
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+
+                var startColor = (curRes.empty ? "fce3ec" : "00ff66");
+                var endColor = (curRes.empty ? "ffe8cc" : "00d4ff");
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#" + startColor + tCode + "), to(#" + endColor + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+
+                var tooltipHTML = '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%';
+
+                if (!curRes.empty) {
+                    var googleFcURL = "https://toolbox.google.com/factcheck/explorer/search/" + fixedEncodeURIComponent(cwTexts[i][j]) + ";hl=en";
+                    tooltipHTML = '<a target="_blank" href="' + googleFcURL + '">' + tooltipHTML + '. Click me to see relevant fact-checks!</span>' + '</a>';
+                } else {
+                    tooltipHTML += '</span>';
+                }
+
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + tooltipHTML + '</div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+    };
+  
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+  
+    xhr.send(tot);
+}
+
+function processClaimCheckingResults(csListener, badgeLenListener) {
+    if (gResults.length != cwSentences.length) {
+        setTimeout(processClaimCheckingResults, 200, csListener, badgeLenListener);
+        return;
+    }
+
+    console.log(gResults);
+
+    var ccListener = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: '200-cc',
+                cwSentences: cwSentences,
+                gResults: gResults
+            });
+        }
+    }
+    chrome.runtime.onMessage.removeListener(csListener);
+    chrome.runtime.onMessage.addListener(ccListener);
+
+    var badgeLenCcListener = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+            response({
+                id: "200-cc",
+                content: cwSentences.length
+            });
+        }
+    }
+    chrome.runtime.onMessage.removeListener(badgeLenListener);
+    chrome.runtime.onMessage.addListener(badgeLenCcListener);
+}
+
+var threshold;
+var viewmode;
+
+chrome.storage.sync.get(['threshold'], function(result) {
+    if (result.threshold == undefined) {
+        chrome.storage.sync.set({threshold: 0.6}, function() {});
+        threshold = 0.6;
+    } else {
+        threshold = result.threshold;
+    }
+});
+
+function get_candidate_claims(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+
+if (allowed(document.URL)) {
+    console.log("COKN Health Info Check will operate on this site")
+
+    respondLoading = function(msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: 'loading-cs',
+                cwSentences: [],
+                gResults: []
+            });
+        }
+    }
+    chrome.runtime.onMessage.addListener(respondLoading);
+
+    var badgeLenLoading = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+            response({
+                id: "-1",
+                content: []
+            });
+        }
+    }
+    chrome.runtime.onMessage.addListener(badgeLenLoading);
+
+    var style = document.createElement('style');
+    style.innerHTML = `
+    claim {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        border-radius: .4em;
+        padding-left: .15em;
+        padding-right: .15em;
+        padding-top: .05em;
+        padding-bottom: .05em;
+        color: black;
+    }
+    /* Tooltip container */
+    .tooltip-vericlaim {
+        position: relative;
+        display: inline;
+    }
+
+    /* Tooltip text */
+    .tooltip-vericlaim .tooltiptext-vericlaim {
+        visibility: hidden;
+        width: 20em;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        font-size: 10pt;
+        font-weight: bold;
+        
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 9999;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip-vericlaim:hover .tooltiptext-vericlaim {
+        visibility: visible;
+    }
+    `;
+
+    // style.innerHTML = `
+    // .has-tooltip {
+    //     /*position: relative;*/
+    //     display: inline;
+    // }
+    // .tooltip-wrapper {
+    //     position: absolute;
+    //     visibility: hidden;
+    // }
+    // .has-tooltip:hover .tooltip-wrapper {
+    //     visibility: visible;
+    //     opacity: 0.7;
+    //     /*top: 30px;*/
+    //     /*left: 50%;*/
+    //     /*margin-left: -76px;*/
+    //     z-index: 9999;
+    // }
+    
+    // .tooltip {
+    //     display: block;
+    //     position: relative;
+    //     top: 2em;
+    //     right: 100%;
+    //     width: 140px;
+    //     height: 96px;
+    //     /*margin-left: -76px;*/
+    //     color: #FFFFFF;
+    //     background: #000000;
+    //     line-height: 96px;
+    //     text-align: center;
+    //     border-radius: 8px;
+    //     box-shadow: 4px 3px 10px #800000;
+    // }
+    // .tooltip:after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 100%;
+    //     left: 50%;
+    //     margin-left: -8px;
+    //     width: 0;
+    //     height: 0;
+    //     border-bottom: 8px solid #000000;
+    //     border-right: 8px solid transparent;
+    //     border-left: 8px solid transparent;
+    // }    
+    // `
+
+    document.head.appendChild(style);
+
+    eList = get_candidate_claims(document.body.querySelectorAll('*:not(style):not(script):not(noscript)'));
+    applyClaimSpottingAPI(respondLoading, badgeLenLoading);
+} else {
+    chrome.runtime.onMessage.addListener((msg, sender, response) => {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: 'not-support',
+                cwSentences: [],
+                gResults: []
+            });
+        }
+    });
+}
+
+function fixedEncodeURIComponent(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+        return '%' + c.charCodeAt(0).toString(16);
+    });
+}
+0x0ac1a66372a9 <JSFunction applyClaimSpottingAPI (sfi = 0xac1a6635a81)> `applyClaimSpottingAPI`: 1264
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<

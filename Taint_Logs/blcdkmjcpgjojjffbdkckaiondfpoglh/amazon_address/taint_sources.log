@@ -1,0 +1,3152 @@
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x2c4faff2aa81 <String[16]: "chrome://newtab/">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x2c4faff2a889 <String[7]: "New Tab">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x2c4faff3b8c1 <String[16]: "chrome://newtab/">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x2c4faff3b891 <String[7]: "New Tab">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x2c4faff3d7b9 <String[16]: "chrome://newtab/">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x2c4faff3d5c1 <String[7]: "New Tab">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:pendingUrl)
+0x2c4faff3d319 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x2c4faff3f539 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x2c4faff3f501 <String[14]: "Your Addresses">
+** In function 0x348007d8238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f381ca9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f381c71 <String[14]: "Your Addresses">
+** In function 0x348007d8238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f383481 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f383449 <String[14]: "Your Addresses">
+** In function 0x348007d8238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x0ac1a66253d9 <String[34]: e"https://www.amazon.com/a/addresses">
+** In function 0x348002ba1e8 ``, source code:
+const ALLOW_ALL = true;
+const MAX_DEPTH = 0;
+
+var allowed_sites = [];
+var prohibit_tag = ["script", "style", "noscript"];
+var delim = '`!@!$`';
+
+var eList = [];
+var eListContent = [];
+
+var cwTexts = [];
+var cwScores = [];
+var cwSentences = [];
+
+var gResults = [];
+
+function allowed(str) {
+    if (ALLOW_ALL) {
+        return true;
+    }
+
+    for (var i = 0; i < allowed_sites.length; i++)
+        if (str.toLowerCase().includes(allowed_sites[i].toLowerCase()))
+            return true;
+
+    return false;
+}
+
+function prohibited(str) {
+    for (var i=0; i<prohibit_tag.length; i++) {
+        if (str.toLowerCase().includes(prohibit_tag[i].toLocaleString()))
+            return true;
+    }
+    return false;
+}
+
+function count_maximum_depth(el) {
+    var ret = 0;
+    if (prohibited(el.tagName)) ret = 100; // arbitrary large number
+
+    var c = el.children;
+    for (var i=0; i<c.length; i++) {
+        ret = Math.max(count_maximum_depth(c[i]) + 1, ret);
+    }
+
+    return ret;
+}
+
+function createCORSRequest(method, url, api_key=null) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    if (method == "POST") {
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    }
+    return xhr;
+}
+
+function applyClaimSpottingAPI(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+
+function applyGoogleAPI() {
+    var url = "https://idir.uta.edu/misinfo-api/query_google";
+
+    var tot = "";
+    for (var i=0; i<cwSentences.length; i++) {
+        tot += cwSentences[i];
+        if (i < cwSentences.length - 1) tot += "$&@!@&!*";
+    }
+    
+    var xhr = createCORSRequest('POST', url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+  
+    xhr.onload = function() {
+        gResults = JSON.parse(xhr.responseText);
+
+        var retIdx = 0;
+        for (var i = 0; i < cwScores.length; i++) {
+            var curHTML = eListContent[i];
+            for (var j = 0; j < cwScores[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                var curRes = gResults[retIdx++];
+
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+
+                var startColor = (curRes.empty ? "fce3ec" : "00ff66");
+                var endColor = (curRes.empty ? "ffe8cc" : "00d4ff");
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#" + startColor + tCode + "), to(#" + endColor + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+
+                var tooltipHTML = '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%';
+
+                if (!curRes.empty) {
+                    var googleFcURL = "https://toolbox.google.com/factcheck/explorer/search/" + fixedEncodeURIComponent(cwTexts[i][j]) + ";hl=en";
+                    tooltipHTML = '<a target="_blank" href="' + googleFcURL + '">' + tooltipHTML + '. Click me to see relevant fact-checks!</span>' + '</a>';
+                } else {
+                    tooltipHTML += '</span>';
+                }
+
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + tooltipHTML + '</div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+    };
+  
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+  
+    xhr.send(tot);
+}
+
+function processClaimCheckingResults(csListener, badgeLenListener) {
+    if (gResults.length != cwSentences.length) {
+        setTimeout(processClaimCheckingResults, 200, csListener, badgeLenListener);
+        return;
+    }
+
+    console.log(gResults);
+
+    var ccListener = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: '200-cc',
+                cwSentences: cwSentences,
+                gResults: gResults
+            });
+        }
+    }
+    chrome.runtime.onMessage.removeListener(csListener);
+    chrome.runtime.onMessage.addListener(ccListener);
+
+    var badgeLenCcListener = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+            response({
+                id: "200-cc",
+                content: cwSentences.length
+            });
+        }
+    }
+    chrome.runtime.onMessage.removeListener(badgeLenListener);
+    chrome.runtime.onMessage.addListener(badgeLenCcListener);
+}
+
+var threshold;
+var viewmode;
+
+chrome.storage.sync.get(['threshold'], function(result) {
+    if (result.threshold == undefined) {
+        chrome.storage.sync.set({threshold: 0.6}, function() {});
+        threshold = 0.6;
+    } else {
+        threshold = result.threshold;
+    }
+});
+
+function get_candidate_claims(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+
+if (allowed(document.URL)) {
+    console.log("COKN Health Info Check will operate on this site")
+
+    respondLoading = function(msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: 'loading-cs',
+                cwSentences: [],
+                gResults: []
+            });
+        }
+    }
+    chrome.runtime.onMessage.addListener(respondLoading);
+
+    var badgeLenLoading = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+            response({
+                id: "-1",
+                content: []
+            });
+        }
+    }
+    chrome.runtime.onMessage.addListener(badgeLenLoading);
+
+    var style = document.createElement('style');
+    style.innerHTML = `
+    claim {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        border-radius: .4em;
+        padding-left: .15em;
+        padding-right: .15em;
+        padding-top: .05em;
+        padding-bottom: .05em;
+        color: black;
+    }
+    /* Tooltip container */
+    .tooltip-vericlaim {
+        position: relative;
+        display: inline;
+    }
+
+    /* Tooltip text */
+    .tooltip-vericlaim .tooltiptext-vericlaim {
+        visibility: hidden;
+        width: 20em;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        font-size: 10pt;
+        font-weight: bold;
+        
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 9999;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip-vericlaim:hover .tooltiptext-vericlaim {
+        visibility: visible;
+    }
+    `;
+
+    // style.innerHTML = `
+    // .has-tooltip {
+    //     /*position: relative;*/
+    //     display: inline;
+    // }
+    // .tooltip-wrapper {
+    //     position: absolute;
+    //     visibility: hidden;
+    // }
+    // .has-tooltip:hover .tooltip-wrapper {
+    //     visibility: visible;
+    //     opacity: 0.7;
+    //     /*top: 30px;*/
+    //     /*left: 50%;*/
+    //     /*margin-left: -76px;*/
+    //     z-index: 9999;
+    // }
+    
+    // .tooltip {
+    //     display: block;
+    //     position: relative;
+    //     top: 2em;
+    //     right: 100%;
+    //     width: 140px;
+    //     height: 96px;
+    //     /*margin-left: -76px;*/
+    //     color: #FFFFFF;
+    //     background: #000000;
+    //     line-height: 96px;
+    //     text-align: center;
+    //     border-radius: 8px;
+    //     box-shadow: 4px 3px 10px #800000;
+    // }
+    // .tooltip:after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 100%;
+    //     left: 50%;
+    //     margin-left: -8px;
+    //     width: 0;
+    //     height: 0;
+    //     border-bottom: 8px solid #000000;
+    //     border-right: 8px solid transparent;
+    //     border-left: 8px solid transparent;
+    // }    
+    // `
+
+    document.head.appendChild(style);
+
+    eList = get_candidate_claims(document.body.querySelectorAll('*:not(style):not(script):not(noscript)'));
+    applyClaimSpottingAPI(respondLoading, badgeLenLoading);
+} else {
+    chrome.runtime.onMessage.addListener((msg, sender, response) => {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: 'not-support',
+                cwSentences: [],
+                gResults: []
+            });
+        }
+    });
+}
+
+function fixedEncodeURIComponent(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+        return '%' + c.charCodeAt(0).toString(16);
+    });
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f384f69 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f384f31 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3a799 <String[14]: e"Deliver to Amy">
+** In function 0x348002ba2c0 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3a801 <String[14]: e"Deliver to Amy">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3a871 <String[14]: ue"Atlanta 30322\x200c">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3a891 <String[14]: ue"Atlanta 30322\x200c">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b169 <String[2]: e"EN">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b189 <String[2]: e"EN">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b1a9 <String[10]: e"Hello, Amy">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b1c9 <String[10]: e"Hello, Amy">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f386219 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3861e1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b5e1 <String[11]: ue"Default: \xa0 ">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b601 <String[11]: ue"Default: \xa0 ">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b649 <String[6]: ue"\xa0 | \xa0 ">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b669 <String[6]: ue"\xa0 | \xa0 ">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b689 <String[7]: e"Amy Lee">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b6a9 <String[7]: e"Amy Lee">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b6c9 <String[18]: e"1762 CLIFTON RD NE">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b6e9 <String[18]: e"1762 CLIFTON RD NE">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b709 <String[22]: e"ATLANTA, GA 30322-4001">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b729 <String[22]: e"ATLANTA, GA 30322-4001">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b749 <String[13]: e"United States">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b769 <String[13]: e"United States">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b789 <String[26]: ue"Phone number: *4701929199,">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b7a9 <String[26]: ue"Phone number: *4701929199,">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b7f1 <String[25]: e"Add delivery instructions">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b811 <String[25]: e"Add delivery instructions">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b959 <String[8]: e"Erin Lee">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b979 <String[8]: e"Erin Lee">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b999 <String[10]: e"27 A ST SW">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b9b9 <String[10]: e"27 A ST SW">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b9d9 <String[27]: e"JACKSONVILLE, AL 36265-2402">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3b9f9 <String[27]: e"JACKSONVILLE, AL 36265-2402">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3ba19 <String[13]: e"United States">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3ba39 <String[13]: e"United States">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3ba59 <String[31]: ue"Phone number: *+1 470 253 1212,">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3ba79 <String[31]: ue"Phone number: *+1 470 253 1212,">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3ba99 <String[25]: e"Add delivery instructions">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bab9 <String[25]: e"Add delivery instructions">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bc01 <String[8]: e"Jack Lee">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bc21 <String[8]: e"Jack Lee">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bc41 <String[14]: e"388 BLOSSOM ST">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bc61 <String[14]: e"388 BLOSSOM ST">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bc81 <String[23]: e"HOLBROOK, NY 11741-2906">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bca1 <String[23]: e"HOLBROOK, NY 11741-2906">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bcc1 <String[13]: e"United States">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bce1 <String[13]: e"United States">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bd01 <String[31]: ue"Phone number: *+1 470 253 1468,">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bd21 <String[31]: ue"Phone number: *+1 470 253 1468,">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bd41 <String[25]: e"Add delivery instructions">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3bd61 <String[25]: e"Add delivery instructions">
+** In function 0x348002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3874c9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f387491 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f388779 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f388741 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f389a39 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f389a01 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f38b559 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f38b521 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3d6b9 <String[31]: ue"Phone number: *+1 470 253 1212,">
+** In function 0x348002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2dd27cf3d759 <String[31]: ue"Phone number: *+1 470 253 1468,">
+** In function 0x348002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f38f5e9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f38f5b1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f390fd9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f390fa1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3929c9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f392991 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3943b9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f394381 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f395da9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f395d71 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f397799 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f397761 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f399189 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f399151 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f39ab79 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f39ab41 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f39c569 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f39c531 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f39dfb9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f39df81 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3a0e91 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3a0e59 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3a28f1 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3a28b9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3a4351 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3a4319 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3a5db1 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3a5d79 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3a7811 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3a77d9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3a9271 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3a9239 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3aacd1 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3aac99 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3ac731 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3ac6f9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3ae191 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3ae159 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3afbf1 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3afbb9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3b1651 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3b1619 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3b30b1 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3b3079 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3b4b11 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3b4ad9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3b6571 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3b6539 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3b7fd1 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3b7f99 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3b9a31 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3b99f9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3bb491 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3bb459 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3bcef1 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3bceb9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0f336f3be951 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0f336f3be919 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125501501 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b1255014c9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125502f61 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125502f29 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125506a11 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b1255069d9 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125508c99 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125508c61 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12550a6f9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12550a6c1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12550c159 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12550c121 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12550dbb9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12550db81 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12550f619 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12550f5e1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125511079 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125511041 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125512ad9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125512aa1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125514539 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125514501 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125515f99 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125515f61 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b1255179f9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b1255179c1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125519459 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125519421 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12551aeb9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12551ae81 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12551c919 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12551c8e1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12551e379 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12551e341 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12551fdd9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12551fda1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125521839 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125521801 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125523299 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125523261 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125524cf9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125524cc1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125526759 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125526721 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b1255281b9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125528181 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125529c19 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125529be1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12552b679 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12552b641 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12552d0d9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12552d0a1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b12552eb39 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b12552eb01 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125530599 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125530561 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125531ff9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125531fc1 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b125533a59 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125533a21 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x02b1255354b9 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x02b125535481 <String[14]: "Your Addresses">
+** In function 0x348007d8250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
