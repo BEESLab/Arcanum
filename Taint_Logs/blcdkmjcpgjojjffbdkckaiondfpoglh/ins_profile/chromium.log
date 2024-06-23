@@ -1,0 +1,73 @@
+[78453:78508:0927/155347.881623:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[78453:78508:0927/155347.881796:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[78453:78507:0927/155347.886152:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[78453:78507:0927/155347.886662:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[78453:78453:0927/155347.891651:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[78515:78515:0927/155347.908441:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[78453:78453:0927/155347.916974:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[78453:78507:0927/155347.925563:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[78453:78507:0927/155347.925600:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[78515:78515:0927/155347.942962:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[78453:78507:0927/155347.968492:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[78453:78507:0927/155347.968570:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[78515:78515:0927/155350.494964:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[78558:78558:0927/155350.501482:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[78562:78562:0927/155350.507260:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[78453:78453:0927/155350.541191:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[78453:78578:0927/155351.313793:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[78453:78578:0927/155351.313881:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[78453:78578:0927/155351.313982:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[78453:78578:0927/155351.314011:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[78453:78578:0927/155351.314072:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[78453:78578:0927/155351.314368:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[78581:78581:0927/155351.400374:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[78581:78581:0927/155351.488434:INFO:local_window_proxy.cc(259)] MarkAsExtensionContext (Background mv2): ["chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/_generated_background_page.html"]
+[78608:78608:0927/155352.195342:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[78628:78628:0927/155352.663469:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[78453:78453:0927/155352.725261:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[78453:78453:0927/155352.726988:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[78453:78453:0927/155352.773687:ERROR:node_channel.cc(861)] Dropping message on closed channel.
+[78453:78453:0927/155353.572559:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[78453:78453:0927/155353.691424:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[78453:78453:0927/155354.889761:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[78453:78453:0927/155359.238396:INFO:CONSOLE(59)] "ErrorUtils caught an error:
+
+No hash for rsrcIndex 93 (rev: 1008662111, cohort: HYP:instagram_web_pkg). ["{\"hash\":\"csr:_a_0_3i\",\"rev\":1008662111,\"type\":\"csr\",\"src\":\":93,40\",\"c\":1,\"tsrc\":null}"]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs.", source: https://static.cdninstagram.com/rsrc.php/v3/ys/r/m-391j4JoBJ.js?_nc_x=Ij3Wp8lg5Kz (59)
+[78453:78453:0927/155401.191331:INFO:CONSOLE(20)] "profile head ok", source: https://www.instagram.com/xqgtiti/ (20)
+[78453:78453:0927/155401.193254:INFO:CONSOLE(24)] "xqgtiti
+Edit Profile
+View archive
+2 posts
+0 followers
+13 following
+Erin
+ 
+she
+This is me!!!!
+google.com", source: https://www.instagram.com/xqgtiti/ (24)
+[78453:78453:0927/155401.193758:INFO:CONSOLE(30)] "post list ok", source: https://www.instagram.com/xqgtiti/ (30)
+[78453:78453:0927/155401.236216:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[78453:78453:0927/155401.307445:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[78453:78453:0927/155401.307939:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[78453:78453:0927/155401.480777:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[78453:78453:0927/155401.511411:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[78453:78453:0927/155401.511816:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[78453:78453:0927/155401.530214:INFO:CONSOLE(106)] "[Report Only] Refused to load the image 'https://googleads.g.doubleclick.net/pagead/viewthroughconversion/858885276/?value=1.00&currency_code=USD&label=qGVACPj3of0DEJyZxpkD&guid=ON&script=0' because it violates the following Content Security Policy directive: "img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster: *.giphy.com *.teststagram.com *.igsonar.com *.google-analytics.com".
+", source: https://www.instagram.com/paid_ads/generete_pixels/? (106)
+[78453:78453:0927/155401.604131:INFO:CONSOLE(0)] "[Report Only] Refused to load the image 'https://www.google.com/pagead/1p-user-list/858885276/?value=1.00&currency_code=USD&label=qGVACPj3of0DEJyZxpkD&guid=ON&script=0&is_vtc=1&random=4137486794' because it violates the following Content Security Policy directive: "img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster: *.giphy.com *.teststagram.com *.igsonar.com *.google-analytics.com".
+", source: https://www.instagram.com/paid_ads/generete_pixels/? (0)
+[78453:78453:0927/155402.105455:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[78608:78608:0927/155404.293243:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.instagram.com/xqgtiti/"]
+[78453:78453:0927/155404.340740:INFO:CONSOLE(274)] "COKN Health Info Check will operate on this site", source: chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/backend.js (274)
+[78649:78649:0927/155406.182789:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[78453:78453:0927/155406.215359:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[78453:78453:0927/155406.215654:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[78453:78453:0927/155406.413391:INFO:CONSOLE(0)] "Access to XMLHttpRequest at 'https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1' from origin 'https://www.instagram.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://www.instagram.com/xqgtiti/ (0)
+[78453:78453:0927/155406.414328:INFO:CONSOLE(142)] "There was an error making the request", source: chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/backend.js (142)
+[78453:78453:0927/155407.015269:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[78453:78453:0927/155451.310520:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 413
+[78453:78453:0927/155451.310628:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 413
+[78453:78453:0927/155451.310857:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[78453:78453:0927/155451.310943:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters

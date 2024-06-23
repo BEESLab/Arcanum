@@ -1,0 +1,2416 @@
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x338f27f6aa51 <String[16]: "chrome://newtab/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x338f27f6a859 <String[7]: "New Tab">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x338f27f7b8b1 <String[16]: "chrome://newtab/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x338f27f7b881 <String[7]: "New Tab">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x338f27f7d5e1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x338f27f7d559 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x338f27f7f111 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x338f27f7f089 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b481981 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4818f9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b482f59 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b482ed1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b484aa9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b484a21 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b486081 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b485ff9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b487c91 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b487c09 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b489269 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4891e1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b48a851 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b48a7c9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b48c699 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b48c611 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b48deb9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b48de31 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x1b52716af5b1 <String[34]: e"https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba1e8 ``, source code:
+const ALLOW_ALL = true;
+const MAX_DEPTH = 0;
+
+var allowed_sites = [];
+var prohibit_tag = ["script", "style", "noscript"];
+var delim = '`!@!$`';
+
+var eList = [];
+var eListContent = [];
+
+var cwTexts = [];
+var cwScores = [];
+var cwSentences = [];
+
+var gResults = [];
+
+function allowed(str) {
+    if (ALLOW_ALL) {
+        return true;
+    }
+
+    for (var i = 0; i < allowed_sites.length; i++)
+        if (str.toLowerCase().includes(allowed_sites[i].toLowerCase()))
+            return true;
+
+    return false;
+}
+
+function prohibited(str) {
+    for (var i=0; i<prohibit_tag.length; i++) {
+        if (str.toLowerCase().includes(prohibit_tag[i].toLocaleString()))
+            return true;
+    }
+    return false;
+}
+
+function count_maximum_depth(el) {
+    var ret = 0;
+    if (prohibited(el.tagName)) ret = 100; // arbitrary large number
+
+    var c = el.children;
+    for (var i=0; i<c.length; i++) {
+        ret = Math.max(count_maximum_depth(c[i]) + 1, ret);
+    }
+
+    return ret;
+}
+
+function createCORSRequest(method, url, api_key=null) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    if (method == "POST") {
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    }
+    return xhr;
+}
+
+function applyClaimSpottingAPI(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+
+function applyGoogleAPI() {
+    var url = "https://idir.uta.edu/misinfo-api/query_google";
+
+    var tot = "";
+    for (var i=0; i<cwSentences.length; i++) {
+        tot += cwSentences[i];
+        if (i < cwSentences.length - 1) tot += "$&@!@&!*";
+    }
+    
+    var xhr = createCORSRequest('POST', url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+  
+    xhr.onload = function() {
+        gResults = JSON.parse(xhr.responseText);
+
+        var retIdx = 0;
+        for (var i = 0; i < cwScores.length; i++) {
+            var curHTML = eListContent[i];
+            for (var j = 0; j < cwScores[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                var curRes = gResults[retIdx++];
+
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+
+                var startColor = (curRes.empty ? "fce3ec" : "00ff66");
+                var endColor = (curRes.empty ? "ffe8cc" : "00d4ff");
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#" + startColor + tCode + "), to(#" + endColor + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+
+                var tooltipHTML = '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%';
+
+                if (!curRes.empty) {
+                    var googleFcURL = "https://toolbox.google.com/factcheck/explorer/search/" + fixedEncodeURIComponent(cwTexts[i][j]) + ";hl=en";
+                    tooltipHTML = '<a target="_blank" href="' + googleFcURL + '">' + tooltipHTML + '. Click me to see relevant fact-checks!</span>' + '</a>';
+                } else {
+                    tooltipHTML += '</span>';
+                }
+
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + tooltipHTML + '</div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+    };
+  
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+  
+    xhr.send(tot);
+}
+
+function processClaimCheckingResults(csListener, badgeLenListener) {
+    if (gResults.length != cwSentences.length) {
+        setTimeout(processClaimCheckingResults, 200, csListener, badgeLenListener);
+        return;
+    }
+
+    console.log(gResults);
+
+    var ccListener = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: '200-cc',
+                cwSentences: cwSentences,
+                gResults: gResults
+            });
+        }
+    }
+    chrome.runtime.onMessage.removeListener(csListener);
+    chrome.runtime.onMessage.addListener(ccListener);
+
+    var badgeLenCcListener = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+            response({
+                id: "200-cc",
+                content: cwSentences.length
+            });
+        }
+    }
+    chrome.runtime.onMessage.removeListener(badgeLenListener);
+    chrome.runtime.onMessage.addListener(badgeLenCcListener);
+}
+
+var threshold;
+var viewmode;
+
+chrome.storage.sync.get(['threshold'], function(result) {
+    if (result.threshold == undefined) {
+        chrome.storage.sync.set({threshold: 0.6}, function() {});
+        threshold = 0.6;
+    } else {
+        threshold = result.threshold;
+    }
+});
+
+function get_candidate_claims(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+
+if (allowed(document.URL)) {
+    console.log("COKN Health Info Check will operate on this site")
+
+    respondLoading = function(msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: 'loading-cs',
+                cwSentences: [],
+                gResults: []
+            });
+        }
+    }
+    chrome.runtime.onMessage.addListener(respondLoading);
+
+    var badgeLenLoading = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+            response({
+                id: "-1",
+                content: []
+            });
+        }
+    }
+    chrome.runtime.onMessage.addListener(badgeLenLoading);
+
+    var style = document.createElement('style');
+    style.innerHTML = `
+    claim {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        border-radius: .4em;
+        padding-left: .15em;
+        padding-right: .15em;
+        padding-top: .05em;
+        padding-bottom: .05em;
+        color: black;
+    }
+    /* Tooltip container */
+    .tooltip-vericlaim {
+        position: relative;
+        display: inline;
+    }
+
+    /* Tooltip text */
+    .tooltip-vericlaim .tooltiptext-vericlaim {
+        visibility: hidden;
+        width: 20em;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        font-size: 10pt;
+        font-weight: bold;
+        
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 9999;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip-vericlaim:hover .tooltiptext-vericlaim {
+        visibility: visible;
+    }
+    `;
+
+    // style.innerHTML = `
+    // .has-tooltip {
+    //     /*position: relative;*/
+    //     display: inline;
+    // }
+    // .tooltip-wrapper {
+    //     position: absolute;
+    //     visibility: hidden;
+    // }
+    // .has-tooltip:hover .tooltip-wrapper {
+    //     visibility: visible;
+    //     opacity: 0.7;
+    //     /*top: 30px;*/
+    //     /*left: 50%;*/
+    //     /*margin-left: -76px;*/
+    //     z-index: 9999;
+    // }
+    
+    // .tooltip {
+    //     display: block;
+    //     position: relative;
+    //     top: 2em;
+    //     right: 100%;
+    //     width: 140px;
+    //     height: 96px;
+    //     /*margin-left: -76px;*/
+    //     color: #FFFFFF;
+    //     background: #000000;
+    //     line-height: 96px;
+    //     text-align: center;
+    //     border-radius: 8px;
+    //     box-shadow: 4px 3px 10px #800000;
+    // }
+    // .tooltip:after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 100%;
+    //     left: 50%;
+    //     margin-left: -8px;
+    //     width: 0;
+    //     height: 0;
+    //     border-bottom: 8px solid #000000;
+    //     border-right: 8px solid transparent;
+    //     border-left: 8px solid transparent;
+    // }    
+    // `
+
+    document.head.appendChild(style);
+
+    eList = get_candidate_claims(document.body.querySelectorAll('*:not(style):not(script):not(noscript)'));
+    applyClaimSpottingAPI(respondLoading, badgeLenLoading);
+} else {
+    chrome.runtime.onMessage.addListener((msg, sender, response) => {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: 'not-support',
+                cwSentences: [],
+                gResults: []
+            });
+        }
+    });
+}
+
+function fixedEncodeURIComponent(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+        return '%' + c.charCodeAt(0).toString(16);
+    });
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b48f4b1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b48f429 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4907e9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b490761 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7869 <String[7]: e"xqgtiti">
+** In function 0x13e0002ba298 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f78d1 <String[7]: e"xqgtiti">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7919 <String[12]: e"Edit Profile">
+** In function 0x13e0002ba298 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7939 <String[12]: e"Edit Profile">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7959 <String[12]: e"View archive">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7979 <String[12]: e"View archive">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7999 <String[1]: e"2">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f79b9 <String[1]: e"2">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f79d9 <String[1]: e"0">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f79f9 <String[1]: e"0">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7a19 <String[2]: e"13">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7a39 <String[2]: e"13">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7a59 <String[4]: e"Erin">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7a79 <String[4]: e"Erin">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7a99 <String[1]: e"\xa0">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7ab9 <String[1]: e"\xa0">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7ad9 <String[3]: e"she">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7af9 <String[3]: e"she">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7b19 <String[14]: e"This is me!!!!">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7b39 <String[14]: e"This is me!!!!">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7b59 <String[10]: e"google.com">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x2baccf4f7b79 <String[10]: e"google.com">
+** In function 0x13e0002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b492a39 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4929b1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b494491 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b494409 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b495ee9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b495e61 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b497941 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4978b9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b499399 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b499311 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b49adf1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b49ad69 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b49c849 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b49c7c1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b49f719 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b49f691 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4a1171 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4a10e9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4a2bc9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4a2b41 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4a4681 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4a45f9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4a6149 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4a60c1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4a7c11 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4a7b89 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4a96d9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4a9651 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4ab1a1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4ab119 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4acc69 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4acbe1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4ae731 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4ae6a9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4b01f9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4b0171 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4b1cc1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4b1c39 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4b3789 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4b3701 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4b5251 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4b51c9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4b6d19 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4b6c91 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4b87e1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4b8759 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4ba2a9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4ba221 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4bbd71 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4bbce9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4bd839 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4bd7b1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x1e271b4bf301 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x1e271b4bf279 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6841ef9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6841e71 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6845a11 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6845989 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6847d01 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6847c79 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba68497c9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6849741 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba684b291 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba684b209 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba684cd59 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba684ccd1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba684e821 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba684e799 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba68502e9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6850261 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6851db1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6851d29 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6853879 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba68537f1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6855341 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba68552b9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6856e09 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6856d81 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba68588d1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6858849 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba685a399 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba685a311 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba685be61 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba685bdd9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba685d929 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba685d8a1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba685f3f1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba685f369 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6860eb9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6860e31 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6862981 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba68628f9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6864449 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba68643c1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6865f11 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6865e89 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba68679d9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6867951 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba68694a1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6869419 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba686af69 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba686aee1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba686ca31 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba686c9a9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba686e4f9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba686e471 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba686ffc1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba686ff39 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6871a89 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6871a01 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6873551 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba68734c9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6875019 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6874f91 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba6876ae1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6876a59 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba68785a9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6878521 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x0d6ba687a071 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x0d6ba6879fe9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x13e0002ba250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
