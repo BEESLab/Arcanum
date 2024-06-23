@@ -1,0 +1,86 @@
+** Propagation paths: 
+
+0x009156e554d1 <String[7]: e"Amy Lee">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x1487c19e5939 <JSFunction (sfi = 0x252073ca9201)> ``: 6762
+(s)
+   {
+    if(s)
+     {
+      var e = document.querySelector(s);
+      var name = get_text(e);
+      if(name)
+       {
+        var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+        get_offer(json,retargeting);
+        return true;
+       }
+     }
+    
+    db_get('url',function(s)
+     {
+      if(s)
+       {
+        var e = document.querySelector(s);
+        var name = get_text(e);
+        if(name)
+         {
+          var json = {site:host,url:url,ref:document.referrer,name:name,shop_id:'',browser:browser,version:version};
+          get_offer(json,retargeting);
+          return true;
+         }
+       }
+       
+       retargeting();
+     });
+   }
+0x38db3ea2ba59 <JSFunction get_text (sfi = 0x38db3ea29399)> `get_text`: 3886
+(e)
+ {
+  var name = '';
+  if(e)
+   {
+    name = e.innerText;
+    if(!name)
+     {
+      name = e.getAttribute('content');
+     }
+   }
+  return name;
+ }
+0x38db3ea2b989 <JSFunction get (sfi = 0x38db3ea29029)> `get`: 1280
+(url,post,fn,not_json)
+ {
+  var ajax = new XMLHttpRequest();
+  var method = 'GET';
+  if(post)
+   {
+    method = 'POST';
+    post = 'json='+encodeURIComponent(JSON.stringify(post));
+   }
+  ajax.open(method,url);
+  ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  ajax.onreadystatechange = function()
+   {
+    if(ajax.readyState==4)
+     {
+      var r = ajax.responseText;
+      if(typeof not_json=='undefined')
+       {
+        r = JSON.parse(r);
+       }
+      if(fn){fn(r);}else{return r;}
+     }
+   }
+  ajax.send(post);
+ }
+
+** Taint source functions: 
+
+
