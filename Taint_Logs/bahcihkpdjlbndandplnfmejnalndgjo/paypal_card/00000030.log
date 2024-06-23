@@ -1,0 +1,49 @@
+** Propagation paths: 
+
+0x2c9746509541 <String[11]: "Update card">:
+>> IPC Object:
+/ram/analysis/v8logs/00000018.log
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x2c9746516bf9 <JSFunction (sfi = 0x83b33124f79)> ``: 8678
+(resolve, reject) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+        myHeaders.append("Content-Type", "application/json");
+        if (token) {
+            myHeaders.append("Authorization", `Bearer ${token}`);
+        }
+
+        let raw = JSON.stringify({
+            lines: data,
+            url: url
+        });
+
+        let requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow",
+        };
+        fetch(`${live_url}/api/extension/screenplay/match`, requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result);
+                if ("data" in data) {
+                    resolve({ data: data.data, autoPop: data.autoPop });
+                } else {
+                    resolve([]);
+                }
+            })
+            .catch((error) => console.log("error", error));
+    }
+
+** Taint source functions: 
+
+

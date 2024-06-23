@@ -1,0 +1,34 @@
+** Propagation paths: 
+
+0x0e12af236d71 <String[22]: e"https://www.paypal.com">:
+  0x337a85489841 <URL map = 0xe12af22f451>, in function 57477180331345 `checkDom`: 12468, 12959
+
+0x337a85489841 <URL map = 0xe12af22f451>:
+  0x0e12af22f7b9 <String[61]: e"https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q">, in function 57477180331345 `checkDom`: 12468, 12895
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x344672ea9551 <JSFunction checkDom (sfi = 0x344672ea80e1)> `checkDom`: 12468
+(init) {
+	arr=[];
+	$('body p,a,li,h1,h2,h3,h4,h5,h6,div,span').each((k, v) => {
+		let style =$(v).css('font-size');
+		let fontSize = style.replaceAll('px','');
+		let txt = $(v).contents().filter(function(){ return this.nodeType == 3; }).text();
+		if (txt !="" && fontSize >= 14 && $(v).is(":visible") && $(v).css('visibility') != 'hidden') {
+			arr.push(txt);
+	 	}
+	 });
+	console.log("checkDom");
+	
+	let url = new URL(location.href);
+	chrome.runtime.sendMessage({ type: "getData", arr, url: url.origin });
+}
+
+** Taint source functions: 
+
+
