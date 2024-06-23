@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="045e90c0-3e6f-4023-9ab5-6f60790b7928" name="jiggly" url="http://jigglypuff.cc.gatech.edu">
+        <fileTransfer host="jigglypuff.cc.gatech.edu" port="22" rootFolder="/data/qxie47/chromium_arti/Arcanum" accessType="SFTP" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

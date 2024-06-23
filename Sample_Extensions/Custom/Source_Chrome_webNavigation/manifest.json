@@ -1,0 +1,17 @@
+{
+  "name": "Source chrome.cookies",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Test the taint source chrome.cookies (see Table 1 in our paper)",
+  "permissions": ["webNavigation"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

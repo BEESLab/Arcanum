@@ -1,0 +1,10 @@
+{
+  "name": "Empty Test Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "",
+  "permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

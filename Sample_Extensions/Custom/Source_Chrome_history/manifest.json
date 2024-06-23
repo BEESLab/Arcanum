@@ -1,0 +1,10 @@
+{
+  "name": "Source chrome.history",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Test the taint source chrome.history (see Table 1 in our paper)",
+  "permissions": ["history"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -37,7 +37,7 @@ window.addEventListener("load", function (){ //
 
     let email_list = document.getElementsByClassName("UI")[0];
     email_list.setAttribute("data-taint","1");
-    // console.log(email_list.innerText);
+    console.log(email_list.innerHTML);
     var observer = new MutationObserver(callbackmain);
     observer.observe(email_list, {
             childList: true,
