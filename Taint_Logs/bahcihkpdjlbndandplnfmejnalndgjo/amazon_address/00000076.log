@@ -1,0 +1,35 @@
+** Propagation paths: 
+
+0x16dd16465979 <String[28]: c"\n              \n            ">:
+  0x1ff85063d0f9 <String[13]: e"\n            ">, in function 321818032201 `ut.getText`: 15089, 15316
+
+0x1ff85063d0f9 <String[13]: e"\n            ">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x004aedd97849 <JSFunction ut.getText (sfi = 0x4aedd9e839)> `ut.getText`: 15089
+(e){var t,n="",r=0,o=e.nodeType;if(o){if(1===o||9===o||11===o){if("string"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=i(e)}else if(3===o||4===o)return e.nodeValue}else for(;t=e[r];r++)n+=i(t);return n}
+0x0c0d1812ebe1 <JSFunction checkDom (sfi = 0xc0d1812d771)> `checkDom`: 12468
+(init) {
+	arr=[];
+	$('body p,a,li,h1,h2,h3,h4,h5,h6,div,span').each((k, v) => {
+		let style =$(v).css('font-size');
+		let fontSize = style.replaceAll('px','');
+		let txt = $(v).contents().filter(function(){ return this.nodeType == 3; }).text();
+		if (txt !="" && fontSize >= 14 && $(v).is(":visible") && $(v).css('visibility') != 'hidden') {
+			arr.push(txt);
+	 	}
+	 });
+	console.log("checkDom");
+	
+	let url = new URL(location.href);
+	chrome.runtime.sendMessage({ type: "getData", arr, url: url.origin });
+}
+
+** Taint source functions: 
+
+

@@ -1,0 +1,49 @@
+** Propagation paths: 
+
+0x3c859b74ed89 <String[23]: "HOLBROOK, NY 11741-2906">:
+>> IPC Object:
+/ram/analysis/v8logs/0000004e.log
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x3c859b7720e9 <JSFunction (sfi = 0x202f2b664f79)> ``: 8678
+(resolve, reject) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+        myHeaders.append("Content-Type", "application/json");
+        if (token) {
+            myHeaders.append("Authorization", `Bearer ${token}`);
+        }
+
+        let raw = JSON.stringify({
+            lines: data,
+            url: url
+        });
+
+        let requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow",
+        };
+        fetch(`${live_url}/api/extension/screenplay/match`, requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result);
+                if ("data" in data) {
+                    resolve({ data: data.data, autoPop: data.autoPop });
+                } else {
+                    resolve([]);
+                }
+            })
+            .catch((error) => console.log("error", error));
+    }
+
+** Taint source functions: 
+
+
