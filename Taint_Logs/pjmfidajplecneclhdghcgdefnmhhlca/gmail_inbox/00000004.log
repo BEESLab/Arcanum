@@ -1,0 +1,36 @@
+** Propagation paths: 
+
+0x1a99d5e4c6d9 <String[39]: e"https://mail.google.com/mail/u/0/#inbox">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24e82b903ab1 <JSFunction sendHTMLpage (sfi = 0x9b6e92a6871)> `sendHTMLpage`: 2526
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+
+** Taint source functions: 
+
+
