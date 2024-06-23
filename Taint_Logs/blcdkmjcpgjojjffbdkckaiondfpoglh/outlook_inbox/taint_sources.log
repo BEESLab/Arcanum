@@ -1,0 +1,4276 @@
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x36bc2852aa81 <String[16]: "chrome://newtab/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x36bc2852a889 <String[7]: "New Tab">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x36bc2853b8c1 <String[16]: "chrome://newtab/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x36bc2853b891 <String[7]: "New Tab">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x36bc2853d599 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x36bc2853d569 <String[7]: "Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x36bc2853ed39 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x36bc2853ed09 <String[7]: "Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7c1159 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7c1129 <String[7]: "Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7c23a1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7c2371 <String[7]: "Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7c3b61 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7c3b31 <String[7]: "Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7c4da9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7c4d79 <String[7]: "Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7c5ff1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7c5fc1 <String[7]: "Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7c8bc1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7c8b81 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7ca0e9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7ca0a9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7cbbb1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7cbb71 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7cd051 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7cd011 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7ce2c9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7ce289 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7cf541 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7cf501 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7d07b9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7d0779 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7d1a31 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7d19f1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7d2ca9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7d2c69 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7d3f21 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7d3ee1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7d5199 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7d5159 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7d6411 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7d63d1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7d7689 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7d7649 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7d9d79 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7d9d39 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7daff1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7dafb1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7dc269 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7dc229 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7dd4e1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7dd4a1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7de759 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7de719 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7e2109 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7e20c9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7e3381 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7e3341 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x1928dd62a8f9 <String[32]: e"https://outlook.live.com/mail/0/">
+** In function 0x22b8002ba1e8 ``, source code:
+const ALLOW_ALL = true;
+const MAX_DEPTH = 0;
+
+var allowed_sites = [];
+var prohibit_tag = ["script", "style", "noscript"];
+var delim = '`!@!$`';
+
+var eList = [];
+var eListContent = [];
+
+var cwTexts = [];
+var cwScores = [];
+var cwSentences = [];
+
+var gResults = [];
+
+function allowed(str) {
+    if (ALLOW_ALL) {
+        return true;
+    }
+
+    for (var i = 0; i < allowed_sites.length; i++)
+        if (str.toLowerCase().includes(allowed_sites[i].toLowerCase()))
+            return true;
+
+    return false;
+}
+
+function prohibited(str) {
+    for (var i=0; i<prohibit_tag.length; i++) {
+        if (str.toLowerCase().includes(prohibit_tag[i].toLocaleString()))
+            return true;
+    }
+    return false;
+}
+
+function count_maximum_depth(el) {
+    var ret = 0;
+    if (prohibited(el.tagName)) ret = 100; // arbitrary large number
+
+    var c = el.children;
+    for (var i=0; i<c.length; i++) {
+        ret = Math.max(count_maximum_depth(c[i]) + 1, ret);
+    }
+
+    return ret;
+}
+
+function createCORSRequest(method, url, api_key=null) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    if (method == "POST") {
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    }
+    return xhr;
+}
+
+function applyClaimSpottingAPI(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+
+function applyGoogleAPI() {
+    var url = "https://idir.uta.edu/misinfo-api/query_google";
+
+    var tot = "";
+    for (var i=0; i<cwSentences.length; i++) {
+        tot += cwSentences[i];
+        if (i < cwSentences.length - 1) tot += "$&@!@&!*";
+    }
+    
+    var xhr = createCORSRequest('POST', url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+  
+    xhr.onload = function() {
+        gResults = JSON.parse(xhr.responseText);
+
+        var retIdx = 0;
+        for (var i = 0; i < cwScores.length; i++) {
+            var curHTML = eListContent[i];
+            for (var j = 0; j < cwScores[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                var curRes = gResults[retIdx++];
+
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+
+                var startColor = (curRes.empty ? "fce3ec" : "00ff66");
+                var endColor = (curRes.empty ? "ffe8cc" : "00d4ff");
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#" + startColor + tCode + "), to(#" + endColor + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+
+                var tooltipHTML = '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%';
+
+                if (!curRes.empty) {
+                    var googleFcURL = "https://toolbox.google.com/factcheck/explorer/search/" + fixedEncodeURIComponent(cwTexts[i][j]) + ";hl=en";
+                    tooltipHTML = '<a target="_blank" href="' + googleFcURL + '">' + tooltipHTML + '. Click me to see relevant fact-checks!</span>' + '</a>';
+                } else {
+                    tooltipHTML += '</span>';
+                }
+
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + tooltipHTML + '</div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+    };
+  
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+  
+    xhr.send(tot);
+}
+
+function processClaimCheckingResults(csListener, badgeLenListener) {
+    if (gResults.length != cwSentences.length) {
+        setTimeout(processClaimCheckingResults, 200, csListener, badgeLenListener);
+        return;
+    }
+
+    console.log(gResults);
+
+    var ccListener = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: '200-cc',
+                cwSentences: cwSentences,
+                gResults: gResults
+            });
+        }
+    }
+    chrome.runtime.onMessage.removeListener(csListener);
+    chrome.runtime.onMessage.addListener(ccListener);
+
+    var badgeLenCcListener = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+            response({
+                id: "200-cc",
+                content: cwSentences.length
+            });
+        }
+    }
+    chrome.runtime.onMessage.removeListener(badgeLenListener);
+    chrome.runtime.onMessage.addListener(badgeLenCcListener);
+}
+
+var threshold;
+var viewmode;
+
+chrome.storage.sync.get(['threshold'], function(result) {
+    if (result.threshold == undefined) {
+        chrome.storage.sync.set({threshold: 0.6}, function() {});
+        threshold = 0.6;
+    } else {
+        threshold = result.threshold;
+    }
+});
+
+function get_candidate_claims(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+
+if (allowed(document.URL)) {
+    console.log("COKN Health Info Check will operate on this site")
+
+    respondLoading = function(msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: 'loading-cs',
+                cwSentences: [],
+                gResults: []
+            });
+        }
+    }
+    chrome.runtime.onMessage.addListener(respondLoading);
+
+    var badgeLenLoading = function (msg, sender, response) {
+        if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+            response({
+                id: "-1",
+                content: []
+            });
+        }
+    }
+    chrome.runtime.onMessage.addListener(badgeLenLoading);
+
+    var style = document.createElement('style');
+    style.innerHTML = `
+    claim {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        border-radius: .4em;
+        padding-left: .15em;
+        padding-right: .15em;
+        padding-top: .05em;
+        padding-bottom: .05em;
+        color: black;
+    }
+    /* Tooltip container */
+    .tooltip-vericlaim {
+        position: relative;
+        display: inline;
+    }
+
+    /* Tooltip text */
+    .tooltip-vericlaim .tooltiptext-vericlaim {
+        visibility: hidden;
+        width: 20em;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        font-size: 10pt;
+        font-weight: bold;
+        
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 9999;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip-vericlaim:hover .tooltiptext-vericlaim {
+        visibility: visible;
+    }
+    `;
+
+    // style.innerHTML = `
+    // .has-tooltip {
+    //     /*position: relative;*/
+    //     display: inline;
+    // }
+    // .tooltip-wrapper {
+    //     position: absolute;
+    //     visibility: hidden;
+    // }
+    // .has-tooltip:hover .tooltip-wrapper {
+    //     visibility: visible;
+    //     opacity: 0.7;
+    //     /*top: 30px;*/
+    //     /*left: 50%;*/
+    //     /*margin-left: -76px;*/
+    //     z-index: 9999;
+    // }
+    
+    // .tooltip {
+    //     display: block;
+    //     position: relative;
+    //     top: 2em;
+    //     right: 100%;
+    //     width: 140px;
+    //     height: 96px;
+    //     /*margin-left: -76px;*/
+    //     color: #FFFFFF;
+    //     background: #000000;
+    //     line-height: 96px;
+    //     text-align: center;
+    //     border-radius: 8px;
+    //     box-shadow: 4px 3px 10px #800000;
+    // }
+    // .tooltip:after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 100%;
+    //     left: 50%;
+    //     margin-left: -8px;
+    //     width: 0;
+    //     height: 0;
+    //     border-bottom: 8px solid #000000;
+    //     border-right: 8px solid transparent;
+    //     border-left: 8px solid transparent;
+    // }    
+    // `
+
+    document.head.appendChild(style);
+
+    eList = get_candidate_claims(document.body.querySelectorAll('*:not(style):not(script):not(noscript)'));
+    applyClaimSpottingAPI(respondLoading, badgeLenLoading);
+} else {
+    chrome.runtime.onMessage.addListener((msg, sender, response) => {
+        if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+            response({
+                id: 'not-support',
+                cwSentences: [],
+                gResults: []
+            });
+        }
+    });
+}
+
+function fixedEncodeURIComponent(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+        return '%' + c.charCodeAt(0).toString(16);
+    });
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7e65e1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7e65a1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7e7859 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7e7819 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7e8ad1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7e8a91 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7e9d49 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7e9d09 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa251087d1 <String[7]: e"Leasing">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108839 <String[7]: e"Leasing">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108859 <String[1]: ue"ƒ">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108879 <String[1]: ue"ƒ">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108899 <String[35]: e"Lease Approved For 1016 West Avenue">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa251088b9 <String[35]: e"Lease Approved For 1016 West Avenue">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa251088d9 <String[7]: e"2:56 PM">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa251088f9 <String[7]: e"2:56 PM">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108919 <String[244]: e"Online Lease Executed Online Lease has been Executed by Both Parties The lease document(s) has been signed by both parties. The executed agreement is attached to this email. If you have any questions, or need help along the way, contact the lea">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108939 <String[244]: e"Online Lease Executed Online Lease has been Executed by Both Parties The lease document(s) has been signed by both parties. The executed agreement is attached to this email. If you have any questions, or need help along the way, contact the lea">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108959 <String[13]: e"Amazon Orders">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108979 <String[13]: e"Amazon Orders">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108999 <String[71]: e"Your Amazon.com order of "Ray-Ban RB3025 Classic..." has been canceled.">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa251089b9 <String[71]: e"Your Amazon.com order of "Ray-Ban RB3025 Classic..." has been canceled.">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa251089d9 <String[7]: e"2:49 PM">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa251089f9 <String[7]: e"2:49 PM">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108a19 <String[243]: e"Your Orders | Your Account | Amazon.com Order Cancellation Order # 113-2660035-1513811 Hello Amy, We're writing to let you know that your order has been successfully canceled. In most cases, you pay for items when we ship them to you, so you w">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108a39 <String[243]: e"Your Orders | Your Account | Amazon.com Order Cancellation Order # 113-2660035-1513811 Hello Amy, We're writing to let you know that your order has been successfully canceled. In most cases, you pay for items when we ship them to you, so you w">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108a59 <String[8]: e"Lee, Amy">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108a79 <String[8]: e"Lee, Amy">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108a99 <String[24]: e"I got into Georgia Tech!">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108ab9 <String[24]: e"I got into Georgia Tech!">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108ad9 <String[7]: e"2:48 PM">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108af9 <String[7]: e"2:48 PM">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108b19 <String[248]: e"Hi Jack, I hope you are doing well. I am happy to announce that I got into Georgia Tech for Fall '23 to pursue postgraduate studies. I hope I can meet you there. We are going to have lots of fun. Look out for my ID on microsoft teams: First Name: A">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108b39 <String[248]: e"Hi Jack, I hope you are doing well. I am happy to announce that I got into Georgia Tech for Fall '23 to pursue postgraduate studies. I hope I can meet you there. We are going to have lots of fun. Look out for my ID on microsoft teams: First Name: A">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108b59 <String[5]: e"Older">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x27fa25108b79 <String[5]: e"Older">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069974f39 <String[20]: e"Fidelity Investments">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069974f59 <String[20]: e"Fidelity Investments">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069974f79 <String[1]: ue"ƒ">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069974f99 <String[1]: ue"ƒ">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069974fb9 <String[44]: e"Your bank statement is ready for your review">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069974fd9 <String[44]: e"Your bank statement is ready for your review">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069974ff9 <String[8]: e"4/4/2023">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069975019 <String[8]: e"4/4/2023">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069975039 <String[216]: ue"Forwarded message - From: <noreply@fidelity.com> Date: Sun, Feb 26, 2023 at 5:27\x202fPM Subject: Your bank statement is ready for your review To: noreply@fidelity.com <noreply@fidelity.com> Dear Fidelity Investments, Tha">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069975059 <String[216]: ue"Forwarded message - From: <noreply@fidelity.com> Date: Sun, Feb 26, 2023 at 5:27\x202fPM Subject: Your bank statement is ready for your review To: noreply@fidelity.com <noreply@fidelity.com> Dear Fidelity Investments, Tha">
+** In function 0x22b8002ba1f8 `get_candidate_claims`, source code:
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069975881 <String[35]: e"Lease Approved For 1016 West Avenue">
+** In function 0x22b8002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069975921 <String[244]: e"Online Lease Executed Online Lease has been Executed by Both Parties The lease document(s) has been signed by both parties. The executed agreement is attached to this email. If you have any questions, or need help along the way, contact the lea">
+** In function 0x22b8002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069975941 <String[71]: e"Your Amazon.com order of "Ray-Ban RB3025 Classic..." has been canceled.">
+** In function 0x22b8002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069975961 <String[243]: e"Your Orders | Your Account | Amazon.com Order Cancellation Order # 113-2660035-1513811 Hello Amy, We're writing to let you know that your order has been successfully canceled. In most cases, you pay for items when we ship them to you, so you w">
+** In function 0x22b8002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x012069975981 <String[24]: e"I got into Georgia Tech!">
+** In function 0x22b8002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x0120699759a1 <String[248]: e"Hi Jack, I hope you are doing well. I am happy to announce that I got into Georgia Tech for Fall '23 to pursue postgraduate studies. I hope I can meet you there. We are going to have lots of fun. Look out for my ID on microsoft teams: First Name: A">
+** In function 0x22b8002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x0120699759c1 <String[44]: e"Your bank statement is ready for your review">
+** In function 0x22b8002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x0120699759e1 <String[216]: ue"Forwarded message - From: <noreply@fidelity.com> Date: Sun, Feb 26, 2023 at 5:27\x202fPM Subject: Your bank statement is ready for your review To: noreply@fidelity.com <noreply@fidelity.com> Dear Fidelity Investments, Tha">
+** In function 0x22b8002ba1f8 `applyClaimSpottingAPI`, source code:
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7ecd19 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7eccd9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0238 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7ee749 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7ee709 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7efa89 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7efa49 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7f0d99 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7f0d59 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7f20a9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7f2069 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7f33b9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7f3379 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7f46c9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7f4689 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7f59d9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7f5999 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7f6ce9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7f6ca9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7f7ff9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7f7fb9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7fb359 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7fb319 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7fce91 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7fce51 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7fe1a1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7fe161 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x04cbac7ff4b1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x04cbac7ff471 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b01a49 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b01a09 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b09729 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b096e9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b0aa39 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b0a9f9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b0bd49 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b0bd09 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b0d7e9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b0d7a9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b101a9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b10169 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b11c49 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b11c09 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b136e9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b136a9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b15189 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b15149 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b16c29 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b16be9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b186c9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b18689 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b1a169 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b1a129 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b1bc09 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b1bbc9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b1cf19 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b1ced9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b1f149 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b1f109 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b20be9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b20ba9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b22689 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b22649 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b23999 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b23959 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b24ca9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b24c69 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b25fb9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b25f79 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b272c9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b27289 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b285d9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b28599 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b298e9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b298a9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b2abf9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b2abb9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b2bf09 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b2bec9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b2d219 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b2d1d9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b2e529 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b2e4e9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b34b69 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b34b29 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b36609 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b365c9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b380a9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b38069 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b39b49 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b39b09 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b3ae59 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b3ae19 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b3c169 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b3c129 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b3d479 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b3d439 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b3e789 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b3e749 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x166c37b3fa99 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x166c37b3fa59 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x08adfdc01ed1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x08adfdc01e91 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x08adfdc066d1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x08adfdc06691 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x08adfdc08171 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x08adfdc08131 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x08adfdc0e4f9 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x08adfdc0e4b9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x08adfdc10729 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x08adfdc106e9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x08adfdc11a39 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x08adfdc119f9 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x08adfdc13c69 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x08adfdc13c29 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d703ce1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d703ca1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d705781 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d705741 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d707221 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d7071e1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d708cc1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d708c81 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d70a761 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d70a721 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d70c201 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d70c1c1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d70dca1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d70dc61 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d70f741 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d70f701 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d7111e1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d7111a1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d712c81 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d712c41 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d714721 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d7146e1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d7161c1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d716181 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d717c61 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d717c21 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d719701 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d7196c1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d71b1a1 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d71b161 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d71cc41 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d71cc01 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d71df51 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d71df11 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d720181 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d720141 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d721c21 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d721be1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d722f31 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d722ef1 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d724241 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d724201 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:url)
+0x21903d725551 <String[32]: "https://outlook.live.com/mail/0/">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.query:title)
+0x21903d725511 <String[24]: "Mail - Jack Ma - Outlook">
+** In function 0x22b8007c0250 ``, source code:
+tabs => {
+        chrome.tabs.sendMessage(
+            tabs[0].id, { from: 'popup', subject: 'badgeInfo' },
+            updateBadge);
+    }
+>>> END Taint source
+

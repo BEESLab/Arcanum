@@ -1,0 +1,140 @@
+>>> TAINT SINK `XHR` REACHED (xml-send-body-USVString) <<<
+STACK TRACE START: 
+0x34664abc5fd9 <String[160]: c"applyClaimSpottingAPI (chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/backend.js:145:9)chrome-extension://blcdkmjcpgjojjffbdkckaiondfpoglh/backend.js:388:5">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** XHR leak, request URL = https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1
+
+** Tainted bytes: (nullptr=0): 1111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000001111111111111111111111111111111111111111111111111111111111111111111111100000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000001111111111111111111111110000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000001111111111111111111111111111111111111111111100000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000001111111111111111111111
+
+** Sink object: New mail (N) Create a new email message.$&@!@&!*Delete (Delete) Delete this message.$&@!@&!*Archive (E) Move this message to your archive folder.$&@!@&!*Report Report this message as phishing.$&@!@&!*Sweep Make a rule around the selected email authors.$&@!@&!*Move to (V) Move to a folder.$&@!@&!*Mark all as read Mark all messages in this folder as read.$&@!@&!*Categorize (C) Categorize this item. Categories applied to a conversation will be applied to all current and future items in the conversation.$&@!@&!*Flag / Unflag Flag or unflag this message.$&@!@&!*Pin / Unpin Pin or unpin this message.$&@!@&!*Snooze (B) Hide this message until a later time.$&@!@&!*Undo (Ctrl+Z) Undo last action.$&@!@&!*Lease Approved For 1016 West Avenue$&@!@&!*Online Lease Executed Online Lease has been Executed by Both Parties The lease document(s) has been signed by both parties. The executed agreement is attached to this email. If you have any questions, or need help along the way, contact the lea$&@!@&!*Your Amazon.com order of "Ray-Ban RB3025 Classic..." has been canceled.$&@!@&!*Your Orders | Your Account | Amazon.com Order Cancellation Order # 113-2660035-1513811 Hello Amy, We're writing to let you know that your order has been successfully canceled. In most cases, you pay for items when we ship them to you, so you w$&@!@&!*I got into Georgia Tech!$&@!@&!*Hi Jack, I hope you are doing well. I am happy to announce that I got into Georgia Tech for Fall '23 to pursue postgraduate studies. I hope I can meet you there. We are going to have lots of fun. Look out for my ID on microsoft teams: First Name: A$&@!@&!*Your bank statement is ready for your review$&@!@&!*Forwarded message - From: <noreply@fidelity.com> Date: Sun, Feb 26, 2023 at 5:27 PM Subject: Your bank statement is ready for your review To: noreply@fidelity.com <noreply@fidelity.com> Dear Fidelity Investments, Tha$&@!@&!*Select an item to read
+
+** Propagation paths: 
+
+0x34664abc1e31 <String[1915]: uc"...<truncated>>">:
+  0x012069975079 <String[22]: e"Select an item to read">, in function 13336889422257 `applyClaimSpottingAPI`: 1264, 1393
+
+0x012069975079 <String[22]: e"Select an item to read">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x0c213c8e7339 <JSFunction get_candidate_claims (sfi = 0xc213c8ffb29)> `get_candidate_claims`: 8331
+(els) {
+    var ret = []
+
+    for (var i = 0; i < els.length; i++) {
+        el = els[i];
+        max_depth = count_maximum_depth(el);
+
+        if (max_depth > MAX_DEPTH) continue;
+        if (typeof el.innerText == 'undefined') continue;
+        txt = el.innerText.trim();
+        if (txt.split(' ').length < 5) continue;
+
+        // ret.push(txt);
+        ret.push(el);
+    }
+    
+    return ret;
+}
+0x0c213c8e71b1 <JSFunction applyClaimSpottingAPI (sfi = 0xc213c8ff541)> `applyClaimSpottingAPI`: 1264
+(respondLoading, badgeLenLoading) {
+    var tot = ""
+
+    for (var i=0; i<eList.length; i++) {
+        tot += eList[i].innerText.trim();
+        if (i < eList.length - 1) tot += '$&@!@&!*'
+    }
+
+    var base_url = "https://idir.uta.edu/misinfo-api/query_claimbuster?rtoks=1";
+        
+    var xhr = createCORSRequest('POST', base_url);
+    if (!xhr) {
+        alert('CORS not supported');
+        return;
+    }
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        var ret = JSON.parse(xhr.responseText);
+
+        for (var i = 0; i < ret.length; i++) {
+            var tmp1 = [];
+            var tmp2 = [];
+            for (var j = 0; j < ret[i].length; j++) {
+                tmp1.push(ret[i][j][0]);
+                tmp2.push(ret[i][j][1]);
+            }
+            cwTexts.push(tmp1);
+            cwScores.push(tmp2);
+        }
+
+        for (var i = 0; i < ret.length; i++) {
+            var curHTML = eList[i].innerText.trim();
+            eListContent.push(curHTML);
+            
+            for (var j = 0; j < ret[i].length; j++) {
+                if (cwScores[i][j] < threshold) continue;
+
+                cwSentences.push(cwTexts[i][j]);
+                var start = curHTML.indexOf(cwTexts[i][j]);
+                var end = start + cwTexts[i][j].length;
+
+                var decCode = Math.round(cwScores[i][j] * 255);
+                var tCode = decCode.toString(16);
+                var colorcode = "background: -webkit-gradient(linear, left top, right top, from(#fce3ec" + tCode + "), to(#ffe8cc" + tCode + "));";
+
+                var newHTML = "<claim style='" + colorcode + "'>" + cwTexts[i][j] + "</claim>";
+                newHTML = '<div class="tooltip-vericlaim">' + newHTML + '<span class="tooltiptext-vericlaim">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></div>';
+                // newHTML = '<div class="has-tooltip">' + newHTML + '<span class="tooltip-wrapper"><span class="tooltip">Check-Worthiness Score: ' + (cwScores[i][j] * 100).toFixed(2) + '%. See extension for details.</span></span></div>';
+
+                curHTML = curHTML.substring(0, start) + newHTML + curHTML.substring(end);
+            }
+            eList[i].innerHTML = curHTML;
+        }
+
+        var csListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+                response({
+                    id: '200-cs',
+                    cwSentences: cwSentences,
+                    gResults: []
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(respondLoading);
+        chrome.runtime.onMessage.addListener(csListener);
+    
+        var badgeLenListener = function (msg, sender, response) {
+            if ((msg.from === 'popup') && (msg.subject === 'badgeInfo')) {
+                response({
+                    id: "200-cs",
+                    content: cwSentences.length
+                });
+            }
+        }
+        chrome.runtime.onMessage.removeListener(badgeLenLoading);
+        chrome.runtime.onMessage.addListener(badgeLenListener);
+    
+        applyGoogleAPI();
+        
+        processClaimCheckingResults(csListener, badgeLenListener);
+    };
+
+    xhr.onerror = function() {
+        console.log('There was an error making the request');
+    };
+
+    xhr.send(tot);
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
