@@ -1,0 +1,124 @@
+[63644:63699:0921/230437.690388:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[63644:63699:0921/230437.690593:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[63644:63698:0921/230437.694991:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[63644:63698:0921/230437.695026:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[63644:63644:0921/230437.699427:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[63706:63706:0921/230437.713375:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[63644:63644:0921/230437.720935:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[63644:63698:0921/230437.730306:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[63644:63698:0921/230437.730360:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[63706:63706:0921/230437.757367:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[63644:63698:0921/230437.777045:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[63644:63698:0921/230437.777117:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[63706:63706:0921/230437.863573:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[63749:63749:0921/230437.864855:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[63750:63750:0921/230437.871812:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[63644:63644:0921/230437.891923:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[63644:63767:0921/230437.943647:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[63644:63767:0921/230437.943693:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[63644:63767:0921/230437.943746:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[63644:63767:0921/230437.943756:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[63644:63767:0921/230437.943780:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[63644:63767:0921/230437.943804:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[63772:63772:0921/230438.083183:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[63772:63781:0921/230438.120046:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js]
+[63644:63644:0921/230438.142240:INFO:CONSOLE(1)] "This is a first install!", source: chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js (1)
+[63772:63772:0921/230438.222746:INFO:local_window_proxy.cc(259)] MarkAsExtensionContext (Background mv2): ["chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/help.html"]
+[63784:63784:0921/230439.310228:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[63792:63792:0921/230439.329143:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[63644:63701:0921/230439.391497:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for www.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[63644:63644:0921/230439.531786:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[63644:63644:0921/230439.532149:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[63644:63701:0921/230439.593064:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for static.xx.fbcdn.net failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[63707:63735:0921/230439.635556:WARNING:spdy_session.cc(3219)] Received RST for invalid stream3
+[63707:63735:0921/230439.635632:WARNING:spdy_session.cc(3219)] Received RST for invalid stream3
+[63644:63701:0921/230439.660520:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for scontent.xx.fbcdn.net failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[63644:63644:0921/230440.060931:ERROR:node_channel.cc(861)] Dropping message on closed channel.
+[63644:63644:0921/230440.395467:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[63644:63644:0921/230449.138702:INFO:CONSOLE(22)] "all post ok", source: https://www.facebook.com/profile.php?id=100084859195049 (22)
+[63644:63644:0921/230449.139742:INFO:CONSOLE(25)] "1", source: https://www.facebook.com/profile.php?id=100084859195049 (25)
+[63644:63644:0921/230449.140273:INFO:CONSOLE(27)] "0", source: https://www.facebook.com/profile.php?id=100084859195049 (27)
+[63644:63644:0921/230449.140776:INFO:CONSOLE(52)] "head yes", source: https://www.facebook.com/profile.php?id=100084859195049 (52)
+[63644:63644:0921/230449.141393:INFO:CONSOLE(56)] "head done", source: https://www.facebook.com/profile.php?id=100084859195049 (56)
+[63644:63644:0921/230449.141901:INFO:CONSOLE(63)] "bio yes", source: https://www.facebook.com/profile.php?id=100084859195049 (63)
+[63644:63644:0921/230449.142434:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[63644:63644:0921/230449.142952:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[63644:63644:0921/230449.143438:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[63644:63644:0921/230449.143827:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[63644:63644:0921/230449.144227:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[63644:63644:0921/230449.144617:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[63644:63644:0921/230449.145014:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[63644:63644:0921/230449.145432:INFO:CONSOLE(68)] "[object HTMLDivElement]", source: https://www.facebook.com/profile.php?id=100084859195049 (68)
+[63644:63644:0921/230449.145823:INFO:CONSOLE(70)] "bio done", source: https://www.facebook.com/profile.php?id=100084859195049 (70)
+[63784:63784:0921/230457.242514:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.facebook.com/profile.php?id=100084859195049"]
+[63772:63821:0921/230513.861190:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js]
+[63707:63735:0921/230522.208568:WARNING:spdy_session.cc(3219)] Received RST for invalid stream17
+[63707:63735:0921/230522.208661:WARNING:spdy_session.cc(3219)] Received RST for invalid stream17
+[63644:63660:0921/230522.267931:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for edge-chat.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[63644:63644:0921/230525.213121:INFO:CONSOLE(231)] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[63644:63644:0921/230525.213530:INFO:CONSOLE(231)] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[63644:63644:0921/230525.214234:INFO:CONSOLE(231)] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[63644:63644:0921/230525.214651:INFO:CONSOLE(231)] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (231)
+[63644:63644:0921/230538.089250:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 413
+[63644:63644:0921/230538.089327:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 413
+[63644:63644:0921/230538.089522:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[63644:63644:0921/230538.089566:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters
+[63644:63662:0921/230543.502229:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for edge-chat.facebook.com failed:
+----- Certificate i=0 (CN=*.facebook.com,O=Meta Platforms\, Inc.,L=Menlo Park,ST=California,C=US) -----
+ERROR: Target certificate looks like a CA but does not set all CA properties
+
+
+[63644:63644:0921/230544.430980:INFO:CONSOLE(59)] "ErrorUtils caught an error:
+
+Encountered a missing `@required` field with action "THROW" at "user.profile_header_renderer" in "ProfileCometHeaderQuery"
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs.", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (59)
+[63772:63923:0921/230552.212508:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js]
+[63644:63644:0921/230603.304800:INFO:CONSOLE(59)] "ErrorUtils caught an error:
+
+Encountered a missing `@required` field with action "THROW" at "user.profile_header_renderer" in "ProfileCometHeaderQuery" [Caught in: caught error in module a [from CometTransientDialogProvider.react] (base)]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs.", source: https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/kIVpvOgjzIO.js?_nc_x=XqDGrcryK4Y (59)
+[63707:63735:0921/230604.330330:WARNING:spdy_session.cc(3219)] Received RST for invalid stream25
+[63707:63735:0921/230604.330491:WARNING:spdy_session.cc(3219)] Received RST for invalid stream25
+[63644:63644:0921/230622.733735:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=558446353055743&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[63644:63644:0921/230622.885692:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=558446353055743&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[63644:63644:0921/230623.072492:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=1459166277271551&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[63707:63735:0921/230623.656777:WARNING:spdy_session.cc(3219)] Received RST for invalid stream31
+[63707:63735:0921/230623.656965:WARNING:spdy_session.cc(3219)] Received RST for invalid stream31
+[63772:63924:0921/230631.405191:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js]
+[63707:63735:0921/230641.927378:WARNING:spdy_session.cc(3219)] Received RST for invalid stream7
+[63707:63735:0921/230641.927447:WARNING:spdy_session.cc(3219)] Received RST for invalid stream7
+[63644:63644:0921/230641.950107:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=1459166277271551&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[63707:63735:0921/230641.993833:WARNING:spdy_session.cc(3219)] Received RST for invalid stream9
+[63707:63735:0921/230641.993900:WARNING:spdy_session.cc(3219)] Received RST for invalid stream9
+[63644:63644:0921/230642.011470:INFO:CONSOLE(0)] "Access to fetch at 'https://edge-chat.facebook.com/mqtt/pull?region=frc&sid=2359886203584511&chunked=true' from origin 'https://www.facebook.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.facebook.com/profile.php?id=100084859195049 (0)
+[63707:63735:0921/230700.540065:WARNING:spdy_session.cc(3219)] Received RST for invalid stream11
+[63707:63735:0921/230700.540173:WARNING:spdy_session.cc(3219)] Received RST for invalid stream11
+[63707:63735:0921/230701.052260:WARNING:spdy_session.cc(3219)] Received RST for invalid stream39
+[63707:63735:0921/230701.052422:WARNING:spdy_session.cc(3219)] Received RST for invalid stream39
+[63644:63644:0921/230701.294961:ERROR:background_mode_manager_aura.cc(12)] Not implemented reached in virtual void BackgroundModeManager::EnableLaunchOnStartup(bool)
+[63644:63644:0921/230701.331335:WARNING:internal_linux.cc(67)] Failed to read /proc/63707/stat
+[63644:63644:0921/230701.331371:ERROR:kill_posix.cc(34)] waitpid(63707): No child processes (10)
+[63644:63663:0921/230701.333016:WARNING:discardable_shared_memory_manager.cc(436)] Some MojoDiscardableSharedMemoryManagerImpls are still alive. They will be leaked.
+[63644:63644:0921/230701.334868:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

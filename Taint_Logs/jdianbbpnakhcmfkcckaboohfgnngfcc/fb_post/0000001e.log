@@ -1,0 +1,19 @@
+** Propagation paths: 
+
+0x0e9e5f7d5b71 <String[315]: "https://www.facebook.com/<br>https://www.facebook.com/friends/<br>https://www.facebook.com/watch/?ref=tab<br>https://www.facebook.com/marketplace/?ref=app_tab<br>https://www.facebook.com/gaming/play/?store_visit_source=gaming_tab<br>https://www.facebook.com/bookmarks/<br>https://www.facebook.com/notifications/<br>">:
+>> IPC Object:
+/ram/analysis/v8logs/0000001d.log
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x0e9e5f7d78d1 <JSFunction (sfi = 0x79ad66264c1)> ``: 2580
+(e){var o=t.links;chrome.storage.local.set({_saveLinkList:o})}
+
+** Taint source functions: 
+
+

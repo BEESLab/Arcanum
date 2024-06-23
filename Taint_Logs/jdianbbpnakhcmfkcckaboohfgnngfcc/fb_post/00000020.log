@@ -1,0 +1,19 @@
+** Propagation paths: 
+
+0x0e9e5f7dd849 <String[55]: "https://www.facebook.com/profile.php?id=100084859195049">:
+>> IPC Object:
+/ram/analysis/v8logs/0000001f.log
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x0e9e5f7df429 <JSFunction (sfi = 0x79ad6626059)> ``: 2306
+(e){var o=t.mails,a=t.mailsFound,i=t.url;chrome.storage.local.set({_saveMailList:o,_emailsFound:a,_currentUrl:i})}
+
+** Taint source functions: 
+
+

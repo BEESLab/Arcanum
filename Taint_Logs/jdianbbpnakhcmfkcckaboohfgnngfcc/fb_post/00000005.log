@@ -1,0 +1,23 @@
+** Propagation paths: 
+
+0x12bc18770209 <String[4380]: c"...<truncated>>">:
+  0x39e289a27af1 <String[398]: e"https://www.facebook.com/permalink.php?story_fbid=pfbid0GJsbfuup6sDBiGVyTQHLjZeWKtVN63nnjgEnrvUKiNqYfSXonHWgoff1Ao5k5mkYl&id=100084859195049&comment_id=890344008625853&reply_comment_id=679777643530933&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R">, in function 1410730830569 `s`: 566, 598
+
+0x39e289a27af1 <String[398]: e"https://www.facebook.com/permalink.php?story_fbid=pfbid0GJsbfuup6sDBiGVyTQHLjZeWKtVN63nnjgEnrvUKiNqYfSXonHWgoff1Ao5k5mkYl&id=100084859195049&comment_id=890344008625853&reply_comment_id=679777643530933&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x0148761c2ae9 <JSFunction s (sfi = 0x354cbc3bee69)> `s`: 566
+(e){var t="";for(var n in e)t+=e[n]+"<br>";return t}
+0x3968ca759d89 <JSFunction (sfi = 0x39e289a21d91)> ``: 13260
+(){this.href.length>0&&"javascript"!==this.href.substr(0,10)&&"mailto"!==this.href.substr(0,6)&&(e.indexOf(this.href)>-1||-1!=this.href.indexOf("manycontacts.com")||e.push(this.href))}
+0x150464488221 <JSFunction reloader (sfi = 0x150464487711)> `reloader`: 315
+(){if(isextensionenabled){var e=$("body").html(),t=$("body a");function n(e){return mcUtils.extractEmails(e)}function o(e){return mcUtils.extractLinks(e)}function i(e){var t=[];return $.each(e,function(e,n){-1==$.inArray(n,t)&&t.push(n)}),t}function s(e){var t="";for(var n in e)t+=e[n]+"<br>";return t}if(null==n(e))chrome.runtime.sendMessage({from:"content",subject:"sendMailCount",mailCount:0}),chrome.runtime.sendMessage({from:"content",subject:"sendEmails",mails:"None Found",mailsFound:"0"});else try{chrome.runtime.sendMessage({from:"content",subject:"sendMailCount",mailCount:i(n(e)).length}),chrome.runtime.sendMessage({from:"content",subject:"sendEmails",mails:s(i(n(e))),mailsFound:i(n(e)).length,url:window.location.href}),chrome.runtime.sendMessage({options:"saveautosave",mails:i(n(e)),url:window.location.href})}catch(e){console.log("Refresh the page to reload the Email Extractor Chrome extension.")}if(null==o(t))chrome.runtime.sendMessage({from:"content",subject:"sendLinks",links:[]});else try{chrome.runtime.sendMessage({from:"content",subject:"sendLinks",links:s(o(t))})}catch(e){console.log("Refresh the page to reload the Email Extractor Chrome extension.")}}}
+
+** Taint source functions: 
+
+

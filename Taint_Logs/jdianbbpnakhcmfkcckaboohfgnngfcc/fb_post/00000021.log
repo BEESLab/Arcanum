@@ -1,0 +1,44 @@
+** Propagation paths: 
+
+0x150c69702e29 <JSArray[0]>:
+  0x37db9d35ad81 <JSArray[0]>, in function 48610768491929 `i`: 479, 501
+  0x37db9d35ad81 <JSArray[0]>, in function 23108606525985 `reloader`: 315, 1109
+  0x37db9d35ad81 <JSArray[0]>, in function 48610768491929 `i`: 479, 506
+  0x1a9bbd171e21 <String[1525378]: e"...<truncated>>">, in function 23108606525985 `reloader`: 315, 1111
+
+0x37db9d35ad81 <JSArray[0]>:
+  0x1a9bbd171e21 <String[1525378]: e"...<truncated>>">, in function 48610768492345 `n`: 388, 421
+  0x1a9bbd171e21 <String[1525378]: e"...<truncated>>">, in function 23108606525985 `reloader`: 315, 1111
+
+0x1a9bbd171e21 <String[1525378]: e"...<truncated>>">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x2c3613969599 <JSFunction i (sfi = 0x354cbc3bee11)> `i`: 479
+(e){var t=[];return $.each(e,function(e,n){-1==$.inArray(n,t)&&t.push(n)}),t}
+0x0148761c2fc9 <JSFunction html (sfi = 0x2d2481953739)> `html`: 50020
+(a){return S(this,function(a){var b=this[0]||{},c=0,d=this.length;if(void 0===a&&1===b.nodeType)return b.innerHTML;if("string"==typeof a&&!za.test(a)&&!la[(ja.exec(a)||["",""])[1].toLowerCase()]){a=r.htmlPrefilter(a);try{for(;c<d;c++)b=this[c]||{},1===b.nodeType&&(r.cleanData(ma(b,!1)),b.innerHTML=a);b=0}catch(e){}}b&&this.empty().append(a)},null,a,arguments.length)}
+0x2c3613969739 <JSFunction n (sfi = 0x354cbc3bed71)> `n`: 388
+(e){return mcUtils.extractEmails(e)}
+0x150464488221 <JSFunction reloader (sfi = 0x150464487711)> `reloader`: 315
+(){if(isextensionenabled){var e=$("body").html(),t=$("body a");function n(e){return mcUtils.extractEmails(e)}function o(e){return mcUtils.extractLinks(e)}function i(e){var t=[];return $.each(e,function(e,n){-1==$.inArray(n,t)&&t.push(n)}),t}function s(e){var t="";for(var n in e)t+=e[n]+"<br>";return t}if(null==n(e))chrome.runtime.sendMessage({from:"content",subject:"sendMailCount",mailCount:0}),chrome.runtime.sendMessage({from:"content",subject:"sendEmails",mails:"None Found",mailsFound:"0"});else try{chrome.runtime.sendMessage({from:"content",subject:"sendMailCount",mailCount:i(n(e)).length}),chrome.runtime.sendMessage({from:"content",subject:"sendEmails",mails:s(i(n(e))),mailsFound:i(n(e)).length,url:window.location.href}),chrome.runtime.sendMessage({options:"saveautosave",mails:i(n(e)),url:window.location.href})}catch(e){console.log("Refresh the page to reload the Email Extractor Chrome extension.")}if(null==o(t))chrome.runtime.sendMessage({from:"content",subject:"sendLinks",links:[]});else try{chrome.runtime.sendMessage({from:"content",subject:"sendLinks",links:s(o(t))})}catch(e){console.log("Refresh the page to reload the Email Extractor Chrome extension.")}}}
+0x0148761c2f89 <JSFunction S (sfi = 0x2d248195f4e1)> `S`: 32328
+(a,b,c,d,e,f,g){var h=0,i=a.length,j=null==c;if("object"===r.type(c)){e=!0;for(h in c)S(a,b,h,c[h],!0,f,g)}else if(void 0!==d&&(e=!0,r.isFunction(d)||(g=!0),j&&(g?(b.call(a,d),b=null):(j=b,b=function(a,b,c){return j.call(r(a),c)})),b))for(;h<i;h++)b(a[h],c,g?d:d.call(a[h],h,b(a[h],c)));return e?a:j?b.call(a):i?b(a[0],c):f}
+0x0148761c2ee9 <JSFunction each (sfi = 0x2d248195d2c1)> `each`: 2827
+(a,b){var c,d=0;if(w(a)){for(c=a.length;d<c;d++)if(b.call(a[d],d,a[d])===!1)break}else for(d in a)if(b.call(a[d],d,a[d])===!1)break;return a}
+0x0148761c2951 <JSFunction extractEmails (sfi = 0x1504644839e9)> `extractEmails`: 11995
+(a){var n,s=[];a=(a=unescape(a)).replace("&#064;","@"),-1!=window.location.hostname.indexOf("google")&&-1==window.location.hostname.indexOf("mail.google")?(a=a.replace(/<\/div>/g,"</div> "),a=$(a).text(),n=/(\\u|\\f|\\x)?([a-zA-Z0-9._\-\_+]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi):n=-1!=window.location.hostname.indexOf("bing")?/(\\u|\\f|\\x)?([a-zA-Z0-9._\-\_+]+(<strong>)?@(<strong>)?[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+(<\/strong>)?)/gi:-1!=window.location.hostname.indexOf("duckduckgo")?/(\\u|\\f|\\x)?([a-zA-Z0-9._\-\_+]+(<b>)?@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+(<\/b>)?)/gi:-1!=window.location.hostname.indexOf("yahoo")?/(\\u|\\f|\\x)?([a-zA-Z0-9._\-\_+]+@(<b>)?[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+(<\/b>)?)/gi:/(\\u|\\f|\\x)?([a-zA-Z0-9._\-\_+]+(@|\[at\]|\[at\*\])[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;var r,l=a.match(n);if(null!=l)for(var m=0;m<l.length;m++){var u=(r=(r=l[m]).toLowerCase(),e&&(r=r.replace("<wbr>","").replace(/<em>|<\/em>/g,"")),o&&(r=r.replace(/<strong>|<\/strong>/g,"")),(i||t)&&(r=r.replace(/<b>|<\/b>/g,"")),-1==r.indexOf("@")&&(r=(r=r.replace("[at]","@")).replace("[at*]","@")),r=r.replace(/(^sx_mrsp_|\\u[\d\w]{4}|\\x[\d\w]{2}|\\f)|\.$/g,""));!(s.indexOf(u)>-1)&&c(u)&&s.push(u)}return s}
+0x0148761c2e51 <JSFunction type (sfi = 0x2d248195cf89)> `type`: 2539
+(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?j[k.call(a)]||"object":typeof a}
+0x2c3613961639 <JSFunction (sfi = 0x39e289a1c911)> ``: 50046
+(a){var b=this[0]||{},c=0,d=this.length;if(void 0===a&&1===b.nodeType)return b.innerHTML;if("string"==typeof a&&!za.test(a)&&!la[(ja.exec(a)||["",""])[1].toLowerCase()]){a=r.htmlPrefilter(a);try{for(;c<d;c++)b=this[c]||{},1===b.nodeType&&(r.cleanData(ma(b,!1)),b.innerHTML=a);b=0}catch(e){}}b&&this.empty().append(a)}
+0x0148761c2c41 <JSFunction w (sfi = 0x2d248195adf9)> `w`: 4044
+(a){var b=!!a&&"length"in a&&a.length,c=r.type(a);return"function"!==c&&!r.isWindow(a)&&("array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a)}
+
+** Taint source functions: 
+
+

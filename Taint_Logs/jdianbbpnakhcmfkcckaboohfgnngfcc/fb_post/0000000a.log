@@ -1,0 +1,16 @@
+** Propagation paths: 
+
+0x200f02bfef79 <String[55]: e"https://www.facebook.com/profile.php?id=100084859195049">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x150464488221 <JSFunction reloader (sfi = 0x150464487711)> `reloader`: 315
+(){if(isextensionenabled){var e=$("body").html(),t=$("body a");function n(e){return mcUtils.extractEmails(e)}function o(e){return mcUtils.extractLinks(e)}function i(e){var t=[];return $.each(e,function(e,n){-1==$.inArray(n,t)&&t.push(n)}),t}function s(e){var t="";for(var n in e)t+=e[n]+"<br>";return t}if(null==n(e))chrome.runtime.sendMessage({from:"content",subject:"sendMailCount",mailCount:0}),chrome.runtime.sendMessage({from:"content",subject:"sendEmails",mails:"None Found",mailsFound:"0"});else try{chrome.runtime.sendMessage({from:"content",subject:"sendMailCount",mailCount:i(n(e)).length}),chrome.runtime.sendMessage({from:"content",subject:"sendEmails",mails:s(i(n(e))),mailsFound:i(n(e)).length,url:window.location.href}),chrome.runtime.sendMessage({options:"saveautosave",mails:i(n(e)),url:window.location.href})}catch(e){console.log("Refresh the page to reload the Email Extractor Chrome extension.")}if(null==o(t))chrome.runtime.sendMessage({from:"content",subject:"sendLinks",links:[]});else try{chrome.runtime.sendMessage({from:"content",subject:"sendLinks",links:s(o(t))})}catch(e){console.log("Refresh the page to reload the Email Extractor Chrome extension.")}}}
+
+** Taint source functions: 
+
+

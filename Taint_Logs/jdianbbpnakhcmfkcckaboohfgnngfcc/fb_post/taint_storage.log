@@ -1,0 +1,132 @@
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2369
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/profile.php?id=100084859195049
+
+{"details":"/ram/analysis/v8logs/00000002.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2620
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/<br>https://www.facebook.com/friends/<br>https://www.facebook.com/watch/?ref=tab<br>https://www.facebook.com/marketplace/?ref=app_tab<br>https://www.facebook.com/gaming/play/?store_visit_source=gaming_tab<br>https://www.facebook.com/bookmarks/<br>https://www.facebook.com/notifications/<br>https://www.facebook.com/photo/?fbid=140128818825757&set=a.140128835492422<br>https://www.facebook.com/photo/?fbid=140128988825740&set=a.140129005492405&__tn__=%3C<br>https://www.facebook.com/profile.php?id=100084859195049&sk=friends<br>https://www.facebook.com/profile.php?id=100084859195049<br>https://www.facebook.com/profile.php?id=100084859195049&sk=about<br>https://www.facebook.com/profile.php?id=100084859195049&sk=photos<br>https://www.facebook.com/profile.php?id=100084859195049&sk=videos<br>https://www.facebook.com/profile.php?id=100084859195049&sk=map<br>https://www.facebook.com/MyComputerCareer<br>https://www.facebook.com/OfficialScreamQueens<br>https://www.facebook.com/xkulreunion<br>https://www.facebook.com/Atlanta-Georgia-107991659233606/<br>https://www.facebook.com/Koski-Tl-686230991510447/<br>https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fanu%3Ffbclid%3DIwAR1sxozwNDXuOZZXTdKBxKEWR-YfBxv80h0XYnx1Q2LPuv5dB9q1jafnwq8&h=AT2Si4kMaIh3eJymdbR76ab3i6sMNYjQ72I0x-6_thVqsZKfH2Itb7r6UkS_GhBQNrm4_wcsV1bWrt0PwCY6F-kEjpwJDz9p6-wWu_eQIvjNqaiTRQdS7YF_evKA<br>https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.google.com%2F%3Ffbclid%3DIwAR1sxozwNDXuOZZXTdKBxKEWR-YfBxv80h0XYnx1Q2LPuv5dB9q1jafnwq8&h=AT2YaZWM0sL-UdX72VedWl7XprXlKb-A8paU0_xJf25umthSLTDHQJEBc7zFvi0IdSaVW1iQwFvyxYhb6h8EYozKkcT7I65aEu3XBKX08Czi7VjiW_WRsxJgC9LSCQ<br>https://www.facebook.com/search/top/?q=Listening%20to%20Music<br>https://www.facebook.com/photo/?fbid=140126822159290&set=pob.100084859195049<br>https://www.facebook.com/didingast<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=%3C%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=%3C%3C%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=-]C%2CP-R<br>https://www.facebook.com/Atlanta-Georgia-107991659233606/?__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=kC%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049#<br>https://www.facebook.com/profile.php?id=100084859195049&comment_id=Y29tbWVudDoxNDAxMzI4ODg4MjUzNTBfODkwMzQ0MDA4NjI1ODUz&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/permalink.php?story_fbid=pfbid0GJsbfuup6sDBiGVyTQHLjZeWKtVN63nnjgEnrvUKiNqYfSXonHWgoff1Ao5k5mkYl&id=100084859195049&comment_id=890344008625853&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/profile.php?id=100084859195049&comment_id=Y29tbWVudDoxNDAxMzI4ODg4MjUzNTBfNjc5Nzc3NjQzNTMwOTMz&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/permalink.php?story_fbid=pfbid0GJsbfuup6sDBiGVyTQHLjZeWKtVN63nnjgEnrvUKiNqYfSXonHWgoff1Ao5k5mkYl&id=100084859195049&comment_id=890344008625853&reply_comment_id=679777643530933&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>
+
+{"details":"/ram/analysis/v8logs/00000006.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2369
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/profile.php?id=100084859195049
+
+{"details":"/ram/analysis/v8logs/00000008.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2620
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/<br>https://www.facebook.com/friends/<br>https://www.facebook.com/watch/?ref=tab<br>https://www.facebook.com/marketplace/?ref=app_tab<br>https://www.facebook.com/gaming/play/?store_visit_source=gaming_tab<br>https://www.facebook.com/bookmarks/<br>https://www.facebook.com/notifications/<br>https://www.facebook.com/photo/?fbid=140128818825757&set=a.140128835492422<br>https://www.facebook.com/photo/?fbid=140128988825740&set=a.140129005492405&__tn__=%3C<br>https://www.facebook.com/profile.php?id=100084859195049&sk=friends<br>https://www.facebook.com/profile.php?id=100084859195049<br>https://www.facebook.com/profile.php?id=100084859195049&sk=about<br>https://www.facebook.com/profile.php?id=100084859195049&sk=photos<br>https://www.facebook.com/profile.php?id=100084859195049&sk=videos<br>https://www.facebook.com/profile.php?id=100084859195049&sk=map<br>https://www.facebook.com/MyComputerCareer<br>https://www.facebook.com/OfficialScreamQueens<br>https://www.facebook.com/xkulreunion<br>https://www.facebook.com/Atlanta-Georgia-107991659233606/<br>https://www.facebook.com/Koski-Tl-686230991510447/<br>https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fanu%3Ffbclid%3DIwAR1sxozwNDXuOZZXTdKBxKEWR-YfBxv80h0XYnx1Q2LPuv5dB9q1jafnwq8&h=AT2Si4kMaIh3eJymdbR76ab3i6sMNYjQ72I0x-6_thVqsZKfH2Itb7r6UkS_GhBQNrm4_wcsV1bWrt0PwCY6F-kEjpwJDz9p6-wWu_eQIvjNqaiTRQdS7YF_evKA<br>https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.google.com%2F%3Ffbclid%3DIwAR1sxozwNDXuOZZXTdKBxKEWR-YfBxv80h0XYnx1Q2LPuv5dB9q1jafnwq8&h=AT2YaZWM0sL-UdX72VedWl7XprXlKb-A8paU0_xJf25umthSLTDHQJEBc7zFvi0IdSaVW1iQwFvyxYhb6h8EYozKkcT7I65aEu3XBKX08Czi7VjiW_WRsxJgC9LSCQ<br>https://www.facebook.com/search/top/?q=Listening%20to%20Music<br>https://www.facebook.com/photo/?fbid=140126822159290&set=pob.100084859195049<br>https://www.facebook.com/didingast<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=%3C%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=%3C%3C%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=-]C%2CP-R<br>https://www.facebook.com/Atlanta-Georgia-107991659233606/?__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=kC%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049#<br>https://www.facebook.com/profile.php?id=100084859195049&comment_id=Y29tbWVudDoxNDAxMzI4ODg4MjUzNTBfODkwMzQ0MDA4NjI1ODUz&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/permalink.php?story_fbid=pfbid0GJsbfuup6sDBiGVyTQHLjZeWKtVN63nnjgEnrvUKiNqYfSXonHWgoff1Ao5k5mkYl&id=100084859195049&comment_id=890344008625853&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/profile.php?id=100084859195049&comment_id=Y29tbWVudDoxNDAxMzI4ODg4MjUzNTBfNjc5Nzc3NjQzNTMwOTMz&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/permalink.php?story_fbid=pfbid0GJsbfuup6sDBiGVyTQHLjZeWKtVN63nnjgEnrvUKiNqYfSXonHWgoff1Ao5k5mkYl&id=100084859195049&comment_id=890344008625853&reply_comment_id=679777643530933&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>
+
+{"details":"/ram/analysis/v8logs/0000000c.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2369
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/profile.php?id=100084859195049
+
+{"details":"/ram/analysis/v8logs/0000000e.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2620
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/<br>https://www.facebook.com/friends/<br>https://www.facebook.com/watch/?ref=tab<br>https://www.facebook.com/marketplace/?ref=app_tab<br>https://www.facebook.com/gaming/play/?store_visit_source=gaming_tab<br>https://www.facebook.com/bookmarks/<br>https://www.facebook.com/notifications/<br>https://www.facebook.com/photo/?fbid=140128818825757&set=a.140128835492422<br>https://www.facebook.com/photo/?fbid=140128988825740&set=a.140129005492405&__tn__=%3C<br>https://www.facebook.com/profile.php?id=100084859195049&sk=friends<br>https://www.facebook.com/profile.php?id=100084859195049<br>https://www.facebook.com/profile.php?id=100084859195049&sk=about<br>https://www.facebook.com/profile.php?id=100084859195049&sk=photos<br>https://www.facebook.com/profile.php?id=100084859195049&sk=videos<br>https://www.facebook.com/profile.php?id=100084859195049&sk=map<br>https://www.facebook.com/MyComputerCareer<br>https://www.facebook.com/OfficialScreamQueens<br>https://www.facebook.com/xkulreunion<br>https://www.facebook.com/Atlanta-Georgia-107991659233606/<br>https://www.facebook.com/Koski-Tl-686230991510447/<br>https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fanu%3Ffbclid%3DIwAR1sxozwNDXuOZZXTdKBxKEWR-YfBxv80h0XYnx1Q2LPuv5dB9q1jafnwq8&h=AT2Si4kMaIh3eJymdbR76ab3i6sMNYjQ72I0x-6_thVqsZKfH2Itb7r6UkS_GhBQNrm4_wcsV1bWrt0PwCY6F-kEjpwJDz9p6-wWu_eQIvjNqaiTRQdS7YF_evKA<br>https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.google.com%2F%3Ffbclid%3DIwAR1sxozwNDXuOZZXTdKBxKEWR-YfBxv80h0XYnx1Q2LPuv5dB9q1jafnwq8&h=AT2YaZWM0sL-UdX72VedWl7XprXlKb-A8paU0_xJf25umthSLTDHQJEBc7zFvi0IdSaVW1iQwFvyxYhb6h8EYozKkcT7I65aEu3XBKX08Czi7VjiW_WRsxJgC9LSCQ<br>https://www.facebook.com/search/top/?q=Listening%20to%20Music<br>https://www.facebook.com/photo/?fbid=140126822159290&set=pob.100084859195049<br>https://www.facebook.com/didingast<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=%3C%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=%3C%3C%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=-]C%2CP-R<br>https://www.facebook.com/Atlanta-Georgia-107991659233606/?__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=kC%2CP-R<br>https://www.facebook.com/profile.php?id=100084859195049#<br>https://www.facebook.com/profile.php?id=100084859195049&comment_id=Y29tbWVudDoxNDAxMzI4ODg4MjUzNTBfODkwMzQ0MDA4NjI1ODUz&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/permalink.php?story_fbid=pfbid0GJsbfuup6sDBiGVyTQHLjZeWKtVN63nnjgEnrvUKiNqYfSXonHWgoff1Ao5k5mkYl&id=100084859195049&comment_id=890344008625853&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/profile.php?id=100084859195049&comment_id=Y29tbWVudDoxNDAxMzI4ODg4MjUzNTBfNjc5Nzc3NjQzNTMwOTMz&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>https://www.facebook.com/permalink.php?story_fbid=pfbid0GJsbfuup6sDBiGVyTQHLjZeWKtVN63nnjgEnrvUKiNqYfSXonHWgoff1Ao5k5mkYl&id=100084859195049&comment_id=890344008625853&reply_comment_id=679777643530933&__cft__[0]=AZVeJLl8rZpLh4r8zZ0y4LW38q9_fhbJunVtOVqxDfKFHxvJ-M23upXKeopk5aTXUD3xVUN-QIq9es0KFI3xdFZFsk9jozK_rU9T-9NGorB-Y4HYkCGqetfrfFnGf8YkmR9PD1hZtYq4fOS4RaJfq9lUafBVAqAvFqiCZQi99-uY_Q&__tn__=R]-R<br>
+
+{"details":"/ram/analysis/v8logs/00000012.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2369
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/profile.php?id=100084859195049
+
+{"details":"/ram/analysis/v8logs/00000014.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2620
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/<br>https://www.facebook.com/friends/<br>https://www.facebook.com/watch/?ref=tab<br>https://www.facebook.com/marketplace/?ref=app_tab<br>https://www.facebook.com/gaming/play/?store_visit_source=gaming_tab<br>https://www.facebook.com/bookmarks/<br>https://www.facebook.com/notifications/<br>
+
+{"details":"/ram/analysis/v8logs/00000018.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2369
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/profile.php?id=100084859195049
+
+{"details":"/ram/analysis/v8logs/0000001a.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2620
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/<br>https://www.facebook.com/friends/<br>https://www.facebook.com/watch/?ref=tab<br>https://www.facebook.com/marketplace/?ref=app_tab<br>https://www.facebook.com/gaming/play/?store_visit_source=gaming_tab<br>https://www.facebook.com/bookmarks/<br>https://www.facebook.com/notifications/<br>
+
+{"details":"/ram/analysis/v8logs/0000001e.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2369
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/profile.php?id=100084859195049
+
+{"details":"/ram/analysis/v8logs/00000020.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://jdianbbpnakhcmfkcckaboohfgnngfcc/bgv3.js:1:2620
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.facebook.com/<br>https://www.facebook.com/friends/<br>https://www.facebook.com/watch/?ref=tab<br>https://www.facebook.com/marketplace/?ref=app_tab<br>https://www.facebook.com/gaming/play/?store_visit_source=gaming_tab<br>https://www.facebook.com/bookmarks/<br>https://www.facebook.com/notifications/<br>
+
+{"details":"/ram/analysis/v8logs/00000024.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<

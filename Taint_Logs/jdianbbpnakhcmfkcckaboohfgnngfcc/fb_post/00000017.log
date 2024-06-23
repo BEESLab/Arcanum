@@ -1,0 +1,23 @@
+** Propagation paths: 
+
+0x145b0c8b60a9 <String[315]: c"https://www.facebook.com/<br>https://www.facebook.com/friends/<br>https://www.facebook.com/watch/?ref=tab<br>https://www.facebook.com/marketplace/?ref=app_tab<br>https://www.facebook.com/gaming/play/?store_visit_source=gaming_tab<br>https://www.facebook.com/bookmarks/<br>https://www.facebook.com/notifications/<br>">:
+  0x2412fcae92f1 <String[39]: e"https://www.facebook.com/notifications/">, in function 39663967399313 `s`: 566, 598
+
+0x2412fcae92f1 <String[39]: e"https://www.facebook.com/notifications/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x2412fcafed91 <JSFunction s (sfi = 0x354cbc3bee69)> `s`: 566
+(e){var t="";for(var n in e)t+=e[n]+"<br>";return t}
+0x150464488221 <JSFunction reloader (sfi = 0x150464487711)> `reloader`: 315
+(){if(isextensionenabled){var e=$("body").html(),t=$("body a");function n(e){return mcUtils.extractEmails(e)}function o(e){return mcUtils.extractLinks(e)}function i(e){var t=[];return $.each(e,function(e,n){-1==$.inArray(n,t)&&t.push(n)}),t}function s(e){var t="";for(var n in e)t+=e[n]+"<br>";return t}if(null==n(e))chrome.runtime.sendMessage({from:"content",subject:"sendMailCount",mailCount:0}),chrome.runtime.sendMessage({from:"content",subject:"sendEmails",mails:"None Found",mailsFound:"0"});else try{chrome.runtime.sendMessage({from:"content",subject:"sendMailCount",mailCount:i(n(e)).length}),chrome.runtime.sendMessage({from:"content",subject:"sendEmails",mails:s(i(n(e))),mailsFound:i(n(e)).length,url:window.location.href}),chrome.runtime.sendMessage({options:"saveautosave",mails:i(n(e)),url:window.location.href})}catch(e){console.log("Refresh the page to reload the Email Extractor Chrome extension.")}if(null==o(t))chrome.runtime.sendMessage({from:"content",subject:"sendLinks",links:[]});else try{chrome.runtime.sendMessage({from:"content",subject:"sendLinks",links:s(o(t))})}catch(e){console.log("Refresh the page to reload the Email Extractor Chrome extension.")}}}
+0x145b0c89dbe1 <JSFunction (sfi = 0x39e289a21d91)> ``: 13260
+(){this.href.length>0&&"javascript"!==this.href.substr(0,10)&&"mailto"!==this.href.substr(0,6)&&(e.indexOf(this.href)>-1||-1!=this.href.indexOf("manycontacts.com")||e.push(this.href))}
+
+** Taint source functions: 
+
+
