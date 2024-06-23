@@ -1,0 +1,43 @@
+>>> TAINT SINK `XHR` REACHED (fetch-body-USVString) <<<
+STACK TRACE START: 
+0x28a50e5080e9 <String[202]: c"sendPost (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/instagram/insta_feed_parser.js:177:28)userDetails (chrome-extension://nkecaphdplhfmmbkcfnknejeonfnifbn/instagram/insta_feed_parser.js:169:9)">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://gramapi.poweradspy.com/instagram_user_data
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: {"age":"","current_country":null,"instagram_username":"xqgtiti","instagram_id":"53080086209","name":"Erin","other_places_lived":"","relationship_status":""}
+
+** Propagation paths: 
+
+0x28a50e506c51 <String[156]: uc"{"age":"","current_country":null,"instagram_username":"xqgtiti","instagram_id":"53080086209","name":"Erin","other_places_lived":"","relationship_status":""}">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"age":{"details":"","tainted":false,"recursive":{}},"current_country":{"details":"","tainted":false,"recursive":{}},"instagram_username":{"details":"/ram/analysis/v8logs/00000001.log","tainted":true,"recursive":{}},"instagram_id":{"details":"/ram/analysis/v8logs/00000002.log","tainted":true,"recursive":{}},"name":{"details":"/ram/analysis/v8logs/00000003.log","tainted":true,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x30664ea73d59 <JSFunction sendPost (sfi = 0x30664ea73091)> `sendPost`: 6326
+(post, url) {
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(post),
+    });
+  } catch (error) {}
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<

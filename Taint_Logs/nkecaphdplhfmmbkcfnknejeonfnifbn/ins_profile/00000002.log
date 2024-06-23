@@ -1,0 +1,48 @@
+** Propagation paths: 
+
+0x1d820dbbe401 <String[11]: u"53080086209">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x30664ea73d59 <JSFunction sendPost (sfi = 0x30664ea73091)> `sendPost`: 6326
+(post, url) {
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(post),
+    });
+  } catch (error) {}
+}
+0x30664ea73c91 <JSFunction userID (sfi = 0x30664ea72ff1)> `userID`: 5125
+() {
+  const pageSource = document.documentElement.outerHTML;
+  user_ID = getBetween(pageSource, "appScopedIdentity", "claim");
+  user_ID = user_ID.replace(/[^a-zA-Z0-9\s]/g, "");
+
+  const userIdSource = getBetween(
+    pageSource,
+    "should_show_category",
+    "badge_count_at_ms"
+  );
+  instagram_username = getBetween(userIdSource, "username", "badge_count");
+  instagram_username = instagram_username.replace(/[^a-zA-Z0-9\s]/g, "");
+
+  const userNameSource = getBetween(
+    pageSource,
+    "category_name",
+    "has_profile_pic"
+  );
+  user_Name = getBetween(userNameSource, "full_name", "has_phone_number");
+  user_Name = user_Name.replace(/[^a-zA-Z0-9\s]/g, "");
+}
+
+** Taint source functions: 
+
+
