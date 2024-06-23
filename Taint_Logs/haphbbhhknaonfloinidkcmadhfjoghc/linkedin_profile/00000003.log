@@ -1,0 +1,293 @@
+** Propagation paths: 
+
+0x2b8fbfe51b99 <String[39]: e"https://www.linkedin.com/in/amy-lee-gt/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x24b779b63629 <JSFunction getldata (sfi = 0xa86d58b7839)> `getldata`: 2573
+(){
+    //console.log(hitflag);
+    if(hitflag=="0")
+    {
+        hitflag = "1";
+
+        var wl = window.location.href;
+        wl = wl.split('?')[0];
+        wl = wl.split('#')[0];
+        //console.log(oldurl+' '+wl);
+        //if(oldurl!=wl)
+        var compele = {'org':"",'des':"",'loc':""};
+        setTimeout(function() {
+            var exp = document.getElementById('experience');
+            if(exp){
+                
+                exp = exp.nextElementSibling;
+                var str = exp.nextElementSibling;
+                var parser = new DOMParser();
+                var virtualDoc = parser.parseFromString(str, 'text/html');
+                //console.log(virtualDoc);
+                
+                //console.log(str);
+                //console.log(str.querySelectorAll('div ul li.artdeco-list__item'));
+                var tmpele = str.querySelector('div ul li.artdeco-list__item');
+                
+                //for(var tj=0;tj<tmpele.length;tj++)
+                {
+                    //console.log(tmpele[tj].innerHTML);
+                    var ext = tmpele.querySelectorAll('span.visually-hidden');
+                    //console.log(ext.length);
+                    /*for(var lo =0;lo<ext.length;lo++){
+                        console.log(ext[lo].innerHTML);
+                    }*/
+
+                    try{
+                        compele['des'] = ext[0].innerText;
+                    }catch(e){}
+                    if(ext.length>4){
+                        try{
+                            compele['org'] = '';
+                        }catch(e){}
+                        try{
+                            compele['des'] = '';
+                        }catch(e){}
+                    }else{
+                        try{
+                            compele['org'] = ext[1].innerText;
+                        }catch(e){}
+                    }
+                    
+                    //break;
+                }
+                //console.log(ext.length);
+                //console.log(compele);
+                //if(compele['org'])
+                
+            }
+            {
+                oldurl = wl;
+        
+                var data = {'name':"",'org':"",'des':"",'ukey':"",'url':"",'loc':""};
+                data['url'] = wl;
+    
+    
+                var el = document.querySelector(".pv-top-card[data-member-id]");
+                if(el){
+                    try{
+                        data['ukey'] = el.getAttribute('data-member-id');
+                    }catch(e){}
+                }
+        
+                var el2 = document.querySelector(".pv-top-card-profile-picture__image");
+                try{
+                    data['name'] = el2.getAttribute('title');
+                }catch(e){}
+                if(data['name']==null){
+                    data['name'] = '';
+                }
+                if(data['name']==''&&el){
+                    var el2 = el.querySelector('.pv-text-details__left-panel h1');
+                    try{
+                        data['name'] = el2.innerText;
+                    }catch(e){}
+        
+                }
+                var el3 = document.querySelector('[aria-label="Current company"]');
+                
+                try{
+                    data['org'] = el3.innerText;
+                }catch(e){}
+                if(data['org']==null){
+                    data['org'] = '';
+                }
+               
+                
+                var el4 = el.querySelector('.pv-text-details__left-panel .text-body-medium');
+                if(el4){
+                    try{
+                        data['des'] = el4.innerText;
+                    }catch(e){}
+                }
+
+                var el5 = el.querySelector('.pv-text-details__left-panel span.text-body-small');
+                if(el5){
+                    try{
+                        data['loc'] = el5.innerText;
+                    }catch(e){}
+                }
+        
+        
+        
+                if(data['org']==''){
+                    
+                    try{
+                        data['org'] = el4.innerText;
+                    }catch(e){}
+                    if(data['org']!=''){
+                        data['org'] = data['org'].split(' at ').pop();
+                        data['org'] = data['org'].split('|')[0];
+                        data['org'] = data['org'].split('@').pop();
+                        data['org'] = data['org'].split("Founder - ").pop().trim();
+                    }
+                }
+                
+            
+                if(compele['des']!=''){
+                    data['des'] = compele['des'];
+                }
+                if(compele['org']!=''){
+                    data['org'] = compele['org'];
+                }
+                data['des'] = data['des'].split(' at ')[0];
+                //console.log(data);
+                setTimeout(function() {
+                    chrome.extension.sendMessage({data: data,action:'lnkdata'});
+                    hitflag ="0";
+                },100);
+            }  
+        },500);
+        
+    }
+    
+}
+0x307077242991 <JSFunction (sfi = 0x39586615f579)> ``: 7441
+() {
+                    chrome.extension.sendMessage({data: data,action:'lnkdata'});
+                    hitflag ="0";
+                }
+0x2106db8f6f59 <JSFunction (sfi = 0x2b8fbfe51761)> ``: 2899
+() {
+            var exp = document.getElementById('experience');
+            if(exp){
+                
+                exp = exp.nextElementSibling;
+                var str = exp.nextElementSibling;
+                var parser = new DOMParser();
+                var virtualDoc = parser.parseFromString(str, 'text/html');
+                //console.log(virtualDoc);
+                
+                //console.log(str);
+                //console.log(str.querySelectorAll('div ul li.artdeco-list__item'));
+                var tmpele = str.querySelector('div ul li.artdeco-list__item');
+                
+                //for(var tj=0;tj<tmpele.length;tj++)
+                {
+                    //console.log(tmpele[tj].innerHTML);
+                    var ext = tmpele.querySelectorAll('span.visually-hidden');
+                    //console.log(ext.length);
+                    /*for(var lo =0;lo<ext.length;lo++){
+                        console.log(ext[lo].innerHTML);
+                    }*/
+
+                    try{
+                        compele['des'] = ext[0].innerText;
+                    }catch(e){}
+                    if(ext.length>4){
+                        try{
+                            compele['org'] = '';
+                        }catch(e){}
+                        try{
+                            compele['des'] = '';
+                        }catch(e){}
+                    }else{
+                        try{
+                            compele['org'] = ext[1].innerText;
+                        }catch(e){}
+                    }
+                    
+                    //break;
+                }
+                //console.log(ext.length);
+                //console.log(compele);
+                //if(compele['org'])
+                
+            }
+            {
+                oldurl = wl;
+        
+                var data = {'name':"",'org':"",'des':"",'ukey':"",'url':"",'loc':""};
+                data['url'] = wl;
+    
+    
+                var el = document.querySelector(".pv-top-card[data-member-id]");
+                if(el){
+                    try{
+                        data['ukey'] = el.getAttribute('data-member-id');
+                    }catch(e){}
+                }
+        
+                var el2 = document.querySelector(".pv-top-card-profile-picture__image");
+                try{
+                    data['name'] = el2.getAttribute('title');
+                }catch(e){}
+                if(data['name']==null){
+                    data['name'] = '';
+                }
+                if(data['name']==''&&el){
+                    var el2 = el.querySelector('.pv-text-details__left-panel h1');
+                    try{
+                        data['name'] = el2.innerText;
+                    }catch(e){}
+        
+                }
+                var el3 = document.querySelector('[aria-label="Current company"]');
+                
+                try{
+                    data['org'] = el3.innerText;
+                }catch(e){}
+                if(data['org']==null){
+                    data['org'] = '';
+                }
+               
+                
+                var el4 = el.querySelector('.pv-text-details__left-panel .text-body-medium');
+                if(el4){
+                    try{
+                        data['des'] = el4.innerText;
+                    }catch(e){}
+                }
+
+                var el5 = el.querySelector('.pv-text-details__left-panel span.text-body-small');
+                if(el5){
+                    try{
+                        data['loc'] = el5.innerText;
+                    }catch(e){}
+                }
+        
+        
+        
+                if(data['org']==''){
+                    
+                    try{
+                        data['org'] = el4.innerText;
+                    }catch(e){}
+                    if(data['org']!=''){
+                        data['org'] = data['org'].split(' at ').pop();
+                        data['org'] = data['org'].split('|')[0];
+                        data['org'] = data['org'].split('@').pop();
+                        data['org'] = data['org'].split("Founder - ").pop().trim();
+                    }
+                }
+                
+            
+                if(compele['des']!=''){
+                    data['des'] = compele['des'];
+                }
+                if(compele['org']!=''){
+                    data['org'] = compele['org'];
+                }
+                data['des'] = data['des'].split(' at ')[0];
+                //console.log(data);
+                setTimeout(function() {
+                    chrome.extension.sendMessage({data: data,action:'lnkdata'});
+                    hitflag ="0";
+                },100);
+            }  
+        }
+
+** Taint source functions: 
+
+

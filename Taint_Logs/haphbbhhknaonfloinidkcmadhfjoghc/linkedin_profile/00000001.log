@@ -1,0 +1,124 @@
+** Propagation paths: 
+
+0x1350a7dc67c1 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x1350a7dc3ee1 <JSFunction (sfi = 0x25b1ce9366c9)> ``: 16212
+(tab){
+       y = tab.url;
+       
+       if(y==''&&lastUrl!=''){
+         lastUrl = y;
+       }
+
+       if(y!=''){
+          if(!y.includes('chrome://') && !y.includes('chrome-extension://')){
+            lastUrl = y; 
+            chrome.storage.local.set({
+               lastUrl: y
+           });
+            checkpage(y);
+            
+            if(y.includes('linkedin.com/in/')){
+               if(y.includes('edit/forms') || y.includes('overlay')){
+                  sendMessageToGetNewDom( y,'dontshow');
+               }else{
+                  //sendMessageToGetNewDom( y,'show_loading');
+                  setTimeout(function(){
+                     //console.log(activeInfo);
+                     chrome.tabs.sendMessage(activeInfo.tabId, {
+                        message: 'TabUpdatedL'
+                     });
+                     
+                  },400);
+                  //console.log('34');
+                  lastUrl = y;
+               }
+               
+            }else if(lastUrl.includes('dashboard.lusha.com/contact-lists') || lastUrl.includes('dashboard.lusha.com/prospecting/contacts')){
+               //console.log('222')
+               chrome.tabs.sendMessage(activeInfo.tabId, {
+                  message: 'TabUpdated1'
+               }); 
+            }else if(y.includes('mail.google.com/mail/') && y.includes('inbox/')){
+               setTimeout(function(){
+                  //console.log('sd1');
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated'
+                  });
+               },400);
+            }else if(lastUrl.includes('crm.zoho.com/crm/org') && lastUrl.includes('tab/Leads/') && lastUrl.includes('/list')){
+               setTimeout(function(){
+                  //
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated3'
+                  });
+               },400);
+            }else if(lastUrl.includes('crm.zoho.com/crm/org') && lastUrl.includes('tab/Leads/')){
+               setTimeout(function(){
+                  //
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated33'
+                  });
+               },400);
+            }else if(lastUrl.includes('crm.zoho.com/crm/org') && lastUrl.includes('tab/Contacts/') && lastUrl.includes('/list')){
+               setTimeout(function(){
+                  //
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated34'
+                  });
+               },400);
+            }else if(lastUrl.includes('crm.zoho.com/crm/org') && lastUrl.includes('tab/Contacts/')){
+               setTimeout(function(){
+                  //
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated35'
+                  });
+               },400);
+            }else if(lastUrl.includes('app.hubspot.com/contacts')  && lastUrl.includes('all/list')){
+               setTimeout(function(){
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated31'
+                  });
+               },400);
+             }else if(lastUrl.includes('app.hubspot.com/contacts') && lastUrl.includes('contact/')){
+               setTimeout(function(){
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated32'
+                  });
+               },400);
+             }else if(lastUrl.includes('linkedin.com/company') && lastUrl.includes('about')){
+               setTimeout(function(){
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated36'
+                  });
+               },400);
+             }else if(lastUrl.includes('myfreshworks.com/crm/sales/contacts')  && !lastUrl.includes('view')){
+               setTimeout(function(){
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated37'
+                  });
+               },400);
+             }else if(lastUrl.includes('myfreshworks.com/crm/sales/accounts')  && !lastUrl.includes('view')){
+               setTimeout(function(){
+                  chrome.tabs.sendMessage(activeInfo.tabId, {
+                     message: 'TabUpdated38'
+                  });
+               },400);
+             }
+          }else if(lastUrl==''){
+            sendMessageToGetNewDom( y,'dontshow');
+          }else if(lastUrl!=''){
+            //checkpage(lastUrl);
+          }
+       }
+   }
+
+** Taint source functions: 
+
+

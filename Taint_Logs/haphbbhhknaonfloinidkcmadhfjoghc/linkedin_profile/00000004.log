@@ -1,0 +1,36 @@
+** Propagation paths: 
+
+0x1350a7de1d21 <String[39]: "https://www.linkedin.com/in/amy-lee-gt/">:
+>> IPC Object:
+/ram/analysis/v8logs/00000003.log
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x025092e5a4e1 <JSFunction saveinfo (sfi = 0x25092e58ef9)> `saveinfo`: 252
+(info){
+   //console.log(info);
+   fetch('https://app.easyleadz.com/api/v3/saveinfo.php', {
+   method: 'POST',
+   body: JSON.stringify(info),
+   headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+      'User-Token':'zWPU1ntF3uJ7SbWqeDXCv8RiyQdRLp4t'
+   }
+   })
+   .then(function(response){ 
+   return response.json()})
+   .then(function(data)
+   {
+      //console.log(data)
+    
+   }).catch(error => console.error('Error:', error));
+}
+
+** Taint source functions: 
+
+

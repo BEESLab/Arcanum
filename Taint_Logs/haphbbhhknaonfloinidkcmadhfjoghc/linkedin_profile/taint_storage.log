@@ -1,0 +1,11 @@
+>>> TAINT SINK `storage` REACHED <<<
+chrome-extension://haphbbhhknaonfloinidkcmadhfjoghc/js/background.js:525:34
+///////////////////////// Details /////////////////////////
+
+** Tainted bytes (nullptr=1): 
+
+** Sink object: https://www.linkedin.com/in/amy-lee-gt/
+
+{"details":"/ram/analysis/v8logs/00000001.log","tainted":true,"recursive":{}}
+
+>>> END TAINT SINK REPORT <<<

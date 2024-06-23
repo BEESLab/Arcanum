@@ -1,0 +1,50 @@
+>>> TAINT SINK `XHR` REACHED (fetch-body-USVString) <<<
+STACK TRACE START: 
+0x1350a7de6789 <String[158]: c"saveinfo (chrome-extension://haphbbhhknaonfloinidkcmadhfjoghc/js/background.js:13:4)chrome-extension://haphbbhhknaonfloinidkcmadhfjoghc/js/background.js:446:7">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** FETCH leak, request URL = https://app.easyleadz.com/api/v3/saveinfo.php
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: {"name":"Amy Lee","org":"Microsoft · Full-time","des":"Marketing Intern","ukey":"1094500950","url":"https://www.linkedin.com/in/amy-lee-gt/","loc":"(She/Her)"}
+
+** Propagation paths: 
+
+0x1350a7de4e29 <String[159]: uc"{"name":"Amy Lee","org":"Microsoft \xb7 Full-time","des":"Marketing Intern","ukey":"1094500950","url":"https://www.linkedin.com/in/amy-lee-gt/","loc":"(She/Her)"}">:
+>> IPC Object:
+{"details":"","tainted":false,"recursive":{"name":{"details":"","tainted":true,"recursive":{}},"org":{"details":"","tainted":true,"recursive":{}},"des":{"details":"","tainted":true,"recursive":{}},"ukey":{"details":"","tainted":false,"recursive":{}},"url":{"details":"/ram/analysis/v8logs/00000004.log","tainted":true,"recursive":{}},"loc":{"details":"","tainted":true,"recursive":{}}}}
+>> END IPC Object
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x025092e5a4e1 <JSFunction saveinfo (sfi = 0x25092e58ef9)> `saveinfo`: 252
+(info){
+   //console.log(info);
+   fetch('https://app.easyleadz.com/api/v3/saveinfo.php', {
+   method: 'POST',
+   body: JSON.stringify(info),
+   headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+      'User-Token':'zWPU1ntF3uJ7SbWqeDXCv8RiyQdRLp4t'
+   }
+   })
+   .then(function(response){ 
+   return response.json()})
+   .then(function(data)
+   {
+      //console.log(data)
+    
+   }).catch(error => console.error('Error:', error));
+}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
