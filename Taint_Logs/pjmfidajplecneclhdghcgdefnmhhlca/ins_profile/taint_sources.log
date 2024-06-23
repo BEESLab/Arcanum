@@ -1,0 +1,369 @@
+>>> Taint source: (invoked from api_request_handler:tabs.create:pendingUrl)
+0x0172de238949 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x2dfc00a48248 ``, source code:
+(tab) { }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:pendingUrl)
+0x0172de23ab31 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x2dfc00a48248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x0172de23b749 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x2dfc00a48428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x0172de23de69 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x0172de23e2f1 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x0172de23ff39 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x2dfc00a48428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x0962011431d9 <String[23]: "Welcome - Changing Room">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x0962011435a1 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x096201145561 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x0962011455e9 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x096201147979 <String[23]: "Welcome - Changing Room">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x0962011479b9 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x09620114a6d9 <String[23]: "Welcome - Changing Room">
+** In function 0x2dfc00a48428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x09620114a8e1 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0x2dfc00a48428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x09620114cfd9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x09620114d061 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x2dfc00a48410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x09620114f8c9 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x2dfc00a48428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x09620114f951 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x2dfc00a48428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:url)
+0x096201152569 <String[34]: "https://www.instagram.com/xqgtiti/">
+** In function 0x2dfc00a48248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:title)
+0x0962011524e1 <String[45]: u"Erin (@xqgtiti) " Instagram photos and videos">
+** In function 0x2dfc00a48248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x07b57bb103f9 <String[11155]: ue"...<truncated>>">
+** In function 0x2dfc002ba108 `DOMtoString`, source code:
+(document_root) {
+        var html = '', node = document_root.firstChild;
+        while (node) {
+            switch (node.nodeType) {
+                case Node.ELEMENT_NODE:
+                    html += node.outerHTML;
+                    break;
+                case Node.TEXT_NODE:
+                    html += node.nodeValue;
+                    break;
+                case Node.CDATA_SECTION_NODE:
+                    html += '<![CDATA[' + node.nodeValue + ']]>';
+                    break;
+                case Node.COMMENT_NODE:
+                    html += '<!--' + node.nodeValue + '-->';
+                    break;
+                case Node.DOCUMENT_TYPE_NODE:
+                    // (X)HTML documents are identified by public identifiers
+                    html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+                    break;
+            }
+            node = node.nextSibling;
+        }
+        return html;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x07b57bb12749 <String[45]: e"https://changingroom.eco/welcome-change-maker">
+** In function 0x2dfc002ba1c8 `sendHTMLpage`, source code:
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x24686c3f6111 <String[667506]: ue"...<truncated>>">
+** In function 0x2dfc002ba108 `DOMtoString`, source code:
+(document_root) {
+        var html = '', node = document_root.firstChild;
+        while (node) {
+            switch (node.nodeType) {
+                case Node.ELEMENT_NODE:
+                    html += node.outerHTML;
+                    break;
+                case Node.TEXT_NODE:
+                    html += node.nodeValue;
+                    break;
+                case Node.CDATA_SECTION_NODE:
+                    html += '<![CDATA[' + node.nodeValue + ']]>';
+                    break;
+                case Node.COMMENT_NODE:
+                    html += '<!--' + node.nodeValue + '-->';
+                    break;
+                case Node.DOCUMENT_TYPE_NODE:
+                    // (X)HTML documents are identified by public identifiers
+                    html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+                    break;
+            }
+            node = node.nextSibling;
+        }
+        return html;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x3179c58de301 <String[34]: e"https://www.instagram.com/xqgtiti/">
+** In function 0x2dfc002ba1c8 `sendHTMLpage`, source code:
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+>>> END Taint source
+

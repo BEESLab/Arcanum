@@ -1,0 +1,85 @@
+[132551:132606:0927/065255.178963:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[132551:132606:0927/065255.179136:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[132551:132605:0927/065255.183434:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[132551:132605:0927/065255.183700:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[132551:132551:0927/065255.188455:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[132613:132613:0927/065255.205343:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[132551:132551:0927/065255.212500:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[132551:132605:0927/065255.219921:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[132551:132605:0927/065255.219963:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[132613:132613:0927/065255.245979:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[132551:132605:0927/065255.256972:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[132551:132605:0927/065255.257068:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[132613:132613:0927/065255.340319:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[132657:132657:0927/065255.350674:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[132658:132658:0927/065255.351765:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[132551:132551:0927/065255.378010:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[132551:132677:0927/065255.430554:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[132551:132677:0927/065255.430611:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[132551:132677:0927/065255.430664:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[132551:132677:0927/065255.430675:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[132551:132677:0927/065255.430699:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[132551:132677:0927/065255.430724:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[132680:132680:0927/065255.535123:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[132680:132688:0927/065255.576539:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/background.js]
+[132690:132690:0927/065255.610736:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[132551:132551:0927/065255.648284:INFO:CONSOLE(92)] "", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (92)
+[132711:132711:0927/065256.216117:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[132732:132732:0927/065256.648527:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[132551:132551:0927/065256.762917:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[132551:132551:0927/065256.763260:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[132551:132551:0927/065256.963355:INFO:CONSOLE(101)] "https://www.instagram.com/xqgtiti/", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (101)
+[132551:132551:0927/065258.237593:INFO:CONSOLE(101)] "https://changingroom.eco/welcome-change-maker", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (101)
+[132614:132636:0927/065258.516013:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[132614:132636:0927/065258.516641:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[132614:132636:0927/065258.517293:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[132614:132636:0927/065258.520386:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[132614:132636:0927/065258.520973:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[132614:132636:0927/065258.521740:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[132551:132551:0927/065301.569453:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[132551:132551:0927/065302.793134:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[132551:132551:0927/065303.616449:INFO:CONSOLE(13)] "[batch] MIXPANEL REQUEST: [object Object]", source: https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js (13)
+[132551:132551:0927/065303.621851:INFO:CONSOLE(59)] "ErrorUtils caught an error:
+
+No hash for rsrcIndex 93 (rev: 1008662111, cohort: HYP:instagram_web_pkg). ["{\"hash\":\"csr:_a_0_3i\",\"rev\":1008662111,\"type\":\"csr\",\"src\":\":93,40\",\"c\":1,\"tsrc\":null}"]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs.", source: https://static.cdninstagram.com/rsrc.php/v3/ys/r/m-391j4JoBJ.js?_nc_x=Ij3Wp8lg5Kz (59)
+[132551:132551:0927/065305.882005:INFO:CONSOLE(20)] "profile head ok", source: https://www.instagram.com/xqgtiti/ (20)
+[132551:132551:0927/065305.884551:INFO:CONSOLE(24)] "xqgtiti
+Edit Profile
+View archive
+2 posts
+0 followers
+13 following
+Erin
+ 
+she
+This is me!!!!
+google.com", source: https://www.instagram.com/xqgtiti/ (24)
+[132551:132551:0927/065305.885035:INFO:CONSOLE(30)] "post list ok", source: https://www.instagram.com/xqgtiti/ (30)
+[132551:132551:0927/065305.894301:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[132551:132551:0927/065305.952138:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[132551:132551:0927/065305.952514:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[132551:132551:0927/065306.091826:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[132551:132551:0927/065306.160972:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[132551:132551:0927/065306.161362:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[132551:132551:0927/065306.217836:INFO:CONSOLE(106)] "[Report Only] Refused to load the image 'https://googleads.g.doubleclick.net/pagead/viewthroughconversion/858885276/?value=1.00&currency_code=USD&label=qGVACPj3of0DEJyZxpkD&guid=ON&script=0' because it violates the following Content Security Policy directive: "img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster: *.giphy.com *.teststagram.com *.igsonar.com *.google-analytics.com".
+", source: https://www.instagram.com/paid_ads/generete_pixels/? (106)
+[132551:132551:0927/065306.300933:INFO:CONSOLE(0)] "[Report Only] Refused to load the image 'https://www.google.com/pagead/1p-user-list/858885276/?value=1.00&currency_code=USD&label=qGVACPj3of0DEJyZxpkD&guid=ON&script=0&is_vtc=1&random=43965703' because it violates the following Content Security Policy directive: "img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster: *.giphy.com *.teststagram.com *.igsonar.com *.google-analytics.com".
+", source: https://www.instagram.com/paid_ads/generete_pixels/? (0)
+[132551:132551:0927/065306.750036:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[132752:132752:0927/065309.931892:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[132551:132551:0927/065309.945735:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[132551:132551:0927/065309.945929:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[132551:132551:0927/065310.677480:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/content/browser/salient_image_retriever.cc(92)  page_url=https://www.instagram.com/xqgtiti/ Salient Image URL: https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/375174621_2298294637225726_5144496426769592186_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t1eSXmds74EAX8EH4sj&_nc_ht=scontent-atl3-1.cdninstagram.com&oh=00_AfCQmiM_xd9MuDqJyfxX7VRAV_J7JJnY4BkEPawc4-gn0A&oe=6508B468
+[132551:132551:0927/065310.800506:INFO:CONSOLE(92)] "https://www.instagram.com/xqgtiti/", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/background.js (92)
+[132657:132657:0927/065311.039876:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://changingroom.eco/welcome-change-maker"]
+[132711:132711:0927/065311.576590:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.instagram.com/xqgtiti/"]
+[132551:132551:0927/065313.709050:INFO:CONSOLE(0)] "Access to fetch at 'https://www.changingroom.eco/api/html_parser' from origin 'https://changingroom.eco' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://changingroom.eco/welcome-change-maker (0)
+[132551:132551:0927/065313.710209:INFO:CONSOLE(65)] "Uncaught (in promise) TypeError: Failed to fetch", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/content_script.js (65)
+[132551:132551:0927/065313.818167:INFO:CONSOLE(0)] "Access to fetch at 'https://www.changingroom.eco/api/html_parser' from origin 'https://www.instagram.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.", source: https://www.instagram.com/xqgtiti/ (0)
+[132551:132551:0927/065313.821241:INFO:CONSOLE(65)] "Uncaught (in promise) TypeError: Failed to fetch", source: chrome-extension://pjmfidajplecneclhdghcgdefnmhhlca/build/content_script.js (65)
+[132551:132551:0927/065356.172971:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 413
+[132551:132551:0927/065356.173059:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 413
+[132551:132551:0927/065356.173279:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[132551:132551:0927/065356.173354:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters
