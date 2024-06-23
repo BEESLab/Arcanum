@@ -1,0 +1,63 @@
+** Propagation paths: 
+
+0x0ab8245fcfc1 <String[10872]: uc"...<truncated>>">:
+  0x24a71a036bd1 <String[10856]: ue"...<truncated>>">, in function 11786000402489 `DOMtoString`: 999, 1206
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x0ab8245e0879 <JSFunction sendHTMLpage (sfi = 0x24a71a0195a9)> `sendHTMLpage`: 2526
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+0x0ab8245e0839 <JSFunction DOMtoString (sfi = 0x24a71a019559)> `DOMtoString`: 999
+(document_root) {
+        var html = '', node = document_root.firstChild;
+        while (node) {
+            switch (node.nodeType) {
+                case Node.ELEMENT_NODE:
+                    html += node.outerHTML;
+                    break;
+                case Node.TEXT_NODE:
+                    html += node.nodeValue;
+                    break;
+                case Node.CDATA_SECTION_NODE:
+                    html += '<![CDATA[' + node.nodeValue + ']]>';
+                    break;
+                case Node.COMMENT_NODE:
+                    html += '<!--' + node.nodeValue + '-->';
+                    break;
+                case Node.DOCUMENT_TYPE_NODE:
+                    // (X)HTML documents are identified by public identifiers
+                    html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+                    break;
+            }
+            node = node.nextSibling;
+        }
+        return html;
+    }
+
+** Taint source functions: 
+
+

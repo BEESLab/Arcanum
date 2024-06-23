@@ -1,0 +1,341 @@
+>>> Taint source: (invoked from api_request_handler:tabs.create:pendingUrl)
+0x3ec52bff8949 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0xf5000a3c248 ``, source code:
+(tab) { }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:pendingUrl)
+0x3ec52bffab31 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0xf5000a3c248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x3ec52bffb749 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0xf5000a3c428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x3ec52bffde69 <String[14]: "Your Addresses">
+** In function 0xf5000a3c410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x3ec52bffe251 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0xf5000a3c410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x3ec52bfffe99 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0xf5000a3c428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da327403141 <String[23]: "Welcome - Changing Room">
+** In function 0xf5000a3c410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da327403509 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0xf5000a3c410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da3274054c9 <String[14]: "Your Addresses">
+** In function 0xf5000a3c410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da327405501 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0xf5000a3c410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da327407fd1 <String[14]: "Your Addresses">
+** In function 0xf5000a3c428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da3274081d1 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0xf5000a3c428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da32740aae9 <String[23]: "Welcome - Changing Room">
+** In function 0xf5000a3c410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da32740ab29 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0xf5000a3c410 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da32740cf61 <String[23]: "Welcome - Changing Room">
+** In function 0xf5000a3c428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from event_emitter:tabs.onUpdated(Fire))
+0x1da32740cfa1 <String[45]: "https://changingroom.eco/welcome-change-maker">
+** In function 0xf5000a3c428 ``, source code:
+(tabId, changeInfo, tab) {
+        if (changeInfo.url == undefined) {
+            return;
+        }
+        else {
+            console.log(changeInfo.url);
+            // get_current_brand(tab.url);
+        }
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x1fb5575672b9 <String[304342]: ue"...<truncated>>">
+** In function 0xf50002ba108 `DOMtoString`, source code:
+(document_root) {
+        var html = '', node = document_root.firstChild;
+        while (node) {
+            switch (node.nodeType) {
+                case Node.ELEMENT_NODE:
+                    html += node.outerHTML;
+                    break;
+                case Node.TEXT_NODE:
+                    html += node.nodeValue;
+                    break;
+                case Node.CDATA_SECTION_NODE:
+                    html += '<![CDATA[' + node.nodeValue + ']]>';
+                    break;
+                case Node.COMMENT_NODE:
+                    html += '<!--' + node.nodeValue + '-->';
+                    break;
+                case Node.DOCUMENT_TYPE_NODE:
+                    // (X)HTML documents are identified by public identifiers
+                    html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+                    break;
+            }
+            node = node.nextSibling;
+        }
+        return html;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x1fb55755abc9 <String[34]: e"https://www.amazon.com/a/addresses">
+** In function 0xf50002ba1c8 `sendHTMLpage`, source code:
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:url)
+0x1da32740ff81 <String[34]: "https://www.amazon.com/a/addresses">
+** In function 0xf5000a3c248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from api_request_handler:tabs.get:title)
+0x1da32740ff49 <String[14]: "Your Addresses">
+** In function 0xf5000a3c248 ``, source code:
+(tab) {
+            console.log(tab.url);
+            // get_current_brand(tab.url);
+        }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x24a71a036bd1 <String[10856]: ue"...<truncated>>">
+** In function 0xf50002ba108 `DOMtoString`, source code:
+(document_root) {
+        var html = '', node = document_root.firstChild;
+        while (node) {
+            switch (node.nodeType) {
+                case Node.ELEMENT_NODE:
+                    html += node.outerHTML;
+                    break;
+                case Node.TEXT_NODE:
+                    html += node.nodeValue;
+                    break;
+                case Node.CDATA_SECTION_NODE:
+                    html += '<![CDATA[' + node.nodeValue + ']]>';
+                    break;
+                case Node.COMMENT_NODE:
+                    html += '<!--' + node.nodeValue + '-->';
+                    break;
+                case Node.DOCUMENT_TYPE_NODE:
+                    // (X)HTML documents are identified by public identifiers
+                    html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+                    break;
+            }
+            node = node.nextSibling;
+        }
+        return html;
+    }
+>>> END Taint source
+
+>>> Taint source: (invoked from blink)
+0x24a71a038f21 <String[45]: e"https://changingroom.eco/welcome-change-maker">
+** In function 0xf50002ba1c8 `sendHTMLpage`, source code:
+(HTMLpage) {
+        const response = await fetch(`https://www.changingroom.eco/api/html_parser`, {
+            method: 'POST',
+            body: JSON.stringify({ 'HTMLpage': HTMLpage,
+                'current_url': location.href }),
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: "application/json",
+            }
+        });
+        const responseJSON = await response.json();
+        console.log('responseJSON', responseJSON);
+        console.log('before partial', can_get_partial_score);
+        // await get_partial_score(location.href)
+        // console.log('after partial',can_get_partial_score)
+        // if(responseJSON.color != 'None' && responseJSON.low_level!='Other' && can_get_partial_score){
+        //     console.log('BOTH COLORS AND SHAPE')
+        //     init();  
+        // }
+        return responseJSON;
+    }
+>>> END Taint source
+
