@@ -1,0 +1,82 @@
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x34e3a2deb701 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-monotone-transparent.svg
+
+** Propagation paths: 
+
+0x064e3e64c701 <String[86]: e"https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-monotone-transparent.svg">:
+  0x064e3e6499a9 <String[61]: e"https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q">, in function 58152294674841 `r`: 5929, 5989
+  0x064e3e64c631 <String[86]: e"https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-monotone-transparent.svg">, in function 58152294715097 ``: 6572, 6687
+  0x064e3e64c631 <String[86]: e"https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-monotone-transparent.svg">, in function 58152294674841 `r`: 5929, 5987
+
+0x064e3e6499a9 <String[61]: e"https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q">:
+
+0x064e3e64c631 <String[86]: e"https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-monotone-transparent.svg">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x07c2e1f92a49 <JSFunction _fixRelativeUris (sfi = 0x1c02497dfb39)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x34e3a2de8ed9 <JSFunction (sfi = 0x64e3e649491)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+0x34e3a2ddf199 <JSFunction r (sfi = 0x64e3e6493f1)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<
+>>> TAINT SINK `DOM` REACHED <<<
+STACK TRACE START: 
+0x34e3a2dedc39 <String[667]: c"E.<anonymous> (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5285)NodeList.forEach (<anonymous>)E._forEachNode (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3589)E._fixRelativeUris (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:5168)E._postProcessContent (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:3022)E.parse (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:29893)ie (chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:31712)chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:5:32029chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/inject.js:7:3">
+STACK TRACE END.
+
+///////////////////////// Details /////////////////////////
+
+** src attribute leak
+
+** Tainted bytes: (nullptr=1): 
+
+** Sink object: https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg
+
+** Propagation paths: 
+
+0x064e3e64c7d1 <String[71]: e"https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg">:
+  0x064e3e6499a9 <String[61]: e"https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q">, in function 58152294674841 `r`: 5929, 5989
+  0x064e3e64c769 <String[71]: e"https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg">, in function 58152294715097 ``: 6572, 6687
+  0x064e3e64c769 <String[71]: e"https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg">, in function 58152294674841 `r`: 5929, 5987
+
+0x064e3e6499a9 <String[61]: e"https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q">:
+
+0x064e3e64c769 <String[71]: e"https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg">:
+
+
+** Taint source objects:
+
+
+** Propagation path functions: 
+
+0x07c2e1f92a49 <JSFunction _fixRelativeUris (sfi = 0x1c02497dfb39)> `_fixRelativeUris`: 5867
+(e){var t=this._doc.baseURI,i=this._doc.documentURI;function r(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}var n=this._getAllNodesWithTag(e,["a"]);this._forEachNode(n,function(s){var h=s.getAttribute("href");if(h)if(h.indexOf("javascript:")===0)if(s.childNodes.length===1&&s.childNodes[0].nodeType===this.TEXT_NODE){var o=this._doc.createTextNode(s.textContent);s.parentNode.replaceChild(o,s);}else {for(var l=this._doc.createElement("span");s.firstChild;)l.appendChild(s.firstChild);s.parentNode.replaceChild(l,s);}else s.setAttribute("href",r(h));});var a=this._getAllNodesWithTag(e,["img","picture","figure","video","audio","source"]);this._forEachNode(a,function(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}});}
+0x34e3a2de8ed9 <JSFunction (sfi = 0x64e3e649491)> ``: 6572
+(s){var h=s.getAttribute("src"),o=s.getAttribute("poster"),l=s.getAttribute("srcset");if(h&&s.setAttribute("src",r(h)),o&&s.setAttribute("poster",r(o)),l){var c=l.replace(this.REGEXPS.srcsetUrl,function(_,T,N,b){return r(T)+(N||"")+b});s.setAttribute("srcset",c);}}
+0x34e3a2ddf199 <JSFunction r (sfi = 0x64e3e6493f1)> `r`: 5929
+(s){if(t==i&&s.charAt(0)=="#")return s;try{return new URL(s,t).href}catch{}return s}
+
+** Taint source functions: 
+
+
+>>> END TAINT SINK REPORT <<<

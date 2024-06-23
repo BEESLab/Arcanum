@@ -1,0 +1,42 @@
+[210717:210772:0929/105019.517366:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[210717:210772:0929/105019.517555:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[210717:210771:0929/105019.521835:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[210717:210771:0929/105019.521886:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[210717:210717:0929/105019.526130:ERROR:network_service_instance_impl.cc(459)] Deprecated value for --net-log-capture-mode. Use IncludeSensitive instead
+[210779:210779:0929/105019.541595:WARNING:angle_platform_impl.cc(48)] vk_utils.cpp:353 (GetAvailableValidationLayers): Vulkan validation layers are missing.
+[210717:210717:0929/105019.549386:WARNING:account_consistency_mode_manager.cc(70)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[210717:210771:0929/105019.559132:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[210717:210771:0929/105019.559174:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[210779:210779:0929/105019.578443:WARNING:sandbox_linux.cc(380)] InitializeSandbox() called with multiple threads in process gpu-process.
+[210717:210771:0929/105019.630960:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[210717:210771:0929/105019.631026:ERROR:bus.cc(399)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[210779:210779:0929/105019.721622:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[210830:210830:0929/105019.728622:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[210835:210835:0929/105019.734102:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[210717:210717:0929/105019.770065:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[210717:210849:0929/105019.816248:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[210717:210849:0929/105019.816323:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[210717:210849:0929/105019.816403:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[210717:210849:0929/105019.816417:WARNING:property.cc(144)] DaemonVersion: GetAndBlock: failed.
+[210717:210849:0929/105019.816458:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[210717:210849:0929/105019.816497:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[210852:210852:0929/105019.949623:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[210852:210861:0929/105020.013337:INFO:dispatcher.cc(588)] MarkAsExtensionContext (Background mv3): [chrome-extension://oadkgbgppkhoaaoepjbcnjejmkknaobg/background.js]
+[210872:210872:0929/105020.742326:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[210893:210893:0929/105021.349336:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[210717:210717:0929/105021.718479:INFO:CONSOLE(152)] "Failed to decode downloaded font: https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Regular.woff2", source: https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q (152)
+[210717:210717:0929/105021.719060:INFO:CONSOLE(152)] "OTS parsing error: Failed to convert WOFF 2.0 font to SFNT", source: https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q (152)
+[210780:210808:0929/105021.731852:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[210780:210808:0929/105021.799436:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[210780:210808:0929/105021.800405:WARNING:http_cache_transaction.cc(1261)] Unable to open or create cache entry
+[210717:210717:0929/105021.853652:INFO:CONSOLE(167)] "Access to font at 'https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Regular.woff' from origin 'https://www.paypal.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q (167)
+[210717:210717:0929/105023.189884:INFO:CONSOLE(1)] "Failed to decode downloaded font: https://www.paypalobjects.com/paypal-ui/fonts/PayPalOpen-Regular.woff2", source: https://www.paypalobjects.com/ui-web/consumer-home/header-footer/1.79.0/cw-utils-header-footer.js (1)
+[210717:210717:0929/105023.190261:INFO:CONSOLE(1)] "OTS parsing error: Failed to convert WOFF 2.0 font to SFNT", source: https://www.paypalobjects.com/ui-web/consumer-home/header-footer/1.79.0/cw-utils-header-footer.js (1)
+[210717:210717:0929/105023.213385:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected number in JSON at position 16490", source: https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q (1)
+[210905:210905:0929/105024.002562:ERROR:runtime_enabled_features.cc(2498)] RuntimeEnabledFeature not recognized: ShadowDOMV0
+[210872:210872:0929/105024.018070:INFO:local_window_proxy.cc(253)] MarkAsExtensionContext (Content Script): ["https://www.paypal.com/myaccount/money/cards/CC-DNGXYXA3SUS8Q"]
+[210717:210717:0929/105036.905840:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(523) Hint cache initialized
+[210717:210717:0929/105120.269350:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(388) Received OptimizationHints component version: 414
+[210717:210717:0929/105120.269429:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(433) Processing OptimizationHints component version: 414
+[210717:210717:0929/105120.269662:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(570) Component successfully processed
+[210717:210717:0929/105120.269719:INFO:optimization_guide_logger.cc(42)] ../../components/optimization_guide/core/hints_manager.cc(505) Loaded optimization filter for HistoryClusters
