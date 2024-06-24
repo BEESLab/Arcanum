@@ -13,22 +13,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-in_debug = True
+in_debug = False
 EXECUTION_TIME = 60
 test_path = "/root/"
 arcanum_executable_path = test_path + 'arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
-if in_debug:
-    # arcanum_executable_path = "/mnt/run/chromium/src/out/Default/chrome"
-    # arcanum_executable_path = '/root/Outlook/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
-    arcanum_executable_path = '/root/real/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 
+linkedin_specific_arcanum_executable_path = test_path + 'LinkedIn_installer/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 chromedriver_path = test_path + 'chromedriver/chromedriver'
-user_data_path = '/root/userdata/'
-log_path = test_path+'logs/'
-os.environ["CHROME_LOG_FILE"] = log_path+'chromium.log'
 wpr_path = '/root/go/pkg/mod/github.com/catapult-project/catapult/web_page_replay_go@v0.0.0-20230901234838-f16ca3c78e46/'
 
-mount_realworld_extension_dir = '/mnt/run/Arcanum/Sample_Extensions/Realworld/'
+log_path = test_path+'logs/'
+os.environ["CHROME_LOG_FILE"] = log_path+'chromium.log'
+user_data_path = '/root/userdata/'
 realworld_extension_dir = '/root/extensions/realworld/'
 recording_dir = '/root/recordings/'
 annotation_dir = '/root/annotations/'
@@ -76,10 +72,6 @@ def init(extension_id):
     display = Display(visible=0, size=(1920, 1080))
     display.start()
 
-    # Add nonce in the recording, replace transformers.go with our modified version
-    # if 'gmail_' in extension_id:
-    #     os.chdir(wpr_path+"src/webpagereplay/")
-    #     os.system('cp transformers_for_gmail_inbox.go transformers.go')
 
 def deinit(extension_id):
     print('=============== Finish Test ===============\n')
@@ -88,15 +80,10 @@ def deinit(extension_id):
     os.system('pkill chromedriver')
     os.system('pkill wpr')
 
-    # Recover transformers.go
-    # Although still use transformers_for_gmail_inbox.go is fine.
-    # if 'gmail_' in extension_name:
-    #     os.chdir(wpr_path + "src/webpagereplay/")
-    #     os.system('cp transformers.go_backup transformers.go')
 
 @func_set_timeout(20)
 def launch_driver(load_extension, extension_name, recording_name = None, rules = None, annotation_name = None,
-                  idle_timeout_ms = None, delay_animation_ms = None):
+                  idle_timeout_ms = None, delay_animation_ms = None, linkedin_specific = False):
 
     if os.path.exists(arcanum_executable_path) == False:
         print(Fore.RED + "Error: Given Arcanum executable path [%s] does not exist. "%arcanum_executable_path + Fore.RESET)
@@ -108,7 +95,14 @@ def launch_driver(load_extension, extension_name, recording_name = None, rules =
 
     service = Service(executable_path=chromedriver_path)
     options = webdriver.ChromeOptions()
-    options.binary_location = arcanum_executable_path
+    if linkedin_specific:
+        if os.path.exists(linkedin_specific_arcanum_executable_path) == False:
+            print(Fore.RED + "Error: Given Arcanum specific executable path for LinkedIn page [%s] does not exist. Please download it first." % linkedin_specific_arcanum_executable_path + Fore.RESET)
+            exit(0)
+        options.binary_location = linkedin_specific_arcanum_executable_path
+    else:
+        options.binary_location = arcanum_executable_path
+
     options.add_argument('--user-data-dir=%s' % user_data_path)
     options.add_argument("--enable-logging")
     options.add_argument("--v=0")
@@ -245,8 +239,6 @@ def aamfmnhcipnbjjnbfmaoooiohikifefk():
 
     deinit(extension_name)
 
-def haphbbhhknaonfloinidkcmadhfjoghc(): # LinkedIn
-    gd = 1
 
 def jdianbbpnakhcmfkcckaboohfgnngfcc():
     """
@@ -660,7 +652,7 @@ def pjmfidajplecneclhdghcgdefnmhhlca():
 
 def mdfgkcdjgpgoeclhefnjgmollcckpedk():
     """
-    This extension use the Sentry JS library to exfiltrate the image element attribute from the Instagram page to an endpoint.
+    the Sentry JS library used by this extension exfiltrates the image element attribute from the Instagram page to an endpoint.
     See Table 7 (Section 4.5) in our paper.
     Here we use the Instagram page as the test case.
     We release our experimental taint logs (and screenshot) of the Instagram page in /Taint_Logs/mdfgkcdjgpgoeclhefnjgmollcckpedk/.
@@ -710,35 +702,203 @@ def mdfgkcdjgpgoeclhefnjgmollcckpedk():
     # Check the extension source to see why we should get the storage sink and XMLHttpRequest sink.
     if os.path.exists(v8_log_path + 'taint_sources.log') \
             and os.path.exists(v8_log_path + 'taint_storage.log') \
-            and os.path.exists(user_data_path + 'taint_xhr.log'):
+            and os.path.exists(user_data_path + 'taint_fetch.log'):
         source_content = input_source_logs()
-        xhr_content = input_sink_logs('xhr')
+        fetch_content = input_sink_logs('fetch')
         # Page image element attribute keywords. See the screenshot in /Taint_Logs/mdfgkcdjgpgoeclhefnjgmollcckpedk/ins_profile/ to locate
         # where the sensitive information appears on the page.
-        if 'This is me!!!!' in source_content and \
-                ('xml-send-body-ArrayBuffer' in xhr_content and '<ArrayBuffer map' in xhr_content):
+        if 'Erin' in source_content and \
+                ('Photo by Erin in The Collective Food Hall at Coda with @cristiano' in fetch_content and 'May be an image of money and text that say' in fetch_content):
             print(success_output)
         else:
             print(fail_output + " Expected content not in the taint logs")
+            print(Back.LIGHTGREEN_EX +
+                  'In this test case, since the exfiltration is triggered by the Sentry library and depends on dynamic values, API keys, and library versions, the exfiltration does not happen every time. \n' +
+                  'Thus, if you see a ' + Fore.RED + 'failure ' + Fore.RESET + Back.LIGHTGREEN_EX + 'here, please directly check our original experimental taint log in "/Taint_Logs/mdfgkcdjgpgoeclhefnjgmollcckpedk/ins_profile/taint_fetch.log" in the GitHub repository, '
+                                                                                                    'which shows the extensions sends the sensitive image attribute to https://o4505330217517056.ingest.sentry.io' +
+                  Back.RESET)
 
     else:
         print(fail_output + " Expected taint log file not found. ")
+        print(Back.LIGHTGREEN_EX +
+            'In this test case, since the exfiltration is triggered by the Sentry library and depends on dynamic values, API keys, and library versions, the exfiltration does not happen every time. \n' +
+            'Thus, if you see a '+ Fore.RED + 'failure ' +Fore.RESET+ Back.LIGHTGREEN_EX+'here, please directly check our original experimental taint log in "/Taint_Logs/mdfgkcdjgpgoeclhefnjgmollcckpedk/ins_profile/taint_fetch.log" in the GitHub repository, '
+            'which shows the extensions sends the sensitive image attribute to https://o4505330217517056.ingest.sentry.io' +
+              Back.RESET)
 
-    deinit(extension_name)
+    deinit(extension_id)
 
 
+def haphbbhhknaonfloinidkcmadhfjoghc():
+
+    extension_id = 'haphbbhhknaonfloinidkcmadhfjoghc'
+    extension_name = extension_id + '.crx'
+    target_page = 'linkedin_profile'
+    test_URL = url_mp[target_page]
+    recording_name = '%s.wprgo' % target_page
+    annotation_name = '%s.js' % target_page
+    rules = rules_map[target_page]
+    success_output = 'Realworld Extension [%s]: ' % extension_id + Back.GREEN + "Success" + Back.RESET + "."
+    fail_output = 'Realworld Extension [%s]: ' % extension_id + Fore.RED + "Fail" + Fore.RESET + "."
+
+
+    check_file_exist(extension_name=extension_name, recording_name=recording_name, annotation_name=annotation_name)
+
+    init(extension_id)
+
+    try:
+        driver = launch_driver(load_extension=True, extension_name=extension_name,
+                               recording_name=recording_name, rules=rules, annotation_name=annotation_name,
+                               idle_timeout_ms = None, delay_animation_ms = None, linkedin_specific=True)
+        print('Launch Arcanum success. Arcanum starts running.')
+        print('Note: driver.get() can take longer than with other target sites '
+              'because the LinkedIn page has many resources and animations.')
+        time.sleep(1)
+        driver.get(test_URL)
+        ui = ''
+        try:
+            ui = WebDriverWait(driver, 40).until(
+                EC.visibility_of_element_located((By.CLASS_NAME, "application-outlet")))
+        finally:
+            innerhtml = ui.get_attribute('innerHTML')
+            tainted_element_num = innerhtml.count('data-taint')
+            if (tainted_element_num):
+                print(
+                    'Inject annotation success: There are %d tainted DOM elements on the page. (Expected to > 50)' % tainted_element_num)
+        print('Execute the extension for 60s after the web page has completely loaded, waiting now...')
+        time.sleep(EXECUTION_TIME)
+        driver.quit()
+    except Exception as e:
+        print(e)
+        print(fail_output)
+        return
+
+    print('End running Arcanum. Start checking taint logs. ')
+    # Check the extension source to see why we should get the storage sink and XMLHttpRequest sink.
+    if os.path.exists(v8_log_path + 'taint_sources.log') \
+            and os.path.exists(user_data_path + 'taint_fetch.log'):
+        source_content = input_source_logs()
+        fetch_content = input_sink_logs('fetch')
+
+        if "Microsoft" in source_content and 'Full-time' in source_content \
+               and ('Amy Lee' in fetch_content and 'Marketing Intern' in fetch_content) and 'She/Her' in fetch_content:
+            print(success_output)
+        else:
+            print(fail_output + " Expected content not in the taint logs")
+    else:
+        print(fail_output + " Expected taint log file not found. ")
+
+    deinit(extension_id)
+
+def kecadfolelkekbfmmfoifpfalfedeljo():
+
+    extension_id = 'kecadfolelkekbfmmfoifpfalfedeljo'
+    extension_name = extension_id + '.crx'
+    target_page = 'linkedin_profile'
+    test_URL = url_mp[target_page]
+    recording_name = '%s.wprgo' % target_page
+    annotation_name = '%s.js' % target_page
+    rules = rules_map[target_page]
+    success_output = 'Realworld Extension [%s]: ' % extension_id + Back.GREEN + "Success" + Back.RESET + "."
+    fail_output = 'Realworld Extension [%s]: ' % extension_id + Fore.RED + "Fail" + Fore.RESET + "."
+
+
+    check_file_exist(extension_name=extension_name, recording_name=recording_name, annotation_name=annotation_name)
+
+    init(extension_name)
+
+    try:
+        driver = launch_driver(load_extension=True, extension_name=extension_name,
+                               recording_name=recording_name, rules=rules, annotation_name=annotation_name,
+                               idle_timeout_ms = None, delay_animation_ms = None, linkedin_specific=True)
+        print('Launch Arcanum success. Arcanum starts running.')
+        print('Note: driver.get() can take longer than with other target sites '
+              'because the LinkedIn page has many resources and animations.')
+        time.sleep(1)
+        driver.get(test_URL)
+        ui = ''
+        try:
+            ui = WebDriverWait(driver, 40).until(
+                EC.visibility_of_element_located((By.CLASS_NAME, "application-outlet")))
+        finally:
+            innerhtml = ui.get_attribute('innerHTML')
+            tainted_element_num = innerhtml.count('data-taint')
+            if (tainted_element_num):
+                print(
+                    'Inject annotation success: There are %d tainted DOM elements on the page. (Expected to > 50)' % tainted_element_num)
+        print('Execute the extension for 60s after the web page has completely loaded, waiting now...')
+        time.sleep(EXECUTION_TIME)
+        driver.quit()
+    except Exception as e:
+        print(e)
+        print(fail_output)
+        return
+
+    print('End running Arcanum. Start checking taint logs. ')
+    # Check the extension source to see why we should get the storage sink and XMLHttpRequest sink.
+    if os.path.exists(v8_log_path + 'taint_sources.log') \
+            and os.path.exists(user_data_path + 'taint_fetch.log'):
+        source_content = input_source_logs()
+        fetch_content = input_sink_logs('fetch')
+        # Location
+        if "Marketing Intern at Microsoft" in source_content and 'Douglasville, Georgia, United States' in source_content \
+               and '"loc":"Douglasville, Georgia, United States"' in fetch_content:
+            print(success_output)
+        else:
+            print(fail_output + " Expected content not in the taint logs")
+    else:
+        print(fail_output + " Expected taint log file not found. ")
+
+    deinit(extension_id)
 
 if __name__ == '__main__':
 
-    # aamfmnhcipnbjjnbfmaoooiohikifefk()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+
+    aamfmnhcipnbjjnbfmaoooiohikifefk()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
     # jdianbbpnakhcmfkcckaboohfgnngfcc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
     # oadkgbgppkhoaaoepjbcnjejmkknaobg()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
     # blcdkmjcpgjojjffbdkckaiondfpoglh()     # Case Study (Sec 4.10)
     # nkecaphdplhfmmbkcfnknejeonfnifbn()     # Table 7 (Sec 4.5)
     # bahcihkpdjlbndandplnfmejnalndgjo()     # Table 7 (Sec 4.5)
     # pjmfidajplecneclhdghcgdefnmhhlca()     # Table 7 (Sec 4.5)
-    
-    mdfgkcdjgpgoeclhefnjgmollcckpedk()     # Table 7 (Sec 4.5)
 
-    haphbbhhknaonfloinidkcmadhfjoghc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
-    kecadfolelkekbfmmfoifpfalfedeljo()     # Table 7 (Sec 4.5)
+    """
+    LinkedIn Cases Below:
+
+    The LinkedIn page has many resources, inline scripts, and animations to load before we can detect the specific DOM elements we want to taint. 
+    It can take a few minutes when we replay the page. 
+    Thus, we built another version of Arcanum with a specific delay for content scripts injection for testing extensions on the LinkedIn page. 
+    Please download the installer from "https://drive.google.com/file/d/13hPgLHP5TedcsCS5HF8g9_8R6jPwfyWW/view?usp=sharing" 
+    and place it in /root/LinkedIn_installer/, then decompress it: 
+    "ar x linkedin_profile.deb"
+    "tar -vxf control.tar && tar -vxf data.tar"
+
+    Then we have a specific_arcanum_executable in: 
+    linkedin_specific_arcanum_executable_path = '/root/LinkedIn_installer/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
+    We use this specific executable to run the test case of the two extensions below (and our experiments for LinkedIn page described in the paper).
+
+    You can also directly check our original experimental taint logs in 
+    /Taint_Logs/haphbbhhknaonfloinidkcmadhfjoghc/linkedin_profile/taint_fetch.log" and 
+    /Taint_Logs/kecadfolelkekbfmmfoifpfalfedeljo/linkedin_profile/taint_fetch.log" in the GitHub repository.
+    The logs show that: 
+    1) [haphbbhhknaonfloinidkcmadhfjoghc] automatically collects and exfiltrates profile and identification information from LinkedIn via Fetch.
+    2) [kecadfolelkekbfmmfoifpfalfedeljo] automatically collects and exfiltrates location, profile and identification information from LinkedIn via Fetch.
+
+    """
+
+    # haphbbhhknaonfloinidkcmadhfjoghc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+
+    # kecadfolelkekbfmmfoifpfalfedeljo()  # Table 7 (Sec 4.5)
+
+
+    """
+    In the test case below, since the exfiltration is triggered by the Sentry library and depends on dynamic values/API keys/online library versions etc., 
+    the exfiltration does not happen every time.
+    
+    Thus, if you see a failure of this test case, please directly check our original experimental taint log in 
+    "/Taint_Logs/mdfgkcdjgpgoeclhefnjgmollcckpedk/ins_profile/taint_fetch.log" in the GitHub repository,
+    which shows the extensions sends the sensitive image attribute to "https://o4505330217517056.ingest.sentry.io/..." 
+    """
+
+    # mdfgkcdjgpgoeclhefnjgmollcckpedk()     # Table 7 (Sec 4.5)
+

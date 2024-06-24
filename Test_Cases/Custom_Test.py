@@ -1017,7 +1017,7 @@ if __name__ == '__main__':
     # Outlook_Extension_MV2_Test()   # Source [Outlook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
     # Outlook_Extension_MV3_Test()   # Source [Outlook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
-    # LinkedIn_Extension_MV2_Test()  # Source [LinkedIn DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
+    LinkedIn_Extension_MV2_Test()  # Source [LinkedIn DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
     # LinkedIn_Extension_MV3_Test()  # Source [LinkedIn DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
 
