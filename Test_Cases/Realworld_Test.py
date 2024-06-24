@@ -16,7 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 in_debug = False
 EXECUTION_TIME = 60
 test_path = "/root/"
-arcanum_executable_path = test_path + 'arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
+arcanum_executable_path = test_path + 'Arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 
 linkedin_specific_arcanum_executable_path = test_path + 'LinkedIn_installer/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 chromedriver_path = test_path + 'chromedriver/chromedriver'

@@ -7,7 +7,7 @@ from colorama import Fore, Back, Style
 
 test_path = "/root/"
 debug_executable_path = "/mnt/run/chromium/src/out/Default/chrome"
-arcanum_executable_path = test_path + 'arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
+arcanum_executable_path = test_path + 'Arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 chromedriver_path = test_path + 'chromedriver/chromedriver'
 user_data_path = test_path + '/userdata/'
 log_path = test_path + 'logs/chromium.log'

@@ -16,7 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 EXECUTION_TIME = 60
 test_path = "/root/"
 linkedin_specific_arcanum_executable_path = '/root/LinkedIn_installer/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
-arcanum_executable_path = test_path + 'arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
+arcanum_executable_path = test_path + 'Arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 
 chromedriver_path = test_path + 'chromedriver/chromedriver'
 user_data_path = '/root/userdata/'
@@ -1219,20 +1219,20 @@ if __name__ == '__main__':
     Amazon_Extension_MV2_Test()    #Source [Amazon DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
     Amazon_Extension_MV3_Test()    #Source [Amazon DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
-    # Facebook_Extension_MV2_Test()  #Source [Facebook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
-    # Facebook_Extension_MV3_Test()  #Source [Facebook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
+    Facebook_Extension_MV2_Test()  #Source [Facebook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
+    Facebook_Extension_MV3_Test()  #Source [Facebook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
-    # Ins_Extension_MV2_Test()       #Source [Facebook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
-    # Ins_Extension_MV3_Test()       #Source [Facebook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
+    Ins_Extension_MV2_Test()       #Source [Facebook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
+    Ins_Extension_MV3_Test()       #Source [Facebook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
-    # Paypal_Extension_MV2_Test()    # Source [Paypal DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
-    # Paypal_Extension_MV3_Test()    # Source [Paypal DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
+    Paypal_Extension_MV2_Test()    # Source [Paypal DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
+    Paypal_Extension_MV3_Test()    # Source [Paypal DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
-    # Gmail_Extension_MV2_Test()     # Source [Gmail DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
-    # Gmail_Extension_MV3_Test()     # Source [Gmail DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
+    Gmail_Extension_MV2_Test()     # Source [Gmail DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
+    Gmail_Extension_MV3_Test()     # Source [Gmail DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
-    # Outlook_Extension_MV2_Test()   # Source [Outlook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
-    # Outlook_Extension_MV3_Test()   # Source [Outlook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
+    Outlook_Extension_MV2_Test()   # Source [Outlook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
+    Outlook_Extension_MV3_Test()   # Source [Outlook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
 
     """
@@ -1252,17 +1252,17 @@ if __name__ == '__main__':
     
     """
 
-    # LinkedIn_Extension_MV2_Test()  # Source [LinkedIn DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
-    # LinkedIn_Extension_MV3_Test()  # Source [LinkedIn DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
+    LinkedIn_Extension_MV2_Test()  # Source [LinkedIn DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
+    LinkedIn_Extension_MV3_Test()  # Source [LinkedIn DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
 
     """
     Other specific test cases for the instructions on using Arcanum: 
     """
-    # source_document_password()
-    # source_document_location()
-    # source_chrome_webRequest()
-    # source_chrome_webNavigation()
+    source_document_password()
+    source_document_location()
+    source_chrome_webRequest()
+    source_chrome_webNavigation()
 
 
 
