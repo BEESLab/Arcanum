@@ -1,3 +1,16 @@
+diff --git a/chrome/browser/chrome_content_browser_client.cc b/chrome/browser/chrome_content_browser_client.cc
+index 96b42e4e7ffe3..dea4495800890 100644
+--- a/chrome/browser/chrome_content_browser_client.cc
++++ b/chrome/browser/chrome_content_browser_client.cc
+@@ -2660,6 +2660,8 @@ void ChromeContentBrowserClient::AppendExtraCommandLineSwitches(
+ #if BUILDFLAG(ENABLE_EXTENSIONS)
+       extensions::switches::kAllowHTTPBackgroundPage,
+       extensions::switches::kAllowLegacyExtensionManifests,
++      extensions::switches::kCustcomScriptIdleTimeoutInMs,
++      extensions::switches::kCustcomDelayForAnimationInMs,
+       extensions::switches::kDisableExtensionsHttpThrottling,
+       extensions::switches::kEnableExperimentalExtensionApis,
+       extensions::switches::kExtensionsOnChromeURLs,
 diff --git a/chrome/browser/extensions/api/history/history_api.cc b/chrome/browser/extensions/api/history/history_api.cc
 index d43d358d339fa..7066c871bb722 100644
 --- a/chrome/browser/extensions/api/history/history_api.cc
@@ -536,6 +549,36 @@ index d3cc6a14e9ff0..c51dc062d4376 100644
  
    // Set the observer for ScriptsExecutedNotification callbacks.
    void set_observer(ScriptsExecutedNotification observer) {
+diff --git a/extensions/common/switches.cc b/extensions/common/switches.cc
+index 51641d4e96023..f74739057dfa7 100644
+--- a/extensions/common/switches.cc
++++ b/extensions/common/switches.cc
+@@ -20,6 +20,12 @@ const char kAllowLegacyExtensionManifests[] =
+ 
+ // Adds the given extension ID to all the permission allowlists.
+ const char kAllowlistedExtensionID[] = "allowlisted-extension-id";
++
++
++// Cxtension content script wait time
++const char kCustcomScriptIdleTimeoutInMs[] = "custom-script-idle-timeout-ms";
++const char kCustcomDelayForAnimationInMs[] = "custom-delay-for-animation-ms";
++
+ // Provides the same functionality as kAllowlistedExtensionID.
+ // TODO(b/204179234): Remove at the end of the deprecation period. Deprecated on
+ // 10/2021.
+diff --git a/extensions/common/switches.h b/extensions/common/switches.h
+index 45713602a6c02..89c397d3d5f13 100644
+--- a/extensions/common/switches.h
++++ b/extensions/common/switches.h
+@@ -16,6 +16,8 @@ namespace switches {
+ extern const char kAllowHTTPBackgroundPage[];
+ extern const char kAllowLegacyExtensionManifests[];
+ extern const char kAllowlistedExtensionID[];
++extern const char kCustcomScriptIdleTimeoutInMs[];
++extern const char kCustcomDelayForAnimationInMs[];
+ extern const char kDEPRECATED_AllowlistedExtensionID[];
+ extern const char kDisableAppContentVerification[];
+ extern const char kDisableExtensionsHttpThrottling[];
 diff --git a/extensions/common/user_script.cc b/extensions/common/user_script.cc
 index c7d8d91a6d28f..9e719194a3e33 100644
 --- a/extensions/common/user_script.cc
@@ -2274,20 +2317,28 @@ index 663ec7ecc376e..a26d22b74ea88 100644
      RequestResult result(RequestResult::INVALID_INVOCATION);
      result.error = std::move(error);
 diff --git a/extensions/renderer/script_injection_manager.cc b/extensions/renderer/script_injection_manager.cc
-index fefe9749f05f0..2ffbbe97c8dfc 100644
+index fefe9749f05f0..c13cd8c0e8ac1 100644
 --- a/extensions/renderer/script_injection_manager.cc
 +++ b/extensions/renderer/script_injection_manager.cc
-@@ -45,7 +45,8 @@ namespace {
+@@ -39,13 +39,16 @@
+ #include "third_party/blink/public/web/web_view.h"
+ #include "url/gurl.h"
+ 
++#include "base/command_line.h"
++#include "extensions/common/switches.h"
++
+ namespace extensions {
+ 
+ namespace {
  
  // The length of time to wait after the DOM is complete to try and run user
  // scripts.
 -const int kScriptIdleTimeoutInMs = 200;
 +//const int kScriptIdleTimeoutInMs = 200;
-+//const int kScriptIdleTimeoutInMs = 3000; // xqg
  
  // Returns the RunLocation that follows |run_location|.
  absl::optional<mojom::RunLocation> NextRunLocation(
-@@ -81,6 +82,7 @@ class ScriptInjectionManager::RFOHelper : public content::RenderFrameObserver {
+@@ -81,6 +84,7 @@ class ScriptInjectionManager::RFOHelper : public content::RenderFrameObserver {
    void DidCreateDocumentElement() override;
    void DidFailProvisionalLoad() override;
    void DidDispatchDOMContentLoadedEvent() override;
@@ -2295,12 +2346,38 @@ index fefe9749f05f0..2ffbbe97c8dfc 100644
    void WillDetach() override;
    void OnDestruct() override;
    void OnStop() override;
-@@ -189,14 +191,40 @@ void ScriptInjectionManager::RFOHelper::DidDispatchDOMContentLoadedEvent() {
-           FROM_HERE,
-           base::BindOnce(&ScriptInjectionManager::RFOHelper::RunIdle,
+@@ -100,12 +104,19 @@ class ScriptInjectionManager::RFOHelper : public content::RenderFrameObserver {
+ 
+   bool should_run_idle_ = true;
+ 
++  int kScriptIdleTimeoutInMs;
++
++  int kDelayForAnimationInMs;
++
+   base::WeakPtrFactory<RFOHelper> weak_factory_{this};
+ };
+ 
+ ScriptInjectionManager::RFOHelper::RFOHelper(content::RenderFrame* render_frame,
+                                              ScriptInjectionManager* manager)
+-    : content::RenderFrameObserver(render_frame), manager_(manager) {}
++    : content::RenderFrameObserver(render_frame), manager_(manager) {
++    kScriptIdleTimeoutInMs = manager->kScriptIdleTimeoutInMs;
++    kDelayForAnimationInMs = manager->kDelayForAnimationInMs;
++}
+ 
+ ScriptInjectionManager::RFOHelper::~RFOHelper() {
+ }
+@@ -174,6 +185,7 @@ void ScriptInjectionManager::RFOHelper::DidDispatchDOMContentLoadedEvent() {
+           &ScriptInjectionManager::RFOHelper::StartInjectScripts,
+           weak_factory_.GetWeakPtr(), mojom::RunLocation::kDocumentEnd));
+ 
++  DVLOG(0) << "kScriptIdleTimeoutInMs="<<kScriptIdleTimeoutInMs<<"\n";
+   // We try to run idle in two places: a delayed task here and in response to
+   // ContentRendererClient::RunScriptsAtDocumentIdle().
+   // DidDispatchDOMContentLoadedEvent() corresponds to completing the document's
+@@ -191,12 +203,38 @@ void ScriptInjectionManager::RFOHelper::DidDispatchDOMContentLoadedEvent() {
                           weak_factory_.GetWeakPtr()),
--          base::Milliseconds(kScriptIdleTimeoutInMs));
-+          base::Milliseconds(240000));
+           base::Milliseconds(kScriptIdleTimeoutInMs));
  
 -  ExtensionFrameHelper::Get(render_frame())
 -      ->ScheduleAtDocumentIdle(
@@ -2316,7 +2393,7 @@ index fefe9749f05f0..2ffbbe97c8dfc 100644
 +//// xqg start
 +void ScriptInjectionManager::RFOHelper::DidFinishLoad() {
 +        DCHECK(content::RenderThread::Get());
-+
++    DVLOG(0) << "kDelayForAnimationInMs=" << kDelayForAnimationInMs<<"\n";
 +        // for ins base::Milliseconds(10000)
 +        // for gmail
 +        render_frame()
@@ -2325,7 +2402,7 @@ index fefe9749f05f0..2ffbbe97c8dfc 100644
 +                        FROM_HERE,
 +                        base::BindOnce(&ScriptInjectionManager::RFOHelper::RunIdle,
 +                                       weak_factory_.GetWeakPtr()),
-+                        base::Milliseconds(200)); // (documentend+timeout)
++                        base::Milliseconds(kDelayForAnimationInMs)); // (documentend+timeout)
 +
 +//        render_frame()
 +//                ->GetTaskRunner(blink::TaskType::kInternalDefault)
@@ -2341,6 +2418,42 @@ index fefe9749f05f0..2ffbbe97c8dfc 100644
  void ScriptInjectionManager::RFOHelper::WillDetach() {
    // The frame is closing - invalidate.
    constexpr bool kForceReset = true;
+@@ -248,6 +286,21 @@ ScriptInjectionManager::ScriptInjectionManager(
+     UserScriptSetManager* user_script_set_manager)
+     : user_script_set_manager_(user_script_set_manager) {
+   user_script_set_manager_observation_.Observe(user_script_set_manager_);
++  const base::CommandLine* cmdline = base::CommandLine::ForCurrentProcess();
++  if (cmdline->HasSwitch(switches::kCustcomScriptIdleTimeoutInMs)) {
++    int timeout_ms = 200;
++    if (base::StringToInt(cmdline->GetSwitchValueNative(switches::kCustcomScriptIdleTimeoutInMs),
++                          &timeout_ms) && timeout_ms > 0) {
++      kScriptIdleTimeoutInMs = timeout_ms;
++    }
++  }
++  if (cmdline->HasSwitch(switches::kCustcomDelayForAnimationInMs)) {
++    int delay_ms = 200;
++    if (base::StringToInt(cmdline->GetSwitchValueNative(switches::kCustcomDelayForAnimationInMs),
++                          &delay_ms) && delay_ms > 0) {
++      kDelayForAnimationInMs = delay_ms;
++    }
++  }
+ }
+ 
+ ScriptInjectionManager::~ScriptInjectionManager() {
+diff --git a/extensions/renderer/script_injection_manager.h b/extensions/renderer/script_injection_manager.h
+index 7bc12987decbc..a95754eb4b76e 100644
+--- a/extensions/renderer/script_injection_manager.h
++++ b/extensions/renderer/script_injection_manager.h
+@@ -130,6 +130,9 @@ class ScriptInjectionManager : public UserScriptSetManager::Observer {
+ 
+   base::ScopedObservation<UserScriptSetManager, UserScriptSetManager::Observer>
+       user_script_set_manager_observation_{this};
++
++  int kScriptIdleTimeoutInMs = 200;
++  int kDelayForAnimationInMs = 200;
+ };
+ 
+ }  // namespace extensions
 diff --git a/extensions/renderer/storage_area.cc b/extensions/renderer/storage_area.cc
 index 4ec1187b2a6db..b6c976b3aa0e5 100644
 --- a/extensions/renderer/storage_area.cc
