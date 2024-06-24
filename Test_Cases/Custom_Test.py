@@ -13,14 +13,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-in_debug = True
 EXECUTION_TIME = 60
 test_path = "/root/"
+linkedin_specific_arcanum_executable_path = '/root/LinkedIn_installer/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 arcanum_executable_path = test_path + 'arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
-if in_debug:
-    # arcanum_executable_path = "/mnt/run/chromium/src/out/Default/chrome"
-    # arcanum_executable_path = '/root/Outlook/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
-    arcanum_executable_path = '/root/real/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 
 chromedriver_path = test_path + 'chromedriver/chromedriver'
 user_data_path = '/root/userdata/'
@@ -28,7 +24,6 @@ log_path = test_path+'logs/'
 os.environ["CHROME_LOG_FILE"] = log_path+'chromium.log'
 wpr_path = '/root/go/pkg/mod/github.com/catapult-project/catapult/web_page_replay_go@v0.0.0-20230901234838-f16ca3c78e46/'
 
-mount_custom_extension_dir = '/mnt/run/Arcanum/Sample_Extensions/Custom/'
 custom_extension_dir = '/root/extensions/custom/'
 recording_dir = '/root/recordings/'
 annotation_dir = '/root/annotations/'
@@ -114,11 +109,7 @@ def init(extension_name):
 
 @func_set_timeout(20)
 def launch_driver(load_extension, extension_name, recording_name = None, rules = None, annotation_name = None,
-                  idle_timeout_ms = None, delay_animation_ms = None):
-
-    if os.path.exists(arcanum_executable_path) == False:
-        print(Fore.RED + "Error: Given Arcanum executable path [%s] does not exist. "%arcanum_executable_path + Fore.RESET)
-        exit(0)
+                  idle_timeout_ms = None, delay_animation_ms = None, linkedin_specific = False):
 
     if os.path.exists(chromedriver_path) == False:
         print(Fore.RED + "Error: Given chromedriver path [%s] does not exist. "%chromedriver_path + Fore.RESET)
@@ -126,7 +117,17 @@ def launch_driver(load_extension, extension_name, recording_name = None, rules =
 
     service = Service(executable_path=chromedriver_path)
     options = webdriver.ChromeOptions()
-    options.binary_location = arcanum_executable_path
+    if linkedin_specific:
+        if os.path.exists(linkedin_specific_arcanum_executable_path) == False:
+            print(Fore.RED + "Error: Given Arcanum specific executable path for LinkedIn page [%s] does not exist. Please download it first." % linkedin_specific_arcanum_executable_path + Fore.RESET)
+            exit(0)
+        options.binary_location = linkedin_specific_arcanum_executable_path
+    else:
+        if os.path.exists(arcanum_executable_path) == False:
+            print(
+                Fore.RED + "Error: Given Arcanum executable path [%s] does not exist. " % arcanum_executable_path + Fore.RESET)
+            exit(0)
+        options.binary_location = arcanum_executable_path
     options.add_argument('--user-data-dir=%s' % user_data_path)
     options.add_argument("--enable-logging")
     options.add_argument("--v=0")
@@ -181,6 +182,219 @@ def check_file_exist(extension_name, recording_name, annotation_name):
     if annotation_name != None and os.path.exists(annotation_dir + annotation_name) == False:
         print(Fore.RED + "Error: The required annotation file [%s] does not exist. Download it from our GitHub repo first." % annotation_name + Fore.RESET)
         exit(0)
+
+def read_taint_source_log():
+    f = open(v8_log_path + 'taint_sources.log', 'r')
+    lines = []
+    while True:
+        r = f.readline()
+        if not r: break
+        lines.append(r)
+    f.close()
+    return lines
+
+
+def parse_taint_source_log():
+    f = open(v8_log_path + 'taint_sources.log', 'r')
+    source_blocks = []
+    lines = []
+    while True:
+        r = f.readline()
+        if not r: break
+        lines.append(r[:-1])
+    f.close()
+
+    block_num = 0
+    i = 0
+    while i < len(lines):
+        if '>>> Taint source: ' in lines[i]:
+            source_blocks.append([lines[i+1]])
+            function_str = ""
+            for j in range(i+2, len(lines)):
+                if '>>> END Taint source' in lines[j]:
+                    i = j
+                    break
+                else: function_str = function_str + lines[j]
+            source_blocks[block_num].append(function_str)
+            block_num = block_num + 1
+        i = i + 1
+    return source_blocks
+
+def extract_raw_string(s):
+    if "<String[1]:" in s: return s[14:-1]
+    # To Extract the raw string ("/search") from cases like <String[7]: e"/search"> or <String[38]: "https://....">
+    return s[s.find('"')+1:-2]
+
+def source_document_password():
+
+    test_URL = "https://yuanbin.xyz/test/"
+    test_extension_name = 'Source_DOM_password'
+    recording_name = 'custom.wprgo'
+    success_output = 'Custom Extension %s: ' % test_extension_name + Back.GREEN + "Success" + Back.RESET + "."
+    fail_output = 'Custom Extension %s: ' % test_extension_name + Fore.RED + "Fail" + Fore.RESET + "."
+    init(test_extension_name)
+
+    check_file_exist(test_extension_name,  recording_name, None)
+
+    rules = "MAP yuanbin.xyz:80 127.0.0.1:8080,MAP yuanbin.xyz:443 127.0.0.1:8081,EXCLUDE localhost"
+    driver = launch_driver(True, test_extension_name, recording_name, rules)
+    driver.get(test_URL)
+    time.sleep(5)
+    driver.quit()
+
+    source_blocks = parse_taint_source_log()
+    success = False
+
+    for i in range(len(source_blocks)):
+        if '<String[8]: e"mypasswd">' in source_blocks[i][0]:
+            success = True
+            break
+        print(source_blocks[i][0])
+
+    if success: print(success_output)
+    else: print(fail_output)
+
+    deinit(test_extension_name)
+
+def source_document_location():
+
+    test_extension_name = 'Source_DOM_location'
+    test_URL = 'https://www.google.com/search?q=Gatech'
+    success_output = 'Custom Extension %s: ' % test_extension_name + Back.GREEN + "Success" + Back.RESET + "."
+    fail_output = 'Custom Extension %s: ' % test_extension_name + Fore.RED + "Fail" + Fore.RESET + "."
+
+    init(test_extension_name)
+
+    driver = launch_driver(True, test_extension_name)
+    driver.get(test_URL)
+    time.sleep(5)
+    driver.quit()
+
+    print('End running Arcanum and start checking "/ram/analysis/v8logs/taint_sources.log":')
+    # Check Taint Source Logs
+    taint_sources = []
+    lines = read_taint_source_log()
+    for i in range(0, len(lines)):
+        line = lines[i]
+        if '>>> Taint source: (invoked from blink)' in line:
+            next_line = lines[i+1]
+            object_address = next_line[:14]
+            object_info = next_line[14:-1]
+            taint_sources.append((object_address, object_info))
+            print("["+str(len(taint_sources)) + '] Object Address: ' + object_address + '; Object Information: '+ object_info)
+            continue
+
+    # See the test extension source code for why we should get those expected sources.
+    expect_sources = ['https://www.google.com/search?q=Gatech', 'https:',
+                      'www.google.com', 'www.google.com', '/search', '?q=Gatech',
+                      'https://www.google.com', 'https://www.google.com/search?q=Gatech']
+    success = True
+    for i in range(len(taint_sources)):
+        if extract_raw_string(taint_sources[i][1]) == expect_sources[i]: continue
+        success = False
+        break
+
+    if success: print(success_output)
+    else: print(fail_output)
+
+    deinit(test_extension_name)
+
+def source_chrome_webRequest():
+    test_extension_name = 'Source_Chrome_webRequest'
+    test_URL1 = 'https://yuanbin.xyz/test/'
+    test_URL2 = 'https://gatech.edu'
+    recording_name = 'custom.wprgo'
+    rules = "MAP *.gatech.edu:80 127.0.0.1:8080,MAP *.gatech.edu:443 127.0.0.1:8081,MAP yuanbin.xyz:80 127.0.0.1:8080,MAP yuanbin.xyz:443 127.0.0.1:8081,EXCLUDE localhost"
+    success_output = 'Custom Extension %s: ' % test_extension_name + Back.GREEN + "Success" + Back.RESET + "."
+    fail_output = 'Custom Extension %s: ' % test_extension_name + Fore.RED + "Fail" + Fore.RESET + "."
+
+    init(test_extension_name)
+    driver = launch_driver(True, test_extension_name, recording_name, rules)
+    driver.get(test_URL1)  # Test "set-cookie" value in responseHeaders
+    driver.get(test_URL1)  # Test "cookie" value in requestHeaders then
+    driver.get(test_URL2)  # Test  url, ip, and initiator of chrome.webRequest.onCompleted
+    time.sleep(5)
+    driver.quit()
+    print('End running Arcanum and start checking "/ram/analysis/v8logs/taint_sources.log":')
+
+    source_blocks = parse_taint_source_log()
+    success_ip = False
+    success_url = False
+    success_initiator = False
+    success_cookie_request = False
+    success_cookie_response = False
+    for i in range(len(source_blocks)):
+        if '<String[9]: "127.0.0.1">' in source_blocks[i][0]: success_ip = True
+        if '<String[54]: "https://www.gatech.edu/sites/default/files/favicon.ico">' in source_blocks[i][0]: success_url = True
+        if '<String[22]: "https://www.gatech.edu">' in source_blocks[i][0]: success_initiator = True
+        if '<String[13]: "user=QingeXie">' in source_blocks[i][0]:
+            if 'details.responseHeaders.length' in source_blocks[i][1]: success_cookie_response = True
+        if '<String[13]: "user=QingeXie">' in source_blocks[i][0]:
+            if 'details.requestHeaders.length' in source_blocks[i][1]: success_cookie_request = True
+
+    success = False
+    if success_ip and success_url and success_initiator and success_cookie_request and success_cookie_response:
+        success = True
+
+    if success: print(success_output)
+    else: print(fail_output)
+
+    deinit(test_extension_name)
+
+def source_chrome_webNavigation():
+    test_extension_name = 'Source_Chrome_webNavigation'
+    test_URL1 = 'https://www.google.com/'
+    test_URL2 = 'https://www.gatech.edu/'
+
+    success_output = 'Custom Extension %s: ' % test_extension_name + Back.GREEN + "Success" + Back.RESET + "."
+    fail_output = 'Custom Extension %s: ' % test_extension_name + Fore.RED + "Fail" + Fore.RESET + "."
+
+    init(test_extension_name)
+
+    driver = launch_driver(True, test_extension_name)
+    driver.get(test_URL1)
+    time.sleep(1)
+    driver.get(test_URL2)
+    time.sleep(5)
+    driver.quit()
+
+    taint_sources_map = {}
+    taint_sources_map['webNavigation.onCompleted'] = []
+    taint_sources_map['webNavigation.getFrame'] = []
+    taint_sources_map['webNavigation.getAllFrames'] = []
+
+    taint_sources = []
+    lines = read_taint_source_log()
+    for i in range(0, len(lines)):
+        line = lines[i]
+        if 'event_emitter:webNavigation.onCompleted' in line:
+            taint_sources_map['webNavigation.onCompleted'].append(extract_raw_string(lines[i + 1][14:-1]))
+        elif 'api_request_handler:webNavigation.getFrame' in line:
+            taint_sources_map['webNavigation.getFrame'].append(extract_raw_string(lines[i + 1][14:-1]))
+        elif 'api_request_handler:webNavigation.getAllFrames' in line:
+            taint_sources_map['webNavigation.getAllFrames'].append(extract_raw_string(lines[i + 1][14:-1]))
+        if '>>> Taint source: ' in line:
+            next_line = lines[i + 1]
+            object_address = next_line[:14]
+            object_info = next_line[14:-1]
+            taint_sources.append((object_address, object_info))
+            # raw_taint_sources.append(extract_raw_string(object_info))
+            print("[" + str(
+                len(taint_sources)) + '] Object Address: ' + object_address + '; Object Information: ' + object_info)
+            continue
+
+    # See the test extension source code for why we should get those expected sources.
+    expect_sources = [test_URL1, test_URL2]
+
+    success = True
+    for key in taint_sources_map:
+        if expect_sources[0] in taint_sources_map[key] and expect_sources[1] in taint_sources_map[key]: continue
+        success = False
+
+    if success: print(success_output)
+    else: print(fail_output)
+
+    deinit(test_extension_name)
 
 def Amazon_Extension_MV2_Test():
 
@@ -781,7 +995,7 @@ def LinkedIn_Extension_MV2_Test():
     try:
         driver = launch_driver(load_extension = True, extension_name = extension_name,
                                recording_name = recording_name, rules = rules, annotation_name = annotation_name,
-                               idle_timeout_ms=240000)
+                               idle_timeout_ms = None, delay_animation_ms = None, linkedin_specific=True)
         print('Launch Arcanum success. Arcanum starts running.')
         print('Note: driver.get() can take longer than with other target sites '
               'because the LinkedIn page has many resources and animations.')
@@ -795,7 +1009,7 @@ def LinkedIn_Extension_MV2_Test():
             innerhtml = ui.get_attribute('innerHTML')
             tainted_element_num = innerhtml.count('data-taint')
             if (tainted_element_num):
-                print('Inject annotation success: There are %d tainted DOM elements on the page. (Expected to be 58)'%tainted_element_num)
+                print('Inject annotation success: There are %d tainted DOM elements on the page. (Expected to > 50)'%tainted_element_num)
         print('Execute the extension for 60s after the web page has completely loaded, waiting now...')
         time.sleep(EXECUTION_TIME)
         driver.quit()
@@ -842,7 +1056,7 @@ def LinkedIn_Extension_MV3_Test():
     try:
         driver = launch_driver(load_extension = True, extension_name = extension_name,
                                recording_name = recording_name, rules = rules, annotation_name = annotation_name,
-                               idle_timeout_ms=240000)
+                               idle_timeout_ms = None, delay_animation_ms = None, linkedin_specific=True)
         print('Launch Arcanum success. Arcanum starts running.')
         print('Note: driver.get() can take longer than with other target sites '
               'because the LinkedIn page has many resources and animations.')
@@ -856,7 +1070,7 @@ def LinkedIn_Extension_MV3_Test():
             innerhtml = ui.get_attribute('innerHTML')
             tainted_element_num = innerhtml.count('data-taint')
             if (tainted_element_num):
-                print('Inject annotation success: There are %d tainted DOM elements on the page. (Expected to be 58)'%tainted_element_num)
+                print('Inject annotation success: There are %d tainted DOM elements on the page. (Expected to > 50)'%tainted_element_num)
         print('Execute the extension for 60s after the web page has completely loaded, waiting now...')
         time.sleep(EXECUTION_TIME)
         driver.quit()
@@ -865,20 +1079,20 @@ def LinkedIn_Extension_MV3_Test():
         print(fail_output)
         return
 
-    # print('End running Arcanum. Start checking taint logs. ')
-    # # Check the extension source to see why we should get the fetch sink.
-    # if os.path.exists(v8_log_path + 'taint_sources.log') \
-    #         and os.path.exists(user_data_path + 'taint_fetch.log'):
-    #     source_content = input_source_logs()
-    #     fetch_content = input_sink_logs('fetch')
-    #     # You can check the content detail in taint logs, here for test we just check some key values of each log.
-    #     if ('Jack Ma' in source_content and 'One off event' in source_content) \
-    #           and ('"str1":"U.S. Department of Educati.' in fetch_content):
-    #         print(success_output)
-    #     else:
-    #         print(fail_output + " Expected content not in the taint logs")
-    # else:
-    #     print(fail_output + " Expected taint log file not found. ")
+    print('End running Arcanum. Start checking taint logs. ')
+    # Check the extension source to see why we should get the fetch sink.
+    if os.path.exists(v8_log_path + 'taint_sources.log') \
+            and os.path.exists(user_data_path + 'taint_fetch.log'):
+        source_content = input_source_logs()
+        fetch_content = input_sink_logs('fetch')
+        # You can check the content detail in taint logs, here for test we just check some key values of each log.
+        if ('Douglasville, Georgia, United States' in source_content and 'amy-lee-gt' in source_content) \
+              and ('Douglasville, Georgia, United States' in fetch_content):
+            print(success_output)
+        else:
+            print(fail_output + " Expected content not in the taint logs")
+    else:
+        print(fail_output + " Expected taint log file not found. ")
 
     deinit(extension_name)
 
@@ -999,8 +1213,11 @@ def Paypal_Extension_MV3_Test():
 
 if __name__ == '__main__':
 
+    """ 
+    Each function is one test case. Uncomment any one to start testing.
+    """
     Amazon_Extension_MV2_Test()    #Source [Amazon DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
-    # Amazon_Extension_MV3_Test()    #Source [Amazon DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
+    Amazon_Extension_MV3_Test()    #Source [Amazon DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
     # Facebook_Extension_MV2_Test()  #Source [Facebook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
     # Facebook_Extension_MV3_Test()  #Source [Facebook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
@@ -1017,9 +1234,35 @@ if __name__ == '__main__':
     # Outlook_Extension_MV2_Test()   # Source [Outlook DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]
     # Outlook_Extension_MV3_Test()   # Source [Outlook DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
-    LinkedIn_Extension_MV2_Test()  # Source [LinkedIn DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
+
+    """
+    LinkedIn Cases Below:
+
+    The LinkedIn page has many resources, inline scripts, and animations to load before we can detect the specific DOM elements we want to taint. 
+    It can take a few minutes when we replay the page. 
+    Thus, we built another version of Arcanum with a specific delay for content scripts injection for testing extensions on the LinkedIn page. 
+    Please download the installer from "https://drive.google.com/file/d/13hPgLHP5TedcsCS5HF8g9_8R6jPwfyWW/view?usp=sharing" 
+    and place it in /root/LinkedIn_installer/, then decompress it: 
+    "ar x linkedin_profile.deb"
+    "tar -vxf control.tar && tar -vxf data.tar"
+
+    Then we have a specific_arcanum_executable in: 
+    linkedin_specific_arcanum_executable_path = '/root/LinkedIn_installer/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
+    We use this specific executable to run the test case of the two extensions below (and our experiments for LinkedIn page described in the paper).
+    
+    """
+
+    # LinkedIn_Extension_MV2_Test()  # Source [LinkedIn DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
     # LinkedIn_Extension_MV3_Test()  # Source [LinkedIn DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
+
+    """
+    Other specific test cases for the instructions on using Arcanum: 
+    """
+    # source_document_password()
+    # source_document_location()
+    # source_chrome_webRequest()
+    # source_chrome_webNavigation()
 
 
 

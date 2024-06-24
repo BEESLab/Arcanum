@@ -853,13 +853,22 @@ def kecadfolelkekbfmmfoifpfalfedeljo():
 
 if __name__ == '__main__':
 
+    """ 
+    Each function is one test case. Uncomment any one to start testing.
+    """
 
     aamfmnhcipnbjjnbfmaoooiohikifefk()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+
     # jdianbbpnakhcmfkcckaboohfgnngfcc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+
     # oadkgbgppkhoaaoepjbcnjejmkknaobg()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+
     # blcdkmjcpgjojjffbdkckaiondfpoglh()     # Case Study (Sec 4.10)
+
     # nkecaphdplhfmmbkcfnknejeonfnifbn()     # Table 7 (Sec 4.5)
+
     # bahcihkpdjlbndandplnfmejnalndgjo()     # Table 7 (Sec 4.5)
+
     # pjmfidajplecneclhdghcgdefnmhhlca()     # Table 7 (Sec 4.5)
 
     """
@@ -886,7 +895,7 @@ if __name__ == '__main__':
 
     """
 
-    # haphbbhhknaonfloinidkcmadhfjoghc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+    haphbbhhknaonfloinidkcmadhfjoghc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
 
     # kecadfolelkekbfmmfoifpfalfedeljo()  # Table 7 (Sec 4.5)
 
