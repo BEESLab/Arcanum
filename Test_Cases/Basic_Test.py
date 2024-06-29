@@ -6,7 +6,6 @@ from pyvirtualdisplay import Display
 from colorama import Fore, Back, Style
 
 test_path = "/root/"
-debug_executable_path = "/mnt/run/chromium/src/out/Default/chrome"
 arcanum_executable_path = test_path + 'Arcanum/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
 chromedriver_path = test_path + 'chromedriver/chromedriver'
 user_data_path = test_path + '/userdata/'
@@ -51,7 +50,6 @@ def launch_driver():
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-gpu')
     extension_path = test_path + 'extensions/custom/empty'
-    # extension_path = '/mnt/run/Arcanum/Sample_Extensions/Custom/Empty'
     options.add_argument('--load-extension={}'.format(extension_path))
     prefs = {"profile.default_content_setting_values.notifications": 2}
     options.add_experimental_option("prefs", prefs)
