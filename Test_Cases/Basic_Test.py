@@ -38,7 +38,7 @@ def deinit():
 def launch_driver():
     service = Service(executable_path=chromedriver_path)
     options = webdriver.ChromeOptions()
-    options.binary_location = debug_executable_path
+    options.binary_location = arcanum_executable_path
     options.add_argument('--user-data-dir=%s' % user_data_path)
     options.add_argument("--enable-logging")
     options.add_argument("--v=0")
@@ -50,8 +50,8 @@ def launch_driver():
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-gpu')
-    # extension_path = test_path + 'extensions/custom/empty'
-    extension_path = '/mnt/run/Arcanum/Sample_Extensions/Custom/Empty'
+    extension_path = test_path + 'extensions/custom/empty'
+    # extension_path = '/mnt/run/Arcanum/Sample_Extensions/Custom/Empty'
     options.add_argument('--load-extension={}'.format(extension_path))
     prefs = {"profile.default_content_setting_values.notifications": 2}
     options.add_experimental_option("prefs", prefs)
