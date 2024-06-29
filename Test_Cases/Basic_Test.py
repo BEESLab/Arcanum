@@ -49,7 +49,7 @@ def launch_driver():
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-gpu')
-    extension_path = test_path + 'extensions/custom/empty'
+    extension_path = test_path + 'extensions/custom/Empty'
     options.add_argument('--load-extension={}'.format(extension_path))
     prefs = {"profile.default_content_setting_values.notifications": 2}
     options.add_experimental_option("prefs", prefs)
