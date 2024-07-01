@@ -41,7 +41,7 @@ def launch_driver():
         print(Fore.RED + "Error: Given Arcanum executable path [%s] does not exist. " % arcanum_executable_path + Fore.RESET)
         exit(0)
     if os.path.exists(extension_path) == False:
-        print(Fore.RED+"Error: Test extension Empty does not exist. Download it from the GitHub repo first." + Fore.RESET)
+        print(Fore.RED+"Error: Test extension %s does not exist. Download it from the GitHub repo first."%extension_path + Fore.RESET)
         exit(0)
 
     service = Service(executable_path=chromedriver_path)
