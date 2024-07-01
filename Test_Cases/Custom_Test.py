@@ -97,6 +97,15 @@ def init(extension_name):
 
     # Add nonce in the recording, replace transformers.go with our modified version
     if 'gmail_' in extension_name:
+        """
+        I already put 'transformers_for_gmail_inbox.go' in the Docker image,
+        you can alo find this file in ~/WprGo_Add_Nonce/ in the Github repo. 
+        """
+        if os.path.exists(wpr_path+"src/webpagereplay/transformers_for_gmail_inbox.go") == False:
+            print(Fore.RED + "Error: transformers_for_gmail_inbox.go does not exist. Download it from the GitHub repo first." % extension_name + Fore.RESET)
+            exit(0)
+        if os.path.exists(wpr_path+"src/transformers.go_backup") == False:
+            os.system("cp %s %s"%(wpr_path+"src/webpagereplay/transformers.go",wpr_path+"src/webpagereplay/transformers.go_backup"))
         os.chdir(wpr_path+"src/webpagereplay/")
         os.system('cp transformers_for_gmail_inbox.go transformers.go')
 
@@ -1251,19 +1260,21 @@ if __name__ == '__main__':
     linkedin_specific_arcanum_executable_path = '/root/LinkedIn_installer/opt/chromium.org/chromium-unstable/chromium-browser-unstable'
     We use this specific executable to run the test case of the two extensions below (and our experiments for LinkedIn page described in the paper).
     
+    Uncomment to test them: 
     """
 
-    LinkedIn_Extension_MV2_Test()  # Source [LinkedIn DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
-    LinkedIn_Extension_MV3_Test()  # Source [LinkedIn DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
+    # LinkedIn_Extension_MV2_Test()  # Source [LinkedIn DOM elements] -> Propagation [chrome.runtime.connect, postMessage, String Concat, TextEncode] -> Sink [storage, XMLHTTPRequest]#
+    # LinkedIn_Extension_MV3_Test()  # Source [LinkedIn DOM elements] -> Propagation [JSON.stringify] -> Sink [Fetch]
 
 
     """
-    Other specific test cases for the instructions on using Arcanum: 
+    Other specific test cases for the instructions on using Arcanum.
+    Uncomment to test them:
     """
-    source_document_password()
-    source_document_location()
-    source_chrome_webRequest()
-    source_chrome_webNavigation()
+    # source_document_password()
+    # source_document_location()
+    # source_chrome_webRequest()
+    # source_chrome_webNavigation()
 
 
 
