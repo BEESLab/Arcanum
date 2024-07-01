@@ -12,8 +12,12 @@ user_data_path = test_path + '/userdata/'
 log_path = test_path + 'logs/chromium.log'
 os.environ["CHROME_LOG_FILE"] = log_path
 v8_log_path = "/ram/analysis/v8logs/"
+custom_extension_dir = '/root/extensions/custom/'
 
 def init():
+    if os.path.exists(custom_extension_dir) == False:
+        os.system('mkdir -p %s'%custom_extension_dir)
+
     os.system('pkill Xvfb')
     os.system('pkill chrome')
     os.system('pkill chromedriver')
@@ -35,7 +39,7 @@ def deinit():
     os.system('pkill wpr')
 
 def launch_driver():
-
+    # Please put ~/Sample_Extensions/Custom/Empty in /root/extensions/custom/
     extension_path = test_path + 'extensions/custom/Empty'
     if os.path.exists(arcanum_executable_path) == False:
         print(Fore.RED + "Error: Given Arcanum executable path [%s] does not exist. " % arcanum_executable_path + Fore.RESET)
