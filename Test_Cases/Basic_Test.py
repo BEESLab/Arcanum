@@ -35,6 +35,15 @@ def deinit():
     os.system('pkill wpr')
 
 def launch_driver():
+
+    extension_path = test_path + 'extensions/custom/Empty'
+    if os.path.exists(arcanum_executable_path) == False:
+        print(Fore.RED + "Error: Given Arcanum executable path [%s] does not exist. " % arcanum_executable_path + Fore.RESET)
+        exit(0)
+    if os.path.exists(extension_path) == False:
+        print(Fore.RED+"Error: Test extension Empty does not exist. Download it from the GitHub repo first." + Fore.RESET)
+        exit(0)
+
     service = Service(executable_path=chromedriver_path)
     options = webdriver.ChromeOptions()
     options.binary_location = arcanum_executable_path
@@ -49,7 +58,7 @@ def launch_driver():
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-gpu')
-    extension_path = test_path + 'extensions/custom/Empty'
+
     options.add_argument('--load-extension={}'.format(extension_path))
     prefs = {"profile.default_content_setting_values.notifications": 2}
     options.add_experimental_option("prefs", prefs)
