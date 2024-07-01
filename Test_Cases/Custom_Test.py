@@ -80,6 +80,9 @@ def deinit(extension_name):
         os.system('cp transformers.go_backup transformers.go')
 
 def init(extension_name):
+    if os.path.exists(wpr_path + "src/transformers.go_backup") == False:
+        os.system("cp %s %s" % (
+        wpr_path + "src/webpagereplay/transformers.go", wpr_path + "src/webpagereplay/transformers.go_backup"))
 
     print('=============== Start Testing the Custom Extension: %s ==============='%extension_name)
     os.system('pkill Xvfb')
@@ -104,8 +107,6 @@ def init(extension_name):
         if os.path.exists(wpr_path+"src/webpagereplay/transformers_for_gmail_inbox.go") == False:
             print(Fore.RED + "Error: transformers_for_gmail_inbox.go does not exist. Download it from the GitHub repo first." + Fore.RESET)
             exit(0)
-        if os.path.exists(wpr_path+"src/transformers.go_backup") == False:
-            os.system("cp %s %s"%(wpr_path+"src/webpagereplay/transformers.go",wpr_path+"src/webpagereplay/transformers.go_backup"))
         os.chdir(wpr_path+"src/webpagereplay/")
         os.system('cp transformers_for_gmail_inbox.go transformers.go')
 
