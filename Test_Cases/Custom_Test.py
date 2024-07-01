@@ -102,7 +102,7 @@ def init(extension_name):
         you can alo find this file in ~/WprGo_Add_Nonce/ in the Github repo. 
         """
         if os.path.exists(wpr_path+"src/webpagereplay/transformers_for_gmail_inbox.go") == False:
-            print(Fore.RED + "Error: transformers_for_gmail_inbox.go does not exist. Download it from the GitHub repo first." % extension_name + Fore.RESET)
+            print(Fore.RED + "Error: transformers_for_gmail_inbox.go does not exist. Download it from the GitHub repo first." + Fore.RESET)
             exit(0)
         if os.path.exists(wpr_path+"src/transformers.go_backup") == False:
             os.system("cp %s %s"%(wpr_path+"src/webpagereplay/transformers.go",wpr_path+"src/webpagereplay/transformers.go_backup"))
