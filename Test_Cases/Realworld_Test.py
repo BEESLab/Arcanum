@@ -860,17 +860,17 @@ if __name__ == '__main__':
 
     aamfmnhcipnbjjnbfmaoooiohikifefk()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
 
-    # jdianbbpnakhcmfkcckaboohfgnngfcc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+    jdianbbpnakhcmfkcckaboohfgnngfcc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
 
-    # oadkgbgppkhoaaoepjbcnjejmkknaobg()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+    oadkgbgppkhoaaoepjbcnjejmkknaobg()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
 
-    # blcdkmjcpgjojjffbdkckaiondfpoglh()     # Case Study (Sec 4.10)
+    blcdkmjcpgjojjffbdkckaiondfpoglh()     # Case Study (Sec 4.10)
 
-    # nkecaphdplhfmmbkcfnknejeonfnifbn()     # Table 7 (Sec 4.5)
+    nkecaphdplhfmmbkcfnknejeonfnifbn()     # Table 7 (Sec 4.5)
 
-    # bahcihkpdjlbndandplnfmejnalndgjo()     # Table 7 (Sec 4.5)
+    bahcihkpdjlbndandplnfmejnalndgjo()     # Table 7 (Sec 4.5)
 
-    # pjmfidajplecneclhdghcgdefnmhhlca()     # Table 7 (Sec 4.5)
+    pjmfidajplecneclhdghcgdefnmhhlca()     # Table 7 (Sec 4.5)
 
     """
     LinkedIn Cases Below:
@@ -893,10 +893,12 @@ if __name__ == '__main__':
     The logs show that: 
     1) [haphbbhhknaonfloinidkcmadhfjoghc] automatically collects and exfiltrates profile and identification information from LinkedIn via Fetch.
     2) [kecadfolelkekbfmmfoifpfalfedeljo] automatically collects and exfiltrates location, profile and identification information from LinkedIn via Fetch.
-
+    
+    Uncomment to test them: 
+    
     """
 
-    haphbbhhknaonfloinidkcmadhfjoghc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
+    # haphbbhhknaonfloinidkcmadhfjoghc()     # Case Study (Sec 4.10), Table 7 (Sec 4.5)
 
     # kecadfolelkekbfmmfoifpfalfedeljo()  # Table 7 (Sec 4.5)
 
@@ -908,6 +910,8 @@ if __name__ == '__main__':
     Thus, if you see a failure of this test case, please directly check our original experimental taint log in 
     "/Taint_Logs/mdfgkcdjgpgoeclhefnjgmollcckpedk/ins_profile/taint_fetch.log" in the GitHub repository,
     which shows the extensions sends the sensitive image attribute to "https://o4505330217517056.ingest.sentry.io/..." 
+    
+    Uncomment to test it:
     """
 
     # mdfgkcdjgpgoeclhefnjgmollcckpedk()     # Table 7 (Sec 4.5)
