@@ -51,12 +51,6 @@ rules_map = {
 }
 
 def init(extension_id):
-    if os.path.exists(realworld_extension_dir) == False:
-        os.system('mkdir -p %s'%realworld_extension_dir)
-    if os.path.exists(recording_dir) == False:
-        os.system('mkdir -p %s'%recording_dir)
-    if os.path.exists(annotation_dir) == False:
-        os.system('mkdir -p %s'%annotation_dir)
 
     print('=============== Start Testing the Real-world Extension: [%s] ==============='%extension_id)
     os.system('pkill Xvfb')
@@ -146,6 +140,13 @@ def launch_driver(load_extension, extension_name, recording_name = None, rules =
     return driver
 
 def check_file_exist(extension_name, recording_name, annotation_name):
+    if os.path.exists(realworld_extension_dir) == False:
+        os.system('mkdir -p %s' % realworld_extension_dir)
+    if os.path.exists(recording_dir) == False:
+        os.system('mkdir -p %s' % recording_dir)
+    if os.path.exists(annotation_dir) == False:
+        os.system('mkdir -p %s' % annotation_dir)
+
     if extension_name != None and os.path.exists(realworld_extension_dir + extension_name) == False:
         print(Fore.RED+"Error: Test extension [%s] does not exist. Download it from the GitHub repo first."%extension_name + Fore.RESET)
         exit(0)
