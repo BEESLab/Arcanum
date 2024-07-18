@@ -49,8 +49,8 @@ Here we describe how to set up a build environment for Chromium and build a vers
 5. After updating the contents of the `args.gn` file, run the above command again to finalize the build preparations: `gn args out/Default`.
 6. Build an unmodified Chrome and its Linux installer (this may take a while depending on the host machine’s performance). 
     ```
-    ninja -C out/Default chrome
-    ninja -C out/Default "chrome/installer/linux:unstable_deb"
+    $ ninja -C out/Default chrome
+    $ ninja -C out/Default "chrome/installer/linux:unstable_deb"
     ```
 7. Build a version of Chrome patched with the Arcanum implementation.
     ```
@@ -67,9 +67,9 @@ Here we describe how to set up a build environment for Chromium and build a vers
     ```
 8. Build a Linux installer for Arcanum, you can then find the .deb file in `out/Arcanum/`.
     ```
-    ninja -C out/Arcanum "chrome/installer/linux:unstable_deb"
-    cd /mnt/build/chromium/src/out/Arcanum/
-    ls chromium-browser-unstable_108.0.5359.71-1_amd64.deb
+    $ ninja -C out/Arcanum "chrome/installer/linux:unstable_deb"
+    $ cd /mnt/build/chromium/src/out/Arcanum/
+    $ ls chromium-browser-unstable_108.0.5359.71-1_amd64.deb
     ```
     
 ## Basic Test
