@@ -101,7 +101,7 @@ $ mkdir -p /root/annotations/
 $ cp -r ~/annotations/* /root/annotations/
 ```
 **Execution**: We have prepared a test case for each custom extension. Run these test cases in the container shell using the pre-configured Python 3.8: `python3.8 ~/Test_Cases/Custom_Test.py`
-Each test case launches Arcanum with the corresponding web recording and DOM element annotations (or without annotations when testing non-web content taint sources), and checks whether we successfully obtain the expected content in the taint logs, demonstrating the correct taint tracking of Arcanum. You can test all custom extensions together or test a specific extension by simply commenting out other test cases in `Custom_Test.py`. 
+Each test case launches Arcanum with the corresponding web recording and DOM element annotations (or without annotations when testing non-web-content taint sources), and checks whether we successfully obtain the expected content in the taint logs, demonstrating the correct taint tracking of Arcanum. You can test all custom extensions together or test a specific extension by simply commenting out other test cases in `Custom_Test.py`. 
 
 **Results**: For each extension being tested, you should see `Custom Extension ${Name}: Success.` in the test case output, demonstrating the correct taint tracking of Arcanum. You can refer to the test case code to see the expected content in the taint logs for each extension.
 
