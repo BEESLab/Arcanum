@@ -50,7 +50,7 @@ Here we describe how to set up a build environment for Chromium and build a vers
 6. Build an unmodified Chrome and its Linux installer (this may take a while depending on the host machine’s performance). 
     ```
     ninja -C out/Default chrome
-    ninja -C out/Default" chrome/installer/linux:unstable_deb"
+    ninja -C out/Default "chrome/installer/linux:unstable_deb"
     ```
 7. Build a version of Chrome patched with the Arcanum implementation.
     ```
