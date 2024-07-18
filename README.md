@@ -46,7 +46,7 @@ Here we describe how to set up a build environment for Chromium and build a vers
      $ cd /mnt/build/chromium/src/
      $ gn args out/Default
      ```
-5. After updating the contents of the `args.gn` file, run the above command again to finalize the build preparations: `gn args out/Default`
+5. After updating the contents of the `args.gn` file, run the above command again to finalize the build preparations: `gn args out/Default`.
 6. Build an unmodified Chrome and its Linux installer (this may take a while depending on the host machine’s performance). 
     ```
     ninja -C out/Default chrome
