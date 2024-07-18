@@ -80,9 +80,8 @@ def deinit(extension_name):
         os.system('cp transformers.go_backup transformers.go')
 
 def init(extension_name):
-    if os.path.exists(wpr_path + "src/transformers.go_backup") == False:
-        os.system("cp %s %s" % (
-        wpr_path + "src/webpagereplay/transformers.go", wpr_path + "src/webpagereplay/transformers.go_backup"))
+
+
 
     print('=============== Start Testing the Custom Extension: %s ==============='%extension_name)
     os.system('pkill Xvfb')
