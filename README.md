@@ -3,6 +3,7 @@ This repository holds the artifacts of our paper "Arcanum: Detecting and Evaluat
 - `patches/`: The Arcanum prototype is built on Chromium Browser version 108.0.5359.71. We provide all Chromium patches of the Arcanum implementation.
 - `Sample_Extensions/`: We provide two types of sample extensions in this artifact as the dataset.  
 --  **Custom Extensions**: Sample extensions implemented by ourselves to demonstrate how extensions can be tested using Arcanum, on seven websites that were experimented with in our paper (Amazon, Facebook, Gmail, Instagram, LinkedIn, Outlook, and PayPal). For each site, we provide one Manifest Version 2 (MV2) extension and one Manifest Version 3 (MV3) extension. Besides, we also provide other custom extensions to guide users in testing the taint tracking process of Arcanum, including testing different taint sources, sinks, and propagation cases. 
+
 --  **Real-world Extensions**: Representative extensions from the Chrome Web Store that have been tested and flagged by Arcanum. Specifically, we include all extensions discussed in the case studies of Section 4.10, as well as those listed in Table 7 of Section 4.5 (i.e., the flagged extensions with the most users in each web content category) in our paper. 
 - `annotations/`:  JavaScript files for annotating specific DOM elements on each target web page. 
 - `recordings/`: Recordings for each target web page.
