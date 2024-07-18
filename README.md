@@ -42,7 +42,7 @@ Here we describe how to set up a build environment for Chromium and build a vers
      ```
  4. Prepare build in the Docker container’s interactive shell. Add the path of Chromium depot tools to the `PATH` environment variable. The command `gn args ...` automatically opens a file (`args.gn`) in the default text editor. Replace the contents of this file with the contents of the file `build/args.gn` from in this repository.
      ```
-     $ export PATH ="/mnt/build/depot_tools:$PATH"
+     $ export PATH="/mnt/build/depot_tools:$PATH"
      $ cd /mnt/build/chromium/src/
      $ gn args out/Default
      ```
