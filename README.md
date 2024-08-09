@@ -93,7 +93,7 @@ $ tar -xvf data.tar && tar -xvf control.tar
 Run the basic test case in the interactive shell of the container, using the pre-configured Python 3.8: `python3.8 ~/Test_Cases/Basic_Test.py`. The basic test case uses Selenium to launch Arcanum (a modified Chromium) with a pre-installed empty extension and navigates to a web page. If Arcanum runs normally, you should see `Basic Test: Success.` in the output.
 
 ## Test Custom Extensions (~1 human-hour)
-**Preparation**: Use the same Docker container from the Basic Test that has the Arcanum executable file in `/root/Arcanum/`. Download all custom extensions (in `Sample_Extensions/Custom/`) and copy the extensions to `/root/extensions/custom/` in the container.
+**Preparation**: Use the same Docker container from the Basic Test that has the Arcanum executable file placed in `/root/Arcanum/`. Download all custom extensions (in `Sample_Extensions/Custom/`) and copy the extensions to `/root/extensions/custom/` in the container.
 ```
 $ mkdir -p /root/extensions/custom/
 $ cp -r ~/Sample_Extensions/Custom/* /root/extensions/custom/
@@ -111,7 +111,7 @@ Each test case launches Arcanum with the corresponding web recording and DOM ele
 **Results**: For each extension being tested, you should see `Custom Extension ${Name}: Success.` in the test case output, demonstrating the correct taint tracking of Arcanum. You can refer to the test case code to see the expected content in the taint logs for each extension.
 
 ## Test Real-world Extensions (~1 human-hour)
-**Preparation**: Use the same Docker container from the Basic Test that has the Arcanum executable filein `/root/Arcanum/`. Download all real-world extensions (in `∼/Sample_Extensions/Realworld/`) from the artifact Git repository and copy the extensions to `/root/extensions/realworld/` in the container.
+**Preparation**: Use the same Docker container from the Basic Test that has the Arcanum executable file placed in `/root/Arcanum/`. Download all real-world extensions (in `∼/Sample_Extensions/Realworld/`) from the artifact Git repository and copy the extensions to `/root/extensions/realworld/` in the container.
 ```
 $ mkdir -p /root/extensions/realworld/
 $ cp -r ~/Sample_Extensions/Realworld/* /root/extensions/realworld/
