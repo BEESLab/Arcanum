@@ -1,6 +1,6 @@
 ## Overview
 This repository holds the artifacts of our paper ["Arcanum: Detecting and Evaluating the Privacy Risks of Browser Extensions on Web Pages and Web Content"](https://www.usenix.org/conference/usenixsecurity24/presentation/xie-qinge) in USENIX Security Symposium 2024. In this work, we develop Arcanum, a dynamic taint tracking system for modern Chrome extensions designed to monitor the flow of sensitive user content from web pages. A key feature of Arcanum is allowing researchers to instrument specific web page elements as tainted at runtime via JS DOM annotations. More information about Arcanum can be found in our paper. This artifact includes: 
-- `patches/`: The Arcanum prototype is built on Chromium Browser version 108.0.5359.71. We provide all Chromium patches of the Arcanum implementation.
+- `patches/`: The Arcanum prototype is built on Chromium Browser version 108.0.5359.71. We provide all Chromium patches of the Arcanum implementation. 
 - `Sample_Extensions/`: We provide two types of sample extensions in this artifact as the dataset.  
 	- **Custom Extensions**: Sample extensions implemented by ourselves to demonstrate how extensions can be tested using Arcanum, on seven websites that were experimented with in our paper (Amazon, Facebook, Gmail, Instagram, LinkedIn, Outlook, and PayPal). For each site, we provide one Manifest Version 2 (MV2) extension and one Manifest Version 3 (MV3) extension. Besides, we also provide other custom extensions to guide users in testing the taint tracking process of Arcanum, including testing different taint sources, sinks, and propagation cases.
 	- **Real-world Extensions**: Representative extensions from the Chrome Web Store that have been tested and flagged by Arcanum. Specifically, we include all extensions discussed in the case studies of Section 4.10, as well as those listed in Table 7 of Section 4.5 (i.e., the flagged extensions with the most users in each web content category) in our paper. 
@@ -11,7 +11,7 @@ This repository holds the artifacts of our paper ["Arcanum: Detecting and Evalua
 - `WprGo_Ad_Nonce`: The modified WprGo script for replaying the Gmail test page. It has been included in the Docker image we provide and will be automatically used in our test cases when testing the Gmail case.
 
 ## Dependencies
-**Hardware**: A 64-bit machine with at least 8 GiB RAM, 4 cores/8 threads CPU, and at least 100 GiB of free disk space is required. More than 16 GiB RAM is highly recommended. For reference, our experiments were conducted on a physical machine with 512 GiB RAM, 32 cores/128 threads CPU, running Ubuntu 20.04.6 LTS (Kernel Linux 5.4.0-173-generic). The provided test cases have also been tested on another Linux server with 8 CPU cores and 16 GiB RAM. If you are using a machine with fewer CPU resources, you might need to adjust the values of `--custom-script-idle-timeout-ms` and `--custom-delay-for-animation-ms` switches in the Python code for Facebook and Gmail test cases, as the CPU resources will impact the page load time when replaying (see explanations in Section 3.4 in our paper). 
+**Hardware**: A x86_64 (amd64) machine with at least 8 GiB RAM, 4 cores/8 threads CPU, and at least 100 GiB of free disk space is required. More than 16 GiB RAM is highly recommended. For reference, our experiments were conducted on a physical machine with 512 GiB RAM, 32 cores/128 threads CPU, running Ubuntu 20.04.6 LTS (Kernel Linux 5.4.0-173-generic). The provided test cases have also been tested on another Linux server with 8 CPU cores and 16 GiB RAM. If you are using a machine with fewer CPU resources, you might need to adjust the values of `--custom-script-idle-timeout-ms` and `--custom-delay-for-animation-ms` switches in the Python code for Facebook and Gmail test cases, as the CPU resources will impact the page load time when replaying (see explanations in Section 3.4 in our paper). 
 
 **Software**: 
 - To build Arcanum, we provide a [Docker image](https://hub.docker.com/r/xqgtiti/arcanum_build) (Ubuntu 20.04) that includes all necessary dependencies for building a version of Chromium patched with the Arcanum implementation. Alternatively, users can follow the [official instruction](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#Docker) to build your own Docker container.
@@ -29,6 +29,9 @@ Here we describe how to set up a build environment for Chromium and build a vers
     ```
     $ mkdir ${HOME}/chromium && cd ${HOME}/chromium/
     $ fetch --nohooks chromium
+    ```
+3. In `src/`, check out the branch for Chromium version 108.0.5359.71. You could also refer to the [official instructions](https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches/) on working with Chromium release branches. 
+    ```
     $ cd src
     $ gclient sync --with_branch_heads --with_tags
     $ git fetch
@@ -83,7 +86,7 @@ Copy the Arcanum installer file (i.e., the .deb file) to `/root/Arcanum/` in the
 ```
 $ cd /root/Arcanum/
 $ ar x chromium-browser-unstable_108.0.5359.71-1_amd64.deb
-$ tar xvf data.tar.xz && tar xvf control.tar.gz
+$ tar -xvf data.tar && tar -xvf control.tar
 ```
 Run the basic test case in the interactive shell of the container, using the pre-configured Python 3.8: `python3.8 ~/Test_Cases/Basic_Test.py`. The basic test case uses Selenium to launch Arcanum (a modified Chromium) with a pre-installed empty extension and navigates to a web page. If Arcanum runs normally, you should see `Basic Test: Success.` in the output.
 
@@ -93,7 +96,7 @@ Run the basic test case in the interactive shell of the container, using the pre
 $ mkdir -p /root/extensions/custom/
 $ cp -r ~/Sample_Extensions/Custom/* /root/extensions/custom/
 ```
-Download all recordings and JS scripts for DOM element anotations from the artifact Git repository and put them in the `/root/` directory in the container:
+Download all recordings and JS scripts for DOM element annotations from the artifact Git repository and put them in the `/root/` directory in the container:
 ```
 $ mkdir -p /root/recordings/
 $ cp -r ~/recordings/* /root/recordings/
@@ -119,9 +122,7 @@ Each test case launches Arcanum with the corresponding web recording and DOM ele
 ## Other Notes
 * Arcanum’s taint source logs, propagation logs, and the storage sink logs are located in `/ram/analysis/v8logs/`. All other taint sink logs are in the user data directory of Chromium.
 * When testing Arcanum with Docker, ensure to allocate sufficient CPU resources (4 logical processors or more), especially when running multiple containers in parallel (e.g., using `--cpus=4 --cpuset-cpus=0-3`). Use `--cpuset-cpus` to specify CPUs in scenarios where preemption may occur.
-* As described in Section 3.4 in the paper, we introduce a forced delay in Arcanum to ensure that a target web page will fully load before an extension injects its content script. We configure this delay as a Chrome switch `--custom-script-idle-timeout-ms` and `--custom-delay-for-animation-ms`. Please refer to the
-provided test cases for examples of its usage.
-
+* As described in Section 3.4 in the paper, we introduce a forced delay in Arcanum to ensure that a target web page will fully load before an extension injects its content script. We configure this delay as a Chrome switch `--custom-script-idle-timeout-ms` and `--custom-delay-for-animation-ms`. Users can set a specific delay when recording and replaying different web pages according to their page loading times. Please refer to the provided test cases for examples of its usage. The test cases were evaluated on a Linux server with 8 CPUs and 16 GiB of RAM. If you are testing with fewer CPU resources, please consider increasing the value of the two switches mentioned above in the test case scripts.
 
 ## Citation
 If you use our system in your research, please cite our work using this Bibtex entry:
