@@ -38,7 +38,7 @@ Here we describe how to set up a build environment for Chromium and build a vers
     $ git checkout tags/108.0.5359.71
     $ gclient sync --with_branch_heads --with_tags
     ```
-If you run into any issues at this step, [these tips](https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/building_old_revisions.md) address some common complications.
+    If you run into any issues at this step, [these tips](https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/building_old_revisions.md) address some common complications.
 
 3. Prepare the Docker container for building. Pull the provided Docker image for building, then launch a Docker container from this image. Make sure to mount the host directory containing the Chromium source code and depot_tools into the container:
      ```
