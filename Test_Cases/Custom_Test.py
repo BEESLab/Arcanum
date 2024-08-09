@@ -539,7 +539,7 @@ def Facebook_Extension_MV2_Test():
     try:
         driver = launch_driver(load_extension = True, extension_name = extension_name,
                                recording_name = recording_name, rules = rules, annotation_name = annotation_name,
-                               idle_timeout_ms=12000)
+                               idle_timeout_ms=15000, delay_animation_ms=10000)
         print('Launch Arcanum success. Arcanum starts running.')
         time.sleep(1)
         driver.get(test_URL)
@@ -598,7 +598,7 @@ def Facebook_Extension_MV3_Test():
     try:
         driver = launch_driver(load_extension = True, extension_name = extension_name,
                                recording_name = recording_name, rules = rules, annotation_name = annotation_name,
-                               idle_timeout_ms=12000)
+                               idle_timeout_ms=15000, delay_animation_ms=10000)
         print('Launch Arcanum success. Arcanum starts running.')
         time.sleep(1)
         driver.get(test_URL)
@@ -654,7 +654,7 @@ def Gmail_Extension_MV2_Test():
     try:
         driver = launch_driver(load_extension = True, extension_name = extension_name,
                                recording_name = recording_name, rules = rules, annotation_name = annotation_name,
-                               idle_timeout_ms=25000)
+                               idle_timeout_ms=30000, delay_animation_ms=15000)
         print('Launch Arcanum success. Arcanum starts running.')
         time.sleep(1)
         driver.get(test_URL)
@@ -714,7 +714,7 @@ def Gmail_Extension_MV3_Test():
     try:
         driver = launch_driver(load_extension = True, extension_name = extension_name,
                                recording_name = recording_name, rules = rules, annotation_name = annotation_name,
-                               idle_timeout_ms=25000)
+                               idle_timeout_ms=30000, delay_animation_ms=15000)
         print('Launch Arcanum success. Arcanum starts running.')
         time.sleep(1)
         driver.get(test_URL)
